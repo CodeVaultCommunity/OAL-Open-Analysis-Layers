@@ -1,0 +1,737 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=22mm]{geometry}
+
+\usepackage{fontspec}
+
+\setmainfont{Arial}
+
+\usepackage{unicode-math}
+
+\setmathfont{Cambria Math}
+
+\usepackage{hyperref}
+
+\setlength{\parskip}{5pt}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Board CRM --- especificação de casos de uso}
+
+\author{Douglas de Oliveira Alkimim \and Bruno Chevitarese}
+
+\date{OAL Alpha-v0.1.0-Alkimim \quad Versão da especificação do projeto: 0.1.0}
+
+\maketitle
+
+\textbf{Status:} Baseline didática
+
+\textbf{Idioma de referência:} en
+
+\section{Objetivo e escopo}
+
+Uma pequena equipe comercial acompanha oportunidades em um quadro de arrastar e soltar. Cada cartão representa uma oportunidade. Mover um cartão altera sua etapa comercial; encerrá-lo registra um resultado. A especificação cobre os seis casos do exemplo, incluindo comportamento observável e resultados de falha.
+
+\subsection{Escopo}
+
+\begin{itemize}
+
+\item \textbf{S-01.} Um quadro CRM local com as etapas ativas Nova, Qualificada e Proposta, seguidas dos resultados terminais Ganha e Perdida.
+
+\item \textbf{S-02.} O operador cria, move, anota e consulta cartões. O gestor também pode encerrá-los. O leitor pode somente consultar o quadro.
+
+\item \textbf{S-03.} O quadro e os casos de uso compartilham os mesmos registros persistidos. Arrastar no navegador é um gesto de entrada; o caso de movimentação define o comportamento resultante.
+
+\end{itemize}
+
+\subsection{Participantes}
+
+\textbf{ACT-01 --- Operador comercial.} Pode criar, mover, anotar e consultar oportunidades.
+
+\textbf{ACT-02 --- Gestor comercial.} Pode executar os seis casos, incluindo encerramento.
+
+\textbf{ACT-03 --- Leitor do quadro.} Pode somente consultar o quadro.
+
+\subsection{Necessidades}
+
+\begin{itemize}
+
+\item \textbf{N-01.} Registrar uma oportunidade com contexto suficiente para identificá-la e identificar seu responsável.
+
+\item \textbf{N-02.} Conhecer a etapa comercial atual e mover uma oportunidade ativa sem perder alterações concorrentes.
+
+\item \textbf{N-03.} Manter um registro conciso das interações com um prospecto.
+
+\item \textbf{N-04.} Consultar o trabalho ativo e os resultados encerrados no mesmo quadro.
+
+\item \textbf{N-05.} Registrar por que uma oportunidade foi encerrada e preservar seu histórico de etapas.
+
+\end{itemize}
+
+\subsection{Premissas}
+
+\begin{itemize}
+
+\item \textbf{A-01.} O limite local autentica o ator; cada caso verifica a permissão antes dos efeitos de domínio.
+
+\item \textbf{A-02.} O relógio e o provedor de identificadores retornam valores válidos. A disponibilidade do armazenamento não é presumida e possui resultado de falha explícito.
+
+\item \textbf{A-03.} O cliente envia a versão observada por último em toda alteração de uma oportunidade existente.
+
+\end{itemize}
+
+\subsection{Fora desta baseline}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Implantação remota, gestão dinâmica de contas, múltiplos clientes e endurecimento para produção.
+
+\item \textbf{O-02.} Envio de email, agendamento, precificação, previsão de receita e sincronização com CRM externo.
+
+\item \textbf{O-03.} Exclusão, reabertura de oportunidades encerradas, união de cartões e edição dos campos de identificação.
+
+\item \textbf{O-04.} Garantia de operação durante falhas do host, do banco de dados ou de energia.
+
+\end{itemize}
+
+\section{Entidades e validade}
+
+\subsection{E-01 -- Oportunidade}
+
+Registro preservado com ID opaco, título, empresa, responsável, etapa, versão inteira e horários de criação/alteração.
+
+\textbf{Validade:} Título e empresa contêm de 1 a 80 caracteres Unicode não vazios; responsável, de 1 a 40. A etapa é NEW, QUALIFIED, PROPOSAL, WON ou LOST. A versão começa em 1 e cresce uma unidade por alteração bem-sucedida.
+
+\subsection{E-02 -- Nota de interação}
+
+Nota acrescentada sem edição, com ID opaco, ID da oportunidade, conteúdo e horário.
+
+\textbf{Validade:} O conteúdo contém de 1 a 500 caracteres Unicode não vazios. Espaços nas extremidades são removidos antes de armazenar.
+
+\subsection{E-03 -- Evento de etapa}
+
+Registro acrescentado sem edição com etapa de origem, destino, operador, horário e versão resultante da oportunidade.
+
+\textbf{Validade:} Origem e destino são diferentes. O evento de criação não tem etapa de origem. Um evento existe somente para uma mudança de etapa bem-sucedida.
+
+\section{Regras de negócio compartilhadas}
+
+\begin{itemize}
+
+\item \textbf{R-01.} Uma oportunidade criada começa em NEW na versão 1. Sua identidade não pode ser reutilizada por outra oportunidade preservada.
+
+\item \textbf{R-02.} Arrastar só permite movimento entre etapas ativas adjacentes: NEW \(\leftrightarrow\) QUALIFIED \(\leftrightarrow\) PROPOSAL. Soltar na etapa atual não altera nada; pular uma etapa é rejeitado.
+
+\item \textbf{R-03.} WON só pode ser alcançada a partir de PROPOSAL. LOST pode ser alcançada de qualquer etapa ativa. WON e LOST são terminais; cartões nessas etapas não podem ser movidos ou encerrados novamente.
+
+\item \textbf{R-04.} Toda alteração de oportunidade existente exige a última versão observada. Uma divergência retorna conflito sem mudar a oportunidade, notas ou histórico de etapas.
+
+\item \textbf{R-05.} Uma alteração bem-sucedida incrementa a versão da oportunidade uma vez. A mudança de etapa e seu evento são gravados juntos; a nota e o incremento de versão também.
+
+\item \textbf{R-06.} Um encerramento exige motivo não vazio de até 200 caracteres. O motivo é preservado como nota e o evento de etapa registra o resultado.
+
+\item \textbf{R-07.} O quadro agrupa todas as oportunidades preservadas por etapa e ordena os cartões de cada etapa pela alteração mais recente e depois pelo ID. Um filtro opcional por responsável usa correspondência exata.
+
+\item \textbf{R-08.} IDs desconhecidos retornam não encontrado. Entrada inválida retorna erro de validação. Falha de armazenamento retorna indisponível. Esses resultados nunca indicam sucesso de alteração não gravada.
+
+\end{itemize}
+
+\section{Capacidades exigidas}
+
+\begin{itemize}
+
+\item \textbf{CAP-ID.} Fornecer identificador opaco para uma oportunidade ou nota.
+
+\item \textbf{CAP-CLOCK.} Fornecer horário para uma alteração registrada.
+
+\item \textbf{CAP-STORE.} Ler e alterar atomicamente oportunidades, notas e eventos de etapa preservados.
+
+\end{itemize}
+
+\section{Contratos dos casos de uso}
+
+\subsection{UC-CRM-001 -- Criar oportunidade}
+
+\textbf{Objetivo:} Colocar uma nova oportunidade comercial no quadro.
+
+\textbf{Acionamento:} O operador envia título, empresa e responsável.
+
+\textbf{Participantes:} ACT-01
+
+\textbf{Atores permitidos:} ACT-01, ACT-02
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Título, empresa e responsável.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validar os três campos de texto.
+
+\item \textbf{F-02.} Obter ID e horário; criar oportunidade NEW na versão 1.
+
+\item \textbf{F-03.} Persistir oportunidade e evento de criação juntos.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Campos inválidos retornam erro de validação sem criar registro.
+
+\item \textbf{X-02.} Armazenamento indisponível retorna indisponível sem resultado de sucesso.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar ID, etapa NEW e versão 1.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} Uma oportunidade preservada e um evento de criação são adicionados atomicamente.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Uma solicitação rejeitada não cria oportunidade nem evento.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-ID, CAP-CLOCK, CAP-STORE
+
+\textbf{Necessidades:} N-01
+
+\textbf{Regras:} R-01, R-08
+
+\textbf{Entidades:} E-01, E-03
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-001-01.} Campos válidos criam cartão NEW na versão 1.
+
+\item \textbf{AC-CRM-001-02.} Campos vazios ou grandes demais não criam cartão.
+
+\item \textbf{AC-CRM-001-03.} A criação produz exatamente um evento inicial de etapa.
+
+\item \textbf{AC-CRM-001-04.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\subsection{UC-CRM-002 -- Mover oportunidade}
+
+\textbf{Objetivo:} Alterar a etapa ativa representada por um cartão arrastado.
+
+\textbf{Acionamento:} O operador solta um cartão em outra coluna ativa.
+
+\textbf{Participantes:} ACT-01
+
+\textbf{Atores permitidos:} ACT-01, ACT-02
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} ID da oportunidade, etapa de destino e versão esperada.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Carregar a oportunidade atual e comparar versões.
+
+\item \textbf{F-02.} Conferir se origem e destino são etapas ativas adjacentes.
+
+\item \textbf{F-03.} Persistir nova etapa, versão incrementada e evento de etapa juntos.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} ID desconhecido retorna não encontrado; versão divergente retorna conflito.
+
+\item \textbf{X-02.} Soltar na mesma etapa, pular etapa ou mover cartão encerrado retorna erro de validação sem alteração.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar etapa de destino e nova versão.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} Um cartão muda de coluna e um evento de etapa é acrescentado.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Movimentos rejeitados preservam etapa, versão e histórico.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-STORE, CAP-CLOCK
+
+\textbf{Necessidades:} N-02, N-05
+
+\textbf{Regras:} R-02, R-04, R-05, R-08
+
+\textbf{Entidades:} E-01, E-03
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-002-01.} Um cartão NEW vai para QUALIFIED com um incremento de versão e evento.
+
+\item \textbf{AC-CRM-002-02.} Um movimento de NEW diretamente para PROPOSAL é rejeitado.
+
+\item \textbf{AC-CRM-002-03.} Uma versão desatualizada é rejeitada sem mudar etapa ou histórico.
+
+\item \textbf{AC-CRM-002-04.} Um cartão encerrado não pode ser arrastado para etapa ativa.
+
+\item \textbf{AC-CRM-002-05.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\subsection{UC-CRM-003 -- Registrar interação}
+
+\textbf{Objetivo:} Preservar uma nota de interação com o prospecto.
+
+\textbf{Acionamento:} O operador envia uma nota para um cartão.
+
+\textbf{Participantes:} ACT-01
+
+\textbf{Atores permitidos:} ACT-01, ACT-02
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} ID da oportunidade, conteúdo da nota e versão esperada.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Remover espaços das extremidades e validar a nota; comparar a versão esperada.
+
+\item \textbf{F-02.} Acrescentar a nota e incrementar a versão da oportunidade juntos.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} ID desconhecido, conteúdo inválido, versão desatualizada e falha de armazenamento têm os resultados de erro definidos.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar ID da nota e nova versão da oportunidade.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} Uma nota é preservada; etapa e histórico de etapas permanecem iguais.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Uma nota rejeitada não incrementa a versão.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-ID, CAP-CLOCK, CAP-STORE
+
+\textbf{Necessidades:} N-03
+
+\textbf{Regras:} R-04, R-05, R-08
+
+\textbf{Entidades:} E-01, E-02
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-003-01.} Uma nota válida pode ser consultada e incrementa uma vez a versão do cartão.
+
+\item \textbf{AC-CRM-003-02.} Notas vazias ou grandes demais são rejeitadas sem mudar a versão.
+
+\item \textbf{AC-CRM-003-03.} Um cartão encerrado ainda aceita uma nota.
+
+\item \textbf{AC-CRM-003-04.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\subsection{UC-CRM-004 -- Consultar quadro}
+
+\textbf{Objetivo:} Consultar oportunidades ativas e encerradas em ordem estável no quadro.
+
+\textbf{Acionamento:} O operador abre ou atualiza o quadro.
+
+\textbf{Participantes:} ACT-03
+
+\textbf{Atores permitidos:} ACT-01, ACT-02, ACT-03
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Filtro opcional por responsável com correspondência exata.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Carregar todas as oportunidades preservadas, opcionalmente filtradas por responsável.
+
+\item \textbf{F-02.} Agrupar por etapa e ordenar cartões por horário de atualização decrescente e ID crescente.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Responsável desconhecido produz colunas vazias; falha de armazenamento retorna indisponível.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar as cinco colunas com ID, campos, etapa e versão de cada cartão.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} Nenhum dado é alterado.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Consultas repetidas de dados inalterados preservam a mesma ordem.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-STORE
+
+\textbf{Necessidades:} N-02, N-04
+
+\textbf{Regras:} R-07, R-08
+
+\textbf{Entidades:} E-01, E-02, E-03
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-004-01.} O quadro inclui cartões ativos e encerrados nas colunas corretas.
+
+\item \textbf{AC-CRM-004-02.} O filtro por responsável é exato e não altera os demais registros.
+
+\item \textbf{AC-CRM-004-03.} Cartões têm ordem determinística em cada coluna.
+
+\item \textbf{AC-CRM-004-04.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\subsection{UC-CRM-005 -- Encerrar como ganha}
+
+\textbf{Objetivo:} Registrar resultado comercial positivo a partir de Proposta.
+
+\textbf{Acionamento:} O operador marca um cartão Proposta como ganho.
+
+\textbf{Participantes:} ACT-02
+
+\textbf{Atores permitidos:} ACT-02
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} ID da oportunidade, motivo e versão esperada.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validar motivo e versão e confirmar a etapa PROPOSAL.
+
+\item \textbf{F-02.} Gravar etapa WON, incremento de versão, evento de etapa e nota do motivo juntos.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Outras etapas de origem, motivo vazio, versão desatualizada, ID desconhecido ou falha de armazenamento retornam os erros definidos.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar WON e a nova versão.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} O cartão torna-se terminal com um evento e uma nota de motivo.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Um encerramento rejeitado preserva cartão e histórico anteriores.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-ID, CAP-CLOCK, CAP-STORE
+
+\textbf{Necessidades:} N-05
+
+\textbf{Regras:} R-03, R-04, R-05, R-06, R-08
+
+\textbf{Entidades:} E-01, E-02, E-03
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-005-01.} Um cartão PROPOSAL é encerrado como WON com uma nota, evento e incremento de versão.
+
+\item \textbf{AC-CRM-005-02.} Um cartão NEW ou QUALIFIED não pode ser encerrado como WON.
+
+\item \textbf{AC-CRM-005-03.} Um cartão encerrado não pode ser encerrado novamente.
+
+\item \textbf{AC-CRM-005-04.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\subsection{UC-CRM-006 -- Encerrar como perdida}
+
+\textbf{Objetivo:} Registrar resultado comercial negativo a partir de uma etapa ativa.
+
+\textbf{Acionamento:} O operador marca um cartão ativo como perdido.
+
+\textbf{Participantes:} ACT-02
+
+\textbf{Atores permitidos:} ACT-02
+
+\paragraph{Entradas}
+
+\begin{itemize}
+
+\item \textbf{I-01.} ID da oportunidade, motivo e versão esperada.
+
+\end{itemize}
+
+\paragraph{Condições assumidas}
+
+\begin{itemize}
+
+\item \textbf{P-01.} O ator solicitante está autenticado e permitido para este caso.
+
+\end{itemize}
+
+\paragraph{Fluxo principal}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validar motivo e versão e confirmar uma etapa ativa.
+
+\item \textbf{F-02.} Gravar etapa LOST, incremento de versão, evento de etapa e nota do motivo juntos.
+
+\end{itemize}
+
+\paragraph{Alternativas e falhas}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Já encerrada, motivo vazio, versão desatualizada, ID desconhecido ou falha de armazenamento retornam os erros definidos.
+
+\end{itemize}
+
+\paragraph{Resultados}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Retornar LOST e a nova versão.
+
+\end{itemize}
+
+\paragraph{Efeitos}
+
+\begin{itemize}
+
+\item \textbf{E-01.} O cartão torna-se terminal com um evento e uma nota de motivo.
+
+\end{itemize}
+
+\paragraph{Garantias}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Um encerramento rejeitado preserva cartão e histórico anteriores.
+
+\end{itemize}
+
+\textbf{Capacidades exigidas:} CAP-ID, CAP-CLOCK, CAP-STORE
+
+\textbf{Necessidades:} N-05
+
+\textbf{Regras:} R-03, R-04, R-05, R-06, R-08
+
+\textbf{Entidades:} E-01, E-02, E-03
+
+\paragraph{Critérios de aceitação}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-006-01.} Cada etapa ativa pode ser encerrada como LOST com uma nota, evento e incremento de versão.
+
+\item \textbf{AC-CRM-006-02.} Um cartão encerrado não pode ser encerrado novamente como LOST.
+
+\item \textbf{AC-CRM-006-03.} Uma versão desatualizada mantém cartão, notas e histórico inalterados.
+
+\item \textbf{AC-CRM-006-04.} Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência.
+
+\end{itemize}
+
+\section{Obrigações complementares}
+
+\begin{itemize}
+
+\item \textbf{Q-01.} A demonstração escuta em 127.0.0.1 e autentica cada requisição à API. Cada caso recusa atores sem permissão antes dos efeitos.
+
+\item \textbf{Q-02.} Mudanças de etapa e encerramentos são atômicos com seus eventos; inclusão de notas é atômica com o incremento de versão.
+
+\item \textbf{Q-03.} Uma atualização conflitante é observável como resultado distinto para o cliente atualizar o quadro e decidir se tenta novamente.
+
+\item \textbf{Q-04.} O quadro retorna todos os registros desta pequena demonstração local. Paginação e metas de vazão estão fora do escopo.
+
+\item \textbf{Q-05.} Nenhum caso exclui oportunidade, nota ou evento de etapa. Backup e restauração do banco pertencem ao ambiente do operador.
+
+\item \textbf{Q-06.} A interface deve oferecer alternativa ao arrastar para mover um cartão por controle explícito de etapa.
+
+\end{itemize}
+
+\section{Glossário}
+
+\textbf{Cartão.} Representação visual de uma oportunidade, não outra entidade de negócio.
+
+\textbf{Etapa ativa.} NEW, QUALIFIED ou PROPOSAL; um cartão pode ser movido enquanto está em uma dessas etapas.
+
+\textbf{Resultado terminal.} WON ou LOST; o encerramento é preservado e não pode ser revertido nesta baseline.
+
+\textbf{Versão esperada.} Versão observada pelo cliente antes de uma alteração; usada para detectar mudanças concorrentes.
+
+\section{Evolução}
+
+Esta baseline é a versão 0.1.0 da especificação do exemplo. Mudanças em resultados, transições ou critérios exigem revisão explícita e implementação alinhada. OAL Alpha-v0.1.0-Alkimim continua sendo a edição da classificação.
+
+\end{document}

@@ -1,0 +1,1256 @@
+{
+  "schema": "oal-ucs-content-Alpha-v0.1.0-Alkimim",
+  "project": "Board CRM",
+  "authors": [
+    "Douglas de Oliveira Alkimim",
+    "Bruno Chevitarese"
+  ],
+  "project_specification_version": "0.1.0",
+  "oal_edition": "Alpha-v0.1.0-Alkimim",
+  "reference_language": "en",
+  "languages": [
+    "en",
+    "pt-BR"
+  ],
+  "title": {
+    "en": "Board CRM — use-case specification",
+    "pt-BR": "Board CRM — especificação de casos de uso"
+  },
+  "status": {
+    "en": "Educational baseline",
+    "pt-BR": "Baseline didática"
+  },
+  "purpose": {
+    "en": "A small sales team tracks opportunities on a drag-and-drop board. A card represents one opportunity. Moving a card changes its sales stage; closing it records an outcome. The specification covers the complete six-case example, including its observable behavior and failure results.",
+    "pt-BR": "Uma pequena equipe comercial acompanha oportunidades em um quadro de arrastar e soltar. Cada cartão representa uma oportunidade. Mover um cartão altera sua etapa comercial; encerrá-lo registra um resultado. A especificação cobre os seis casos do exemplo, incluindo comportamento observável e resultados de falha."
+  },
+  "scope": [
+    {
+      "id": "S-01",
+      "text": {
+        "en": "One local CRM board with the active stages New, Qualified, and Proposal, followed by the terminal outcomes Won and Lost.",
+        "pt-BR": "Um quadro CRM local com as etapas ativas Nova, Qualificada e Proposta, seguidas dos resultados terminais Ganha e Perdida."
+      }
+    },
+    {
+      "id": "S-02",
+      "text": {
+        "en": "The sales operator creates, moves, annotates, and views cards. The manager may also close them. The viewer may only view the board.",
+        "pt-BR": "O operador cria, move, anota e consulta cartões. O gestor também pode encerrá-los. O leitor pode somente consultar o quadro."
+      }
+    },
+    {
+      "id": "S-03",
+      "text": {
+        "en": "The board and case operations share the same persistent records. A browser drag is an input gesture; the move case defines the resulting behavior.",
+        "pt-BR": "O quadro e os casos de uso compartilham os mesmos registros persistidos. Arrastar no navegador é um gesto de entrada; o caso de movimentação define o comportamento resultante."
+      }
+    }
+  ],
+  "actors": [
+    {
+      "id": "ACT-01",
+      "name": {
+        "en": "Sales operator",
+        "pt-BR": "Operador comercial"
+      },
+      "description": {
+        "en": "May create, move, annotate, and view opportunities.",
+        "pt-BR": "Pode criar, mover, anotar e consultar oportunidades."
+      }
+    },
+    {
+      "id": "ACT-02",
+      "name": {
+        "en": "Sales manager",
+        "pt-BR": "Gestor comercial"
+      },
+      "description": {
+        "en": "May execute all six use cases, including closure.",
+        "pt-BR": "Pode executar os seis casos, incluindo encerramento."
+      }
+    },
+    {
+      "id": "ACT-03",
+      "name": {
+        "en": "Board viewer",
+        "pt-BR": "Leitor do quadro"
+      },
+      "description": {
+        "en": "May view the board only.",
+        "pt-BR": "Pode somente consultar o quadro."
+      }
+    }
+  ],
+  "needs": [
+    {
+      "id": "N-01",
+      "text": {
+        "en": "Record an opportunity with enough context to identify it and its owner.",
+        "pt-BR": "Registrar uma oportunidade com contexto suficiente para identificá-la e identificar seu responsável."
+      }
+    },
+    {
+      "id": "N-02",
+      "text": {
+        "en": "Know the current sales stage and move an active opportunity without losing concurrent changes.",
+        "pt-BR": "Conhecer a etapa comercial atual e mover uma oportunidade ativa sem perder alterações concorrentes."
+      }
+    },
+    {
+      "id": "N-03",
+      "text": {
+        "en": "Keep a concise record of interactions with a prospect.",
+        "pt-BR": "Manter um registro conciso das interações com um prospecto."
+      }
+    },
+    {
+      "id": "N-04",
+      "text": {
+        "en": "Inspect active work and closed outcomes from the same board.",
+        "pt-BR": "Consultar o trabalho ativo e os resultados encerrados no mesmo quadro."
+      }
+    },
+    {
+      "id": "N-05",
+      "text": {
+        "en": "Record why an opportunity ended and retain its stage history.",
+        "pt-BR": "Registrar por que uma oportunidade foi encerrada e preservar seu histórico de etapas."
+      }
+    }
+  ],
+  "assumptions": [
+    {
+      "id": "A-01",
+      "text": {
+        "en": "The local boundary authenticates the actor; each use case checks its permission before domain effects.",
+        "pt-BR": "O limite local autentica o ator; cada caso verifica a permissão antes dos efeitos de domínio."
+      }
+    },
+    {
+      "id": "A-02",
+      "text": {
+        "en": "The clock and identifier provider return valid values. Storage availability is not assumed and has an explicit failure result.",
+        "pt-BR": "O relógio e o provedor de identificadores retornam valores válidos. A disponibilidade do armazenamento não é presumida e possui resultado de falha explícito."
+      }
+    },
+    {
+      "id": "A-03",
+      "text": {
+        "en": "A client sends the version it last observed for every mutation of an existing opportunity.",
+        "pt-BR": "O cliente envia a versão observada por último em toda alteração de uma oportunidade existente."
+      }
+    }
+  ],
+  "out_of_scope": [
+    {
+      "id": "O-01",
+      "text": {
+        "en": "Remote deployment, dynamic account management, tenants, and production hardening.",
+        "pt-BR": "Implantação remota, gestão dinâmica de contas, múltiplos clientes e endurecimento para produção."
+      }
+    },
+    {
+      "id": "O-02",
+      "text": {
+        "en": "Email delivery, scheduling, pricing, revenue forecasts, and external CRM synchronization.",
+        "pt-BR": "Envio de email, agendamento, precificação, previsão de receita e sincronização com CRM externo."
+      }
+    },
+    {
+      "id": "O-03",
+      "text": {
+        "en": "Deletion, reopening closed opportunities, merging cards, and editing opportunity identity fields.",
+        "pt-BR": "Exclusão, reabertura de oportunidades encerradas, união de cartões e edição dos campos de identificação."
+      }
+    },
+    {
+      "id": "O-04",
+      "text": {
+        "en": "A guarantee of operation during host, database, or power failure.",
+        "pt-BR": "Garantia de operação durante falhas do host, do banco de dados ou de energia."
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "E-01",
+      "name": {
+        "en": "Opportunity",
+        "pt-BR": "Oportunidade"
+      },
+      "description": {
+        "en": "A retained record with an opaque ID, title, company, owner, stage, integer version, and creation/update times.",
+        "pt-BR": "Registro preservado com ID opaco, título, empresa, responsável, etapa, versão inteira e horários de criação/alteração."
+      },
+      "validity": {
+        "en": "Title and company each contain 1–80 nonblank Unicode characters; owner contains 1–40. Stage is one of NEW, QUALIFIED, PROPOSAL, WON, LOST. Version starts at 1 and grows by one per successful mutation.",
+        "pt-BR": "Título e empresa contêm de 1 a 80 caracteres Unicode não vazios; responsável, de 1 a 40. A etapa é NEW, QUALIFIED, PROPOSAL, WON ou LOST. A versão começa em 1 e cresce uma unidade por alteração bem-sucedida."
+      }
+    },
+    {
+      "id": "E-02",
+      "name": {
+        "en": "Interaction note",
+        "pt-BR": "Nota de interação"
+      },
+      "description": {
+        "en": "An append-only note with an opaque ID, opportunity ID, body, and timestamp.",
+        "pt-BR": "Nota acrescentada sem edição, com ID opaco, ID da oportunidade, conteúdo e horário."
+      },
+      "validity": {
+        "en": "Body contains 1–500 nonblank Unicode characters. Leading and trailing spaces are removed before storage.",
+        "pt-BR": "O conteúdo contém de 1 a 500 caracteres Unicode não vazios. Espaços nas extremidades são removidos antes de armazenar."
+      }
+    },
+    {
+      "id": "E-03",
+      "name": {
+        "en": "Stage event",
+        "pt-BR": "Evento de etapa"
+      },
+      "description": {
+        "en": "An append-only record of source stage, destination stage, actor, timestamp, and the resulting opportunity version.",
+        "pt-BR": "Registro acrescentado sem edição com etapa de origem, destino, operador, horário e versão resultante da oportunidade."
+      },
+      "validity": {
+        "en": "Source and destination differ. The creation event has no source stage. An event exists only for a successful stage change.",
+        "pt-BR": "Origem e destino são diferentes. O evento de criação não tem etapa de origem. Um evento existe somente para uma mudança de etapa bem-sucedida."
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-01",
+      "text": {
+        "en": "A newly created opportunity starts in NEW at version 1. Its identity cannot be reused for another retained opportunity.",
+        "pt-BR": "Uma oportunidade criada começa em NEW na versão 1. Sua identidade não pode ser reutilizada por outra oportunidade preservada."
+      }
+    },
+    {
+      "id": "R-02",
+      "text": {
+        "en": "A drag may move only between adjacent active stages: NEW ↔ QUALIFIED ↔ PROPOSAL. Dropping on the current stage changes nothing; skipping a stage is rejected.",
+        "pt-BR": "Arrastar só permite movimento entre etapas ativas adjacentes: NEW ↔ QUALIFIED ↔ PROPOSAL. Soltar na etapa atual não altera nada; pular uma etapa é rejeitado."
+      }
+    },
+    {
+      "id": "R-03",
+      "text": {
+        "en": "WON is reachable only from PROPOSAL. LOST is reachable from any active stage. WON and LOST are terminal; cards in either stage cannot be moved or closed again.",
+        "pt-BR": "WON só pode ser alcançada a partir de PROPOSAL. LOST pode ser alcançada de qualquer etapa ativa. WON e LOST são terminais; cartões nessas etapas não podem ser movidos ou encerrados novamente."
+      }
+    },
+    {
+      "id": "R-04",
+      "text": {
+        "en": "Every mutation of an existing opportunity requires its last observed version. A mismatch returns conflict without changing the opportunity, notes, or stage history.",
+        "pt-BR": "Toda alteração de oportunidade existente exige a última versão observada. Uma divergência retorna conflito sem mudar a oportunidade, notas ou histórico de etapas."
+      }
+    },
+    {
+      "id": "R-05",
+      "text": {
+        "en": "A successful mutation increments the opportunity version once. A stage change and its stage event commit together; a note and its version increment commit together.",
+        "pt-BR": "Uma alteração bem-sucedida incrementa a versão da oportunidade uma vez. A mudança de etapa e seu evento são gravados juntos; a nota e o incremento de versão também."
+      }
+    },
+    {
+      "id": "R-06",
+      "text": {
+        "en": "A close operation requires a nonblank reason of at most 200 characters. The reason is retained as a note and the stage event records the outcome.",
+        "pt-BR": "Um encerramento exige motivo não vazio de até 200 caracteres. O motivo é preservado como nota e o evento de etapa registra o resultado."
+      }
+    },
+    {
+      "id": "R-07",
+      "text": {
+        "en": "The board groups all retained opportunities by stage and orders cards within a stage by most recent update, then by ID. An optional owner filter uses exact matching.",
+        "pt-BR": "O quadro agrupa todas as oportunidades preservadas por etapa e ordena os cartões de cada etapa pela alteração mais recente e depois pelo ID. Um filtro opcional por responsável usa correspondência exata."
+      }
+    },
+    {
+      "id": "R-08",
+      "text": {
+        "en": "Unknown IDs return not-found. Invalid input returns validation error. Storage failure returns unavailable. These results never report success for an uncommitted mutation.",
+        "pt-BR": "IDs desconhecidos retornam não encontrado. Entrada inválida retorna erro de validação. Falha de armazenamento retorna indisponível. Esses resultados nunca indicam sucesso de alteração não gravada."
+      }
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-ID",
+      "text": {
+        "en": "Provide an opaque identifier for an opportunity or note.",
+        "pt-BR": "Fornecer identificador opaco para uma oportunidade ou nota."
+      }
+    },
+    {
+      "id": "CAP-CLOCK",
+      "text": {
+        "en": "Provide a timestamp for a recorded change.",
+        "pt-BR": "Fornecer horário para uma alteração registrada."
+      }
+    },
+    {
+      "id": "CAP-STORE",
+      "text": {
+        "en": "Read and atomically change retained opportunities, notes, and stage events.",
+        "pt-BR": "Ler e alterar atomicamente oportunidades, notas e eventos de etapa preservados."
+      }
+    }
+  ],
+  "use_cases": [
+    {
+      "id": "UC-CRM-001",
+      "title": {
+        "en": "Create opportunity",
+        "pt-BR": "Criar oportunidade"
+      },
+      "actor": "ACT-01",
+      "objective": {
+        "en": "Place a new sales opportunity on the board.",
+        "pt-BR": "Colocar uma nova oportunidade comercial no quadro."
+      },
+      "trigger": {
+        "en": "The operator submits title, company, and owner.",
+        "pt-BR": "O operador envia título, empresa e responsável."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Title, company, owner.",
+            "pt-BR": "Título, empresa e responsável."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Validate the three text fields.",
+            "pt-BR": "Validar os três campos de texto."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Obtain ID and time; create a NEW opportunity at version 1.",
+            "pt-BR": "Obter ID e horário; criar oportunidade NEW na versão 1."
+          }
+        },
+        {
+          "id": "F-03",
+          "text": {
+            "en": "Persist the opportunity and creation event together.",
+            "pt-BR": "Persistir oportunidade e evento de criação juntos."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "Invalid fields return validation error without a record.",
+            "pt-BR": "Campos inválidos retornam erro de validação sem criar registro."
+          }
+        },
+        {
+          "id": "X-02",
+          "text": {
+            "en": "Unavailable storage returns unavailable without a success result.",
+            "pt-BR": "Armazenamento indisponível retorna indisponível sem resultado de sucesso."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return the ID, NEW stage, and version 1.",
+            "pt-BR": "Retornar ID, etapa NEW e versão 1."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "One retained opportunity and one creation event are added atomically.",
+            "pt-BR": "Uma oportunidade preservada e um evento de criação são adicionados atomicamente."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "A rejected request creates neither opportunity nor event.",
+            "pt-BR": "Uma solicitação rejeitada não cria oportunidade nem evento."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-ID",
+        "CAP-CLOCK",
+        "CAP-STORE"
+      ],
+      "needs": [
+        "N-01"
+      ],
+      "rules": [
+        "R-01",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-03"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-001-01",
+          "text": {
+            "en": "Valid fields create a NEW card at version 1.",
+            "pt-BR": "Campos válidos criam cartão NEW na versão 1."
+          }
+        },
+        {
+          "id": "AC-CRM-001-02",
+          "text": {
+            "en": "Blank or oversized fields create no card.",
+            "pt-BR": "Campos vazios ou grandes demais não criam cartão."
+          }
+        },
+        {
+          "id": "AC-CRM-001-03",
+          "text": {
+            "en": "Creation produces exactly one initial stage event.",
+            "pt-BR": "A criação produz exatamente um evento inicial de etapa."
+          }
+        },
+        {
+          "id": "AC-CRM-001-04",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-01",
+        "ACT-02"
+      ]
+    },
+    {
+      "id": "UC-CRM-002",
+      "title": {
+        "en": "Move opportunity",
+        "pt-BR": "Mover oportunidade"
+      },
+      "actor": "ACT-01",
+      "objective": {
+        "en": "Change the active stage represented by a dragged card.",
+        "pt-BR": "Alterar a etapa ativa representada por um cartão arrastado."
+      },
+      "trigger": {
+        "en": "The operator drops a card on another active column.",
+        "pt-BR": "O operador solta um cartão em outra coluna ativa."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Opportunity ID, destination stage, expected version.",
+            "pt-BR": "ID da oportunidade, etapa de destino e versão esperada."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Load the current opportunity and compare versions.",
+            "pt-BR": "Carregar a oportunidade atual e comparar versões."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Check that source and destination are adjacent active stages.",
+            "pt-BR": "Conferir se origem e destino são etapas ativas adjacentes."
+          }
+        },
+        {
+          "id": "F-03",
+          "text": {
+            "en": "Persist the new stage, incremented version, and stage event together.",
+            "pt-BR": "Persistir nova etapa, versão incrementada e evento de etapa juntos."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "Unknown ID returns not-found; version mismatch returns conflict.",
+            "pt-BR": "ID desconhecido retorna não encontrado; versão divergente retorna conflito."
+          }
+        },
+        {
+          "id": "X-02",
+          "text": {
+            "en": "Same-stage, skipped-stage, or closed-card drop returns validation error without change.",
+            "pt-BR": "Soltar na mesma etapa, pular etapa ou mover cartão encerrado retorna erro de validação sem alteração."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return destination stage and new version.",
+            "pt-BR": "Retornar etapa de destino e nova versão."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "One card changes column and one stage event is appended.",
+            "pt-BR": "Um cartão muda de coluna e um evento de etapa é acrescentado."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "Rejected moves preserve stage, version, and history.",
+            "pt-BR": "Movimentos rejeitados preservam etapa, versão e histórico."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-STORE",
+        "CAP-CLOCK"
+      ],
+      "needs": [
+        "N-02",
+        "N-05"
+      ],
+      "rules": [
+        "R-02",
+        "R-04",
+        "R-05",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-03"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-002-01",
+          "text": {
+            "en": "A NEW card moves to QUALIFIED with one version increment and event.",
+            "pt-BR": "Um cartão NEW vai para QUALIFIED com um incremento de versão e evento."
+          }
+        },
+        {
+          "id": "AC-CRM-002-02",
+          "text": {
+            "en": "A move from NEW directly to PROPOSAL is rejected.",
+            "pt-BR": "Um movimento de NEW diretamente para PROPOSAL é rejeitado."
+          }
+        },
+        {
+          "id": "AC-CRM-002-03",
+          "text": {
+            "en": "A stale version is rejected without changing stage or history.",
+            "pt-BR": "Uma versão desatualizada é rejeitada sem mudar etapa ou histórico."
+          }
+        },
+        {
+          "id": "AC-CRM-002-04",
+          "text": {
+            "en": "A closed card cannot be dragged to an active stage.",
+            "pt-BR": "Um cartão encerrado não pode ser arrastado para etapa ativa."
+          }
+        },
+        {
+          "id": "AC-CRM-002-05",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-01",
+        "ACT-02"
+      ]
+    },
+    {
+      "id": "UC-CRM-003",
+      "title": {
+        "en": "Record interaction",
+        "pt-BR": "Registrar interação"
+      },
+      "actor": "ACT-01",
+      "objective": {
+        "en": "Keep an append-only note about a prospect interaction.",
+        "pt-BR": "Preservar uma nota de interação com o prospecto."
+      },
+      "trigger": {
+        "en": "The operator submits a note for a card.",
+        "pt-BR": "O operador envia uma nota para um cartão."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Opportunity ID, note body, expected version.",
+            "pt-BR": "ID da oportunidade, conteúdo da nota e versão esperada."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Trim and validate the note; compare the expected version.",
+            "pt-BR": "Remover espaços das extremidades e validar a nota; comparar a versão esperada."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Append the note and increment the opportunity version together.",
+            "pt-BR": "Acrescentar a nota e incrementar a versão da oportunidade juntos."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "Unknown ID, invalid body, stale version, and storage failure have their defined error results.",
+            "pt-BR": "ID desconhecido, conteúdo inválido, versão desatualizada e falha de armazenamento têm os resultados de erro definidos."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return note ID and new opportunity version.",
+            "pt-BR": "Retornar ID da nota e nova versão da oportunidade."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "One note is retained; stage and stage history stay unchanged.",
+            "pt-BR": "Uma nota é preservada; etapa e histórico de etapas permanecem iguais."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "A rejected note does not increment the version.",
+            "pt-BR": "Uma nota rejeitada não incrementa a versão."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-ID",
+        "CAP-CLOCK",
+        "CAP-STORE"
+      ],
+      "needs": [
+        "N-03"
+      ],
+      "rules": [
+        "R-04",
+        "R-05",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-003-01",
+          "text": {
+            "en": "A valid note is retrievable and increments the card version once.",
+            "pt-BR": "Uma nota válida pode ser consultada e incrementa uma vez a versão do cartão."
+          }
+        },
+        {
+          "id": "AC-CRM-003-02",
+          "text": {
+            "en": "Blank or oversized notes are rejected without version change.",
+            "pt-BR": "Notas vazias ou grandes demais são rejeitadas sem mudar a versão."
+          }
+        },
+        {
+          "id": "AC-CRM-003-03",
+          "text": {
+            "en": "A closed card still accepts a note.",
+            "pt-BR": "Um cartão encerrado ainda aceita uma nota."
+          }
+        },
+        {
+          "id": "AC-CRM-003-04",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-01",
+        "ACT-02"
+      ]
+    },
+    {
+      "id": "UC-CRM-004",
+      "title": {
+        "en": "View board",
+        "pt-BR": "Consultar quadro"
+      },
+      "actor": "ACT-03",
+      "objective": {
+        "en": "Inspect active and closed opportunities in a stable board order.",
+        "pt-BR": "Consultar oportunidades ativas e encerradas em ordem estável no quadro."
+      },
+      "trigger": {
+        "en": "The operator opens or refreshes the board.",
+        "pt-BR": "O operador abre ou atualiza o quadro."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Optional exact owner filter.",
+            "pt-BR": "Filtro opcional por responsável com correspondência exata."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Load all retained opportunities, optionally filtered by owner.",
+            "pt-BR": "Carregar todas as oportunidades preservadas, opcionalmente filtradas por responsável."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Group by stage and sort cards by update time descending and ID ascending.",
+            "pt-BR": "Agrupar por etapa e ordenar cartões por horário de atualização decrescente e ID crescente."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "An unknown owner yields empty columns; storage failure returns unavailable.",
+            "pt-BR": "Responsável desconhecido produz colunas vazias; falha de armazenamento retorna indisponível."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return all five columns with each card ID, fields, stage, and version.",
+            "pt-BR": "Retornar as cinco colunas com ID, campos, etapa e versão de cada cartão."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "No data is changed.",
+            "pt-BR": "Nenhum dado é alterado."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "Repeated reads of unchanged data preserve the same order.",
+            "pt-BR": "Consultas repetidas de dados inalterados preservam a mesma ordem."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-STORE"
+      ],
+      "needs": [
+        "N-02",
+        "N-04"
+      ],
+      "rules": [
+        "R-07",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-02",
+        "E-03"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-004-01",
+          "text": {
+            "en": "The board includes active and closed cards in their correct columns.",
+            "pt-BR": "O quadro inclui cartões ativos e encerrados nas colunas corretas."
+          }
+        },
+        {
+          "id": "AC-CRM-004-02",
+          "text": {
+            "en": "Owner filtering is exact and leaves other records unchanged.",
+            "pt-BR": "O filtro por responsável é exato e não altera os demais registros."
+          }
+        },
+        {
+          "id": "AC-CRM-004-03",
+          "text": {
+            "en": "Cards have deterministic order within every column.",
+            "pt-BR": "Cartões têm ordem determinística em cada coluna."
+          }
+        },
+        {
+          "id": "AC-CRM-004-04",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-01",
+        "ACT-02",
+        "ACT-03"
+      ]
+    },
+    {
+      "id": "UC-CRM-005",
+      "title": {
+        "en": "Close as won",
+        "pt-BR": "Encerrar como ganha"
+      },
+      "actor": "ACT-02",
+      "objective": {
+        "en": "Record a successful sales outcome from Proposal.",
+        "pt-BR": "Registrar resultado comercial positivo a partir de Proposta."
+      },
+      "trigger": {
+        "en": "The operator marks a Proposal card as won.",
+        "pt-BR": "O operador marca um cartão Proposta como ganho."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Opportunity ID, reason, expected version.",
+            "pt-BR": "ID da oportunidade, motivo e versão esperada."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Validate reason and version, then confirm PROPOSAL stage.",
+            "pt-BR": "Validar motivo e versão e confirmar a etapa PROPOSAL."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Commit WON stage, version increment, stage event, and reason note together.",
+            "pt-BR": "Gravar etapa WON, incremento de versão, evento de etapa e nota do motivo juntos."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "Other source stages, blank reason, stale version, unknown ID, or storage failure return their defined errors.",
+            "pt-BR": "Outras etapas de origem, motivo vazio, versão desatualizada, ID desconhecido ou falha de armazenamento retornam os erros definidos."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return WON and the new version.",
+            "pt-BR": "Retornar WON e a nova versão."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "The card becomes terminal with one event and one reason note.",
+            "pt-BR": "O cartão torna-se terminal com um evento e uma nota de motivo."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "A rejected closure preserves the prior card and history.",
+            "pt-BR": "Um encerramento rejeitado preserva cartão e histórico anteriores."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-ID",
+        "CAP-CLOCK",
+        "CAP-STORE"
+      ],
+      "needs": [
+        "N-05"
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "R-05",
+        "R-06",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-02",
+        "E-03"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-005-01",
+          "text": {
+            "en": "A PROPOSAL card closes as WON with one note, event, and version increment.",
+            "pt-BR": "Um cartão PROPOSAL é encerrado como WON com uma nota, evento e incremento de versão."
+          }
+        },
+        {
+          "id": "AC-CRM-005-02",
+          "text": {
+            "en": "A NEW or QUALIFIED card cannot close as WON.",
+            "pt-BR": "Um cartão NEW ou QUALIFIED não pode ser encerrado como WON."
+          }
+        },
+        {
+          "id": "AC-CRM-005-03",
+          "text": {
+            "en": "A closed card cannot close again.",
+            "pt-BR": "Um cartão encerrado não pode ser encerrado novamente."
+          }
+        },
+        {
+          "id": "AC-CRM-005-04",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-02"
+      ]
+    },
+    {
+      "id": "UC-CRM-006",
+      "title": {
+        "en": "Close as lost",
+        "pt-BR": "Encerrar como perdida"
+      },
+      "actor": "ACT-02",
+      "objective": {
+        "en": "Record an unsuccessful sales outcome from an active stage.",
+        "pt-BR": "Registrar resultado comercial negativo a partir de uma etapa ativa."
+      },
+      "trigger": {
+        "en": "The operator marks an active card as lost.",
+        "pt-BR": "O operador marca um cartão ativo como perdido."
+      },
+      "inputs": [
+        {
+          "id": "I-01",
+          "text": {
+            "en": "Opportunity ID, reason, expected version.",
+            "pt-BR": "ID da oportunidade, motivo e versão esperada."
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "id": "P-01",
+          "text": {
+            "en": "The requesting actor is authenticated and permitted for this case.",
+            "pt-BR": "O ator solicitante está autenticado e permitido para este caso."
+          }
+        }
+      ],
+      "main_flow": [
+        {
+          "id": "F-01",
+          "text": {
+            "en": "Validate reason and version, then confirm an active stage.",
+            "pt-BR": "Validar motivo e versão e confirmar uma etapa ativa."
+          }
+        },
+        {
+          "id": "F-02",
+          "text": {
+            "en": "Commit LOST stage, version increment, stage event, and reason note together.",
+            "pt-BR": "Gravar etapa LOST, incremento de versão, evento de etapa e nota do motivo juntos."
+          }
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "X-01",
+          "text": {
+            "en": "Already closed, blank reason, stale version, unknown ID, or storage failure return their defined errors.",
+            "pt-BR": "Já encerrada, motivo vazio, versão desatualizada, ID desconhecido ou falha de armazenamento retornam os erros definidos."
+          }
+        }
+      ],
+      "results": [
+        {
+          "id": "O-01",
+          "text": {
+            "en": "Return LOST and the new version.",
+            "pt-BR": "Retornar LOST e a nova versão."
+          }
+        }
+      ],
+      "effects": [
+        {
+          "id": "E-01",
+          "text": {
+            "en": "The card becomes terminal with one event and one reason note.",
+            "pt-BR": "O cartão torna-se terminal com um evento e uma nota de motivo."
+          }
+        }
+      ],
+      "guarantees": [
+        {
+          "id": "G-01",
+          "text": {
+            "en": "A rejected closure preserves the prior card and history.",
+            "pt-BR": "Um encerramento rejeitado preserva cartão e histórico anteriores."
+          }
+        }
+      ],
+      "dependencies": [
+        "CAP-ID",
+        "CAP-CLOCK",
+        "CAP-STORE"
+      ],
+      "needs": [
+        "N-05"
+      ],
+      "rules": [
+        "R-03",
+        "R-04",
+        "R-05",
+        "R-06",
+        "R-08"
+      ],
+      "entities": [
+        "E-01",
+        "E-02",
+        "E-03"
+      ],
+      "criteria": [
+        {
+          "id": "AC-CRM-006-01",
+          "text": {
+            "en": "Each active stage may close as LOST with one note, event, and version increment.",
+            "pt-BR": "Cada etapa ativa pode ser encerrada como LOST com uma nota, evento e incremento de versão."
+          }
+        },
+        {
+          "id": "AC-CRM-006-02",
+          "text": {
+            "en": "A closed card cannot close as LOST again.",
+            "pt-BR": "Um cartão encerrado não pode ser encerrado novamente como LOST."
+          }
+        },
+        {
+          "id": "AC-CRM-006-03",
+          "text": {
+            "en": "A stale version leaves the card, notes, and history unchanged.",
+            "pt-BR": "Uma versão desatualizada mantém cartão, notas e histórico inalterados."
+          }
+        },
+        {
+          "id": "AC-CRM-006-04",
+          "text": {
+            "en": "A missing or unpermitted actor is denied before any domain or persistence effect.",
+            "pt-BR": "Ator ausente ou sem permissão é recusado antes de qualquer efeito de domínio ou persistência."
+          }
+        }
+      ],
+      "permitted_actors": [
+        "ACT-02"
+      ]
+    }
+  ],
+  "quality_obligations": [
+    {
+      "id": "Q-01",
+      "text": {
+        "en": "The demonstration binds to 127.0.0.1 and authenticates each API request. Every case denies unpermitted actors before effects.",
+        "pt-BR": "A demonstração escuta em 127.0.0.1 e autentica cada requisição à API. Cada caso recusa atores sem permissão antes dos efeitos."
+      }
+    },
+    {
+      "id": "Q-02",
+      "text": {
+        "en": "Stage changes and closures are atomic with their events; note insertion is atomic with its version increment.",
+        "pt-BR": "Mudanças de etapa e encerramentos são atômicos com seus eventos; inclusão de notas é atômica com o incremento de versão."
+      }
+    },
+    {
+      "id": "Q-03",
+      "text": {
+        "en": "A conflicting update is observable as a distinct result so a client can refresh the board and retry deliberately.",
+        "pt-BR": "Uma atualização conflitante é observável como resultado distinto para o cliente atualizar o quadro e decidir se tenta novamente."
+      }
+    },
+    {
+      "id": "Q-04",
+      "text": {
+        "en": "The board returns all records for this small local demonstration. Pagination and throughput targets are outside its scope.",
+        "pt-BR": "O quadro retorna todos os registros desta pequena demonstração local. Paginação e metas de vazão estão fora do escopo."
+      }
+    },
+    {
+      "id": "Q-05",
+      "text": {
+        "en": "No case deletes an opportunity, note, or stage event. Database backup and restore belong to the operator's environment.",
+        "pt-BR": "Nenhum caso exclui oportunidade, nota ou evento de etapa. Backup e restauração do banco pertencem ao ambiente do operador."
+      }
+    },
+    {
+      "id": "Q-06",
+      "text": {
+        "en": "The UI must expose a non-drag alternative for moving a card through an explicit stage control.",
+        "pt-BR": "A interface deve oferecer alternativa ao arrastar para mover um cartão por controle explícito de etapa."
+      }
+    }
+  ],
+  "glossary": [
+    {
+      "term": {
+        "en": "Card",
+        "pt-BR": "Cartão"
+      },
+      "meaning": {
+        "en": "Visual representation of one opportunity, not another business entity.",
+        "pt-BR": "Representação visual de uma oportunidade, não outra entidade de negócio."
+      }
+    },
+    {
+      "term": {
+        "en": "Active stage",
+        "pt-BR": "Etapa ativa"
+      },
+      "meaning": {
+        "en": "NEW, QUALIFIED, or PROPOSAL; a card may move while in one of these stages.",
+        "pt-BR": "NEW, QUALIFIED ou PROPOSAL; um cartão pode ser movido enquanto está em uma dessas etapas."
+      }
+    },
+    {
+      "term": {
+        "en": "Terminal outcome",
+        "pt-BR": "Resultado terminal"
+      },
+      "meaning": {
+        "en": "WON or LOST; closure is retained and is not reversible in this baseline.",
+        "pt-BR": "WON ou LOST; o encerramento é preservado e não pode ser revertido nesta baseline."
+      }
+    },
+    {
+      "term": {
+        "en": "Expected version",
+        "pt-BR": "Versão esperada"
+      },
+      "meaning": {
+        "en": "The version observed by the client before a mutation; used to detect concurrent changes.",
+        "pt-BR": "Versão observada pelo cliente antes de uma alteração; usada para detectar mudanças concorrentes."
+      }
+    }
+  ],
+  "evolution": {
+    "en": "This baseline is version 0.1.0 of the example specification. Any change to case results, stage transitions, or criteria needs an explicit revision and aligned implementation. OAL Alpha-v0.1.0-Alkimim remains the classification edition.",
+    "pt-BR": "Esta baseline é a versão 0.1.0 da especificação do exemplo. Mudanças em resultados, transições ou critérios exigem revisão explícita e implementação alinhada. OAL Alpha-v0.1.0-Alkimim continua sendo a edição da classificação."
+  }
+}

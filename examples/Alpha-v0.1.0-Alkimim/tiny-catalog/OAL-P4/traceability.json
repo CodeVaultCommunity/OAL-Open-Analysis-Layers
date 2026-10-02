@@ -1,0 +1,111 @@
+{
+  "project": "Tiny Catalog",
+  "version": "0.1.0",
+  "channel": "local browser and JSON over WSGI",
+  "interface_to_cases": [
+    {
+      "id": "UI-CAT-REGISTER",
+      "description": "Registration form and its refresh",
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-003"
+      ]
+    },
+    {
+      "id": "UI-CAT-LOOKUP",
+      "description": "Lookup form",
+      "case_ids": [
+        "UC-CAT-002"
+      ]
+    },
+    {
+      "id": "UI-CAT-LIST",
+      "description": "Initial load and refresh button",
+      "case_ids": [
+        "UC-CAT-003"
+      ]
+    },
+    {
+      "id": "UI-CAT-DEACTIVATE",
+      "description": "Item deactivate button and refresh",
+      "case_ids": [
+        "UC-CAT-004",
+        "UC-CAT-003"
+      ]
+    },
+    {
+      "id": "API-CAT-POST-ITEMS",
+      "description": "POST /items",
+      "case_ids": [
+        "UC-CAT-001"
+      ]
+    },
+    {
+      "id": "API-CAT-GET-ITEM",
+      "description": "GET /items/{code}",
+      "case_ids": [
+        "UC-CAT-002"
+      ]
+    },
+    {
+      "id": "API-CAT-GET-ITEMS",
+      "description": "GET /items",
+      "case_ids": [
+        "UC-CAT-003"
+      ]
+    },
+    {
+      "id": "API-CAT-DEACTIVATE",
+      "description": "POST /items/{code}/deactivate",
+      "case_ids": [
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "id": "UI-CAT-LANGUAGE",
+      "description": "Language switch",
+      "case_ids": []
+    },
+    {
+      "id": "UI-CAT-STATIC",
+      "description": "Static page and status messages",
+      "case_ids": []
+    }
+  ],
+  "cases_to_interface": [
+    {
+      "case_id": "UC-CAT-001",
+      "interface_element_ids": [
+        "UI-CAT-REGISTER",
+        "API-CAT-POST-ITEMS"
+      ]
+    },
+    {
+      "case_id": "UC-CAT-002",
+      "interface_element_ids": [
+        "UI-CAT-LOOKUP",
+        "API-CAT-GET-ITEM"
+      ]
+    },
+    {
+      "case_id": "UC-CAT-003",
+      "interface_element_ids": [
+        "UI-CAT-REGISTER",
+        "UI-CAT-LIST",
+        "UI-CAT-DEACTIVATE",
+        "API-CAT-GET-ITEMS"
+      ]
+    },
+    {
+      "case_id": "UC-CAT-004",
+      "interface_element_ids": [
+        "UI-CAT-DEACTIVATE",
+        "API-CAT-DEACTIVATE"
+      ]
+    }
+  ],
+  "interface_only": [
+    "UI-CAT-LANGUAGE",
+    "UI-CAT-STATIC"
+  ]
+}

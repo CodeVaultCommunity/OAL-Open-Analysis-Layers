@@ -1,0 +1,145 @@
+{
+  "model": "OAL Alpha-v0.1.0-Alkimim",
+  "status": "illustrative baseline",
+  "accountable_people": [
+    "Douglas de Oliveira Alkimim",
+    "Bruno Chevitarese"
+  ],
+  "transitions": [
+    {
+      "from": "needs",
+      "to": "ucs",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Organize the illustrative needs into stable cases, actors, outcomes, and acceptance criteria.",
+        "pt-BR": "Organizar as necessidades didáticas em casos estáveis, atores, resultados e critérios de aceite."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ],
+      "source_artifact": "needs-baseline.json",
+      "provenance_limit": "Needs baseline reconstructed from the existing UCS; not independent historical stakeholder evidence."
+    },
+    {
+      "from": "ucs",
+      "to": "adpm",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Model opportunities, notes, and stage events as entities; put stage policy in six cases; inject Store, Clock, and IdentifierProvider; deny forbidden actors before effects.",
+        "pt-BR": "Modelar oportunidades, notas e eventos de etapa como entidades; manter regras de etapa nos seis casos; injetar Store, Clock e IdentifierProvider; recusar atores sem permissão antes dos efeitos."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ]
+    },
+    {
+      "from": "ucs",
+      "to": "advs",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Plan a scenario for every UCS criterion, with active and closed stages, stale versions, atomic effects, and missing or forbidden actors.",
+        "pt-BR": "Planejar um cenário por critério da UCS, com etapas ativas e encerradas, versões obsoletas, efeitos atômicos e atores ausentes ou sem permissão."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ]
+    },
+    {
+      "from": [
+        "adpm",
+        "advs"
+      ],
+      "to": "adi",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Use Python cases, injected SQLite storage, and executable criterion-linked checks.",
+        "pt-BR": "Usar casos em Python, armazenamento SQLite injetado e verificações executáveis ligadas aos critérios."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ]
+    },
+    {
+      "from": "adi",
+      "to": "adib",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Expose callable cases through a loopback browser and JSON routes; select HTTP Basic credentials, representations, and status mapping.",
+        "pt-BR": "Expor os casos invocáveis por navegador local e rotas JSON; escolher credenciais HTTP Basic, representações e códigos de resposta."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "additional_sources": [
+        {
+          "layer": "ucs",
+          "version": "0.1.0",
+          "decisions_informed": "exposed outcomes and actor permissions"
+        }
+      ],
+      "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json"
+    }
+  ]
+}

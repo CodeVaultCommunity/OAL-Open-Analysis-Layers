@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oal-work-board-example"
+version = "0.1.0a0"
+description = "Local work-item board illustrating the OAL layers."
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "OAL contributors"}]
+dependencies = []
+
+[project.scripts]
+oal-work-board = "work_board.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"work_board.transport" = ["static/*.html", "static/*.css", "static/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

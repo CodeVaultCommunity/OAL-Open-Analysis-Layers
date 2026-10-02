@@ -1,0 +1,143 @@
+{
+  "project": "Tiny Catalog",
+  "specification_version": "0.1.0",
+  "classification": "UCS (OAL Alpha-v0.1.0-Alkimim)",
+  "domain": {
+    "id": "D-CAT",
+    "name": "Catalog",
+    "optional_organization": true
+  },
+  "use_cases": [
+    {
+      "id": "UC-CAT-001",
+      "name": "Register item",
+      "name_pt": "Cadastrar item",
+      "needs": [
+        "N-01"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-01",
+        "R-02"
+      ],
+      "dependencies": [],
+      "criteria": [
+        "AC-CAT-001-01",
+        "AC-CAT-001-02",
+        "AC-CAT-001-03",
+        "AC-CAT-001-04",
+        "AC-CAT-001-05",
+        "AC-CAT-001-06"
+      ],
+      "initiating_actor": "ACT-CAT-M",
+      "permitted_actors": [
+        "ACT-CAT-M"
+      ]
+    },
+    {
+      "id": "UC-CAT-002",
+      "name": "Get item",
+      "name_pt": "Consultar item",
+      "needs": [
+        "N-02"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-03",
+        "R-06"
+      ],
+      "dependencies": [],
+      "criteria": [
+        "AC-CAT-002-01",
+        "AC-CAT-002-02",
+        "AC-CAT-002-03",
+        "AC-CAT-002-04",
+        "AC-CAT-002-05",
+        "AC-CAT-002-06"
+      ],
+      "initiating_actor": "ACT-CAT-R",
+      "permitted_actors": [
+        "ACT-CAT-M",
+        "ACT-CAT-R"
+      ]
+    },
+    {
+      "id": "UC-CAT-003",
+      "name": "List available items",
+      "name_pt": "Listar itens disponíveis",
+      "needs": [
+        "N-02"
+      ],
+      "entities": [
+        "E-02"
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "dependencies": [],
+      "criteria": [
+        "AC-CAT-003-01",
+        "AC-CAT-003-02",
+        "AC-CAT-003-03",
+        "AC-CAT-003-04"
+      ],
+      "initiating_actor": "ACT-CAT-R",
+      "permitted_actors": [
+        "ACT-CAT-M",
+        "ACT-CAT-R"
+      ]
+    },
+    {
+      "id": "UC-CAT-004",
+      "name": "Deactivate item",
+      "name_pt": "Desativar item",
+      "needs": [
+        "N-03"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "dependencies": [
+        "UC-CAT-002"
+      ],
+      "criteria": [
+        "AC-CAT-004-01",
+        "AC-CAT-004-02",
+        "AC-CAT-004-03",
+        "AC-CAT-004-04",
+        "AC-CAT-004-05",
+        "AC-CAT-004-06"
+      ],
+      "initiating_actor": "ACT-CAT-M",
+      "permitted_actors": [
+        "ACT-CAT-M"
+      ]
+    }
+  ],
+  "shared_criteria": [
+    "AC-SHARED-01"
+  ],
+  "actors": [
+    {
+      "id": "ACT-CAT-M",
+      "name": "maintainer",
+      "description": "May execute all four cases."
+    },
+    {
+      "id": "ACT-CAT-R",
+      "name": "reader",
+      "description": "May retrieve and list items."
+    }
+  ]
+}

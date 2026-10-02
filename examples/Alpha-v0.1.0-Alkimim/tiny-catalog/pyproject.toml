@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oal-tiny-catalog-example"
+version = "0.1.0a0"
+description = "Local Python catalog illustrating all five OAL responsibilities."
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "OAL contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest==9.0.2"]
+
+[project.scripts]
+oal-catalog = "tiny_catalog.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"tiny_catalog.transport" = ["static/*.html", "static/*.css", "static/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+markers = [
+  "unit: entity or tool without external services or other tools",
+  "integration: tool consuming external services or other tools",
+  "behavior: P3 check whose subject is a use case; ADVS identity is recorded separately",
+  "interaction: a check of the selected P4 channel",
+  "criterion(*ids): UCS acceptance criteria verified by this scenario",
+]
+filterwarnings = ["error::ResourceWarning"]

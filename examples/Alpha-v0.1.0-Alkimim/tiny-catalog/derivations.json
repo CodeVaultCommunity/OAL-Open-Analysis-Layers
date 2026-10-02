@@ -1,0 +1,135 @@
+{
+  "model": "OAL Alpha-v0.1.0-Alkimim",
+  "status": "illustrative baseline",
+  "accountable_people": [
+    "Douglas de Oliveira Alkimim",
+    "Bruno Chevitarese"
+  ],
+  "transitions": [
+    {
+      "from": "needs",
+      "to": "ucs",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Organize the illustrative needs into stable cases, actors, outcomes, and acceptance criteria.",
+        "pt-BR": "Organizar as necessidades didáticas em casos estáveis, atores, resultados e critérios de aceite."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "source_artifact": "needs-baseline.json",
+      "provenance_limit": "Needs baseline reconstructed from the existing UCS; not independent historical stakeholder evidence."
+    },
+    {
+      "from": "ucs",
+      "to": "adpm",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Model ItemKey and Item as data entities; keep catalog policy in four cases; inject ItemStore and the lookup case; check permissions before effects.",
+        "pt-BR": "Modelar ItemKey e Item como entidades de dados; manter regras do catálogo nos quatro casos; injetar ItemStore e o caso de consulta; verificar permissões antes dos efeitos."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "from": "ucs",
+      "to": "advs",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Plan one scenario per UCS criterion, plus entity, storage, concurrency, and HTTP checks; include missing and forbidden actors.",
+        "pt-BR": "Planejar um cenário por critério da UCS, além de verificações de entidade, armazenamento, concorrência e HTTP; incluir atores ausentes e sem permissão."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "from": [
+        "adpm",
+        "advs"
+      ],
+      "to": "adi",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Use Python cases, injected SQLite storage, and executable criterion-linked checks.",
+        "pt-BR": "Usar casos em Python, armazenamento SQLite injetado e verificações executáveis ligadas aos critérios."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "from": "adi",
+      "to": "adib",
+      "source_version": "0.1.0",
+      "destination_version": "0.1.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Expose callable cases through a loopback browser and JSON routes; select HTTP Basic credentials, representations, and status mapping.",
+        "pt-BR": "Expor os casos invocáveis por navegador local e rotas JSON; escolher credenciais HTTP Basic, representações e códigos de resposta."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "additional_sources": [
+        {
+          "layer": "ucs",
+          "version": "0.1.0",
+          "decisions_informed": "exposed outcomes and actor permissions"
+        }
+      ],
+      "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json"
+    }
+  ]
+}

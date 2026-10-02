@@ -1,0 +1,45 @@
+{
+  "model": "OAL Alpha-v0.1.0-Alkimim",
+  "status": "illustrative baseline",
+  "transitions": [
+    {
+      "from": "needs", "to": "ucs", "source_version": "0.1.0", "destination_version": "0.1.0",
+      "scope": "all six illustrative cases", "responsible_people": ["Douglas de Oliveira Alkimim"],
+      "case_ids": ["UC-WB-001", "UC-WB-002", "UC-WB-003", "UC-WB-004", "UC-WB-005", "UC-WB-006"],
+      "source_artifact": "needs-baseline.json", "destination_artifact": "OAL-P1/ucs.json",
+      "provenance_limit": "Needs reconstructed from UCS, not independent stakeholder evidence.",
+      "added_decisions": "Name six cases, allowed actors, workflow outcomes, and acceptance criteria."
+    },
+    {
+      "from": "ucs", "to": "adpm", "source_version": "0.1.0", "destination_version": "0.1.0",
+      "scope": "all six illustrative cases", "responsible_people": ["Douglas de Oliveira Alkimim"],
+      "case_ids": ["UC-WB-001", "UC-WB-002", "UC-WB-003", "UC-WB-004", "UC-WB-005", "UC-WB-006"],
+      "source_artifact": "OAL-P1/ucs.json", "destination_artifact": "OAL-P2/adpm/MODEL.md",
+      "added_decisions": "Separate six cases, item and comment data, store capabilities, and injected providers."
+    },
+    {
+      "from": "ucs", "to": "advs", "source_version": "0.1.0", "destination_version": "0.1.0",
+      "scope": "all six illustrative cases", "responsible_people": ["Douglas de Oliveira Alkimim"],
+      "case_ids": ["UC-WB-001", "UC-WB-002", "UC-WB-003", "UC-WB-004", "UC-WB-005", "UC-WB-006"],
+      "source_artifact": "OAL-P1/ucs.json", "destination_artifact": "OAL-P2/advs/behavioral-tests.json",
+      "added_decisions": "Assign one behavioral-test identity to each case and list criterion-linked checks."
+    },
+    {
+      "from": ["adpm", "advs"], "to": "adi", "source_version": "0.1.0", "destination_version": "0.1.0",
+      "scope": "all six illustrative cases", "responsible_people": ["Douglas de Oliveira Alkimim"],
+      "case_ids": ["UC-WB-001", "UC-WB-002", "UC-WB-003", "UC-WB-004", "UC-WB-005", "UC-WB-006"],
+      "source_artifacts": ["OAL-P2/adpm/MODEL.md", "OAL-P2/advs/behavioral-tests.json"],
+      "destination_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "added_decisions": "Use callable Python cases, SQLite storage, and atomic version checks."
+    },
+    {
+      "from": "adi", "to": "adib", "source_version": "0.1.0", "destination_version": "0.1.0",
+      "scope": "all six illustrative cases", "responsible_people": ["Douglas de Oliveira Alkimim"],
+      "case_ids": ["UC-WB-001", "UC-WB-002", "UC-WB-003", "UC-WB-004", "UC-WB-005", "UC-WB-006"],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md", "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json",
+      "additional_sources": [{"layer": "ucs", "version": "0.1.0", "decisions_informed": "actor permissions and exposed outcomes"}],
+      "added_decisions": "Expose the cases through a loopback browser and JSON API with HTTP Basic identity."
+    }
+  ]
+}

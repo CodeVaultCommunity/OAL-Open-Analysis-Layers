@@ -1,0 +1,73 @@
+{
+  "project": "Work Board",
+  "version": "0.1.0",
+  "scope": "One local team, work items grouped by project, a three-state workflow, and discussion.",
+  "actors": {
+    "manager": "Creates, assigns, advances, comments, and reads.",
+    "contributor": "Creates, advances, comments, and reads.",
+    "viewer": "Reads the board and comments."
+  },
+  "out_of_scope": ["Sprints", "Time estimates", "Notifications", "Public deployment", "User administration"],
+  "use_cases": [
+    {
+      "id": "UC-WB-001", "name": "Create work item", "needs": ["N-WB-001"],
+      "actors": ["manager", "contributor"],
+      "trigger": "An allowed actor submits a project and title.",
+      "result": "A new item is in backlog with version 1 and no assignee.",
+      "criteria": [
+        {"id": "AC-WB-001-01", "text": "A valid item stores project, title, description, priority, backlog status, and version 1."},
+        {"id": "AC-WB-001-02", "text": "A viewer or invalid required fields cannot create an item."}
+      ]
+    },
+    {
+      "id": "UC-WB-002", "name": "Assign work item", "needs": ["N-WB-002"],
+      "actors": ["manager"],
+      "trigger": "A manager names an assignee and the expected version.",
+      "result": "The assignee is recorded and the version increases.",
+      "criteria": [
+        {"id": "AC-WB-002-01", "text": "Only a manager can assign an existing item."},
+        {"id": "AC-WB-002-02", "text": "A stale version is rejected without overwriting a newer assignment."}
+      ]
+    },
+    {
+      "id": "UC-WB-003", "name": "Advance work item", "needs": ["N-WB-003"],
+      "actors": ["manager", "contributor"],
+      "trigger": "An allowed actor requests the next state with the expected version.",
+      "result": "The item advances backlog → in_progress → done, one step at a time.",
+      "criteria": [
+        {"id": "AC-WB-003-01", "text": "A valid next step changes the state and increases the version."},
+        {"id": "AC-WB-003-02", "text": "A skipped step or stale version is rejected without changing the item."}
+      ]
+    },
+    {
+      "id": "UC-WB-004", "name": "Add comment", "needs": ["N-WB-004"],
+      "actors": ["manager", "contributor"],
+      "trigger": "An allowed actor submits comment text for an existing item.",
+      "result": "A comment records author, text, and time without changing the item version.",
+      "criteria": [
+        {"id": "AC-WB-004-01", "text": "A valid comment is retained with its actor and timestamp."},
+        {"id": "AC-WB-004-02", "text": "A viewer, empty text, or absent item cannot add a comment."}
+      ]
+    },
+    {
+      "id": "UC-WB-005", "name": "View board", "needs": ["N-WB-005"],
+      "actors": ["manager", "contributor", "viewer"],
+      "trigger": "An actor requests the board, optionally filtering project or state.",
+      "result": "Matching work items are returned without mutation.",
+      "criteria": [
+        {"id": "AC-WB-005-01", "text": "An allowed actor can see all items or only a selected project or state."},
+        {"id": "AC-WB-005-02", "text": "An unknown state filter is rejected."}
+      ]
+    },
+    {
+      "id": "UC-WB-006", "name": "View comments", "needs": ["N-WB-006"],
+      "actors": ["manager", "contributor", "viewer"],
+      "trigger": "An actor requests discussion for an item.",
+      "result": "Its comments are returned in time order without mutation.",
+      "criteria": [
+        {"id": "AC-WB-006-01", "text": "An allowed actor can read an item's comments, including an empty list."},
+        {"id": "AC-WB-006-02", "text": "An absent item is reported as absent."}
+      ]
+    }
+  ]
+}

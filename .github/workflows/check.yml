@@ -1,0 +1,32 @@
+name: Test OAL examples
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        example: [tiny-catalog, board-crm, work-board]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate OAL artifacts and local links
+        run: python examples/validate_oal.py
+      - name: Install example and test runner
+        run: |
+          python -m pip install -e "./examples/Alpha-v0.1.0-Alkimim/${{ matrix.example }}"
+          python -m pip install pytest==9.0.2
+      - name: Run example tests
+        working-directory: examples/Alpha-v0.1.0-Alkimim/${{ matrix.example }}
+        run: python -m pytest -q

@@ -1,0 +1,105 @@
+{
+  "project": "Board CRM",
+  "version": "0.1.0",
+  "ucs_version": "0.1.0",
+  "definition": "One directly linked behavioral test identity per UCS case; listed executable checks support that identity and are not additional directly linked behavioral tests.",
+  "tests": [
+    {
+      "id": "BT-CRM-001",
+      "ucs_case_id": "UC-CRM-001",
+      "ucs_criteria": [
+        "AC-CRM-001-01",
+        "AC-CRM-001-02",
+        "AC-CRM-001-03",
+        "AC-CRM-001-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_create_checks_fields_and_initial_event",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CRM-002",
+      "ucs_case_id": "UC-CRM-002",
+      "ucs_criteria": [
+        "AC-CRM-002-01",
+        "AC-CRM-002-02",
+        "AC-CRM-002-03",
+        "AC-CRM-002-04",
+        "AC-CRM-002-05"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_move_is_adjacent_and_versioned",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CRM-003",
+      "ucs_case_id": "UC-CRM-003",
+      "ucs_criteria": [
+        "AC-CRM-003-01",
+        "AC-CRM-003-02",
+        "AC-CRM-003-03",
+        "AC-CRM-003-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_notes_increment_once_and_work_after_closure",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CRM-004",
+      "ucs_case_id": "UC-CRM-004",
+      "ucs_criteria": [
+        "AC-CRM-004-01",
+        "AC-CRM-004-02",
+        "AC-CRM-004-03",
+        "AC-CRM-004-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_board_includes_all_columns_and_exact_owner_filter",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CRM-005",
+      "ucs_case_id": "UC-CRM-005",
+      "ucs_criteria": [
+        "AC-CRM-005-01",
+        "AC-CRM-005-02",
+        "AC-CRM-005-03",
+        "AC-CRM-005-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_won_requires_proposal_and_records_reason",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CRM-006",
+      "ucs_case_id": "UC-CRM-006",
+      "ucs_criteria": [
+        "AC-CRM-006-01",
+        "AC-CRM-006-02",
+        "AC-CRM-006-03",
+        "AC-CRM-006-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_lost_from_each_active_stage_and_stale_rejection",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    }
+  ]
+}

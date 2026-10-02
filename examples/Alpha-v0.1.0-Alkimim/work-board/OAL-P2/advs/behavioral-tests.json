@@ -1,0 +1,13 @@
+{
+  "project": "Work Board",
+  "version": "0.1.0",
+  "definition": "One directly linked behavioral-test identity per UCS case; executable functions are supporting checks.",
+  "tests": [
+    {"id": "BT-WB-001", "ucs_case_id": "UC-WB-001", "ucs_criteria": ["AC-WB-001-01", "AC-WB-001-02"], "supporting_checks": ["tests/p3/test_cases.py::test_create_item"]},
+    {"id": "BT-WB-002", "ucs_case_id": "UC-WB-002", "ucs_criteria": ["AC-WB-002-01", "AC-WB-002-02"], "supporting_checks": ["tests/p3/test_cases.py::test_assign_item"]},
+    {"id": "BT-WB-003", "ucs_case_id": "UC-WB-003", "ucs_criteria": ["AC-WB-003-01", "AC-WB-003-02"], "supporting_checks": ["tests/p3/test_cases.py::test_transition_item"]},
+    {"id": "BT-WB-004", "ucs_case_id": "UC-WB-004", "ucs_criteria": ["AC-WB-004-01", "AC-WB-004-02"], "supporting_checks": ["tests/p3/test_cases.py::test_add_comment"]},
+    {"id": "BT-WB-005", "ucs_case_id": "UC-WB-005", "ucs_criteria": ["AC-WB-005-01", "AC-WB-005-02"], "supporting_checks": ["tests/p3/test_cases.py::test_view_board"]},
+    {"id": "BT-WB-006", "ucs_case_id": "UC-WB-006", "ucs_criteria": ["AC-WB-006-01", "AC-WB-006-02"], "supporting_checks": ["tests/p3/test_cases.py::test_view_comments"]}
+  ]
+}

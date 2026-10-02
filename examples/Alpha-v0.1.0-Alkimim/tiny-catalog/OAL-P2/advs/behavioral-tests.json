@@ -1,0 +1,81 @@
+{
+  "project": "Tiny Catalog",
+  "version": "0.1.0",
+  "ucs_version": "0.1.0",
+  "definition": "One directly linked behavioral test identity per UCS case; listed executable checks support that identity and are not additional directly linked behavioral tests.",
+  "tests": [
+    {
+      "id": "BT-CAT-001",
+      "ucs_case_id": "UC-CAT-001",
+      "ucs_criteria": [
+        "AC-CAT-001-01",
+        "AC-CAT-001-02",
+        "AC-CAT-001-03",
+        "AC-CAT-001-04",
+        "AC-CAT-001-05",
+        "AC-CAT-001-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_001_register.py",
+        "tests/p3/test_authorization.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CAT-002",
+      "ucs_case_id": "UC-CAT-002",
+      "ucs_criteria": [
+        "AC-CAT-002-01",
+        "AC-CAT-002-02",
+        "AC-CAT-002-03",
+        "AC-CAT-002-04",
+        "AC-CAT-002-05",
+        "AC-CAT-002-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_002_get.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CAT-003",
+      "ucs_case_id": "UC-CAT-003",
+      "ucs_criteria": [
+        "AC-CAT-003-01",
+        "AC-CAT-003-02",
+        "AC-CAT-003-03",
+        "AC-CAT-003-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_003_list.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    },
+    {
+      "id": "BT-CAT-004",
+      "ucs_case_id": "UC-CAT-004",
+      "ucs_criteria": [
+        "AC-CAT-004-01",
+        "AC-CAT-004-02",
+        "AC-CAT-004-03",
+        "AC-CAT-004-04",
+        "AC-CAT-004-05",
+        "AC-CAT-004-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_004_deactivate.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run"
+    }
+  ]
+}

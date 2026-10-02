@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the OAL reference model when discussing or adapting its rules."
+title: "OAL: Open Analysis Layers — Alpha-v0.1.0-Alkimim"
+type: software
+version: Alpha-v0.1.0-Alkimim
+license: MIT
+authors:
+  - family-names: Alkimim
+    given-names: Douglas de Oliveira
+  - family-names: Chevitarese
+    given-names: Bruno
+abstract: >-
+  A reference model connecting use-case specification (UCS),
+  a program model (ADPM), verification specification (ADVS),
+  implementation (ADI), and interaction boundaries (ADIB) through
+  accountable derivations and traceable case-to-interface mappings.
+keywords:
+  - use cases
+  - requirements engineering
+  - verification
+  - software architecture
+  - traceability
