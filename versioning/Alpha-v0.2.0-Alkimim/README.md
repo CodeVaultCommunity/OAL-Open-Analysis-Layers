@@ -58,7 +58,7 @@ OAL stands for Open Analysis Layers. The model organizes development responsibil
 
 7. **Derivation engines.** An Engine LX-LY is a metamodel that specifies the construction of a deterministic logic from a selected source model to a selected destination model, and the execution of that logic on artifacts.
 
-   **Construction and execution.** For a source model $M_n \models L_n$ and a destination model $M_{n+1} \models L_{n+1}$: construction $\operatorname{Build}_E(M_n, M_{n+1})$ yields a transformer $T[M_n, M_{n+1}]$ or a construction failure; execution $T[M_n, M_{n+1}]\,(a)$ yields $b$, where $a \in A(M_n)$ and $b \in A(M_{n+1})$; $a$ and $b$ instantiate the selected source and destination models, respectively. $\operatorname{Build}$ is an explanatory notation for the operation foreseen by the engine metamodel; it does not require an executable factory, another mandatory metalevel, or a separate service. The canonical names are Engine Needs-L1, Engine L1-L2, Engine L2-L3, and Engine L3-L4.
+   **Construction and execution.** For a source model $M_n \models L_n$ and a destination model $M_{n+1} \models L_{n+1}$: construction $\mathrm{Build}_E(M_n, M_{n+1})$ yields a transformer $T[M_n, M_{n+1}]$ or a construction failure; execution $T[M_n, M_{n+1}]\,(a)$ yields $b$, where $a \in A(M_n)$ and $b \in A(M_{n+1})$; $a$ and $b$ instantiate the selected source and destination models, respectively. $\mathrm{Build}$ is an explanatory notation for the operation foreseen by the engine metamodel; it does not require an executable factory, another mandatory metalevel, or a separate service. The canonical names are Engine Needs-L1, Engine L1-L2, Engine L2-L3, and Engine L3-L4.
 
    **Declared contract.** A claimed engine implementation must define, in verifiable form:
 
@@ -89,7 +89,7 @@ OAL stands for Open Analysis Layers. The model organizes development responsibil
 
 8. **Conversion, translation, derivation, and realization substitution.** Four operations are distinct and have different obligations:
 
-   - **(a)** **Conversion between representations of one model.** Valid documents of a model may use several representations, such as JSON, Markdown, or TeX. A conversion $C_{rs}$ maps valid documents in representation $r$ to documents in representation $s$ of the same model $M$. For every document $x$ in the declared domain, $\operatorname{decode}_s(C_{rs}(x)) \equiv_M \operatorname{decode}_r(x)$, where $\operatorname{decode}$ recovers the model content and $\equiv_M$ is the declared equivalence of that content. A round-trip claim also states the equivalence criterion for the return. Byte identity and editorial conventions outside the model are neither required nor evidence of content preservation.
+   - **(a)** **Conversion between representations of one model.** Valid documents of a model may use several representations, such as JSON, Markdown, or TeX. A conversion $C_{rs}$ maps valid documents in representation $r$ to documents in representation $s$ of the same model $M$. For every document $x$ in the declared domain, $\mathrm{decode}_s(C_{rs}(x)) \equiv_M \mathrm{decode}_r(x)$, where $\mathrm{decode}$ recovers the model content and $\equiv_M$ is the declared equivalence of that content. A round-trip claim also states the equivalence criterion for the return. Byte identity and editorial conventions outside the model are neither required nor evidence of content preservation.
    - **(b)** **Translation between distinct models of the same layer.** Models $M, N \in \mathcal{M}_i$ share the layer's defining responsibilities, but membership in the same layer does not imply a total, invertible, or lossless translation. A translation requires an explicit mapping, a declared domain, and the obligations it preserves. Information or behavior outside the mapping is lost or changed and is recorded. A shared layer label does not presume a universal translator.
    - **(c)** **Derivation between layers.** A derivation produces artifacts of the selected destination model, preserves the applicable source identities, contracts, criteria, and permissions, and may add decisions that belong to the destination responsibility. It records provenance and decisions under rule 2. A manual derivation can be documented without claiming a constructed or executed transformer. A claim of engine realization, transformer construction, or transformer execution additionally meets rule 7. Derivation correctness does not require a structural copy of the source.
    - **(d)** **Translation or substitution between realizations of the same named engine.** This is subject to the selected source and destination models, the declared domains, and the guarantees of those realizations. It preserves the required inputs, destination responsibility, case links, and derivation obligations while recording implementation-specific losses and decisions.
@@ -334,11 +334,11 @@ $$
 **Construction.** A successful construction according to engine $E$ is written as:
 
 $$
-\operatorname{Build}_E(M_n, M_{n+1})
+\mathrm{Build}_E(M_n, M_{n+1})
 \longrightarrow T[M_n, M_{n+1}].
 $$
 
-The arrow records one construction with its fixed choices. Other choices may produce a different transformer, and construction may fail. $\operatorname{Build}$ names the construction operation specified by the engine; it does not prescribe an executable factory.
+The arrow records one construction with its fixed choices. Other choices may produce a different transformer, and construction may fail. $\mathrm{Build}$ names the construction operation specified by the engine; it does not prescribe an executable factory.
 
 **Execution.** Let $T = T[M_n, M_{n+1}]$ be that constructed transformer. Under its declared preconditions and operational conditions:
 
@@ -371,7 +371,7 @@ A composition $T_{13}(a) = T_{23}(T_{12}(a))$ is defined only on $D_{13} \subset
 
 Two models conforming to the same layer may admit different representations while preserving that layer’s defining contracts. Four operations remain distinct: converting representations of the same model, translating between distinct models of the same layer, deriving between layers, and substituting realizations of the same named engine.
 
-For representations $r$ and $s$ of one model $M$, a lossless conversion of model content can be written as $\operatorname{decode}_s(C_{rs}(x)) \equiv_M \operatorname{decode}_r(x)$, with a declared domain for $C_{rs}$, a definition of the decoding functions, and a declared equivalence $\equiv_M$; round-trip claims also state the equivalence criterion for the return. A conversion is not a derivation, a shared layer is not a universal translator, and a documented loss does not satisfy a contract that requires preserving the lost information.
+For representations $r$ and $s$ of one model $M$, a lossless conversion of model content can be written as $\mathrm{decode}_s(C_{rs}(x)) \equiv_M \mathrm{decode}_r(x)$, with a declared domain for $C_{rs}$, a definition of the decoding functions, and a declared equivalence $\equiv_M$; round-trip claims also state the equivalence criterion for the return. A conversion is not a derivation, a shared layer is not a universal translator, and a documented loss does not satisfy a contract that requires preserving the lost information.
 
 Examples: converting the Board CRM UCS JSON into its LaTeX renderings is a representation conversion of one model; translating two L1 models with different field names requires a mapping; deriving ADMV from UCS adds ADPM and ADVS decisions and is not a copy of the UCS.
 

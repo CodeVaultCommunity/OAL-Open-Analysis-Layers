@@ -213,7 +213,7 @@ that transformer on artifacts.
 For an adjacent-layer transition, a successful construction can be written as:
 
 $$
-\operatorname{Build}_E(M_n,M_{n+1})
+\mathrm{Build}_E(M_n,M_{n+1})
 \longrightarrow T[M_n,M_{n+1}].
 $$
 

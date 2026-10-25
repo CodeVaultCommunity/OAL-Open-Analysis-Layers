@@ -58,7 +58,7 @@ OAL significa Open Analysis Layers. O modelo organiza as responsabilidades de de
 
 7. **Motores de derivação.** Um Motor LX-LY é um metamodelo que especifica a construção de uma lógica determinística a partir de um modelo de origem selecionado para um modelo de destino selecionado e a execução dessa lógica sobre artefatos.
 
-   **Construção e execução.** Para um modelo de origem $M_n \models L_n$ e um modelo de destino $M_{n+1} \models L_{n+1}$: a construção $\operatorname{Build}_E(M_n, M_{n+1})$ produz um transformador $T[M_n, M_{n+1}]$ ou uma falha de construção; a execução $T[M_n, M_{n+1}]\,(a)$ produz $b$, em que $a \in A(M_n)$ e $b \in A(M_{n+1})$; $a$ e $b$ instanciam, respectivamente, os modelos selecionados de origem e destino. $\operatorname{Build}$ é uma notação explicativa da operação prevista pelo metamodelo do motor; não exige uma fábrica executável, outro metanível obrigatório ou um serviço separado. Os nomes canônicos são Motor Needs-L1, Motor L1-L2, Motor L2-L3 e Motor L3-L4.
+   **Construção e execução.** Para um modelo de origem $M_n \models L_n$ e um modelo de destino $M_{n+1} \models L_{n+1}$: a construção $\mathrm{Build}_E(M_n, M_{n+1})$ produz um transformador $T[M_n, M_{n+1}]$ ou uma falha de construção; a execução $T[M_n, M_{n+1}]\,(a)$ produz $b$, em que $a \in A(M_n)$ e $b \in A(M_{n+1})$; $a$ e $b$ instanciam, respectivamente, os modelos selecionados de origem e destino. $\mathrm{Build}$ é uma notação explicativa da operação prevista pelo metamodelo do motor; não exige uma fábrica executável, outro metanível obrigatório ou um serviço separado. Os nomes canônicos são Motor Needs-L1, Motor L1-L2, Motor L2-L3 e Motor L3-L4.
 
    **Contrato declarado.** Uma implementação declarada de motor deve definir, de forma verificável:
 
@@ -89,7 +89,7 @@ OAL significa Open Analysis Layers. O modelo organiza as responsabilidades de de
 
 8. **Conversão, tradução, derivação e substituição de realizações.** Quatro operações são distintas e têm obrigações diferentes:
 
-   - **(a)** **Conversão entre representações de um modelo.** Documentos válidos de um modelo podem usar várias representações, como JSON, Markdown ou TeX. Uma conversão $C_{rs}$ mapeia documentos válidos na representação $r$ para documentos na representação $s$ do mesmo modelo $M$. Para todo documento $x$ em seu domínio declarado, $\operatorname{decode}_s(C_{rs}(x)) \equiv_M \operatorname{decode}_r(x)$, em que $\operatorname{decode}$ recupera o conteúdo do modelo e $\equiv_M$ é a equivalência declarada desse conteúdo. Uma alegação de ida e volta também declara o critério de equivalência do retorno. Identidade de bytes e convenções editoriais fora do modelo não são exigidas nem são evidência de preservação do conteúdo.
+   - **(a)** **Conversão entre representações de um modelo.** Documentos válidos de um modelo podem usar várias representações, como JSON, Markdown ou TeX. Uma conversão $C_{rs}$ mapeia documentos válidos na representação $r$ para documentos na representação $s$ do mesmo modelo $M$. Para todo documento $x$ em seu domínio declarado, $\mathrm{decode}_s(C_{rs}(x)) \equiv_M \mathrm{decode}_r(x)$, em que $\mathrm{decode}$ recupera o conteúdo do modelo e $\equiv_M$ é a equivalência declarada desse conteúdo. Uma alegação de ida e volta também declara o critério de equivalência do retorno. Identidade de bytes e convenções editoriais fora do modelo não são exigidas nem são evidência de preservação do conteúdo.
    - **(b)** **Tradução entre modelos distintos da mesma camada.** Modelos $M, N \in \mathcal{M}_i$ compartilham as responsabilidades definidoras da camada, mas pertencer à mesma camada não implica tradução total, invertível ou sem perdas. A tradução exige mapeamento explícito, domínio declarado e as obrigações que preserva. Informação ou comportamento fora do mapeamento é perdido ou alterado e é registrado. Um rótulo de camada compartilhado não presume um tradutor universal.
    - **(c)** **Derivação entre camadas.** A derivação produz artefatos do modelo de destino selecionado, preserva as identidades, contratos, critérios e permissões aplicáveis da origem e pode acrescentar decisões próprias da responsabilidade de destino. Registra proveniência e decisões conforme a regra 2. Uma derivação manual pode ser documentada sem declarar um transformador construído ou executado. Uma declaração de realização de motor, construção de transformador ou execução de transformador também satisfaz a regra 7. A correção da derivação não exige cópia estrutural da origem.
    - **(d)** **Tradução ou substituição entre realizações do mesmo motor nomeado.** Está sujeita aos modelos de origem e destino selecionados, aos domínios declarados e às garantias dessas realizações. Preserva as entradas obrigatórias, a responsabilidade de destino, os vínculos entre casos e as obrigações da derivação, registrando perdas e decisões próprias da implementação.
@@ -334,11 +334,11 @@ $$
 **Construção.** Uma construção bem-sucedida segundo o motor $E$ é escrita como:
 
 $$
-\operatorname{Build}_E(M_n, M_{n+1})
+\mathrm{Build}_E(M_n, M_{n+1})
 \longrightarrow T[M_n, M_{n+1}].
 $$
 
-A seta registra uma construção com suas escolhas fixadas. Outras escolhas podem produzir outro transformador, e a construção pode falhar. $\operatorname{Build}$ nomeia a operação de construção especificada pelo motor; não prescreve uma fábrica executável.
+A seta registra uma construção com suas escolhas fixadas. Outras escolhas podem produzir outro transformador, e a construção pode falhar. $\mathrm{Build}$ nomeia a operação de construção especificada pelo motor; não prescreve uma fábrica executável.
 
 **Execução.** Seja $T = T[M_n, M_{n+1}]$ esse transformador construído. Sob suas precondições e condições operacionais declaradas:
 
@@ -371,7 +371,7 @@ Uma composição $T_{13}(a) = T_{23}(T_{12}(a))$ é definida apenas em $D_{13} \
 
 Dois modelos conformes à mesma camada podem admitir representações diferentes preservando os contratos que definem essa camada. Quatro operações permanecem distintas: converter representações do mesmo modelo, traduzir entre modelos distintos da mesma camada, derivar entre camadas e substituir realizações do mesmo motor nomeado.
 
-Para representações $r$ e $s$ de um modelo $M$, uma conversão sem perda do conteúdo do modelo pode ser escrita como $\operatorname{decode}_s(C_{rs}(x)) \equiv_M \operatorname{decode}_r(x)$, com domínio declarado para $C_{rs}$, definição das funções de decodificação e uma equivalência declarada $\equiv_M$; alegações de ida e volta também declaram o critério de equivalência do retorno. Uma conversão não é uma derivação, uma camada compartilhada não é um tradutor universal, e uma perda documentada não satisfaz um contrato que exige preservar a informação perdida.
+Para representações $r$ e $s$ de um modelo $M$, uma conversão sem perda do conteúdo do modelo pode ser escrita como $\mathrm{decode}_s(C_{rs}(x)) \equiv_M \mathrm{decode}_r(x)$, com domínio declarado para $C_{rs}$, definição das funções de decodificação e uma equivalência declarada $\equiv_M$; alegações de ida e volta também declaram o critério de equivalência do retorno. Uma conversão não é uma derivação, uma camada compartilhada não é um tradutor universal, e uma perda documentada não satisfaz um contrato que exige preservar a informação perdida.
 
 Exemplos: converter a UCS JSON do Board CRM em suas representações LaTeX é uma conversão de representação de um modelo; traduzir dois modelos L1 com nomes de campos diferentes exige um mapeamento; derivar a ADMV da UCS acrescenta decisões de ADPM e ADVS e não é uma cópia da UCS.
 

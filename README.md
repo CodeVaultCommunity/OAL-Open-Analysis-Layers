@@ -66,11 +66,11 @@ $$
 **Construction.** A successful construction according to engine $E$ is written as:
 
 $$
-\operatorname{Build}_E(M_n, M_{n+1})
+\mathrm{Build}_E(M_n, M_{n+1})
 \longrightarrow T[M_n, M_{n+1}].
 $$
 
-The arrow records one construction with its fixed choices. Other choices may produce a different transformer, and construction may fail. $\operatorname{Build}$ names the construction operation specified by the engine; it does not prescribe an executable factory.
+The arrow records one construction with its fixed choices. Other choices may produce a different transformer, and construction may fail. $\mathrm{Build}$ names the construction operation specified by the engine; it does not prescribe an executable factory.
 
 **Execution.** Let $T = T[M_n, M_{n+1}]$ be that constructed transformer. Under its declared preconditions and operational conditions:
 

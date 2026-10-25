@@ -66,11 +66,11 @@ $$
 **Construção.** Uma construção bem-sucedida segundo o motor $E$ é escrita como:
 
 $$
-\operatorname{Build}_E(M_n, M_{n+1})
+\mathrm{Build}_E(M_n, M_{n+1})
 \longrightarrow T[M_n, M_{n+1}].
 $$
 
-A seta registra uma construção com suas escolhas fixadas. Outras escolhas podem produzir outro transformador, e a construção pode falhar. $\operatorname{Build}$ nomeia a operação de construção especificada pelo motor; não prescreve uma fábrica executável.
+A seta registra uma construção com suas escolhas fixadas. Outras escolhas podem produzir outro transformador, e a construção pode falhar. $\mathrm{Build}$ nomeia a operação de construção especificada pelo motor; não prescreve uma fábrica executável.
 
 **Execução.** Seja $T = T[M_n, M_{n+1}]$ esse transformador construído. Sob suas precondições e condições operacionais declaradas:
 

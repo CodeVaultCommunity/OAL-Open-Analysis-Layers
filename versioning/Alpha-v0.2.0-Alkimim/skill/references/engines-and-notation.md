@@ -55,13 +55,13 @@ $$
 A successful construction according to engine $E$ is represented by:
 
 $$
-\operatorname{Build}_E(M_n, M_{n+1})
+\mathrm{Build}_E(M_n, M_{n+1})
 \longrightarrow T[M_n, M_{n+1}].
 $$
 
 The arrow describes one construction with its fixed choices. Construction can fail, and different mapping, representation, technology or policy choices can produce different transformers for the same model pair. Those choices are frozen at construction or incorporated into the selected models.
 
-$\operatorname{Build}$ is explanatory notation. It does not imply an executable factory, a separate service or another mandatory metalevel.
+$\mathrm{Build}$ is explanatory notation. It does not imply an executable factory, a separate service or another mandatory metalevel.
 
 For $T = T[M_n, M_{n+1}]$, successful execution has the form:
 
@@ -140,9 +140,9 @@ Finite tests support the cases and configurations actually observed; they do not
 A conversion $C_{rs}$ changes a valid document from representation $r$ to representation $s$ of the same model $M$. On its declared domain, preservation of model content is expressed by:
 
 $$
-\operatorname{decode}_s(C_{rs}(x))
+\mathrm{decode}_s(C_{rs}(x))
 \equiv_M
-\operatorname{decode}_r(x).
+\mathrm{decode}_r(x).
 $$
 
 The decoding functions recover model content, and $\equiv_M$ is its declared equivalence. A round-trip claim also identifies an equivalence criterion for the return. Byte equality and editorial conventions outside the model neither establish nor universally define content preservation.
