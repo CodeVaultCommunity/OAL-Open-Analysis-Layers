@@ -1,0 +1,134 @@
+{
+  "record_kind": "didactic derivation record; not a transformer construction record and not an execution log",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "model_status": "specified",
+  "model_reference": null,
+  "engine_status": "not_demonstrated",
+  "provenance": "Adapted from the Alpha-v0.1.0-Alkimim example derivations. The four reusable models under models/ were specified for Alpha-v0.2.0-Alkimim and applied to the projects manually; the instances are declared in model-instances.json. No transformer was constructed or executed for this adaptation.",
+  "status": "illustrative baseline",
+  "accountable_people": [
+    "Douglas de Oliveira Alkimim",
+    "Bruno Chevitarese"
+  ],
+  "transitions": [
+    {
+      "from": "needs",
+      "to": "ucs",
+      "layer": "L1",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Organize the illustrative needs into stable cases, actors, outcomes, and acceptance criteria; keep channel choices out of the specification.",
+        "pt-BR": "Organizar as necessidades didáticas em casos estáveis, atores, resultados e critérios de aceite; manter escolhas de canal fora da especificação."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "source_artifact": "needs-baseline.json",
+      "source_model": {
+        "status": "external needs record, reconstructed; reusable needs model unspecified",
+        "provenance_limit": "Needs baseline reconstructed from the existing UCS; not independent historical stakeholder evidence."
+      }
+    },
+    {
+      "from": "ucs",
+      "to": "l2",
+      "layer": "L2",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Single L1-to-L2 derivation producing both ADMV components: ADPM models ItemKey and Item as data entities, keeps catalog policy in four cases, injects ItemStore and the lookup case, and checks permissions before effects; ADVS plans one behavioral test identity per case with supporting scenario, entity, storage, concurrency, and channel checks, including missing and forbidden actors.",
+        "pt-BR": "Derivação única L1→L2 produzindo ambos os componentes da ADMV: o ADPM modela ItemKey e Item como entidades de dados, mantém as regras do catálogo nos quatro casos, injeta ItemStore e o caso de consulta e verifica permissões antes dos efeitos; a ADVS planeja uma identidade de teste comportamental por caso com verificações de apoio de cenário, entidade, armazenamento, concorrência e canal, incluindo atores ausentes e sem permissão."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "destination_artifacts": [
+        "OAL-P2/adpm/MODEL.md",
+        "OAL-P2/adpm/tool-contracts.md",
+        "OAL-P2/advs/SCENARIOS.md",
+        "OAL-P2/advs/behavioral-tests.json"
+      ]
+    },
+    {
+      "from": "l2",
+      "to": "l3",
+      "layer": "L3",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Use Python cases, injected SQLite storage, and executable criterion-linked checks.",
+        "pt-BR": "Usar casos em Python, armazenamento SQLite injetado e verificações executáveis ligadas aos critérios."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "from": "l3",
+      "to": "l4",
+      "layer": "L4",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Expose callable cases through a loopback browser and JSON routes; select HTTP Basic credentials, representations, and status mapping as channel decisions of this boundary.",
+        "pt-BR": "Expor os casos invocáveis por navegador local e rotas JSON; escolher credenciais HTTP Basic, representações e códigos de resposta como decisões de canal desta fronteira."
+      },
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "additional_sources": [
+        {
+          "layer": "ucs",
+          "version": "0.2.0",
+          "decisions_informed": "exposed outcomes and actor permissions"
+        }
+      ],
+      "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json"
+    }
+  ],
+  "model_references": {
+    "L1": "../models/l1-case-contracts/MODEL.md",
+    "L2": "../models/l2-program-scenarios/MODEL.md",
+    "L3": "../models/l3-python-core/MODEL.md",
+    "L4": "../models/l4-http-boundary/MODEL.md"
+  }
+}

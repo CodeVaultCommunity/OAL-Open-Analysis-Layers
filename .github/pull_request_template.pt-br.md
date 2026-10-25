@@ -1,21 +1,25 @@
 [English](pull_request_template.md) · [Início](../README.pt-br.md)
 
-## Escopo da alteração
+## Escopo e edição
 
-Descreva se a mudança afeta a redação normativa, uma tradução, os guias, o mapa de interação ou um exemplo.
+Informe a edição do OAL e descreva se a mudança afeta redação normativa, uma tradução, um guia, um modelo, uma definição de motor, um registro de derivação ou um exemplo.
 
-## Correspondência e critérios de aceitação
+## Tipo de objeto afetado
 
-Identifique os casos de uso ou critérios alterados, ou declare que nenhum foi afetado.
+Metamodelo de camada · modelo reutilizável · artefato de projeto · construção de transformador · execução de transformador. Indique quais objetos a mudança toca e quais permanecem inalterados.
 
-## Derivação e mapa de interação
+## Mudança de contrato e correspondência
 
-Informe versões de origem e destino afetadas, pessoa responsável e vínculos ADIB entre elementos e casos.
+Identifique casos de uso, critérios, permissões ou contratos alterados, ou declare que nenhum foi afetado. Observe identidades de caso afetadas e seus testes comportamentais.
+
+## Derivação, modelo e mapa de interação
+
+Informe versões de origem e destino afetadas, a pessoa responsável, o estado do modelo (especificado ou não especificado), qualquer declaração de motor e os vínculos ADIB entre elementos e casos. Não apresente um pacote combinado ou a coexistência de artefatos como transformação executada.
 
 ## Verificação realizada
 
-Inclua comandos e resultados, com o ambiente. Não declare execuções que não ocorreram.
+Inclua os comandos e seus resultados, com o ambiente. Não declare execuções que não ocorreram e separe verificações planejadas de evidência executada.
 
 ## Versionamento e autoria
 
-Identifique se a mudança é editorial ou exige uma nova edição normativa.
+Identifique se a mudança é editorial ou exige uma nova edição normativa, e preserve autoria e créditos.

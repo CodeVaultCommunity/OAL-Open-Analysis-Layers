@@ -1,0 +1,249 @@
+{
+  "project": "Board CRM",
+  "version": "0.2.0",
+  "ucs_version": "0.2.0",
+  "definition": "One directly linked behavioral test identity per UCS case; listed executable checks support that identity and are not additional directly linked behavioral tests.",
+  "tests": [
+    {
+      "id": "BT-CRM-001",
+      "ucs_case_id": "UC-CRM-001",
+      "ucs_criteria": [
+        "AC-CRM-001-01",
+        "AC-CRM-001-02",
+        "AC-CRM-001-03",
+        "AC-CRM-001-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_create_checks_fields_and_initial_event",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-01",
+          "ACT-02"
+        ],
+        "forbidden_roles": [
+          "ACT-03"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-03}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-03}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      }
+    },
+    {
+      "id": "BT-CRM-002",
+      "ucs_case_id": "UC-CRM-002",
+      "ucs_criteria": [
+        "AC-CRM-002-01",
+        "AC-CRM-002-02",
+        "AC-CRM-002-03",
+        "AC-CRM-002-04",
+        "AC-CRM-002-05"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_move_is_adjacent_and_versioned",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-01",
+          "ACT-02"
+        ],
+        "forbidden_roles": [
+          "ACT-03"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-03}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-03}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      }
+    },
+    {
+      "id": "BT-CRM-003",
+      "ucs_case_id": "UC-CRM-003",
+      "ucs_criteria": [
+        "AC-CRM-003-01",
+        "AC-CRM-003-02",
+        "AC-CRM-003-03",
+        "AC-CRM-003-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_notes_increment_once_and_work_after_closure",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-01",
+          "ACT-02"
+        ],
+        "forbidden_roles": [
+          "ACT-03"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-03}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-03}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      }
+    },
+    {
+      "id": "BT-CRM-004",
+      "ucs_case_id": "UC-CRM-004",
+      "ucs_criteria": [
+        "AC-CRM-004-01",
+        "AC-CRM-004-02",
+        "AC-CRM-004-03",
+        "AC-CRM-004-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_board_includes_all_columns_and_exact_owner_filter",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state",
+        "tests/p3/test_crm.py::CrmScenarios.test_board_orders_cards_by_update_time_then_id"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "forbidden_roles": [],
+        "known_forbidden_scenario": "not_applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u is empty: every known role is permitted, so a known-role-not-permitted scenario does not exist. Absent and unknown identities remain separate scenarios.",
+          "pt-BR": "F_u = A \\ A_u é vazio: todo papel conhecido é permitido, então não existe cenário de papel conhecido sem permissão. Identidades ausente e desconhecida continuam cenários separados."
+        }
+      }
+    },
+    {
+      "id": "BT-CRM-005",
+      "ucs_case_id": "UC-CRM-005",
+      "ucs_criteria": [
+        "AC-CRM-005-01",
+        "AC-CRM-005-02",
+        "AC-CRM-005-03",
+        "AC-CRM-005-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_won_requires_proposal_and_records_reason",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-02"
+        ],
+        "forbidden_roles": [
+          "ACT-01",
+          "ACT-03"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-01, ACT-03}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-01, ACT-03}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      }
+    },
+    {
+      "id": "BT-CRM-006",
+      "ucs_case_id": "UC-CRM-006",
+      "ucs_criteria": [
+        "AC-CRM-006-01",
+        "AC-CRM-006-02",
+        "AC-CRM-006-03",
+        "AC-CRM-006-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_crm.py::CrmScenarios.test_lost_from_each_active_stage_and_stale_rejection",
+        "tests/p3/test_crm.py::CrmScenarios.test_case_permissions_deny_before_effects",
+        "tests/p3/test_crm.py::CrmScenarios.test_authorization_matrix_denies_without_changing_state"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-01",
+          "ACT-02",
+          "ACT-03"
+        ],
+        "permitted_roles": [
+          "ACT-02"
+        ],
+        "forbidden_roles": [
+          "ACT-01",
+          "ACT-03"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-01, ACT-03}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-01, ACT-03}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      }
+    }
+  ],
+  "evidence": {
+    "planned_checks": [
+      "Run the supporting checks in tests/p3 and the channel checks in tests/p4."
+    ],
+    "execution": {
+      "status": "recorded",
+      "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+      "observed": "23 passed, 36 subtests passed in 0.53s",
+      "run_id": "2026-10-24T19:55:43-03:00"
+    },
+    "report": "../../../verification/execution.json"
+  },
+  "channel_checks": [
+    {
+      "scenario": "CS-05",
+      "obligation": "CH-CRM-JSON",
+      "supporting_check": "tests/p4/test_http_board.py::LocalBoardScenario.test_json_media_type_and_charset"
+    },
+    {
+      "scenario": "CS-06",
+      "obligation": "CH-CRM-FRAMING",
+      "supporting_check": "tests/p4/test_http_board.py::LocalBoardScenario.test_incomplete_and_unsupported_framing_are_rejected_without_creation"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "run_started_at": "2026-10-24T19:55:43-03:00",
+  "run_finished_at": "2026-10-24T19:55:46-03:00",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "pytest": "9.0.2"
+  },
+  "records": [
+    {
+      "project": "tiny-catalog",
+      "working_directory": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog",
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+      "exit_code": 0,
+      "result": "90 passed in 1.01s",
+      "log": "tiny-catalog-pytest.txt"
+    },
+    {
+      "project": "board-crm",
+      "working_directory": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm",
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+      "exit_code": 0,
+      "result": "23 passed, 36 subtests passed in 0.53s",
+      "log": "board-crm-pytest.txt"
+    },
+    {
+      "project": "work-board",
+      "working_directory": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board",
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+      "exit_code": 0,
+      "result": "32 passed in 0.53s",
+      "log": "work-board-pytest.txt"
+    },
+    {
+      "project": "board-crm",
+      "working_directory": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm",
+      "command": "python OAL-P1/render_ucs.py --check",
+      "exit_code": 0,
+      "result": "No differences",
+      "log": "board-crm-tex.txt"
+    }
+  ],
+  "scope": "Application tests and existing TeX representation check; finite observed scenarios, not a general conformance proof.",
+  "limits": [
+    "No browser JavaScript execution.",
+    "No derivation transformer constructed or executed.",
+    "Commit-failure checks use controlled SQLite connection faults."
+  ],
+  "setup_note": "Local HTTP access and test dependency installation were authorized for the isolated verification environment."
+}

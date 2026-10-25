@@ -1,0 +1,59 @@
+{
+  "project": "Tiny Catalog",
+  "ucs_version": "0.2.0",
+  "adpm_version": "0.2.0",
+  "scope": "the complete four-use-case example",
+  "mapping": [
+    {
+      "id": "UC-CAT-001",
+      "implementation": "tiny_catalog.usecases.register_item:RegisterItem",
+      "source": "src/tiny_catalog/usecases/register_item.py",
+      "behavioral_test": "BT-CAT-001",
+      "interface_element_ids": [
+        "UI-CAT-REGISTER",
+        "API-CAT-POST-ITEMS"
+      ]
+    },
+    {
+      "id": "UC-CAT-002",
+      "implementation": "tiny_catalog.usecases.get_item:GetItem",
+      "source": "src/tiny_catalog/usecases/get_item.py",
+      "behavioral_test": "BT-CAT-002",
+      "interface_element_ids": [
+        "UI-CAT-LOOKUP",
+        "API-CAT-GET-ITEM"
+      ]
+    },
+    {
+      "id": "UC-CAT-003",
+      "implementation": "tiny_catalog.usecases.list_available_items:ListAvailableItems",
+      "source": "src/tiny_catalog/usecases/list_available_items.py",
+      "behavioral_test": "BT-CAT-003",
+      "interface_element_ids": [
+        "UI-CAT-REGISTER",
+        "UI-CAT-LIST",
+        "UI-CAT-DEACTIVATE",
+        "API-CAT-GET-ITEMS"
+      ]
+    },
+    {
+      "id": "UC-CAT-004",
+      "implementation": "tiny_catalog.usecases.deactivate_item:DeactivateItem",
+      "source": "src/tiny_catalog/usecases/deactivate_item.py",
+      "behavioral_test": "BT-CAT-004",
+      "interface_element_ids": [
+        "UI-CAT-DEACTIVATE",
+        "API-CAT-DEACTIVATE"
+      ]
+    }
+  ],
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "model_status": "specified",
+  "model_identity": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0",
+  "adi_version": "0.2.0",
+  "advs_version": "0.2.0",
+  "adib_version": "0.2.0",
+  "behavioral_test_source": "OAL-P2/advs/behavioral-tests.json",
+  "interface_mapping_source": "OAL-P4/traceability.json"
+}

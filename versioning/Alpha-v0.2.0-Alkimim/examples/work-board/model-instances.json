@@ -1,0 +1,311 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "Work Board",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "artifact_version": "0.2.0",
+  "instances": [
+    {
+      "id": "work-board-m1",
+      "layer": "L1",
+      "model": {
+        "identity": "OAL-EX-M1-CASE-CONTRACTS",
+        "version": "0.1.0",
+        "definition": "../models/l1-case-contracts/MODEL.md"
+      },
+      "artifact": {
+        "scope": "all use cases in the declared project scope",
+        "canonical_content": [
+          "OAL-P1/ucs.json"
+        ],
+        "files": [
+          "OAL-P1/ucs.json",
+          "OAL-P1/UCS.md",
+          "OAL-P1/UCS.pt-br.md"
+        ],
+        "symbols": [],
+        "narrative_projection": "OAL-P1/UCS.md"
+      },
+      "mapping": {
+        "cases": {
+          "UC-WB-001": "UC-WB-001",
+          "UC-WB-002": "UC-WB-002",
+          "UC-WB-003": "UC-WB-003",
+          "UC-WB-004": "UC-WB-004",
+          "UC-WB-005": "UC-WB-005",
+          "UC-WB-006": "UC-WB-006"
+        },
+        "technical_failure_obligation": {
+          "id": "O-WB-AVAIL",
+          "source": "OAL-P1/ucs.json",
+          "criteria": [
+            "AC-WB-001-03",
+            "AC-WB-002-03",
+            "AC-WB-003-03",
+            "AC-WB-004-03",
+            "AC-WB-005-03",
+            "AC-WB-006-03"
+          ]
+        }
+      },
+      "evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "Review the UCS against OAL-EX-M1-CASE-CONTRACTS 0.1.0."
+        ],
+        "execution": {
+          "status": "not_recorded",
+          "reference": null,
+          "observed": "manual review; no executed check recorded"
+        }
+      },
+      "limits": "The UCS is assessed against M1; the model does not prove that the contracts describe the real system or that stakeholder needs are adequate."
+    },
+    {
+      "id": "work-board-m2",
+      "layer": "L2",
+      "model": {
+        "identity": "OAL-EX-M2-PROGRAM-SCENARIOS",
+        "version": "0.1.0",
+        "definition": "../models/l2-program-scenarios/MODEL.md"
+      },
+      "artifact": {
+        "scope": "all use cases: ADPM program cases and ADVS behavioral tests",
+        "canonical_content": {
+          "adpm": [
+            "OAL-P2/adpm/MODEL.md",
+            "OAL-P2/adpm/traceability.json"
+          ],
+          "advs": [
+            "OAL-P2/advs/SCENARIOS.md",
+            "OAL-P2/advs/behavioral-tests.json"
+          ]
+        },
+        "files": [
+          "OAL-P2/adpm/MODEL.md",
+          "OAL-P2/adpm/MODEL.pt-br.md",
+          "OAL-P2/adpm/traceability.json",
+          "OAL-P2/advs/SCENARIOS.md",
+          "OAL-P2/advs/SCENARIOS.pt-br.md",
+          "OAL-P2/advs/behavioral-tests.json"
+        ],
+        "symbols": []
+      },
+      "mapping": {
+        "cases": {
+          "UC-WB-001": {
+            "adpm": "UC-WB-001",
+            "behavioral_test": "BT-WB-001"
+          },
+          "UC-WB-002": {
+            "adpm": "UC-WB-002",
+            "behavioral_test": "BT-WB-002"
+          },
+          "UC-WB-003": {
+            "adpm": "UC-WB-003",
+            "behavioral_test": "BT-WB-003"
+          },
+          "UC-WB-004": {
+            "adpm": "UC-WB-004",
+            "behavioral_test": "BT-WB-004"
+          },
+          "UC-WB-005": {
+            "adpm": "UC-WB-005",
+            "behavioral_test": "BT-WB-005"
+          },
+          "UC-WB-006": {
+            "adpm": "UC-WB-006",
+            "behavioral_test": "BT-WB-006"
+          }
+        },
+        "technical_failure_checks": [
+          "tests/p3/test_cases.py::test_storage_failure_is_exposed_by_each_case_without_false_success"
+        ]
+      },
+      "evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "32 passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Criterion coverage is a reference-level mapping; scenario sufficiency is reviewed, not proven by the test run."
+    },
+    {
+      "id": "work-board-m3",
+      "layer": "L3",
+      "model": {
+        "identity": "OAL-EX-M3-PYTHON-CORE",
+        "version": "0.1.0",
+        "definition": "../models/l3-python-core/MODEL.md"
+      },
+      "artifact": {
+        "scope": "callable core for all cases",
+        "canonical_content": [
+          "src/work_board/__init__.py",
+          "src/work_board/authorization.py",
+          "src/work_board/composition.py",
+          "src/work_board/errors.py",
+          "src/work_board/entities.py",
+          "src/work_board/tools",
+          "src/work_board/usecases"
+        ],
+        "files": [
+          "OAL-P3/IMPLEMENTATION.md",
+          "OAL-P3/IMPLEMENTATION.pt-br.md",
+          "src/work_board/__init__.py",
+          "src/work_board/authorization.py",
+          "src/work_board/composition.py",
+          "src/work_board/errors.py",
+          "src/work_board/entities.py",
+          "src/work_board/tools",
+          "src/work_board/usecases",
+          "tests/p3",
+          "tests/integration"
+        ],
+        "symbols": [
+          "src/work_board/usecases/operations.py::CreateItem",
+          "src/work_board/usecases/operations.py::AssignItem",
+          "src/work_board/usecases/operations.py::TransitionItem",
+          "src/work_board/usecases/operations.py::AddComment",
+          "src/work_board/usecases/operations.py::ViewBoard",
+          "src/work_board/usecases/operations.py::ViewComments",
+          "src/work_board/errors.py::Unavailable"
+        ],
+        "boundary_files": [
+          "src/work_board/__main__.py",
+          "src/work_board/transport"
+        ],
+        "actor_context": "This example uses a resolved role string from a trusted caller; HTTP Basic resolves it at the boundary. Each case independently authorizes that role. Anonymous access is not admitted."
+      },
+      "mapping": {
+        "cases": {
+          "UC-WB-001": "src/work_board/usecases/operations.py::CreateItem",
+          "UC-WB-002": "src/work_board/usecases/operations.py::AssignItem",
+          "UC-WB-003": "src/work_board/usecases/operations.py::TransitionItem",
+          "UC-WB-004": "src/work_board/usecases/operations.py::AddComment",
+          "UC-WB-005": "src/work_board/usecases/operations.py::ViewBoard",
+          "UC-WB-006": "src/work_board/usecases/operations.py::ViewComments"
+        },
+        "technical_failures": {
+          "unavailable": {
+            "symbol": "src/work_board/errors.py::Unavailable",
+            "contract": "OAL-P1/ucs.json failure_contracts",
+            "write_outcomes": [
+              "not_applied",
+              "unknown"
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "32 passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Symbol resolution and test execution do not prove universal behavioral correctness."
+    },
+    {
+      "id": "work-board-m4",
+      "layer": "L4",
+      "model": {
+        "identity": "OAL-EX-M4-HTTP-BOUNDARY",
+        "version": "0.1.0",
+        "definition": "../models/l4-http-boundary/MODEL.md"
+      },
+      "artifact": {
+        "scope": "local HTTP channel; exposed cases",
+        "canonical_content": [
+          "OAL-P4/HTTP.md"
+        ],
+        "files": [
+          "OAL-P4/HTTP.md",
+          "OAL-P4/HTTP.pt-br.md",
+          "OAL-P4/traceability.json",
+          "src/work_board/transport/wsgi.py",
+          "src/work_board/transport/static/index.html",
+          "src/work_board/transport/static/app.js",
+          "tests/p4"
+        ],
+        "symbols": [],
+        "actor_context": "This example uses a resolved role string from a trusted caller; HTTP Basic resolves it at the boundary. Each case independently authorizes that role. Anonymous access is not admitted."
+      },
+      "mapping": {
+        "cases": {
+          "UC-WB-001": [
+            "UI-WB-CREATE",
+            "API-WB-CREATE"
+          ],
+          "UC-WB-002": [
+            "UI-WB-ASSIGN",
+            "API-WB-ASSIGN"
+          ],
+          "UC-WB-003": [
+            "UI-WB-ADVANCE",
+            "API-WB-TRANSITION"
+          ],
+          "UC-WB-004": [
+            "UI-WB-COMMENT",
+            "API-WB-COMMENT"
+          ],
+          "UC-WB-005": [
+            "UI-WB-CREATE",
+            "UI-WB-ASSIGN",
+            "UI-WB-ADVANCE",
+            "UI-WB-COMMENT",
+            "UI-WB-BOARD",
+            "API-WB-BOARD"
+          ],
+          "UC-WB-006": [
+            "UI-WB-COMMENTS",
+            "API-WB-COMMENTS"
+          ]
+        },
+        "interface_only": [
+          "UI-WB-STATIC"
+        ],
+        "technical_failures": {
+          "unavailable": {
+            "http_status": 503,
+            "contract": "OAL-P4/HTTP.md",
+            "write_outcome": "Preserve not_applied/unknown as reported by the core; a failed write is not assumed rolled back.",
+            "checks": [
+              "tests/p4/test_http.py::test_storage_failure_returns_503_and_known_write_outcome",
+              "tests/p4/test_http.py::test_unconfirmed_commit_is_reported_as_unknown_over_http"
+            ]
+          }
+        },
+        "version_boundary_checks": [
+          "tests/p4/test_http.py::test_large_expected_version_returns_conflict_or_missing"
+        ]
+      },
+      "evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "32 passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Channel tests are WSGI-level; JavaScript visual behavior is not executed."
+    }
+  ]
+}

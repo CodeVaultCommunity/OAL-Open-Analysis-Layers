@@ -1,0 +1,89 @@
+{
+  "model": "OAL-EX-M3-PYTHON-CORE",
+  "model_version": "0.1.0",
+  "layer": "L3",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "counterexample_note": {
+    "en": "Invalid instance used to check rejection. It is not a project artifact.",
+    "pt-BR": "Instância inválida usada para verificar a recusa. Não é artefato de projeto."
+  },
+  "expected_violations": [
+    "V-M3-05: authorization is delegated to the HTTP adapter instead of the case.",
+    "V-M3-03: the case points to a symbol that does not exist.",
+    "V-M3-06: the store implementation revalidates entity fields, duplicating I_E.",
+    "V-M3-04: the core imports the transport module."
+  ],
+  "project": "counterexample",
+  "source_l2": {
+    "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+    "version": "0.1.0",
+    "instance": "counterexample"
+  },
+  "core": {
+    "package": "src/counterexample",
+    "modules": [
+      "src/counterexample/entities.py",
+      "src/counterexample/usecases.py"
+    ],
+    "excluded": [],
+    "language": "Python",
+    "transport_imports": [
+      "counterexample.transport.wsgi"
+    ]
+  },
+  "entities": [
+    {
+      "ucs_entity_id": "E-01",
+      "symbol": "src/counterexample/entities.py::Product",
+      "validity_owner": "tool"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ADI-001",
+      "ucs_case_id": "UC-CAT-001",
+      "adpm_case_id": "P-CAT-001",
+      "symbol": "src/counterexample/usecases.py::MissingCase",
+      "callable_convention": "__call__",
+      "authorization": "the HTTP adapter checks the route and the session"
+    }
+  ],
+  "tool_contracts": [
+    {
+      "id": "TC-001",
+      "symbol": "src/counterexample/tools.py::Store",
+      "ready_entity_assumption": "The store revalidates every entity field.",
+      "contextual_conditions": []
+    }
+  ],
+  "implementations": [
+    {
+      "contract_id": "TC-001",
+      "symbol": "src/counterexample/tools.py::SQLiteStore",
+      "configuration": "sqlite"
+    }
+  ],
+  "composition": [],
+  "verification": [
+    {
+      "bt_ids": [
+        "BT-CAT-001"
+      ],
+      "checks": [
+        "tests/p3/missing.py::test_missing"
+      ],
+      "execution": {
+        "status": "not_recorded",
+        "reference": null
+      }
+    }
+  ],
+  "mapping": {
+    "cases": {
+      "UC-CAT-001": "ADI-001"
+    },
+    "criteria": {},
+    "bt_links": {}
+  },
+  "application_initializers": []
+}

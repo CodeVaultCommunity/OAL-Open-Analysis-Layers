@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work Board · OAL example</title>
+  <link rel="stylesheet" href="/app.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">OAL · Work Board</p>
+    <h1>Work items, from backlog to done</h1>
+    <p>A local issue-tracking example. When the browser asks for credentials, use <code>manager / manager-demo</code>, <code>contributor / contributor-demo</code>, or <code>viewer / viewer-demo</code>.</p>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="new-heading">
+      <h2 id="new-heading">New work item</h2>
+      <form id="create-form">
+        <label>Project <input name="project" maxlength="40" required placeholder="Site refresh"></label>
+        <label>Title <input name="title" maxlength="120" required placeholder="Prepare release checklist"></label>
+        <label>Description <textarea name="description" maxlength="2000" rows="2"></textarea></label>
+        <label>Priority <select name="priority"><option>normal</option><option>low</option><option>high</option></select></label>
+        <button type="submit">Create item</button>
+      </form>
+    </section>
+    <section class="panel" aria-labelledby="board-heading">
+      <div class="heading-row"><h2 id="board-heading">Board</h2><button id="refresh" type="button">Refresh</button></div>
+      <label>Project filter <input id="filter-project" placeholder="All projects"></label>
+      <div id="message" role="status" aria-live="polite"></div>
+      <div id="board" class="board"></div>
+    </section>
+  </main>
+  <footer>Runs on your computer. Data is stored in the example SQLite file.</footer>
+</body>
+</html>

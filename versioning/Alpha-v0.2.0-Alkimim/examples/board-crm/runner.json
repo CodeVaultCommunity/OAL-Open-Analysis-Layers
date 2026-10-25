@@ -1,0 +1,7 @@
+{
+  "name": "board-crm",
+  "executor": "python-wsgi",
+  "entrypoint": "board_crm.__main__:create_handler",
+  "default_port": 8001,
+  "database_name": "board-crm.sqlite3"
+}

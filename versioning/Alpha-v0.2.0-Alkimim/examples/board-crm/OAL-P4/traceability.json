@@ -1,0 +1,179 @@
+{
+  "project": "Board CRM",
+  "version": "0.2.0",
+  "channel": "local browser and JSON over WSGI",
+  "interface_to_cases": [
+    {
+      "id": "UI-CRM-CREATE",
+      "description": "Creation form and refresh",
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-MOVE",
+      "description": "Drag and stage selector, then refresh",
+      "case_ids": [
+        "UC-CRM-002",
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-NOTE",
+      "description": "Note form and refresh",
+      "case_ids": [
+        "UC-CRM-003",
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-BOARD",
+      "description": "Initial load, owner filter, and refresh",
+      "case_ids": [
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-WON",
+      "description": "Won button and refresh",
+      "case_ids": [
+        "UC-CRM-005",
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-LOST",
+      "description": "Lost button and refresh",
+      "case_ids": [
+        "UC-CRM-006",
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "API-CRM-CREATE",
+      "description": "POST /api/opportunities",
+      "case_ids": [
+        "UC-CRM-001"
+      ]
+    },
+    {
+      "id": "API-CRM-MOVE",
+      "description": "POST /api/opportunities/{id}/move",
+      "case_ids": [
+        "UC-CRM-002"
+      ]
+    },
+    {
+      "id": "API-CRM-NOTE",
+      "description": "POST /api/opportunities/{id}/notes",
+      "case_ids": [
+        "UC-CRM-003"
+      ]
+    },
+    {
+      "id": "API-CRM-BOARD",
+      "description": "GET /api/board",
+      "case_ids": [
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "API-CRM-WON",
+      "description": "POST /api/opportunities/{id}/close-won",
+      "case_ids": [
+        "UC-CRM-005"
+      ]
+    },
+    {
+      "id": "API-CRM-LOST",
+      "description": "POST /api/opportunities/{id}/close-lost",
+      "case_ids": [
+        "UC-CRM-006"
+      ]
+    },
+    {
+      "id": "UI-CRM-LANGUAGE",
+      "description": "Language switch (also refreshes the board through UC-CRM-004), headings, and status",
+      "case_ids": [
+        "UC-CRM-004"
+      ]
+    },
+    {
+      "id": "UI-CRM-STATIC",
+      "description": "Static page, CSS, and JavaScript",
+      "case_ids": []
+    }
+  ],
+  "cases_to_interface": [
+    {
+      "case_id": "UC-CRM-001",
+      "interface_element_ids": [
+        "UI-CRM-CREATE",
+        "API-CRM-CREATE"
+      ]
+    },
+    {
+      "case_id": "UC-CRM-002",
+      "interface_element_ids": [
+        "UI-CRM-MOVE",
+        "API-CRM-MOVE"
+      ]
+    },
+    {
+      "case_id": "UC-CRM-003",
+      "interface_element_ids": [
+        "UI-CRM-NOTE",
+        "API-CRM-NOTE"
+      ]
+    },
+    {
+      "case_id": "UC-CRM-004",
+      "interface_element_ids": [
+        "UI-CRM-CREATE",
+        "UI-CRM-MOVE",
+        "UI-CRM-NOTE",
+        "UI-CRM-BOARD",
+        "UI-CRM-WON",
+        "UI-CRM-LOST",
+        "UI-CRM-LANGUAGE",
+        "API-CRM-BOARD"
+      ]
+    },
+    {
+      "case_id": "UC-CRM-005",
+      "interface_element_ids": [
+        "UI-CRM-WON",
+        "API-CRM-WON"
+      ]
+    },
+    {
+      "case_id": "UC-CRM-006",
+      "interface_element_ids": [
+        "UI-CRM-LOST",
+        "API-CRM-LOST"
+      ]
+    }
+  ],
+  "interface_only": [
+    "UI-CRM-STATIC"
+  ],
+  "channel_obligations": [
+    {
+      "id": "CH-CRM-JSON",
+      "origin": "L4 representation decision",
+      "definition": "OAL-P4/HTTP.md",
+      "checks": [
+        "tests/p4/test_http_board.py::LocalBoardScenario.test_json_media_type_and_charset"
+      ]
+    },
+    {
+      "id": "CH-CRM-FRAMING",
+      "origin": "L4 framing decision",
+      "definition": "OAL-P4/HTTP.md",
+      "checks": [
+        "tests/p4/test_http_board.py::LocalBoardScenario.test_incomplete_and_unsupported_framing_are_rejected_without_creation"
+      ]
+    }
+  ]
+}

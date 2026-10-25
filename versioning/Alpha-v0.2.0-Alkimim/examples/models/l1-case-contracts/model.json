@@ -1,0 +1,11 @@
+{
+    "identity":  "OAL-EX-M1-CASE-CONTRACTS",
+    "version":  "0.1.0",
+    "layer":  "L1",
+    "oal_edition":  "Alpha-v0.2.0-Alkimim",
+    "definition":  "MODEL.md",
+    "translation":  "MODEL.pt-br.md",
+    "template":  "template.json",
+    "example":  "example.json",
+    "counterexample":  "counterexample.json"
+}

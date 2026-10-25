@@ -1,0 +1,405 @@
+{
+  "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0",
+  "layer": "L2",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "partial_slice": true,
+  "slice_note": {
+    "en": "Partial L2 slice of Tiny Catalog for two cases. It omits UC-CAT-003 and UC-CAT-004, most scenarios, and the complete tool contracts; the complete instance is the project's L2 artifact. The shared integration check also names BT-CAT-003/004 from the complete project; they are not added as extra tests to this slice.",
+    "pt-BR": "Recorte parcial de L2 do Tiny Catalog para dois casos. Omite UC-CAT-003 e UC-CAT-004, a maior parte dos cenários e os contratos completos de ferramenta; a instância completa é o artefato L2 do projeto. A verificação compartilhada de integração também nomeia BT-CAT-003/004 do projeto completo; eles não são acrescentados como testes extras a este recorte."
+  },
+  "project": "Tiny Catalog",
+  "source_l1": {
+    "model": "OAL-EX-M1-CASE-CONTRACTS",
+    "version": "0.1.0",
+    "instance": "tiny-catalog OAL-P1/UCS.md + OAL-P1/index.json"
+  },
+  "adpm": {
+    "cases": [
+      {
+        "id": "P-CAT-001",
+        "ucs_case_id": "UC-CAT-001",
+        "collaborators": [
+          "Item factory",
+          "ItemStore"
+        ],
+        "sequence": [
+          "Check actor permission before validation or reads.",
+          "Construct a valid active item.",
+          "Insert it under an atomically unique code.",
+          "Map a store conflict to duplicate_item."
+        ],
+        "results": [
+          "registered item"
+        ],
+        "effects": [
+          "one retained record"
+        ],
+        "errors": [
+          "invalid_data",
+          "duplicate_item",
+          "persistence_unavailable"
+        ],
+        "permission": "maintainer only; deny before effects",
+        "domains": [
+          "D-CAT"
+        ],
+        "lifetime": "one case instance per application"
+      },
+      {
+        "id": "P-CAT-002",
+        "ucs_case_id": "UC-CAT-002",
+        "collaborators": [
+          "Key factory",
+          "ItemStore"
+        ],
+        "sequence": [
+          "Check actor permission before validation or reads.",
+          "Validate the code.",
+          "Read the retained record.",
+          "Distinguish missing from unavailable storage."
+        ],
+        "results": [
+          "item, active or inactive"
+        ],
+        "effects": [],
+        "errors": [
+          "invalid_data",
+          "item_not_found",
+          "persistence_unavailable"
+        ],
+        "permission": "maintainer or reader; deny before reads",
+        "domains": [
+          "D-CAT"
+        ],
+        "lifetime": "one case instance per application"
+      }
+    ],
+    "entities": [
+      {
+        "id": "PE-01",
+        "ucs_entity_id": "E-01",
+        "validity_location": "src/tiny_catalog/entities/item.py::ItemKey.code setter"
+      },
+      {
+        "id": "PE-02",
+        "ucs_entity_id": "E-02",
+        "validity_location": "src/tiny_catalog/entities/item.py::Item.name and Item.active setters"
+      }
+    ],
+    "tool_contracts": [
+      {
+        "id": "TC-INSERT",
+        "operation": "insert(item)",
+        "inputs": [
+          "a ready Item satisfying the entity's coherence conditions"
+        ],
+        "outputs": [
+          "confirmed insert"
+        ],
+        "guarantees": [
+          "unique code preserved atomically",
+          "success means storage acknowledged the write"
+        ],
+        "failures": [
+          "duplicate code",
+          "storage unavailable"
+        ],
+        "ready_entity_assumption": "A ready entity satisfies I_E; the tool does not revalidate item fields.",
+        "contextual_conditions": [
+          {
+            "condition": "the code is not already allocated to a retained item",
+            "object": "the key in the persisted set",
+            "purpose": "preserve unique retention atomically",
+            "responsibility": "store contract; the domain meaning of the conflict is decided by UC-CAT-001"
+          }
+        ]
+      },
+      {
+        "id": "TC-GET",
+        "operation": "get(code)",
+        "inputs": [
+          "a valid key"
+        ],
+        "outputs": [
+          "a ready Item"
+        ],
+        "guarantees": [
+          "reads do not mutate",
+          "a reconstructed entity uses canonical validation"
+        ],
+        "failures": [
+          "missing item",
+          "storage unavailable",
+          "invalid stored representation"
+        ],
+        "ready_entity_assumption": "A ready entity satisfies I_E; reconstruction still uses the entity's canonical validation.",
+        "contextual_conditions": [
+          {
+            "condition": "the stored representation decodes to an entity",
+            "object": "the raw persisted record",
+            "purpose": "reject corrupt storage as a technical failure",
+            "responsibility": "codec/adapter; the entity still validates its fields"
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "case": "UC-CAT-001",
+        "requires": [
+          "TC-INSERT"
+        ]
+      },
+      {
+        "case": "UC-CAT-002",
+        "requires": [
+          "TC-GET"
+        ]
+      }
+    ],
+    "composition": [
+      {
+        "implementation": "SQLiteStore",
+        "selected_by": "composition.py",
+        "injected_into": [
+          "UC-CAT-001",
+          "UC-CAT-002"
+        ]
+      }
+    ],
+    "authorization": [
+      {
+        "case": "UC-CAT-001",
+        "actors": [
+          "maintainer"
+        ],
+        "decision": "deny by default before effects"
+      },
+      {
+        "case": "UC-CAT-002",
+        "actors": [
+          "maintainer",
+          "reader"
+        ],
+        "decision": "deny by default before reads"
+      }
+    ],
+    "lifetime": [
+      {
+        "component": "case instances",
+        "lifetime": "application scope"
+      }
+    ]
+  },
+  "advs": {
+    "behavioral_tests": [
+      {
+        "id": "BT-CAT-001",
+        "ucs_case_id": "UC-CAT-001",
+        "criteria": [
+          "AC-CAT-001-01",
+          "AC-CAT-001-02",
+          "AC-CAT-001-03",
+          "AC-CAT-001-06"
+        ],
+        "boundary": "P3 callable use case",
+        "status": "planned and implemented; execution result recorded separately",
+        "scenarios": [
+          {
+            "id": "VS-001-OK",
+            "preparation": [
+              "empty catalog"
+            ],
+            "actor": "maintainer",
+            "action": "register a valid item",
+            "observed_boundary": "P3 case",
+            "configuration": "SQLite store",
+            "expected_result": "registered item",
+            "expected_effects": [
+              "one retained active record"
+            ],
+            "criteria_verified": [
+              "AC-CAT-001-01"
+            ],
+            "applicability": {
+              "status": "applicable",
+              "justification": ""
+            }
+          },
+          {
+            "id": "VS-001-PERMISSION",
+            "preparation": [
+              "empty catalog",
+              "known actors A = {maintainer, reader}; permitted A_u = {maintainer}; F_u = {reader}"
+            ],
+            "actor": "reader or unknown or absent",
+            "action": "attempt registration",
+            "observed_boundary": "P3 case",
+            "configuration": "direct call",
+            "expected_result": "access denied or authentication required",
+            "expected_effects": [
+              "no record"
+            ],
+            "criteria_verified": [
+              "AC-CAT-001-06"
+            ],
+            "applicability": {
+              "status": "applicable",
+              "justification": "F_u is non-empty."
+            }
+          }
+        ],
+        "supporting_checks": [
+          "tests/p3/test_uc_cat_001_register.py",
+          "tests/p3/test_authorization.py",
+          "tests/p3/test_retention_flow.py"
+        ],
+        "shared_criteria": [
+          "AC-SHARED-01"
+        ],
+        "shared_supporting_checks": [
+          "SC-CAT-RETENTION"
+        ]
+      },
+      {
+        "id": "BT-CAT-002",
+        "ucs_case_id": "UC-CAT-002",
+        "criteria": [
+          "AC-CAT-002-01",
+          "AC-CAT-002-02",
+          "AC-CAT-002-03",
+          "AC-CAT-002-06"
+        ],
+        "boundary": "P3 callable use case",
+        "status": "planned and implemented; execution result recorded separately",
+        "scenarios": [
+          {
+            "id": "VS-002-OK",
+            "preparation": [
+              "an active and an inactive item"
+            ],
+            "actor": "reader",
+            "action": "retrieve by code",
+            "observed_boundary": "P3 case",
+            "configuration": "SQLite store",
+            "expected_result": "the retained item",
+            "expected_effects": [],
+            "criteria_verified": [
+              "AC-CAT-002-01"
+            ],
+            "applicability": {
+              "status": "applicable",
+              "justification": ""
+            }
+          },
+          {
+            "id": "VS-002-MISSING",
+            "preparation": [
+              "no authenticated actor"
+            ],
+            "actor": "absent",
+            "action": "attempt retrieval",
+            "observed_boundary": "P3 case",
+            "configuration": "direct call",
+            "expected_result": "authentication required",
+            "expected_effects": [],
+            "criteria_verified": [
+              "AC-CAT-002-06"
+            ],
+            "applicability": {
+              "status": "applicable",
+              "justification": ""
+            }
+          },
+          {
+            "id": "VS-002-KNOWN-FORBIDDEN",
+            "preparation": [
+              "known actors A = {maintainer, reader}; permitted A_u = {maintainer, reader}; F_u = {}"
+            ],
+            "actor": "none",
+            "action": "not applicable",
+            "observed_boundary": "P3 case",
+            "configuration": "",
+            "expected_result": "not applicable",
+            "expected_effects": [],
+            "criteria_verified": [],
+            "applicability": {
+              "status": "not_applicable",
+              "justification": "F_u = A \\ A_u is empty: every known role may retrieve, so no known-role-not-permitted scenario exists."
+            }
+          }
+        ],
+        "supporting_checks": [
+          "tests/p3/test_uc_cat_002_get.py",
+          "tests/p3/test_authorization.py",
+          "tests/p3/test_retention_flow.py"
+        ],
+        "shared_criteria": [
+          "AC-SHARED-01"
+        ],
+        "shared_supporting_checks": [
+          "SC-CAT-RETENTION"
+        ]
+      }
+    ],
+    "planned_checks": [
+      "Run the supporting checks for both behavioral tests.",
+      "Exercise the HTTP channel variants in tests/p4."
+    ],
+    "execution": {
+      "status": "not_recorded",
+      "reference": null
+    },
+    "l4_obligations": [],
+    "shared_supporting_checks": [
+      {
+        "id": "SC-CAT-RETENTION",
+        "kind": "integration-support",
+        "criteria_verified": [
+          "AC-SHARED-01"
+        ],
+        "case_ids": [
+          "UC-CAT-001",
+          "UC-CAT-002",
+          "UC-CAT-003",
+          "UC-CAT-004"
+        ],
+        "obligation_ids": [
+          "P-01",
+          "P-02"
+        ],
+        "behavioral_test_ids": [
+          "BT-CAT-001",
+          "BT-CAT-002",
+          "BT-CAT-003",
+          "BT-CAT-004"
+        ],
+        "reference": "tests/p3/test_retention_flow.py::test_confirmed_deactivation_survives_application_reconstruction",
+        "scenario": {
+          "id": "VS-AC-SHARED-01",
+          "preparation": [
+            "A usable retained store and an unused valid code.",
+            "A resolved maintainer context satisfying this example's authentication requirement."
+          ],
+          "actor": "maintainer; context resolved by a trusted caller",
+          "action": "Register, deactivate, reconstruct the application, retrieve, and list through the specified cases.",
+          "observed_boundary": "ADI callable cases across normal application reconstruction",
+          "configuration": "SQLite file retained between two application instances",
+          "expected_result": "Same code and name with active=false; the inactive item is absent from the available listing.",
+          "expected_effects": [
+            "One retained inactive record; no deletion or reactivation."
+          ],
+          "criteria_verified": [
+            "AC-SHARED-01"
+          ],
+          "applicability": {
+            "status": "applicable",
+            "justification": "All four cases and obligations P-01/P-02 participate in the declared retention contract."
+          }
+        },
+        "status": "planned and implemented; execution recorded separately"
+      }
+    ]
+  }
+}

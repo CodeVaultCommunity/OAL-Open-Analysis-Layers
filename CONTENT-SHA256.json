@@ -1,0 +1,1995 @@
+{
+  "algorithm": "SHA-256",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "scope": "All delivered files except the inventory itself.",
+  "excluded_paths": [
+    "CONTENT-SHA256.json"
+  ],
+  "files": [
+    {
+      "path": ".editorconfig",
+      "size_bytes": 225,
+      "sha256": "cc97f64ec292a2d4405e3b05ea7e0531081e7e44e5a753fde4e93b48360b0764"
+    },
+    {
+      "path": ".gitattributes",
+      "size_bytes": 58,
+      "sha256": "9a5b3e8c93ebcd35a580f2c2cf3b51cad2f4e5c1514a6984f454f36b355dacd8"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 347,
+      "sha256": "e8216df6704bc441d55851651e363f98ee6f62cef3c6813177823ef9cff52179"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 939,
+      "sha256": "aba2366f28c71b4f2a2fe729653604ba74ade96d2c9ca62bdfeedc282a070ed3"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 20192,
+      "sha256": "19022b5e01f9690ec3ba829e004ae05198e994303062135c2c5c813c950b84f7"
+    },
+    {
+      "path": "README.pt-br.md",
+      "size_bytes": 21734,
+      "sha256": "7de55608313655e1597006228df59068ab7791a3d1be94816a61695d4112302d"
+    },
+    {
+      "path": "VERSION",
+      "size_bytes": 20,
+      "sha256": "2610f425717c4812da8e56219848c25d8f6896260d83d6cf2393bf2b5b3f4e52"
+    },
+    {
+      "path": "assets/README.md",
+      "size_bytes": 1294,
+      "sha256": "ac6c5bd455479bbacacb34f7fc417a5b66db11c3ca255046d4e278ff1eb460f8"
+    },
+    {
+      "path": "assets/README.pt-br.md",
+      "size_bytes": 1429,
+      "sha256": "a57fd74e1c0d24a541aace06c233a3e1394a68b4ed3f8bfa4055ee998805a45d"
+    },
+    {
+      "path": "assets/oal-banner-en.png",
+      "size_bytes": 1116174,
+      "sha256": "998f7c6c4aeed8d6db73eacc8684f1f154cb7d37ef516e565dee25d7a3460ac9"
+    },
+    {
+      "path": "assets/oal-banner-pt-br.png",
+      "size_bytes": 999424,
+      "sha256": "5028a78bd27208fc2448a3cc29610fe807f500cd455641c38dd55e9e4cd76ed6"
+    },
+    {
+      "path": "assets/oal-layers-en.png",
+      "size_bytes": 156556,
+      "sha256": "3a5654b18cdae903718c4f9bbb39f41133d4e8e9af29ff972f1fa49044023848"
+    },
+    {
+      "path": "assets/oal-layers-pt-br.png",
+      "size_bytes": 160699,
+      "sha256": "05ed5d46c73d56fcaa9b352bfcebc7d9373ff97482d72363a2014208e42922e6"
+    },
+    {
+      "path": "assets/oal-logo-dark.png",
+      "size_bytes": 445724,
+      "sha256": "77f85c5355e1a54da4f6551738bf14fb2e3c08bde5367877c421249c74583b45"
+    },
+    {
+      "path": "assets/oal-logo.png",
+      "size_bytes": 659810,
+      "sha256": "830e69cdc9bcd50838775083841e18b8cfbaee48981a75ab970d0b9b42c140fe"
+    },
+    {
+      "path": "assets/oal-map-en.png",
+      "size_bytes": 209582,
+      "sha256": "c19783663d2bc4c1dbf0ae4ac325ed5bb57ee3d85e0396bf73d6fc33d9afc265"
+    },
+    {
+      "path": "assets/oal-map-pt-br.png",
+      "size_bytes": 217092,
+      "sha256": "dad9939706a0b230daa9a52fecefa2d48ba563535b730f010dda46b97bec49a2"
+    },
+    {
+      "path": "assets/oal-mark.png",
+      "size_bytes": 675559,
+      "sha256": "c4f6a253bdac61db33a3e76a0eff69896072110b8bee6babe60deff58707da21"
+    },
+    {
+      "path": "assets/sources/README.md",
+      "size_bytes": 3180,
+      "sha256": "257bb184affec0481819d1b7d9fecab346cb0cdf978e3014fe04e8e00e10a429"
+    },
+    {
+      "path": "assets/sources/README.pt-br.md",
+      "size_bytes": 3415,
+      "sha256": "5116ed8737313a8aa8bfc416b6ad46c4076a60c0edbb4174de394b8b2f2ad54f"
+    },
+    {
+      "path": "assets/sources/banner-background.png",
+      "size_bytes": 1986995,
+      "sha256": "64569743c8032c19ab0deb02d0eccd00146859bb7f43619c8eab94d1877edf08"
+    },
+    {
+      "path": "assets/sources/labels.json",
+      "size_bytes": 3571,
+      "sha256": "a6ceb194bfd617f202943a854f7a208aecc25f90275dc074de367c197b9ed90b"
+    },
+    {
+      "path": "assets/sources/oal-banner-en.svg",
+      "size_bytes": 3559909,
+      "sha256": "6a7656552b1e0f6b613c0dfa284b8003e784f2bc1ec0c905c1c23a2cf23b08e7"
+    },
+    {
+      "path": "assets/sources/oal-banner-pt-br.svg",
+      "size_bytes": 3559931,
+      "sha256": "771213331c58585c2566ede96934b03e0bba82afbf5146e6abcd17c7065b84e0"
+    },
+    {
+      "path": "assets/sources/oal-layers-en.svg",
+      "size_bytes": 8412,
+      "sha256": "92dd1af4f7ce69bed0b86c1e2c97c164c08c804835ebb62bc78449f32c47f9d0"
+    },
+    {
+      "path": "assets/sources/oal-layers-pt-br.svg",
+      "size_bytes": 8442,
+      "sha256": "ea55f2f1d6962bbaace72d40c4cbbfcefca37e9237c211cdb58e1b2431b34791"
+    },
+    {
+      "path": "assets/sources/oal-map-en.svg",
+      "size_bytes": 13218,
+      "sha256": "91e91f73321e13b2065bbccca341bd50cb9209fd772d02793a2f2dd425f5cc9d"
+    },
+    {
+      "path": "assets/sources/oal-map-pt-br.svg",
+      "size_bytes": 13271,
+      "sha256": "1976ac2adf29c26de62910f30bdb32bf18d366edbd73df59e703986e4b77c41e"
+    },
+    {
+      "path": "assets/sources/render_images.py",
+      "size_bytes": 12976,
+      "sha256": "892b81323423adfd2ce91e48d83c8bf36fdf2ea2a1847f961a90f35a1af5d810"
+    },
+    {
+      "path": "run_examples.py",
+      "size_bytes": 6412,
+      "sha256": "bb293a024419efe038d88968e3b74385c78c423748de4ca855a7323a78d1381c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/README.md",
+      "size_bytes": 24890,
+      "sha256": "9e79175111371fa2b5d661e5e5492da9c9cb30c1f910b32741c0d5093cbfef52"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md",
+      "size_bytes": 27467,
+      "sha256": "e08ee5a45343b206afc6e0f36ba31b52c5a1dc0002f51e97bb9b76ddb9aaf3c3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
+      "size_bytes": 3453,
+      "sha256": "03229e726ed167e8878c8758245566e28b6492ece91936a68e90a0424c654a00"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
+      "size_bytes": 3755,
+      "sha256": "144c6d9b8d044ac5fd5eee6f31cc2d51a8c7af2085dcd6963a98f2f2f66488a8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 21579,
+      "sha256": "b71416fc601aef5a53c4ab0426b6a009617d83f149d2fdd0a0e7570015bb4cd3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 20022,
+      "sha256": "23752ca3b6a1ea11c06c9b4267b6f1980919c3e866e1538a12bdeb4805eb50b2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7534,
+      "sha256": "55b64a15820e99a0f644c2d27d873e2c7d1a94377f794d699fb87cca53b9688f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 44039,
+      "sha256": "6fa854776d4340fedfc92b16272bc510fd78a98457f3d4c4ddf4e3705301c26b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3100,
+      "sha256": "6ee8610e07d1e14d3eed1f7ee80307f6ef836063de092a1127d1257c4d9182a9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3326,
+      "sha256": "c87d6ad4e6fb6010c339e6a2a17ab9bbbdde4dd5c0ff6cec1c302766f820f363"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 1866,
+      "sha256": "6f2535a850b83d6fcccfff02296e5cdece9c5b28257c1f3c2a51aa0a705de89b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 1952,
+      "sha256": "9e01db8b2f38c95d127357b6cc1c370b64cab69080c9c2bff1a2ec361b1e92b4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2350,
+      "sha256": "e7c4bfddd6a48a46d7fa2603e03ddf2669294d567d3df0160647f20811ec4e13"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 6563,
+      "sha256": "2657f8ad1d0d898fa14826dab0ed81692d81450d4429e8ed90d06f28cc6664e3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7160,
+      "sha256": "dad85444db1b72560aae589553ff6374d45484a04b2e819cf394ae38e9c2b7a9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 3677,
+      "sha256": "862df2a97cf24f31afc3bfc3c654a2556a7952121a5fc932efe400366bb762a2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1609,
+      "sha256": "bb6a2d0f1dacc093afeeec416ca84383f974e1fdd7e35bf667254b2ef1f6a6cd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1777,
+      "sha256": "e818f67729fad29d1eb15fc1aa439ae82b920c24ed532a17c16fd01c7dd9ac81"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 2657,
+      "sha256": "5f71f926936f4bcfa0ee8f8a458d4569b2005209d30f93993aa498f084bab269"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 2801,
+      "sha256": "76bbbce8087e3c1cf9ebf20b5d3c3ca5df099e2cbfaf0453d2b5b1ed11705556"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3378,
+      "sha256": "898dac9df743efdc3bd372b584cf1a7791afdda5792dc6d42f6320e8fb35da15"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.md",
+      "size_bytes": 3067,
+      "sha256": "bd62c96c95a4970ba112bec2178379f77bfbc297a9c38c70f70d606cad11d395"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.pt-br.md",
+      "size_bytes": 3361,
+      "sha256": "3e905084fd2b7a3830068e34d96bf08821bd16614e4b7311dd6a7bd52065f50b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/derivations.json",
+      "size_bytes": 4963,
+      "sha256": "fdcd13a859adf7e854521e98389c6947f76194785ef72328a1a591b5ce83ac17"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1792,
+      "sha256": "d1e887a57cb5c0f01cf2c46999949399db0acbd8cb9e8630266a47faab09dde3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/pyproject.toml",
+      "size_bytes": 635,
+      "sha256": "662b8c64871437c9ef863051283210251362a96c979fc9ed26d81f1038fcc590"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 90,
+      "sha256": "000d22ceeb10c8c8aaeaf2987b8caa79e39fdbed2b90005646ba5e336229fef2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1651,
+      "sha256": "0d7e1c4bf62207eb4a555c5e602a16a65daa2bd2b840a6c1507336d6220e3203"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2130,
+      "sha256": "9f03c9c9e2ae3b828ebb1dc1841de0982b167a3f10ff96a4c61d5335d29fa27e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 483,
+      "sha256": "77ed24dd4483f1541ee28433fe4b65d6b9501909e04a086b896326803334ae9c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1159,
+      "sha256": "23e9e47fcf2b627326fcca9bdba110c9c87be4272689146d1e231611f3b35726"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6309,
+      "sha256": "a93b6d4e9c397b1e039c738586c2b915aaef26df34f0407ecb9c721d35b081d0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 791,
+      "sha256": "eb327b24d9b6228d07938169c342b7c788a2f5f233977e1832dbb5735be4fcd8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2563,
+      "sha256": "3594d19a08a8e77ec8a1e67a421cc9cb9c6fe00016deaee1f3b444e5bafc71e1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5165,
+      "sha256": "367bbb4feb7db08d218c2f587dcdcd9b2bba040b3fb00a00b46ff48dd881f69b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5510,
+      "sha256": "7c0de9bcb893cadb97832e2b88d96bcd430b8b826d55223c735dfcf813595842"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 1930,
+      "sha256": "49ad8b10a954c4f83e66e0b7434658b2a5eee4b57568ec43405a077c5a8289f5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 7737,
+      "sha256": "1cd3857df1e4d90a1d82c69e3292be96a0c32e4a0804473ba95fce689b32bd47"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 3164,
+      "sha256": "3ca45000b5a05797a0fcc0ac0a8c7b12c5556165eb26584d317fbcb6fdf3191a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 1246,
+      "sha256": "96b5449699f2099b046a2324988618aa4fc434b5d17ac25ebf8a49b0d2131b7b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 14147,
+      "sha256": "adcb04ebd6bcff84eaf1460276b892193fab9e1689c9e9fcd2dde8282da8f2a6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 15007,
+      "sha256": "1104ebea1dc8c916b65a310cd7270e4d8da95cb2a812894333272222129ec435"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 2928,
+      "sha256": "5c533135c3f46436bcfb0bffd029a18922f3f9080261b49c4185964ffa565cc0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2596,
+      "sha256": "1fad86353314895f4864c691e34004bc29303f8d90c8e359ab07d9251d18548e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2828,
+      "sha256": "c3e711ad339befb7ac43c2c1f1d065659fc7119270a3f4ce2f69b8493752cce5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2151,
+      "sha256": "e6bbe4fe3d1797807c3ede75b5fc7c5bd195eeaedc3cd830409ef6d5d234d0f1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2405,
+      "sha256": "4708b1cba6f945f91e42c40a9d989506e680f610edaab60953df8ec12e6bddbf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1763,
+      "sha256": "43fc21dfca1d3e8aaca883c87705b5c6448165bfc81cb9373d5caa4f1dcfa789"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 6369,
+      "sha256": "5d78ed3ef70ee8e710ea112070c960c09a4495067f11c50b7cb93bc5aa8adf47"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 6701,
+      "sha256": "0769bc4fb8b65d5bade7eee703d17123dfc59d5b5e2e564f2f2ff8304e88e9fb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 2436,
+      "sha256": "2fe653f640666c8e5132175a98b4715e89f9088a4a299b0bee5c3ed3bf301c20"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 3006,
+      "sha256": "a84669a8a118f154c19170b230cb7c0ece7c8bb62fe7420010e1da0f15f2a3af"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 3278,
+      "sha256": "56fa6c5c4db3e7c59ba7d7cba76eacc777e239e612f36cc5767f7036fa338b00"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1619,
+      "sha256": "48c32fceb9b295a02a3e5f4417c2d54478ad2572e69b1f76994b69e07b68f07a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1787,
+      "sha256": "7f222a6fed4ba3284637cde44184728250b283988d3de0b9b36bf7de10942ccf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3351,
+      "sha256": "28aae0956a26effc39e1f7985d4975188d65bbd73b6700c01105ea3b8fba522a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3604,
+      "sha256": "6e773603fe1cfcbb9ab69b372496fa01f4d7051f685403f472187a3236847393"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2350,
+      "sha256": "67fb716f72acab7e9d02f158bd8001ad82b499f7706effb8b6fadb7ee8eaaced"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.md",
+      "size_bytes": 2772,
+      "sha256": "bc3c3473347d2fd600af1a4c1bb734cb2af20c2146a7c2a9903b3bc69669619e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 3058,
+      "sha256": "2f6f0366c3af09c44515b6811ffb77b1283e3eeeffb7a900e6b328d788403c7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/derivations.json",
+      "size_bytes": 4687,
+      "sha256": "0fbd57e7b239ccbc30f7a2a7cb1a459436f3ec493ec4b9b331637ee5fa9cd2a1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1196,
+      "sha256": "773812bf73fe98c2691e39b67b6a59001082bec968e4f9c7e4ffd1f6f7e0bb3a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1173,
+      "sha256": "b7351bfc11127591aff0e4ea1a16d846bc2a1a30b74480b29047a780fc029278"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 1454,
+      "sha256": "64f3034ba7e8ecb7382acddab51e32cfba71b6545f19b42e336c6de009456c7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 112,
+      "sha256": "9bbc3f652d97e94cb18819b55a7d78cdda5fa8fedee8414c107bc27383f3d1b2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1789,
+      "sha256": "d47773c5bed3cb45c51f1cdd3642a34a0f63a1a77d5a550c253cc0c268fed40b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 626,
+      "sha256": "5f9a5d98e3e9c41cff8ad47626f1cca83c816b499a81aeab8b08ccdb01374de0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1628,
+      "sha256": "eb3f742030ba312e43edfd9578bdf84aa179842e64967fb396e294833a4d0433"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 830,
+      "sha256": "c80d57eea0a48584cbf1a944159e8c73bc6f213d6baacb0c0629b1d383c71762"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2087,
+      "sha256": "cfb2041d93a70a814cb87a23023c6b6b4b8c6f932c8defb059bf25aba4077281"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 73,
+      "sha256": "ce10d67c1492ab5725279e3624a7db389f75565a32e8aa5dda3497a61fb8a750"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 1002,
+      "sha256": "6a060d7d7d2d5521becad09387c5c6e5da097c87210b3fe5542459030924735b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 1496,
+      "sha256": "72910f86d4652784b6efd0f4b772075aba7eeec2a65ba1bf5bed8f077636711d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 833,
+      "sha256": "3925b7bd1151f6edeffe005fdfd8e37b2d51e72cb85e6ed491f48230b2995c34"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2492,
+      "sha256": "a39907e42a8312a1cd1abdebbec35a5bfd52bcf1ebb55c202993ef7e60d7c829"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 971,
+      "sha256": "7252053aeff08093108a6d08dbc9e54c24a99a4ffb8f540920c2d0f89e3ecffe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 1027,
+      "sha256": "670cb1b8da15433aefe0795a1e705216811cc7a057ad7e4ffd2eda26976925ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 3614,
+      "sha256": "b50ad58877ae57b8425ddf57398ff6d55717f291d02d03bdbfa6ceaa7843cc14"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 1239,
+      "sha256": "3a30d012116590ab16aa694b9260d26cbae75a9d4d140787d8631795ef2f7317"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 1325,
+      "sha256": "dc383264e54b217740904529cb001838887ce67c0afd3fb19ecbfe976a7c13ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1537,
+      "sha256": "f513affd8aa5e4fd09699ac032dd927c782018dfbd4e50cf3ab5121c84571380"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 787,
+      "sha256": "d3efaf61457e37d5abcc24107364c4cd5cd0ddba821fa0fcd52062b174bff8e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 864,
+      "sha256": "8519739486324dd219c209ab706657bf2f955e3a838813d5d3cd31edf6c0fee3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 1216,
+      "sha256": "79aea2d73a818e5de5b08042b0518b3aa833a32eddb151f96ce7a55da35ab339"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1237,
+      "sha256": "375b342be61f54bd624e0039ebc42e3b5993e9f53c91984e64db7261caa3d686"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1315,
+      "sha256": "d7f38e652e40e1be47e729da3e4577a1e76736ca6d50112d7af960d0f7fdb093"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 1902,
+      "sha256": "3860b5ba92db2c9f71a39e3fe9d7640d6b07cf4e6a7cd49bd8d1ac8af0754fab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 2042,
+      "sha256": "fa523313be6117aff1ae01d76cac77c6bb606bd785a5947a3eae415790d3947e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 2192,
+      "sha256": "a230a65cfb005503e5b94d549458e7fb0d66aefffc74c5c180fcf0017d059995"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.md",
+      "size_bytes": 2380,
+      "sha256": "cb6ea0709e0e78079dec7703c5d769add439cd9f1b9f8d72e0a3cb9f80af02d5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.pt-br.md",
+      "size_bytes": 2518,
+      "sha256": "6a71e4053871213ecb86e0138007453a839cea685aeeb89e77819cb4e91b6cb9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/derivations.json",
+      "size_bytes": 2986,
+      "sha256": "ed508585f62885cac359b5812cc3656b139115211825bafd3f4e1e4690c78df8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "8bd6327642a6abd976126587c55ce5561c800f9cc44a8104bda897a6246acc46"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/pyproject.toml",
+      "size_bytes": 626,
+      "sha256": "d7a8c2c5db2b14f37c73d7b5247da9c84c477e6125d184fad566a0b1e774a845"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 710,
+      "sha256": "795354f15bb9112f4449b6887712160ef8c83f0fac8174a87c97c723be98211e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 827,
+      "sha256": "a3e33e18eca44b4f60b9dfa550579e776d02f75501143eea1400acf213be3490"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 460,
+      "sha256": "ce164f3cebcf96f3f367a90ef8b630c5a758d6519fc11cc555131efe737d9bfb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 623,
+      "sha256": "9f4ba56f30efc081addc8f9fce6b4fab39d025f2ac6fff9a9bf09c11d0884112"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 4391,
+      "sha256": "ebb7cead12a1c5c443671a3ae6cd8cc8a7f5da1932b959888b356747f5a624ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 800,
+      "sha256": "fd6f93c1901ce8751f2cd66dcd6eb089e372f5c27ed6bd2b1d0830422cf108c7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 3812,
+      "sha256": "dfcdd192ef64496924fb141c8fd7c342bce2c9ce31be6d0b14384ee19636b351"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5742,
+      "sha256": "7933c94bf8c17336515d370bd00be5b5d8bd4c0767f79f335868f12b0f8c3967"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4151,
+      "sha256": "4f9150644f3498cea8cb83eab2a4f9ece5b33d9741a988f636840bf650dd8431"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 3560,
+      "sha256": "2188c7fb309a4e1633d2ab3347413b8d32514568ef2ec010b6e3272ce5349f48"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 3927,
+      "sha256": "b4f3ea88fd8680ed2c65afb8d70ab3de6e73c57667f4305c6d794eb996f96e28"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/README.md",
+      "size_bytes": 67453,
+      "sha256": "4acd1803b5ed9bb3481ba4a18766ed464abc7414f5e01d9d362e8af617e04377"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md",
+      "size_bytes": 73709,
+      "sha256": "12cff6a01d3b44068621a0f4d9e10767978df7772a0668d922ba2411592a6462"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.md",
+      "size_bytes": 7780,
+      "sha256": "4f32b9cc6ae6abe9dd5bc199bcded49b9dc6fa8881bbcf73f27a5a2da967d4dc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.pt-br.md",
+      "size_bytes": 8508,
+      "sha256": "298d17d73a5f6bd285c3ed38c01512ad8d6c0d1d31ac20f2bcaabe18cfb99d14"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 22025,
+      "sha256": "8d4c83441ddb00abb4a87d3c231f7c6fe01130b0927e32454dab291ff47dee12"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 20471,
+      "sha256": "3aa772fa7eaf6b077bb545b170bbd76af301cdb65f6f074ade123975776a944a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7621,
+      "sha256": "f941460baa85aaa2b85044561402b556095f26b75a4e62a87a35d663280529b5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 59540,
+      "sha256": "61942305e84a41e977c240922595f692c6e21bab9c95f6ec023acf37fae892ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3485,
+      "sha256": "dd2c9d7e2e8ad51baf840f35e009dfa5112e6c17d51e800b5bdf6353703e4824"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3763,
+      "sha256": "b129bd16f6c2ead50327fbf956635c43775bc77bb01fbf2a8ab6d7857bdf29ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2738,
+      "sha256": "93ce7ef592fda411fb8d407ebf74d652e0f85b0bcb54dca2fc0a543973f459b3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2929,
+      "sha256": "dac55c833d3f4363724ea6f84d6582c27ee5b11470a81fc32caeff26b8e772df"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2397,
+      "sha256": "3439edf8ca0d71ecac971eaa4c580cc5156ebf8e8e2bb2bc2425559950f7c476"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 8530,
+      "sha256": "f14850bcd41117279cb6507c7e1d18fdfe757702be4ea9763c4dbca5a63ed7db"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 9263,
+      "sha256": "bcaa40852bf3a2b0e3d1ed57d7a6396c17bf35175590bacb309b4e3378b6c926"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8799,
+      "sha256": "214613bbdf9f1428e034a01fb8b2fb5abccbf831087a8aefd24cb2781316202e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2513,
+      "sha256": "29f92c389ba532efd9cb26b2aedbb69a9e3715522d5fe52e9a0dc570ef2fe2e5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2761,
+      "sha256": "ebf463213c9e444757f146dcf0323106ba727b01d1517d8b885f2e27e93a09dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 5333,
+      "sha256": "d03a36e336734bf0be913f7b9c953c28127df1a35fe7ea7e80054bab41fee48e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 5722,
+      "sha256": "cd91edaf3da6f9cea0ec38ef933972bb028076ad5a9a94be8a1c63ff2794853d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3843,
+      "sha256": "d416f9f8a591003ce22a674e24a8a9e39ed48a49fd3ae049247fab27904cca6f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.md",
+      "size_bytes": 3701,
+      "sha256": "e7d5b44a7490a75ed88513404d04532c40fb9d0d30b46f59fc5500f5888dcb70"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.pt-br.md",
+      "size_bytes": 4049,
+      "sha256": "10b807ff800f880337c393ba61ec875cc130178a37b97eb9de0a5d9251933f03"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/derivations.json",
+      "size_bytes": 7474,
+      "sha256": "c1a4043a46284f6352d58e5cc3692fbee00ca0799a7d2b37c4083f4f3723cdc0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/model-instances.json",
+      "size_bytes": 9882,
+      "sha256": "f50b4ac702e22fdb99e4a134471a628146d78d04a507fe4aaa9249ce69c16427"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1746,
+      "sha256": "4631eb43abb4107a1281a5f92d65668b108bfa3632457570f538f1020d3954ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/pyproject.toml",
+      "size_bytes": 613,
+      "sha256": "514841eec4e5fc63803d5f3dad60fc43919bb8fb24cd3c5843534f075757db6e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 89,
+      "sha256": "0c584307688a9375862eeedcfb641bad4581a4c51fc7235fcaa0313f87d2c3b4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1651,
+      "sha256": "0d7e1c4bf62207eb4a555c5e602a16a65daa2bd2b840a6c1507336d6220e3203"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2736,
+      "sha256": "0ed0824462cccc006caa4ef13cfd659bad44df788fb32e8036b17605c46a9074"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 483,
+      "sha256": "77ed24dd4483f1541ee28433fe4b65d6b9501909e04a086b896326803334ae9c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1159,
+      "sha256": "23e9e47fcf2b627326fcca9bdba110c9c87be4272689146d1e231611f3b35726"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6974,
+      "sha256": "114081c4cfdcd979089d858cdcab7e40c87b859a205e1914bc445837310f0bb8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 1124,
+      "sha256": "5df6711c64741a86780913e60c597b598df8a9830f8184a2eb955f9565875ae5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2523,
+      "sha256": "d52bd38714413ea7cf597ed74431cd280683d7cb5caae246a9d13c7d759dbebc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5934,
+      "sha256": "9240c8d186051ec5c3275a4d970d1692543bc484915511180d4f2602aa88a564"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5888,
+      "sha256": "f779798c9a8257bb12afd1eac2f0ceddb92512ba319662ecc509360ad5402d56"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3162,
+      "sha256": "2f995d51ce5e6eb645f359f996efffdc9c0636ab88563eafa33c1954899c9471"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 12141,
+      "sha256": "6f02f5151856780aeb1378b9de857a1a51a86b0f5ae94991389bee134fa598f5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 6167,
+      "sha256": "0eea037721571203a64b995bc89b50c790364ab11ea28dccf5af0c9744077107"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 2116,
+      "sha256": "0abd3fb9c0d79bb69e3c183747b3f1b3150f51b68f604ebaee00a91b26cbbb3d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.md",
+      "size_bytes": 6458,
+      "sha256": "f3343a426bcd29efc80af57c2b8fac73b9e9f2988ab91955de1d79990909e38f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.pt-br.md",
+      "size_bytes": 6958,
+      "sha256": "4f34dfcacee3c19cb40ed0545d609c2024a27d6d7eebc0e828fc3c5009a89b9e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.md",
+      "size_bytes": 11896,
+      "sha256": "dad9b90178970f7ef5e6b6c47bd1d13b857306e23b17ae1d8b8e5f1293a1fd0a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.pt-br.md",
+      "size_bytes": 12614,
+      "sha256": "90f1bcf8c15a3f70538050e50f145b0e44adb72c4b94d4eef6a7d3f9e16c3dba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/counterexample.json",
+      "size_bytes": 2847,
+      "sha256": "d7f2008e7acdcda204a56bceaec08786273e2ac088726b0d6e4d84805dadcbaa"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/example.json",
+      "size_bytes": 11738,
+      "sha256": "616079bc26862bddead412ad3b864bad5241b9d063234e851307183bc2be0fe5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/model.json",
+      "size_bytes": 328,
+      "sha256": "982aab0629b4e5452d38a7dcf9e6dd93fbbd9785351de3afe7e91e3d5bb80586"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/template.json",
+      "size_bytes": 2563,
+      "sha256": "d36784da303e5bd8e18792c1221e6c2729df016ad16f4bd18845f5f0a504eb38"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.md",
+      "size_bytes": 10903,
+      "sha256": "4d0bc3cd44aaf609b362b7a81eecdf1e27378d82cd4c96e7e905ca7ef1c16637"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.pt-br.md",
+      "size_bytes": 11605,
+      "sha256": "e19599ba47034e0f747940b3c78a4cfacad5250a642b50f94db2b7295e8f5ffa"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/counterexample.json",
+      "size_bytes": 3553,
+      "sha256": "69084e48aaa5eab3a5b49a5c573c7e4485a5322275ca7b09af862de213459d88"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/example.json",
+      "size_bytes": 12825,
+      "sha256": "8e5792182cb5f6d42079976dba62c45b844fbae42162cbbfc6ba3f6dcd341fc0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/model.json",
+      "size_bytes": 331,
+      "sha256": "0d8cdeddaa00da1930c6a6676b9f9440349a53bdd4dfe948daba63b1d103212a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/template.json",
+      "size_bytes": 2817,
+      "sha256": "1b5186015a4e9bd5833ea1920d5785bc0e03473428e046fa324cd6888bc7f782"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.md",
+      "size_bytes": 10054,
+      "sha256": "e889f901cd6677c0db02baf502017bfacd909ad06da4940a6ab1b20ae7fd0c50"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.pt-br.md",
+      "size_bytes": 10815,
+      "sha256": "e0006fee54e7188b79bf8f0ce851d05b264cc5e6611fc4076de535d41b5b15e9"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/counterexample.json",
+      "size_bytes": 2343,
+      "sha256": "d524b387901a4d33f2a00c075fb0aa504c75c5263dc33da70de7e7467e5d8706"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/example.json",
+      "size_bytes": 4611,
+      "sha256": "6fd974774b038b865d256ee9016661478ccdf3cedcd7019e4fd8d8312cf98439"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/model.json",
+      "size_bytes": 325,
+      "sha256": "33cdc45eb40903bf33024425cc1a908aff9d023908803f658386d87caaf53dcd"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/template.json",
+      "size_bytes": 1664,
+      "sha256": "96d3d16f71c5e8d972aa1659b49f868f8f4dc0cd580175117a59357685283ae0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.md",
+      "size_bytes": 8313,
+      "sha256": "0badb29d86aef7de91d3fd98d0b92bc69e3e8425d8c0f1f86225f834d45956ef"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.pt-br.md",
+      "size_bytes": 8814,
+      "sha256": "fe728f79620c1a51674d124049dbbd41015f4ed7baf7760b66b95fcef1b33744"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/counterexample.json",
+      "size_bytes": 2106,
+      "sha256": "66d1301e40e49fac79763337d1d8380a80521ce9621359121d421681ca1b1bae"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/example.json",
+      "size_bytes": 6776,
+      "sha256": "da148d91cf84007a29159367ca4c366c5b5eff4f7db99b98f655e155268ceec7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/model.json",
+      "size_bytes": 327,
+      "sha256": "0c859b009777164538d966f49653d7a73222894dc49e2e584a2515cb88d84139"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/template.json",
+      "size_bytes": 1857,
+      "sha256": "8ed5b7247f656956c61c2ae897f5bdef952406070cea2d13386de44fa0c94c08"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 16528,
+      "sha256": "abcecd49281b1c1ee1b4dc73b7cc63ec1b50735667b29d73c7e9347856821693"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 17598,
+      "sha256": "0379d5a3d9efee686ee21d516dc281fb57586a927f5b7c6abf04de948d950c4f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 20630,
+      "sha256": "7d59de2ba2dcc41657a8ddc42d71d2ff64ea99b56c2197dcce9859fafe59464f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3042,
+      "sha256": "960f3858e5a7b58596564e3483db2505e319b1e504fc5cf1a355fa15fc9b9b8e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3318,
+      "sha256": "6943fc9ef285be6c4ac4b6337d119bdb750467582c683ad5039f03784e9705c5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 3361,
+      "sha256": "badbb4d4ea56c34d28191b6ab36b02bd10fb4040095a0bbff7c19511fedb6f5e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 3720,
+      "sha256": "84b759588ae05e63a163455a34cec1ecb6a1e149311751c3ef50b4a163ec5c44"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1819,
+      "sha256": "e1ab16a0d27887c9ce87a8dab826588375b59485db58c96a05eeb90523207ab3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 7414,
+      "sha256": "c5b7e29fe365175f42099d24e29613bae96e6bdb75df57adcf6b5449cf6dad31"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7847,
+      "sha256": "8477b79b9a025979b89689975ab5483e1ef9b69a157d778dc09cd3d8ead9ee1c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 7711,
+      "sha256": "3de53692445dec522b969f1e6b1892e05f85129390024e3d0fb02c503b003996"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 5009,
+      "sha256": "02e98a69f9828ae7e3aea8dc647fc3f9f95e8e97891e8757bdfd078169b1837b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 5441,
+      "sha256": "a4290893e19d4a12106c1a410373ee872c7c46ebaa797ecc7a16ee0f6057a71a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2475,
+      "sha256": "3bb578c78a1e5c76e1aadc250d156a044397a108b4a225f2cf22c520d595f7a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2697,
+      "sha256": "480b1376684d7b153c34728e8fd9a0bd2262993013c88209128356cddbffb2a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3704,
+      "sha256": "32ab3e24ddd6bdf3562d58376c253b0ed7f4d12d5043380f386b41aee947ec3e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3954,
+      "sha256": "e81101dde01c756c9f9765be41c1ae959b571edb18d98275ceba4b1e00023232"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2350,
+      "sha256": "cdfceeacd22001dd506cc50419dcc9356c8e9d4f497169b9ae2e463508b3e434"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.md",
+      "size_bytes": 3672,
+      "sha256": "525b77157442d90f1537e391c8fd1d26326c6aa235c6eae3e966bfc84c72839d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 4022,
+      "sha256": "754cfad0a0aca2b4c4a8d52e4dc939e2899d07c6fe6c0df70b7d823dd45f31e0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/derivations.json",
+      "size_bytes": 5567,
+      "sha256": "1d63efbcf16eae98396c5052ac85d90803c30ad37000430cfe13e44865f14ce3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/model-instances.json",
+      "size_bytes": 9545,
+      "sha256": "37a337897300aa87423111f3a0f40890f2b0e772a629cf4086d68786d3cf0ea8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1196,
+      "sha256": "3ac1bdaa5907ad419131d19ddbbca3f0c80d8fdc11f4e0851e9ce0be011c26d7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1171,
+      "sha256": "9a1e4beb0bc59ca96430af3ceee6da305ded13108a2f7009025c89a055137aed"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 3089,
+      "sha256": "ff2fd45f6d4d132338a5a573cbc09618bc35c0ee4fad75dc9ce008a9efbc5c88"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 122,
+      "sha256": "3bcd3658ca598c5db1e126148dd3e8a9842bfc47955082520393667a7f5ab828"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1789,
+      "sha256": "d47773c5bed3cb45c51f1cdd3642a34a0f63a1a77d5a550c253cc0c268fed40b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 783,
+      "sha256": "e978fada772d107a6e108be03c9d70fa31a35ed942a727f9f75ff4b4a97caf54"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1628,
+      "sha256": "eb3f742030ba312e43edfd9578bdf84aa179842e64967fb396e294833a4d0433"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 1167,
+      "sha256": "420bf0920d4523a5c1d4976dd85d01e971cfd1431f7b8f28f3f1b772af3e25bf"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2055,
+      "sha256": "3b12f9d6315c435be6905e09f1220049f77616607ce990e5e085e979708dcc5c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 73,
+      "sha256": "055b277f1775cc819b474f539abab72eb4131ba637268f8af5699a606011bd8f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 1002,
+      "sha256": "6a060d7d7d2d5521becad09387c5c6e5da097c87210b3fe5542459030924735b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 4019,
+      "sha256": "a52ee62292c1de9d41e0a1afc0620b1e5510da97e71b523b82212d2dcf6a8b5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 817,
+      "sha256": "83ca6e9b8a081251b905f9d7fcf564669f6f05e730bfe03d7ba8a022a2666bf8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2492,
+      "sha256": "a39907e42a8312a1cd1abdebbec35a5bfd52bcf1ebb55c202993ef7e60d7c829"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_demo_auth.py",
+      "size_bytes": 2887,
+      "sha256": "a93910e16f3ea524f13d21fd5ee87ebec1db5f9af1e2b5e5bd9fffb37d01ac35"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/board-crm-pytest.txt",
+      "size_bytes": 83,
+      "sha256": "e465ace4d4511c8484464d77916f4372a01f7b70ff41f48609ec9d0792ff8a84"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/board-crm-tex.txt",
+      "size_bytes": 30,
+      "sha256": "225ef04e4349e89b0645b939f75d7af2f30c09e296a77c373f6ceee6067a796d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/execution.json",
+      "size_bytes": 1998,
+      "sha256": "1ad9bf3b85a5662b467c6dcdf69694445618b493a61d8a938f882170ca908f43"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/structural-checks.json",
+      "size_bytes": 1747,
+      "sha256": "65bf8b36f26f6b5abba596cd9a79f834205293d39ec933b94f8e2e91c9b32a8a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/tiny-catalog-pytest.txt",
+      "size_bytes": 179,
+      "sha256": "7f5cbdf37a135268c9731d72ac09cdfe538b67faa057e1a514098799c8c285ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/work-board-pytest.txt",
+      "size_bytes": 99,
+      "sha256": "2c1fb26e2381deb566100a0510229630e1e8f0d05c7d6c6c3b83734e375d0878"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/LICENSE",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 4231,
+      "sha256": "891f5b122814cd734a929189473d187b7271af77647163208c2dc2bfe93f62df"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 4708,
+      "sha256": "d82a427d866df8cd1c1fcbcf66ba30b1894d402bc77151ad028c5c117db02a62"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 21953,
+      "sha256": "4172edfb6a31577fcb107f8619d298cea721d017574acb18a7f90a1bd0aa87ed"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2421,
+      "sha256": "e3c51a4ac2c6a3869aaf1e0c2839f6cceb35a2a51bcf0a84c9e849a840b95aec"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2678,
+      "sha256": "68cf97e0dcdafc8db4804c19ff62a590bd3e3fb666a8aa2d25e7c8ee04027ce2"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2039,
+      "sha256": "a70931a141280b9b38d2954358d56de488907c253f76d248cb04b5019e73016f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 4310,
+      "sha256": "6bf4adc7396ded283ee2746b593945103eb37c9242a0c5d5f462b9917e5f4051"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 4664,
+      "sha256": "8923dcf0d979425c5f3778d1622062071251da681882121f409f79af6e0b17a3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 7847,
+      "sha256": "d570bbf3f78025393b2ad36a90f7812808e5184c720bd6c4a7ba286f4391428b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2589,
+      "sha256": "cba1a9fbaafa8087eed9b4973d312581360e1b6df86f29b564daa4b3b1656be1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2832,
+      "sha256": "f170d0dae9b5e4e922c43b9cd294fceeb720b6ff6ed6dbd59dfb12938423b8ac"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 2808,
+      "sha256": "ae37c7cad57fa96d606cd73bd230b5fc844856ae5a65ef77ae6d99ade15625fc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3047,
+      "sha256": "e5f4548bb0c6e0e32222c234cbab94742a7d3dd489b37c8eeee1586059b3b82a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 2192,
+      "sha256": "54bdc4b1e198c93aa8af3295111d3d654a0c1a58c93aa2e6ab5c15b0120f7512"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.md",
+      "size_bytes": 3536,
+      "sha256": "129feca25e72bba9f62327344fdb7a40b41f532b57c536827aa91b4f764d45f3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.pt-br.md",
+      "size_bytes": 3821,
+      "sha256": "99fa3585e773bb26290e379822c6a00073a1f03eb0e65be1da172f7a65ba2f38"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/derivations.json",
+      "size_bytes": 4631,
+      "sha256": "7c432be535f2b99defb0d7a6027d4035726231870f5b5aef4e6ef5469412fd09"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/model-instances.json",
+      "size_bytes": 10346,
+      "sha256": "528a59030dd74fea25fae52897881ca0fb0ea66fcffcce1c48e49b736da444b0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "3a42927ad0d54b4e20e94cf0c0368aa840e8973ac829da007eb6336f475ca091"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/pyproject.toml",
+      "size_bytes": 697,
+      "sha256": "07c01306a7e15859b6f0c746707b173da6020f2f92f271a8526d579f6509d236"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 710,
+      "sha256": "795354f15bb9112f4449b6887712160ef8c83f0fac8174a87c97c723be98211e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 958,
+      "sha256": "c7adf8fbe6839fed4782818fed0bfa74b97f4ca9eafa62ea20ddd710fd877fc3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 801,
+      "sha256": "28b1be4e927f4da8b449572314a1e09a4db98ec0dc036db5695d40f6d44960ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 2598,
+      "sha256": "2d630c1ce114c2c84faa5c543f4349046d95959f65337f6339a511eb937951bb"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 6525,
+      "sha256": "fbfb5e796a373ab7934ef2140b17170e8ca76af0196c7e107b149b90698c5c94"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 1133,
+      "sha256": "ea19a9eb7408e48fd51f63eb9f179304439626a55bee87eb93ececfae74f6612"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 4025,
+      "sha256": "75bbb3cbdfcdec05eaccc832a72d844532f3a9b47b489fa8ac3fbedcba763b32"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5887,
+      "sha256": "9c6d12a99c4a806b51be56e5e3d2109bc344a5d61d74152e390ac079ceea0cb6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4488,
+      "sha256": "394e37a9f6bf3f9c9e6529d61416de3e05098a6d832241fd61d5a66e0350d96f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/integration/test_sqlite_store.py",
+      "size_bytes": 4778,
+      "sha256": "b47fdcc79e122698aeaaf96c17889f798fac2ad2385c5238ccc44ee771fc792d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 10378,
+      "sha256": "9899b325877f2aaf46f0b63bc32c350d88bd6695160635e2a5ab77f56ca0ff72"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 7217,
+      "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/LICENSE.txt",
+      "size_bytes": 1127,
+      "sha256": "13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/SKILL.md",
+      "size_bytes": 13691,
+      "sha256": "1390cd028c6fb6a0c642aa3f668e1f2130d6adaa1de569dd711ed4d182d9fb7b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/actors-and-boundaries.md",
+      "size_bytes": 11669,
+      "sha256": "41a5e90dec9dbe43453c051499b9fa5544b7aba0ca0a261b5768de5bc838abb6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/conformance-and-evidence.md",
+      "size_bytes": 9416,
+      "sha256": "6a726463a6f2a0c34857afd7a4a8e1286c003389f8b3e1d1b9607561795649ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/engines-and-notation.md",
+      "size_bytes": 12859,
+      "sha256": "7dbcdb1933a36caefbbd73aa2c12990746446c85d7c904df25ad85c8299d7324"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/layers.md",
+      "size_bytes": 16712,
+      "sha256": "983938fe7ee2b04355654ab194ee6ae3cc78e87e2291ab8fc0a556da5d828172"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/source-map.md",
+      "size_bytes": 7225,
+      "sha256": "adf9665b660d089f525a343a75b9102db20e9673e4f91762c62c693e704ebdba"
+    }
+  ]
+}

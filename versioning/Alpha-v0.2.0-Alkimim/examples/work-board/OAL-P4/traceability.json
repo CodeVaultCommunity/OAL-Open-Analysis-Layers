@@ -1,0 +1,29 @@
+{
+  "project": "Work Board",
+  "version": "0.2.0",
+  "channel": "local browser and JSON over WSGI",
+  "interface_to_cases": [
+    {"id": "UI-WB-CREATE", "description": "Create form and board refresh", "case_ids": ["UC-WB-001", "UC-WB-005"]},
+    {"id": "UI-WB-ASSIGN", "description": "Assign control and board refresh", "case_ids": ["UC-WB-002", "UC-WB-005"]},
+    {"id": "UI-WB-ADVANCE", "description": "Advance control and board refresh", "case_ids": ["UC-WB-003", "UC-WB-005"]},
+    {"id": "UI-WB-COMMENT", "description": "Comment control and board refresh", "case_ids": ["UC-WB-004", "UC-WB-005"]},
+    {"id": "UI-WB-BOARD", "description": "Initial load, filter, and refresh", "case_ids": ["UC-WB-005"]},
+    {"id": "UI-WB-COMMENTS", "description": "Read comments control", "case_ids": ["UC-WB-006"]},
+    {"id": "API-WB-CREATE", "description": "POST /api/items", "case_ids": ["UC-WB-001"]},
+    {"id": "API-WB-ASSIGN", "description": "POST /api/items/{id}/assign", "case_ids": ["UC-WB-002"]},
+    {"id": "API-WB-TRANSITION", "description": "POST /api/items/{id}/transition", "case_ids": ["UC-WB-003"]},
+    {"id": "API-WB-COMMENT", "description": "POST /api/items/{id}/comments", "case_ids": ["UC-WB-004"]},
+    {"id": "API-WB-BOARD", "description": "GET /api/items", "case_ids": ["UC-WB-005"]},
+    {"id": "API-WB-COMMENTS", "description": "GET /api/items/{id}/comments", "case_ids": ["UC-WB-006"]},
+    {"id": "UI-WB-STATIC", "description": "Static page, headings, and messages", "case_ids": []}
+  ],
+  "cases_to_interface": [
+    {"case_id": "UC-WB-001", "interface_element_ids": ["UI-WB-CREATE", "API-WB-CREATE"]},
+    {"case_id": "UC-WB-002", "interface_element_ids": ["UI-WB-ASSIGN", "API-WB-ASSIGN"]},
+    {"case_id": "UC-WB-003", "interface_element_ids": ["UI-WB-ADVANCE", "API-WB-TRANSITION"]},
+    {"case_id": "UC-WB-004", "interface_element_ids": ["UI-WB-COMMENT", "API-WB-COMMENT"]},
+    {"case_id": "UC-WB-005", "interface_element_ids": ["UI-WB-CREATE", "UI-WB-ASSIGN", "UI-WB-ADVANCE", "UI-WB-COMMENT", "UI-WB-BOARD", "API-WB-BOARD"]},
+    {"case_id": "UC-WB-006", "interface_element_ids": ["UI-WB-COMMENTS", "API-WB-COMMENTS"]}
+  ],
+  "interface_only": ["UI-WB-STATIC"]
+}

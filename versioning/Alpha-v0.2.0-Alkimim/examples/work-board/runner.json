@@ -1,0 +1,7 @@
+{
+  "name": "work-board",
+  "executor": "python-wsgi",
+  "entrypoint": "work_board.__main__:create_handler",
+  "default_port": 8002,
+  "database_name": "work-board.sqlite3"
+}

@@ -1,0 +1,73 @@
+{
+  "project": "Work Board",
+  "version": "0.2.0",
+  "mapping": [
+    {
+      "id": "UC-WB-001",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:CreateItem",
+      "behavioral_test": "BT-WB-001",
+      "interface_element_ids": [
+        "UI-WB-CREATE",
+        "API-WB-CREATE"
+      ]
+    },
+    {
+      "id": "UC-WB-002",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:AssignItem",
+      "behavioral_test": "BT-WB-002",
+      "interface_element_ids": [
+        "UI-WB-ASSIGN",
+        "API-WB-ASSIGN"
+      ]
+    },
+    {
+      "id": "UC-WB-003",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:TransitionItem",
+      "behavioral_test": "BT-WB-003",
+      "interface_element_ids": [
+        "UI-WB-ADVANCE",
+        "API-WB-TRANSITION"
+      ]
+    },
+    {
+      "id": "UC-WB-004",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:AddComment",
+      "behavioral_test": "BT-WB-004",
+      "interface_element_ids": [
+        "UI-WB-COMMENT",
+        "API-WB-COMMENT"
+      ]
+    },
+    {
+      "id": "UC-WB-005",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:ViewBoard",
+      "behavioral_test": "BT-WB-005",
+      "interface_element_ids": [
+        "UI-WB-CREATE",
+        "UI-WB-ASSIGN",
+        "UI-WB-ADVANCE",
+        "UI-WB-COMMENT",
+        "UI-WB-BOARD",
+        "API-WB-BOARD"
+      ]
+    },
+    {
+      "id": "UC-WB-006",
+      "source": "src/work_board/usecases/operations.py",
+      "implementation": "work_board.usecases.operations:ViewComments",
+      "behavioral_test": "BT-WB-006",
+      "interface_element_ids": [
+        "UI-WB-COMMENTS",
+        "API-WB-COMMENTS"
+      ]
+    }
+  ],
+  "model_status": "specified",
+  "model_identity": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0"
+}

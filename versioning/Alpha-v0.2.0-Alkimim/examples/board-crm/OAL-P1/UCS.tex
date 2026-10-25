@@ -1,0 +1,741 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=22mm]{geometry}
+
+\usepackage{fontspec}
+
+\setmainfont{Arial}
+
+\usepackage{unicode-math}
+
+\setmathfont{Cambria Math}
+
+\usepackage{hyperref}
+
+\setlength{\parskip}{5pt}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\title{Board CRM --- use-case specification}
+
+\author{Douglas de Oliveira Alkimim \and Bruno Chevitarese}
+
+\date{OAL Alpha-v0.2.0-Alkimim \quad Project specification version: 0.2.0}
+
+\maketitle
+
+\textbf{Status:} Educational baseline
+
+\textbf{Reference language:} en
+
+\section{Purpose and scope}
+
+A small sales team tracks opportunities on a drag-and-drop board. A card represents one opportunity. Moving a card changes its sales stage; closing it records an outcome. The specification covers the complete six-case example, including its observable behavior and failure results.
+
+\subsection{Scope}
+
+\begin{itemize}
+
+\item \textbf{S-01.} One local CRM board with the active stages New, Qualified, and Proposal, followed by the terminal outcomes Won and Lost.
+
+\item \textbf{S-02.} The sales operator creates, moves, annotates, and views cards. The manager may also close them. The viewer may only view the board.
+
+\item \textbf{S-03.} The board and case operations share the same persistent records. A browser drag is an input gesture; the move case defines the resulting behavior.
+
+\end{itemize}
+
+\subsection{Participants}
+
+\textbf{ACT-01 --- Sales operator.} May create, move, annotate, and view opportunities.
+
+\textbf{ACT-02 --- Sales manager.} May execute all six use cases, including closure.
+
+\textbf{ACT-03 --- Board viewer.} May view the board only.
+
+\subsection{Needs}
+
+\begin{itemize}
+
+\item \textbf{N-01.} Record an opportunity with enough context to identify it and its owner.
+
+\item \textbf{N-02.} Know the current sales stage and move an active opportunity without losing concurrent changes.
+
+\item \textbf{N-03.} Keep a concise record of interactions with a prospect.
+
+\item \textbf{N-04.} Inspect active work and closed outcomes from the same board.
+
+\item \textbf{N-05.} Record why an opportunity ended and retain its stage history.
+
+\end{itemize}
+
+\subsection{Assumptions}
+
+\begin{itemize}
+
+\item \textbf{A-01.} The local boundary authenticates the actor; each use case checks its permission before domain effects.
+
+\item \textbf{A-02.} The clock and identifier provider return valid values. Storage availability is not assumed and has an explicit failure result.
+
+\item \textbf{A-03.} A client sends the version it last observed for every mutation of an existing opportunity.
+
+\end{itemize}
+
+\subsection{Outside this baseline}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Remote deployment, dynamic account management, tenants, and production hardening.
+
+\item \textbf{O-02.} Email delivery, scheduling, pricing, revenue forecasts, and external CRM synchronization.
+
+\item \textbf{O-03.} Deletion, reopening closed opportunities, merging cards, and editing opportunity identity fields.
+
+\item \textbf{O-04.} A guarantee of operation during host, database, or power failure.
+
+\end{itemize}
+
+\section{Entities and validity}
+
+\subsection{E-01 -- Opportunity}
+
+A retained record with an opaque ID, title, company, owner, stage, integer version, and creation/update times.
+
+\textbf{Validity:} Title and company each contain 1--80 nonblank Unicode characters; owner contains 1--40. Stage is one of NEW, QUALIFIED, PROPOSAL, WON, LOST. Version starts at 1 and grows by one per successful mutation.
+
+\subsection{E-02 -- Interaction note}
+
+An append-only note with an opaque ID, opportunity ID, body, and timestamp.
+
+\textbf{Validity:} Body contains 1--500 nonblank Unicode characters. Leading and trailing spaces are removed before storage.
+
+\subsection{E-03 -- Stage event}
+
+An append-only record of source stage, destination stage, event author, timestamp, and the resulting opportunity version. The event author is the identity written to history: the creation event records the sales responsible (owner) as its author, while later events record the actor identity supplied by the calling case (through the HTTP channel, the authenticated principal).
+
+\textbf{Validity:} Source and destination differ. The creation event has no source stage. An event exists only for a successful stage change.
+
+\section{Shared business rules}
+
+\begin{itemize}
+
+\item \textbf{R-01.} A newly created opportunity starts in NEW at version 1. Its identity cannot be reused for another retained opportunity.
+
+\item \textbf{R-02.} A drag may move only between adjacent active stages: NEW \(\leftrightarrow\) QUALIFIED \(\leftrightarrow\) PROPOSAL. Dropping on the current stage is rejected without changing the card; skipping a stage is rejected.
+
+\item \textbf{R-03.} WON is reachable only from PROPOSAL. LOST is reachable from any active stage. WON and LOST are terminal; cards in either stage cannot be moved or closed again.
+
+\item \textbf{R-04.} Every mutation of an existing opportunity requires its last observed version. A mismatch returns conflict without changing the opportunity, notes, or stage history.
+
+\item \textbf{R-05.} A successful mutation increments the opportunity version once. A stage change and its stage event commit together; a note and its version increment commit together.
+
+\item \textbf{R-06.} A close operation requires a nonblank reason of at most 200 characters. The reason is retained as a note and the stage event records the outcome.
+
+\item \textbf{R-07.} The board groups all retained opportunities by stage and orders cards within a stage by most recent update, then by ID. An optional owner filter uses exact matching.
+
+\item \textbf{R-08.} Unknown IDs return not-found. Invalid input returns validation error. Storage failure returns unavailable. These results never report success for an uncommitted mutation.
+
+\end{itemize}
+
+\section{Required capabilities}
+
+\begin{itemize}
+
+\item \textbf{CAP-ID.} Provide an opaque identifier for an opportunity or note.
+
+\item \textbf{CAP-CLOCK.} Provide a timestamp for a recorded change.
+
+\item \textbf{CAP-STORE.} Read and atomically change retained opportunities, notes, and stage events.
+
+\end{itemize}
+
+\section{Use-case contracts}
+
+\subsection{UC-CRM-001 -- Create opportunity}
+
+\textbf{Objective:} Place a new sales opportunity on the board.
+
+\textbf{Trigger:} The operator submits title, company, and owner.
+
+\textbf{Participants:} ACT-01
+
+\textbf{Permitted actors:} ACT-01, ACT-02
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Title, company, owner.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validate the three text fields.
+
+\item \textbf{F-02.} Obtain ID and time; create a NEW opportunity at version 1.
+
+\item \textbf{F-03.} Persist the opportunity and creation event together.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Invalid fields return validation error without a record.
+
+\item \textbf{X-02.} Unavailable storage returns unavailable without a success result.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return the ID, NEW stage, and version 1.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} One retained opportunity and one creation event are added atomically.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} A rejected request creates neither opportunity nor event.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-01
+
+\textbf{Rules:} R-01, R-08
+
+\textbf{Entities:} E-01, E-03
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-001-01.} Valid fields create a NEW card at version 1.
+
+\item \textbf{AC-CRM-001-02.} Blank or oversized fields create no card.
+
+\item \textbf{AC-CRM-001-03.} Creation produces exactly one initial stage event.
+
+\item \textbf{AC-CRM-001-04.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\subsection{UC-CRM-002 -- Move opportunity}
+
+\textbf{Objective:} Change the active stage represented by a dragged card.
+
+\textbf{Trigger:} The operator drops a card on another active column.
+
+\textbf{Participants:} ACT-01
+
+\textbf{Permitted actors:} ACT-01, ACT-02
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Opportunity ID, destination stage, expected version.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Load the current opportunity and compare versions.
+
+\item \textbf{F-02.} Check that source and destination are adjacent active stages.
+
+\item \textbf{F-03.} Persist the new stage, incremented version, and stage event together.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Unknown ID returns not-found; version mismatch returns conflict.
+
+\item \textbf{X-02.} Same-stage, skipped-stage, or closed-card drop returns validation error without change.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return destination stage and new version.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} One card changes column and one stage event is appended.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Rejected moves preserve stage, version, and history.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-02, N-05
+
+\textbf{Rules:} R-02, R-04, R-05, R-08
+
+\textbf{Entities:} E-01, E-03
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-002-01.} A NEW card moves to QUALIFIED with one version increment and event.
+
+\item \textbf{AC-CRM-002-02.} A move from NEW directly to PROPOSAL is rejected.
+
+\item \textbf{AC-CRM-002-03.} A stale version is rejected without changing stage or history.
+
+\item \textbf{AC-CRM-002-04.} A closed card cannot be dragged to an active stage.
+
+\item \textbf{AC-CRM-002-05.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\subsection{UC-CRM-003 -- Record interaction}
+
+\textbf{Objective:} Keep an append-only note about a prospect interaction.
+
+\textbf{Trigger:} The operator submits a note for a card.
+
+\textbf{Participants:} ACT-01
+
+\textbf{Permitted actors:} ACT-01, ACT-02
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Opportunity ID, note body, expected version.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Trim and validate the note; compare the expected version.
+
+\item \textbf{F-02.} Append the note and increment the opportunity version together.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Unknown ID, invalid body, stale version, and storage failure have their defined error results.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return note ID and new opportunity version.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} One note is retained; stage and stage history stay unchanged.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} A rejected note does not increment the version.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-03
+
+\textbf{Rules:} R-04, R-05, R-08
+
+\textbf{Entities:} E-01, E-02
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-003-01.} A valid note is retrievable and increments the card version once.
+
+\item \textbf{AC-CRM-003-02.} Blank or oversized notes are rejected without version change.
+
+\item \textbf{AC-CRM-003-03.} A closed card still accepts a note.
+
+\item \textbf{AC-CRM-003-04.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\subsection{UC-CRM-004 -- View board}
+
+\textbf{Objective:} Inspect active and closed opportunities in a stable board order.
+
+\textbf{Trigger:} An authorized user opens or refreshes the board.
+
+\textbf{Participants:} ACT-03
+
+\textbf{Permitted actors:} ACT-01, ACT-02, ACT-03
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Optional exact owner filter.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Load all retained opportunities, optionally filtered by owner.
+
+\item \textbf{F-02.} Group by stage and sort cards by update time descending and ID ascending.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} An unknown owner yields empty columns; storage failure returns unavailable.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return all five columns with each card ID, fields, stage, and version.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} No data is changed.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} Repeated reads of unchanged data preserve the same order.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-02, N-04
+
+\textbf{Rules:} R-07, R-08
+
+\textbf{Entities:} E-01, E-02, E-03
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-004-01.} The board includes active and closed cards in their correct columns.
+
+\item \textbf{AC-CRM-004-02.} Owner filtering is exact and leaves other records unchanged.
+
+\item \textbf{AC-CRM-004-03.} Cards have deterministic order within every column.
+
+\item \textbf{AC-CRM-004-04.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\subsection{UC-CRM-005 -- Close as won}
+
+\textbf{Objective:} Record a successful sales outcome from Proposal.
+
+\textbf{Trigger:} The manager marks a Proposal card as won.
+
+\textbf{Participants:} ACT-02
+
+\textbf{Permitted actors:} ACT-02
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Opportunity ID, reason, expected version.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validate reason and version, then confirm PROPOSAL stage.
+
+\item \textbf{F-02.} Commit WON stage, version increment, stage event, and reason note together.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Other source stages, blank reason, stale version, unknown ID, or storage failure return their defined errors.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return WON and the new version.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} The card becomes terminal with one event and one reason note.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} A rejected closure preserves the prior card and history.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-05
+
+\textbf{Rules:} R-03, R-04, R-05, R-06, R-08
+
+\textbf{Entities:} E-01, E-02, E-03
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-005-01.} A PROPOSAL card closes as WON with one note, event, and version increment.
+
+\item \textbf{AC-CRM-005-02.} A NEW or QUALIFIED card cannot close as WON.
+
+\item \textbf{AC-CRM-005-03.} A closed card cannot close again.
+
+\item \textbf{AC-CRM-005-04.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\subsection{UC-CRM-006 -- Close as lost}
+
+\textbf{Objective:} Record an unsuccessful sales outcome from an active stage.
+
+\textbf{Trigger:} The manager marks an active card as lost.
+
+\textbf{Participants:} ACT-02
+
+\textbf{Permitted actors:} ACT-02
+
+\paragraph{Inputs}
+
+\begin{itemize}
+
+\item \textbf{I-01.} Opportunity ID, reason, expected version.
+
+\end{itemize}
+
+\paragraph{Assumed conditions}
+
+\begin{itemize}
+
+\item \textbf{P-01.} The requesting actor is authenticated and permitted for this case.
+
+\end{itemize}
+
+\paragraph{Main flow}
+
+\begin{itemize}
+
+\item \textbf{F-01.} Validate reason and version, then confirm an active stage.
+
+\item \textbf{F-02.} Commit LOST stage, version increment, stage event, and reason note together.
+
+\end{itemize}
+
+\paragraph{Alternatives and failures}
+
+\begin{itemize}
+
+\item \textbf{X-01.} Already closed, blank reason, stale version, unknown ID, or storage failure return their defined errors.
+
+\end{itemize}
+
+\paragraph{Results}
+
+\begin{itemize}
+
+\item \textbf{O-01.} Return LOST and the new version.
+
+\end{itemize}
+
+\paragraph{Effects}
+
+\begin{itemize}
+
+\item \textbf{E-01.} The card becomes terminal with one event and one reason note.
+
+\end{itemize}
+
+\paragraph{Guarantees}
+
+\begin{itemize}
+
+\item \textbf{G-01.} A rejected closure preserves the prior card and history.
+
+\end{itemize}
+
+\textbf{Required capabilities:} 
+
+\textbf{Needs:} N-05
+
+\textbf{Rules:} R-03, R-04, R-05, R-06, R-08
+
+\textbf{Entities:} E-01, E-02, E-03
+
+\paragraph{Acceptance criteria}
+
+\begin{itemize}
+
+\item \textbf{AC-CRM-006-01.} Each active stage may close as LOST with one note, event, and version increment.
+
+\item \textbf{AC-CRM-006-02.} A closed card cannot close as LOST again.
+
+\item \textbf{AC-CRM-006-03.} A stale version leaves the card, notes, and history unchanged.
+
+\item \textbf{AC-CRM-006-04.} A missing or unpermitted actor is denied before any domain or persistence effect.
+
+\end{itemize}
+
+\section{Complementary obligations}
+
+\begin{itemize}
+
+\item \textbf{Q-01.} Every case denies an unpermitted actor before effects. The case, not the channel, decides permission.
+
+\item \textbf{Q-02.} Stage changes and closures are atomic with their events; note insertion is atomic with its version increment.
+
+\item \textbf{Q-03.} A conflicting update is observable as a distinct result so a client can refresh the board and retry deliberately.
+
+\item \textbf{Q-04.} The board returns all records for this small local demonstration. Pagination and throughput targets are outside its scope.
+
+\item \textbf{Q-05.} No case deletes an opportunity, note, or stage event. Database backup and restore belong to the operator's environment.
+
+\item \textbf{Q-06.} Moving a card must be operable without drag-and-drop, through an explicit control.
+
+\item \textbf{Q-07.} The demonstration binds to 127.0.0.1 and authenticates each API request with HTTP Basic demonstration credentials.
+
+\item \textbf{Q-08.} The stage selector is the concrete non-drag control; it invokes UC-CRM-002 and then UC-CRM-004.
+
+\end{itemize}
+
+\section{Glossary}
+
+\textbf{Card.} Visual representation of one opportunity, not another business entity.
+
+\textbf{Active stage.} NEW, QUALIFIED, or PROPOSAL; a card may move while in one of these stages.
+
+\textbf{Terminal outcome.} WON or LOST; closure is retained and is not reversible in this baseline.
+
+\textbf{Expected version.} The version observed by the client before a mutation; used to detect concurrent changes.
+
+\section{Evolution}
+
+This baseline is version 0.2.0 of the example specification, adapted for OAL Alpha-v0.2.0-Alkimim. Any change to case results, stage transitions, or criteria needs an explicit revision and aligned implementation. Channel choices, such as authentication and representation, belong to the interaction boundary (L4).
+
+\end{document}

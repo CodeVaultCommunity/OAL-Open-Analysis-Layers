@@ -1,0 +1,7 @@
+{
+  "name": "tiny-catalog",
+  "executor": "python-wsgi",
+  "entrypoint": "tiny_catalog.__main__:create_handler",
+  "default_port": 8000,
+  "database_name": "catalog.sqlite3"
+}

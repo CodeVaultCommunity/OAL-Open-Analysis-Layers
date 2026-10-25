@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny Catalog · OAL Alpha-v0.2.0-Alkimim</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><span class="mark">O</span><strong>OAL <small>Tiny Catalog</small></strong><button id="language" type="button">English</button></header>
+  <main>
+    <section class="intro"><p class="eyebrow">EXEMPLO EXECUTÁVEL · PYTHON</p><h1 data-i18n="headline">Um catálogo pequeno, com regras claras.</h1><p data-i18n="intro">Cadastre itens, consulte o catálogo e desative itens sem apagar seus registros.</p></section>
+    <section class="panels">
+      <form id="register" class="panel">
+        <h2 data-i18n="register">Cadastrar item</h2>
+        <label><span data-i18n="code">Código</span><input name="code" required maxlength="24" pattern="[A-Z0-9_-]+" placeholder="BOOK-1"></label>
+        <label><span data-i18n="name">Nome</span><input name="name" required maxlength="80" placeholder="Notebook"></label>
+        <button class="primary" type="submit" data-i18n="save">Cadastrar</button>
+      </form>
+      <form id="lookup" class="panel">
+        <h2 data-i18n="lookup">Consultar código</h2>
+        <label><span data-i18n="code">Código</span><input name="code" required placeholder="BOOK-1"></label>
+        <button type="submit" data-i18n="search">Consultar</button>
+        <div id="lookup-result" class="lookup-result" aria-live="polite"></div>
+      </form>
+    </section>
+    <section class="listing"><div class="section-head"><div><p class="eyebrow" data-i18n="active">ITENS ATIVOS</p><h2 data-i18n="catalog">Catálogo</h2></div><button id="refresh" type="button" data-i18n="refresh">Atualizar</button></div><p id="status" role="status" aria-live="polite"></p><div id="items" class="items"></div></section>
+  </main>
+  <footer data-i18n="footer">Demonstração local. O SQLite preserva também os itens desativados.</footer>
+</body>
+</html>

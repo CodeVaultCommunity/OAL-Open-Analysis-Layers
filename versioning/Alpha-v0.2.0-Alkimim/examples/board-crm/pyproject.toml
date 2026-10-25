@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oal-board-crm-example"
+version = "0.2.0a0"
+description = "Local Python CRM board illustrating the four OAL layers (L1-L4)."
+requires-python = ">=3.12"
+readme = "README.md"
+license = "MIT"
+authors = [
+  {name = "Douglas de Oliveira Alkimim"},
+  {name = "Bruno Chevitarese"},
+]
+dependencies = []
+
+[project.scripts]
+oal-board-crm = "board_crm.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"board_crm.transport" = ["static/*.html", "static/*.css", "static/*.js"]

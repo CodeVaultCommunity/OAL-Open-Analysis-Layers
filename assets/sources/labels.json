@@ -1,0 +1,78 @@
+{
+  "en": {
+    "language": "English",
+    "engine": "Engine",
+    "layer": {
+      "adib": "Stimuli, actor context, responses",
+      "adi": "Callable cases + observed results",
+      "adpm": "Program model",
+      "advs": "Verification specification",
+      "ucs": "Behavior, actors, and criteria"
+    },
+    "banner": {
+      "tagline": "From analysis to implementation and interaction.",
+      "reference": ["Optional reference to versioned UCS", "(additional source during derivation)"],
+      "parallel": ["One L1–L2 derivation; ADPM and ADVS", "may be prepared in parallel."],
+      "ucs": ["Specifies use cases,", "actors and criteria"],
+      "admv": ["ADPM + ADVS", "Program model +", "verification specification"],
+      "adi": ["Implements the callable core", "and its verification"],
+      "adib": ["Exposes interactions and", "resolves actor context"],
+      "benefits": ["Clear specifications", "Traceable model", "Verifiable implementation", "Consistent interactions"]
+    },
+    "map": {
+      "adib": "Boundaries / external interfaces",
+      "adi": "Use-case implementation",
+      "adpm": "Derived use-case model",
+      "advs": "Behavioral test",
+      "ucs": "Specified use case",
+      "boundaries": ["API Boundary", "UI Boundary", "CLI Boundary"],
+      "implementations": ["UC Impl A", "UC Impl B", "UC Impl C"],
+      "model_uc": "Model UC",
+      "behavioral_test": "Behavioral Test",
+      "uc": "UC",
+      "many": "n:n traceability",
+      "many_note": ["Each boundary may use several cases;", "each case may serve several boundaries."],
+      "pair": "1:1 pair mapping",
+      "pair_note": "(ADPM use case + ADVS behavioral test) ↔ ADI implementation",
+      "bijection": "1:1 bijection"
+    }
+  },
+  "pt-br": {
+    "language": "Português",
+    "engine": "Motor",
+    "layer": {
+      "adib": "Estímulos, contexto de ator e respostas",
+      "adi": "Casos invocáveis + resultados observados",
+      "adpm": "Modelo de programa",
+      "advs": "Especificação da verificação",
+      "ucs": "Comportamento, atores e critérios"
+    },
+    "banner": {
+      "tagline": "Da análise à implementação e à interação.",
+      "reference": ["Consulta opcional à UCS versionada", "(fonte adicional durante a derivação)"],
+      "parallel": ["Uma derivação L1–L2; ADPM e ADVS", "podem ser preparados em paralelo."],
+      "ucs": ["Especifica casos,", "atores e critérios"],
+      "admv": ["ADPM + ADVS", "Modelo de programa +", "especificação da verificação"],
+      "adi": ["Implementa o núcleo", "e suas verificações"],
+      "adib": ["Expõe interações e", "resolve o contexto de ator"],
+      "benefits": ["Especificações claras", "Modelo rastreável", "Implementação verificável", "Interações consistentes"]
+    },
+    "map": {
+      "adib": "Fronteiras / interfaces externas",
+      "adi": "Implementação de caso de uso",
+      "adpm": "Modelo derivado de caso de uso",
+      "advs": "Teste comportamental",
+      "ucs": "Caso de uso especificado",
+      "boundaries": ["Fronteira API", "Fronteira UI", "Fronteira CLI"],
+      "implementations": ["Impl. UC A", "Impl. UC B", "Impl. UC C"],
+      "model_uc": "UC no modelo",
+      "behavioral_test": "Teste comportamental",
+      "uc": "UC",
+      "many": "rastreabilidade n:n",
+      "many_note": ["Cada fronteira pode usar vários casos;", "cada caso pode atender várias fronteiras."],
+      "pair": "mapeamento 1:1",
+      "pair_note": "(Caso ADPM + teste comportamental ADVS) ↔ implementação ADI",
+      "bijection": "bijeção 1:1"
+    }
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "project": "Tiny Catalog",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "specification_version": "0.2.0",
+  "status": "baseline",
+  "classification": "UCS artifact (OAL Alpha-v0.2.0-Alkimim) instantiating OAL-EX-M1-CASE-CONTRACTS 0.1.0",
+  "sources": [
+    {
+      "id": "SRC-NEEDS",
+      "description": "Reconstructed needs baseline (N-01 to N-03).",
+      "provenance": "needs-baseline.json; reconstructed from the UCS, not independent stakeholder evidence.",
+      "reconstructed": true
+    },
+    {
+      "id": "SRC-UCS",
+      "description": "Project UCS narrative and contracts.",
+      "provenance": "OAL-P1/UCS.md, baseline 0.2.0.",
+      "reconstructed": false
+    }
+  ],
+  "canonical_content": {
+    "structured": "OAL-P1/index.json",
+    "narrative": "OAL-P1/UCS.md",
+    "translation": "OAL-P1/UCS.pt-br.md",
+    "authority_by_field": {
+      "identifiers_sets_and_relations": "OAL-P1/index.json",
+      "detailed_case_entity_rule_and_obligation_contracts": "OAL-P1/UCS.md",
+      "shared_integration_criteria": "OAL-P1/index.json shared_criteria",
+      "actor_policy": "OAL-P1/index.json actor_policy"
+    },
+    "consistency_rule": "Identifiers, actor and case sets, references, and reproduced statements agree between the index and the English narrative. The index is authoritative for identifiers, sets, relations, actor_policy, and the complete shared_criteria definitions; the English narrative is authoritative for detailed case, entity, rule, and obligation contracts. Structured contract summaries do not replace omitted narrative details. The Portuguese narrative translates the English narrative and the canonical shared criterion without changing obligations."
+  },
+  "facts": [
+    {
+      "id": "F-01",
+      "kind": "assumption",
+      "statement": "A request has an authenticated actor in the permitted set for the requested case (A-01)."
+    },
+    {
+      "id": "F-02",
+      "kind": "assumption",
+      "statement": "The environment supplies functioning persistence and sufficient resources (A-02)."
+    },
+    {
+      "id": "F-03",
+      "kind": "requirement",
+      "statement": "Retain a catalog item under an unambiguous code (N-01)."
+    },
+    {
+      "id": "F-04",
+      "kind": "requirement",
+      "statement": "Consult known items and identify which are currently available (N-02)."
+    },
+    {
+      "id": "F-05",
+      "kind": "requirement",
+      "statement": "Remove an item from availability without losing its record (N-03)."
+    },
+    {
+      "id": "F-06",
+      "kind": "open",
+      "statement": "Production hosting, account management, crash recovery, and deployment isolation are outside this baseline."
+    }
+  ],
+  "domain": {
+    "id": "D-CAT",
+    "name": "Catalog",
+    "optional_organization": true
+  },
+  "actors": [
+    {
+      "id": "ACT-CAT-M",
+      "name": "maintainer",
+      "description": "May execute all four cases."
+    },
+    {
+      "id": "ACT-CAT-R",
+      "name": "reader",
+      "description": "May retrieve and list items."
+    }
+  ],
+  "entities": [
+    {
+      "id": "E-01",
+      "meaning": "Item key.",
+      "fields": [
+        "code: 1-24 characters from A-Z, 0-9, _ and -"
+      ],
+      "relations": [],
+      "invariants": [
+        "Codes are exact and case-sensitive.",
+        "Lowercase input is invalid."
+      ],
+      "validity_owner": "entity",
+      "validity_location": "OAL-P1/UCS.md E-01; implemented in src/tiny_catalog/entities/item.py::ItemKey"
+    },
+    {
+      "id": "E-02",
+      "meaning": "Retained catalog item.",
+      "fields": [
+        "code: E-01",
+        "name: 1-80 Unicode characters, nonblank",
+        "active: boolean"
+      ],
+      "relations": [
+        "Each item has one E-01 code."
+      ],
+      "invariants": [
+        "The active flag is boolean, not a numeric or textual substitute.",
+        "Whitespace in the name is preserved."
+      ],
+      "validity_owner": "entity",
+      "validity_location": "OAL-P1/UCS.md E-02; implemented in src/tiny_catalog/entities/item.py::Item"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-01",
+      "statement": "Registration cannot reuse a code allocated to any retained item, including an inactive one.",
+      "applied_by": [
+        "UC-CAT-001"
+      ]
+    },
+    {
+      "id": "R-02",
+      "statement": "Successful registration creates an active item; the caller does not choose initial availability.",
+      "applied_by": [
+        "UC-CAT-001"
+      ]
+    },
+    {
+      "id": "R-03",
+      "statement": "Deactivation changes availability, not identity or name, and does not delete the record.",
+      "applied_by": [
+        "UC-CAT-002",
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "id": "R-04",
+      "statement": "The available listing returns only active items, ordered by ascending ASCII code.",
+      "applied_by": [
+        "UC-CAT-003"
+      ]
+    },
+    {
+      "id": "R-05",
+      "statement": "Deactivating an already inactive item succeeds without changing its data.",
+      "applied_by": [
+        "UC-CAT-004"
+      ]
+    },
+    {
+      "id": "R-06",
+      "statement": "Reading returns data independent from the persisted state; assigning to a returned entity does not persist a change.",
+      "applied_by": [
+        "UC-CAT-002"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "id": "P-01",
+      "nature": "persistence",
+      "statement": "Registration preserves unique codes atomically. A successful write means the storage acknowledged it. Confirmed records remain readable after normal reconstruction.",
+      "origin": "domain",
+      "origin_reference": "UCS R-01 / P-01",
+      "scope": "UC-CAT-001 and the persistence contract",
+      "verifiable_conditions": [
+        "two concurrent registrations for one code yield one success and one duplicate rejection",
+        "a confirmed record is readable after reconstruction"
+      ],
+      "responsibility": "UC-CAT-001 with the store contract"
+    },
+    {
+      "id": "P-02",
+      "nature": "persistence",
+      "statement": "Catalog records are owned by the catalog capability. Reads do not update data. Unknown code and unavailable persistence remain distinguishable.",
+      "origin": "domain",
+      "origin_reference": "UCS P-02",
+      "scope": "all four cases",
+      "verifiable_conditions": [
+        "missing item and unavailable storage have distinct outcomes",
+        "no public operation deletes or reactivates in this version"
+      ],
+      "responsibility": "cases UC-CAT-001..004"
+    },
+    {
+      "id": "S-01",
+      "nature": "security",
+      "statement": "Every case checks an authenticated actor identity from the permitted set before any domain or persistence effect. The authentication mechanism and network exposure are L4 decisions.",
+      "origin": "domain",
+      "origin_reference": "UCS S-01 / A-01",
+      "scope": "all four cases",
+      "verifiable_conditions": [
+        "an absent actor is denied before persistence",
+        "an unpermitted actor is denied before persistence",
+        "denial is observable"
+      ],
+      "responsibility": "cases UC-CAT-001..004; the channel supplies identity only"
+    },
+    {
+      "id": "O-01",
+      "nature": "observability",
+      "statement": "Success, invalid data, duplicate code, missing item, and unavailable persistence are distinguishable as applicable.",
+      "origin": "domain",
+      "origin_reference": "UCS O-01",
+      "scope": "all four cases",
+      "verifiable_conditions": [
+        "failures are not represented as successful empty listings or confirmed writes"
+      ],
+      "responsibility": "cases and the channel representation"
+    },
+    {
+      "id": "O-02",
+      "nature": "failure-semantics",
+      "statement": "On a persistence failure after a write attempt, the final outcome may be unknown; rollback is not promised.",
+      "origin": "domain",
+      "origin_reference": "UCS O-02",
+      "scope": "UC-CAT-001 and UC-CAT-004",
+      "verifiable_conditions": [
+        "an unconfirmed write is not reported as a confirmed success"
+      ],
+      "responsibility": "cases with the store contract"
+    },
+    {
+      "id": "Q-01",
+      "nature": "performance",
+      "statement": "Inputs obey finite field constraints; the listing returns the complete available set for a small catalog.",
+      "origin": "assumption",
+      "origin_reference": "UCS Q-01",
+      "scope": "UC-CAT-003",
+      "verifiable_conditions": [
+        "the returned collection contains every active item",
+        "no latency or throughput target is claimed"
+      ],
+      "responsibility": "UC-CAT-003"
+    }
+  ],
+  "criterion_catalog": [
+    {
+      "id": "AC-CAT-001-01",
+      "case_id": "UC-CAT-001",
+      "statement": "Valid registration returns the supplied code/name with active=true; a later lookup returns that record."
+    },
+    {
+      "id": "AC-CAT-001-02",
+      "case_id": "UC-CAT-001",
+      "statement": "Invalid input is rejected and creates no record."
+    },
+    {
+      "id": "AC-CAT-001-03",
+      "case_id": "UC-CAT-001",
+      "statement": "A previously allocated code is rejected even if the existing item is inactive; its data remain unchanged."
+    },
+    {
+      "id": "AC-CAT-001-04",
+      "case_id": "UC-CAT-001",
+      "statement": "Two concurrent valid registrations for one unused code yield exactly one success and one duplicate rejection when persistence is available."
+    },
+    {
+      "id": "AC-CAT-001-05",
+      "case_id": "UC-CAT-001",
+      "statement": "Persistence unavailability is distinguishable from confirmed registration."
+    },
+    {
+      "id": "AC-CAT-001-06",
+      "case_id": "UC-CAT-001",
+      "statement": "An absent or unpermitted actor is denied before any domain or persistence effect."
+    },
+    {
+      "id": "AC-CAT-002-01",
+      "case_id": "UC-CAT-002",
+      "statement": "Active and inactive retained items are both retrievable with their data."
+    },
+    {
+      "id": "AC-CAT-002-02",
+      "case_id": "UC-CAT-002",
+      "statement": "A valid absent code produces the missing-item outcome."
+    },
+    {
+      "id": "AC-CAT-002-03",
+      "case_id": "UC-CAT-002",
+      "statement": "An invalid code is rejected as invalid data."
+    },
+    {
+      "id": "AC-CAT-002-04",
+      "case_id": "UC-CAT-002",
+      "statement": "An unavailable lookup is not reported as a missing item."
+    },
+    {
+      "id": "AC-CAT-002-05",
+      "case_id": "UC-CAT-002",
+      "statement": "Changing returned data does not change the persisted record."
+    },
+    {
+      "id": "AC-CAT-002-06",
+      "case_id": "UC-CAT-002",
+      "statement": "An absent or unpermitted actor is denied before any domain or persistence effect."
+    },
+    {
+      "id": "AC-CAT-003-01",
+      "case_id": "UC-CAT-003",
+      "statement": "The result contains exactly the active items in the required order."
+    },
+    {
+      "id": "AC-CAT-003-02",
+      "case_id": "UC-CAT-003",
+      "statement": "An empty catalog or one with only inactive items yields an empty collection."
+    },
+    {
+      "id": "AC-CAT-003-03",
+      "case_id": "UC-CAT-003",
+      "statement": "Persistence failure does not become a successful empty collection."
+    },
+    {
+      "id": "AC-CAT-003-04",
+      "case_id": "UC-CAT-003",
+      "statement": "An absent or unpermitted actor is denied before any domain or persistence effect."
+    },
+    {
+      "id": "AC-CAT-004-01",
+      "case_id": "UC-CAT-004",
+      "statement": "The item becomes inactive, leaves the available listing, and stays retrievable."
+    },
+    {
+      "id": "AC-CAT-004-02",
+      "case_id": "UC-CAT-004",
+      "statement": "Repeating the request succeeds with the same retained data."
+    },
+    {
+      "id": "AC-CAT-004-03",
+      "case_id": "UC-CAT-004",
+      "statement": "A missing record is rejected and not implicitly created."
+    },
+    {
+      "id": "AC-CAT-004-04",
+      "case_id": "UC-CAT-004",
+      "statement": "Invalid code is rejected as invalid data."
+    },
+    {
+      "id": "AC-CAT-004-05",
+      "case_id": "UC-CAT-004",
+      "statement": "Unavailable lookup or persistence cannot produce a false confirmation."
+    },
+    {
+      "id": "AC-CAT-004-06",
+      "case_id": "UC-CAT-004",
+      "statement": "An absent or unpermitted actor is denied before any domain or persistence effect."
+    }
+  ],
+  "use_cases": [
+    {
+      "id": "UC-CAT-001",
+      "name": "Register item",
+      "name_pt": "Cadastrar item",
+      "objective": "Retain a new available item (N-01).",
+      "trigger": "A maintainer requests registration in the single catalog.",
+      "inputs": [
+        "code",
+        "name"
+      ],
+      "context": [
+        "single catalog",
+        "actor_policy applies; no anonymous access"
+      ],
+      "preconditions": [
+        "A-01: an authenticated actor in the permitted set."
+      ],
+      "results": [
+        "the registered item"
+      ],
+      "effects": [
+        "one new retained active record"
+      ],
+      "alternatives": [
+        "a duplicate code rejects registration without overwriting the existing item"
+      ],
+      "failures": [
+        "invalid_data",
+        "duplicate_item",
+        "persistence_unavailable",
+        "authentication_required",
+        "access_denied"
+      ],
+      "needs": [
+        "N-01"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-01",
+        "R-02"
+      ],
+      "capabilities": [
+        "atomically record a new item while preserving key uniqueness"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "P-01",
+        "P-02",
+        "S-01",
+        "O-01",
+        "O-02",
+        "Q-01"
+      ],
+      "criteria": [
+        "AC-CAT-001-01",
+        "AC-CAT-001-02",
+        "AC-CAT-001-03",
+        "AC-CAT-001-04",
+        "AC-CAT-001-05",
+        "AC-CAT-001-06"
+      ],
+      "initiating_actor": "ACT-CAT-M",
+      "permitted_actors": [
+        "ACT-CAT-M"
+      ]
+    },
+    {
+      "id": "UC-CAT-002",
+      "name": "Get item",
+      "name_pt": "Consultar item",
+      "objective": "Inspect a retained record (N-02).",
+      "trigger": "A permitted actor requests an item by code.",
+      "inputs": [
+        "code"
+      ],
+      "context": [
+        "single catalog",
+        "actor_policy applies; no anonymous access"
+      ],
+      "preconditions": [
+        "A-01: an authenticated actor in the permitted set."
+      ],
+      "results": [
+        "the item, irrespective of availability"
+      ],
+      "effects": [],
+      "alternatives": [],
+      "failures": [
+        "invalid_data",
+        "item_not_found",
+        "persistence_unavailable",
+        "authentication_required",
+        "access_denied"
+      ],
+      "needs": [
+        "N-02"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-03",
+        "R-06"
+      ],
+      "capabilities": [
+        "retrieve a retained record by its code"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "P-02",
+        "S-01",
+        "O-01",
+        "Q-01"
+      ],
+      "criteria": [
+        "AC-CAT-002-01",
+        "AC-CAT-002-02",
+        "AC-CAT-002-03",
+        "AC-CAT-002-04",
+        "AC-CAT-002-05",
+        "AC-CAT-002-06"
+      ],
+      "initiating_actor": "ACT-CAT-R",
+      "permitted_actors": [
+        "ACT-CAT-M",
+        "ACT-CAT-R"
+      ]
+    },
+    {
+      "id": "UC-CAT-003",
+      "name": "List available items",
+      "name_pt": "Listar itens disponíveis",
+      "objective": "Identify currently available records (N-02).",
+      "trigger": "A permitted actor requests the available catalog.",
+      "inputs": [],
+      "context": [
+        "single catalog",
+        "actor_policy applies; no anonymous access"
+      ],
+      "preconditions": [
+        "A-01: an authenticated actor in the permitted set."
+      ],
+      "results": [
+        "an ordered collection of items"
+      ],
+      "effects": [],
+      "alternatives": [
+        "an empty collection is a successful result"
+      ],
+      "failures": [
+        "persistence_unavailable",
+        "authentication_required",
+        "access_denied"
+      ],
+      "needs": [
+        "N-02"
+      ],
+      "entities": [
+        "E-02"
+      ],
+      "rules": [
+        "R-04"
+      ],
+      "capabilities": [
+        "retrieve retained item data"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "P-02",
+        "S-01",
+        "O-01",
+        "Q-01"
+      ],
+      "criteria": [
+        "AC-CAT-003-01",
+        "AC-CAT-003-02",
+        "AC-CAT-003-03",
+        "AC-CAT-003-04"
+      ],
+      "initiating_actor": "ACT-CAT-R",
+      "permitted_actors": [
+        "ACT-CAT-M",
+        "ACT-CAT-R"
+      ]
+    },
+    {
+      "id": "UC-CAT-004",
+      "name": "Deactivate item",
+      "name_pt": "Desativar item",
+      "objective": "Stop offering an item while retaining its record (N-03).",
+      "trigger": "A maintainer requests deactivation by code.",
+      "inputs": [
+        "code"
+      ],
+      "context": [
+        "single catalog",
+        "actor_policy applies; no anonymous access"
+      ],
+      "preconditions": [
+        "A-01: an authenticated actor in the permitted set."
+      ],
+      "results": [
+        "the retained inactive item"
+      ],
+      "effects": [
+        "only the active flag changes on a successful transition"
+      ],
+      "alternatives": [
+        "deactivating an inactive item succeeds without an additional state change"
+      ],
+      "failures": [
+        "invalid_data",
+        "item_not_found",
+        "persistence_unavailable",
+        "authentication_required",
+        "access_denied"
+      ],
+      "needs": [
+        "N-03"
+      ],
+      "entities": [
+        "E-01",
+        "E-02"
+      ],
+      "rules": [
+        "R-03",
+        "R-05"
+      ],
+      "capabilities": [
+        "record a changed value for an existing item without inserting a missing one"
+      ],
+      "dependencies": [
+        "UC-CAT-002"
+      ],
+      "obligations": [
+        "P-01",
+        "P-02",
+        "S-01",
+        "O-01",
+        "O-02",
+        "Q-01"
+      ],
+      "criteria": [
+        "AC-CAT-004-01",
+        "AC-CAT-004-02",
+        "AC-CAT-004-03",
+        "AC-CAT-004-04",
+        "AC-CAT-004-05",
+        "AC-CAT-004-06"
+      ],
+      "initiating_actor": "ACT-CAT-M",
+      "permitted_actors": [
+        "ACT-CAT-M"
+      ]
+    }
+  ],
+  "shared_criteria": [
+    {
+      "id": "AC-SHARED-01",
+      "kind": "integration",
+      "statement": "After registering and confirming deactivation of an item, end that application instance and reconstruct the application with the same retained storage. Lookup returns the same code and name with active=false; the available listing excludes that item.",
+      "statement_pt": "Após cadastrar um item e confirmar sua desativação, encerrar aquela instância da aplicação e reconstruí-la com o mesmo armazenamento retido. A consulta retorna o mesmo código e nome com active=false; a listagem de disponíveis exclui esse item.",
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "obligation_ids": [
+        "P-01",
+        "P-02"
+      ],
+      "preconditions": [
+        "A usable retained store and an unused valid code.",
+        "A resolved maintainer context satisfying this example's authentication requirement."
+      ],
+      "actions": [
+        "Register the item through UC-CAT-001 and receive confirmation.",
+        "Deactivate it through UC-CAT-004 and receive confirmation.",
+        "End the application instance and reconstruct it with the same retained storage.",
+        "Retrieve it through UC-CAT-002 and list available items through UC-CAT-003."
+      ],
+      "verifiable_conditions": [
+        "The retained record has the original code and name and active=false after normal reconstruction.",
+        "The available listing excludes the inactive record.",
+        "No deletion or reactivation occurs during the scenario."
+      ],
+      "limits": [
+        "Normal reconstruction only; no crash, power-loss, backup-recovery, or replication guarantee."
+      ]
+    }
+  ],
+  "actor_policy": {
+    "context": "An explicitly resolved role of the caller, with authentication required by this project contract.",
+    "authentication": "required for every case in this example",
+    "authorization": "Each case checks its permitted role set before domain or persistence effects.",
+    "missing_or_unknown_context": "denied",
+    "anonymous_access": "not admitted by this example",
+    "composition": "The same relevant context is passed to another case, which applies its own policy."
+  }
+}

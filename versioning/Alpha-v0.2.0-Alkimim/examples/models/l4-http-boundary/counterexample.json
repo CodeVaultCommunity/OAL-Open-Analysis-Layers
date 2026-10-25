@@ -1,0 +1,61 @@
+{
+  "model": "OAL-EX-M4-HTTP-BOUNDARY",
+  "model_version": "0.1.0",
+  "layer": "L4",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "counterexample_note": {
+    "en": "Invalid instance used to check rejection. It is not a project artifact.",
+    "pt-BR": "Instância inválida usada para verificar a recusa. Não é artefato de projeto."
+  },
+  "expected_violations": [
+    "V-M4-05: the endpoint reads the SQLite file directly.",
+    "V-M4-04: authorization is delegated to the route; the case does not decide permission.",
+    "V-M4-09: a JavaScript control creates a new business rule (automatic card creation).",
+    "V-M4-06: the reverse link for UI-EXTRA is missing.",
+    "V-M4-07: an implementation choice is marked external without a source."
+  ],
+  "project": "counterexample",
+  "source_l3": {"model": "OAL-EX-M3-PYTHON-CORE", "version": "0.1.0", "instance": "counterexample"},
+  "channel": {
+    "kind": "HTTP + JSON",
+    "configuration": "local",
+    "pages": ["/"],
+    "authentication": "none",
+    "identity_resolution": "the route checks a header"
+  },
+  "endpoints": [
+    {
+      "id": "API-X",
+      "method": "POST",
+      "path": "/items",
+      "case_id": "UC-CAT-001",
+      "inputs": ["code", "name"],
+      "identity": "not passed",
+      "success": "201",
+      "failures": [],
+      "representation": "application/json",
+      "persistence_access": "INSERT INTO items ..."
+    }
+  ],
+  "interface_elements": [
+    {"id": "UI-MAIN", "description": "Form", "invokes": ["UC-CAT-001"], "interface_only": false},
+    {"id": "UI-EXTRA", "description": "Automatic card creation", "invokes": [], "interface_only": false}
+  ],
+  "obligations": [
+    {
+      "id": "O-X",
+      "nature": "security",
+      "statement": "The page is secure.",
+      "origin": "external",
+      "origin_reference": "",
+      "scope": "page",
+      "verifiable_conditions": [],
+      "check_refs": []
+    }
+  ],
+  "channel_checks": [],
+  "exposure_scope": ["UC-CAT-001"],
+  "interface_only": [],
+  "persistence_access": "direct SQL from the endpoint",
+  "execution": {"status": "recorded", "reference": null}
+}

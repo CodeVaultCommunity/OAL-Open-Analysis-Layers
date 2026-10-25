@@ -1,0 +1,123 @@
+{
+  "record_kind": "didactic derivation record; not a transformer construction record and not an execution log",
+  "oal_edition": "Alpha-v0.2.0-Alkimim",
+  "model_status": "specified",
+  "model_reference": null,
+  "engine_status": "not_demonstrated",
+  "provenance": "Adapted from the Alpha-v0.1.0-Alkimim example derivations. The four reusable models under models/ were specified for Alpha-v0.2.0-Alkimim and applied to the projects manually; the instances are declared in model-instances.json. No transformer was constructed or executed for this adaptation.",
+  "status": "illustrative baseline",
+  "transitions": [
+    {
+      "from": "needs",
+      "to": "ucs",
+      "layer": "L1",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "all six illustrative cases",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim"
+      ],
+      "case_ids": [
+        "UC-WB-001",
+        "UC-WB-002",
+        "UC-WB-003",
+        "UC-WB-004",
+        "UC-WB-005",
+        "UC-WB-006"
+      ],
+      "source_artifact": "needs-baseline.json",
+      "destination_artifact": "OAL-P1/ucs.json",
+      "source_model": {
+        "status": "external needs record, reconstructed; reusable needs model unspecified",
+        "provenance_limit": "Needs reconstructed from UCS, not independent stakeholder evidence."
+      },
+      "added_decisions": "Name six cases, allowed actors, workflow outcomes, and acceptance criteria. In-place baseline review declares stable storage unavailability and its known/unknown write outcomes, and preserves every positive expected-version input."
+    },
+    {
+      "from": "ucs",
+      "to": "l2",
+      "layer": "L2",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "all six illustrative cases",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim"
+      ],
+      "case_ids": [
+        "UC-WB-001",
+        "UC-WB-002",
+        "UC-WB-003",
+        "UC-WB-004",
+        "UC-WB-005",
+        "UC-WB-006"
+      ],
+      "source_artifact": "OAL-P1/ucs.json",
+      "destination_artifacts": [
+        "OAL-P2/adpm/MODEL.md",
+        "OAL-P2/advs/behavioral-tests.json"
+      ],
+      "added_decisions": "Single L1-to-L2 derivation producing both components: separate six cases, item and comment data, store capabilities, and injected providers in ADPM; assign one behavioral-test identity to each case and list criterion-linked checks in ADVS. WorkStore carries Unavailable with explicit write_outcome; ADVS adds criterion-linked storage and version-boundary checks."
+    },
+    {
+      "from": "l2",
+      "to": "l3",
+      "layer": "L3",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "all six illustrative cases",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim"
+      ],
+      "case_ids": [
+        "UC-WB-001",
+        "UC-WB-002",
+        "UC-WB-003",
+        "UC-WB-004",
+        "UC-WB-005",
+        "UC-WB-006"
+      ],
+      "source_artifacts": [
+        "OAL-P2/adpm/MODEL.md",
+        "OAL-P2/advs/behavioral-tests.json"
+      ],
+      "destination_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "added_decisions": "Use callable Python cases, SQLite storage, and atomic version checks. Classify nonmatching oversized versions before binding them; retain atomic compare-and-set; translate driver/commit failures without claiming an unconfirmed write had no effect."
+    },
+    {
+      "from": "l3",
+      "to": "l4",
+      "layer": "L4",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "all six illustrative cases",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim"
+      ],
+      "case_ids": [
+        "UC-WB-001",
+        "UC-WB-002",
+        "UC-WB-003",
+        "UC-WB-004",
+        "UC-WB-005",
+        "UC-WB-006"
+      ],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json",
+      "additional_sources": [
+        {
+          "layer": "ucs",
+          "version": "0.2.0",
+          "decisions_informed": "actor permissions and exposed outcomes"
+        }
+      ],
+      "added_decisions": "Expose the cases through a loopback browser and JSON API with HTTP Basic identity. Map unavailable to 503 and expose write_outcome in the JSON response."
+    }
+  ],
+  "model_references": {
+    "L1": "../models/l1-case-contracts/MODEL.md",
+    "L2": "../models/l2-program-scenarios/MODEL.md",
+    "L3": "../models/l3-python-core/MODEL.md",
+    "L4": "../models/l4-http-boundary/MODEL.md"
+  }
+}

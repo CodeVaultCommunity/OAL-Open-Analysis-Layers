@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "provenance": "Illustrative needs reconstructed from the UCS for this example; not independent stakeholder history.",
+  "needs": [
+    {"id": "N-WB-001", "statement": "A team can record work in a project backlog."},
+    {"id": "N-WB-002", "statement": "A manager can assign a work item to a person."},
+    {"id": "N-WB-003", "statement": "A team can advance work through a small, explicit workflow."},
+    {"id": "N-WB-004", "statement": "Contributors can record discussion on a work item."},
+    {"id": "N-WB-005", "statement": "The team can see and filter its work board."},
+    {"id": "N-WB-006", "statement": "The team can read the discussion of an item."}
+  ]
+}

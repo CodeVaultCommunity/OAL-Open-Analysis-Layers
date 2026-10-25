@@ -1,0 +1,74 @@
+{
+  "historical_files_unchanged": 161,
+  "version_fields_preserved": 128,
+  "model_instances": 12,
+  "source_symbol_references": 91,
+  "projects": {
+    "tiny-catalog": {
+      "cases": 4,
+      "behavioral_tests": 4,
+      "case_criteria": 22,
+      "channel_identity_links": 10,
+      "shared_criteria": 1
+    },
+    "board-crm": {
+      "cases": 6,
+      "behavioral_tests": 6,
+      "case_criteria": 25,
+      "channel_identity_links": 18
+    },
+    "work-board": {
+      "cases": 6,
+      "behavioral_tests": 6,
+      "case_criteria": 18,
+      "channel_identity_links": 16
+    }
+  },
+  "local_markdown_file_references": 1204,
+  "images": {
+    "oal-banner-en.png": {
+      "width": 1766,
+      "height": 776,
+      "mode": "RGBA"
+    },
+    "oal-banner-pt-br.png": {
+      "width": 1766,
+      "height": 776,
+      "mode": "RGBA"
+    },
+    "oal-layers-en.png": {
+      "width": 1284,
+      "height": 1020,
+      "mode": "RGBA"
+    },
+    "oal-layers-pt-br.png": {
+      "width": 1284,
+      "height": 1020,
+      "mode": "RGBA"
+    },
+    "oal-map-en.png": {
+      "width": 1427,
+      "height": 1058,
+      "mode": "RGBA"
+    },
+    "oal-map-pt-br.png": {
+      "width": 1427,
+      "height": 1058,
+      "mode": "RGBA"
+    }
+  },
+  "cache_files_remaining": 0,
+  "errors": [],
+  "checked_at": "2026-10-24T21:24:35-03:00",
+  "scope": "Final repository structural checks after informational skill integration. Application execution results remain in execution.json with their original timestamps.",
+  "skill": {
+    "skill_name": "oal-alpha-v0-2-0-alkimim",
+    "files": 7,
+    "local_references": 61,
+    "anchors": 47,
+    "numbered_requirements": 46,
+    "source_hashes_match": true,
+    "license_preserved": true,
+    "errors": []
+  }
+}
