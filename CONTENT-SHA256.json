@@ -33,13 +33,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 20192,
-      "sha256": "19022b5e01f9690ec3ba829e004ae05198e994303062135c2c5c813c950b84f7"
+      "size_bytes": 21048,
+      "sha256": "90dd469296bfbecf3319cae1e93b76ee242b84c0c16ff10ba3b8908e779b6366"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 21734,
-      "sha256": "7de55608313655e1597006228df59068ab7791a3d1be94816a61695d4112302d"
+      "size_bytes": 22578,
+      "sha256": "0047e84986078f9a150780344306305df5e815d8681486597068fed09bf4cb20"
     },
     {
       "path": "VERSION",
@@ -63,8 +63,8 @@
     },
     {
       "path": "assets/oal-banner-pt-br.png",
-      "size_bytes": 999424,
-      "sha256": "5028a78bd27208fc2448a3cc29610fe807f500cd455641c38dd55e9e4cd76ed6"
+      "size_bytes": 1138102,
+      "sha256": "ca265d7addda5573471ee689544de4a0a06e876bfd42bbd53e5fe5b5e4b466f6"
     },
     {
       "path": "assets/oal-layers-en.png",
@@ -163,23 +163,23 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/README.md",
-      "size_bytes": 24890,
-      "sha256": "9e79175111371fa2b5d661e5e5492da9c9cb30c1f910b32741c0d5093cbfef52"
+      "size_bytes": 24936,
+      "sha256": "e08f2afb093ecf1adfc3b4a2cb07b59313911ea220778ee89b5f559e1d96acb1"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md",
-      "size_bytes": 27467,
-      "sha256": "e08ee5a45343b206afc6e0f36ba31b52c5a1dc0002f51e97bb9b76ddb9aaf3c3"
+      "size_bytes": 27513,
+      "sha256": "639b2cd325c0a6f2a43a38109d98185a49385607a59c7c5ea77dfd3f36df9b92"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
-      "size_bytes": 3453,
-      "sha256": "03229e726ed167e8878c8758245566e28b6492ece91936a68e90a0424c654a00"
+      "size_bytes": 3469,
+      "sha256": "674f87cc00906b9f755a2cbf459ec8c8e54104cb4583e20926437b7246aa4870"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
-      "size_bytes": 3755,
-      "sha256": "144c6d9b8d044ac5fd5eee6f31cc2d51a8c7af2085dcd6963a98f2f2f66488a8"
+      "size_bytes": 3771,
+      "sha256": "106613669101e6e73f32ba5b3357481561674cf03cc1b474b38d963c214a761c"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/LICENSE",
@@ -443,13 +443,13 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
-      "size_bytes": 14147,
-      "sha256": "adcb04ebd6bcff84eaf1460276b892193fab9e1689c9e9fcd2dde8282da8f2a6"
+      "size_bytes": 14151,
+      "sha256": "1ea2cf8de0075ffcaeed79efed769232e9a0adb22e8c61504807f15e9bc865e6"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
-      "size_bytes": 15007,
-      "sha256": "1104ebea1dc8c916b65a310cd7270e4d8da95cb2a812894333272222129ec435"
+      "size_bytes": 15011,
+      "sha256": "00bc1038747d240374e34be0a0ccabb30bcf9b417931498ebeae4dd3f646eaf7"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
@@ -968,23 +968,23 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/README.md",
-      "size_bytes": 67453,
-      "sha256": "4acd1803b5ed9bb3481ba4a18766ed464abc7414f5e01d9d362e8af617e04377"
+      "size_bytes": 67421,
+      "sha256": "e2dcea7e1cf6a6459393f08b37fe720a417dd2baef9c671d91180c73ab88d433"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md",
-      "size_bytes": 73709,
-      "sha256": "12cff6a01d3b44068621a0f4d9e10767978df7772a0668d922ba2411592a6462"
+      "size_bytes": 73676,
+      "sha256": "b6d3d9ef1d1b0bffbb00b743372040d8c62872b0e7cfb95597a5fe43811865e7"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.md",
-      "size_bytes": 7780,
-      "sha256": "4f32b9cc6ae6abe9dd5bc199bcded49b9dc6fa8881bbcf73f27a5a2da967d4dc"
+      "size_bytes": 7796,
+      "sha256": "abae369173ac9367a6df6282706eca941b5e8afde375e862866d0bdb927e94f9"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.pt-br.md",
-      "size_bytes": 8508,
-      "sha256": "298d17d73a5f6bd285c3ed38c01512ad8d6c0d1d31ac20f2bcaabe18cfb99d14"
+      "size_bytes": 8524,
+      "sha256": "98ae50be53242798336df7b6fec348742547daecb546985dddbb9837c45a03b5"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/LICENSE",
@@ -1248,23 +1248,23 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.md",
-      "size_bytes": 6458,
-      "sha256": "f3343a426bcd29efc80af57c2b8fac73b9e9f2988ab91955de1d79990909e38f"
+      "size_bytes": 6474,
+      "sha256": "e6cb5fcda8c4a9c21842fcd343a71e65b68dea764aba3b074383a2d2194bb513"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.pt-br.md",
-      "size_bytes": 6958,
-      "sha256": "4f34dfcacee3c19cb40ed0545d609c2024a27d6d7eebc0e828fc3c5009a89b9e"
+      "size_bytes": 6974,
+      "sha256": "21e861dc60355231771bd00509adb469b92609b18b7b38a98d9e17519e9f9527"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.md",
-      "size_bytes": 11896,
-      "sha256": "dad9b90178970f7ef5e6b6c47bd1d13b857306e23b17ae1d8b8e5f1293a1fd0a"
+      "size_bytes": 11912,
+      "sha256": "c3c738f94d77f7ad372b8255c9b512310b0e608790e9848abb9443f5722d08b2"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.pt-br.md",
-      "size_bytes": 12614,
-      "sha256": "90f1bcf8c15a3f70538050e50f145b0e44adb72c4b94d4eef6a7d3f9e16c3dba"
+      "size_bytes": 12630,
+      "sha256": "1a7e01598b56ef009d5741eac56888a59c0d621b73b2517a1d3744caf35135f3"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/counterexample.json",
@@ -1288,13 +1288,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.md",
-      "size_bytes": 10903,
-      "sha256": "4d0bc3cd44aaf609b362b7a81eecdf1e27378d82cd4c96e7e905ca7ef1c16637"
+      "size_bytes": 10919,
+      "sha256": "c611a28be1c7b67da50b19eadf0011799bffafcd7751f703809f2db190980aa3"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.pt-br.md",
-      "size_bytes": 11605,
-      "sha256": "e19599ba47034e0f747940b3c78a4cfacad5250a642b50f94db2b7295e8f5ffa"
+      "size_bytes": 11621,
+      "sha256": "ffa4c4020868176e9085436bdf751940194570fde661970703709afa6eabf690"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/counterexample.json",
@@ -1318,13 +1318,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.md",
-      "size_bytes": 10054,
-      "sha256": "e889f901cd6677c0db02baf502017bfacd909ad06da4940a6ab1b20ae7fd0c50"
+      "size_bytes": 10070,
+      "sha256": "e512f550f35c87adec34ccce296e92e495402289f8201773fcaf5f396f56debd"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.pt-br.md",
-      "size_bytes": 10815,
-      "sha256": "e0006fee54e7188b79bf8f0ce851d05b264cc5e6611fc4076de535d41b5b15e9"
+      "size_bytes": 10831,
+      "sha256": "d2bfc5068baf9e971bcf9895a5f1b21aae4b87d774b6e7387c5d4064b331d0c6"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/counterexample.json",
@@ -1348,13 +1348,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.md",
-      "size_bytes": 8313,
-      "sha256": "0badb29d86aef7de91d3fd98d0b92bc69e3e8425d8c0f1f86225f834d45956ef"
+      "size_bytes": 8329,
+      "sha256": "14e0a0ec1dfe308bd79a755d05a1a04465c0ed0b178090e8d51e7bf924ae7610"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.pt-br.md",
-      "size_bytes": 8814,
-      "sha256": "fe728f79620c1a51674d124049dbbd41015f4ed7baf7760b66b95fcef1b33744"
+      "size_bytes": 8830,
+      "sha256": "a0f673530ddb68e44d920c0236a73c45c2ef3e7582c1baa49da38f7811aca634"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/counterexample.json",
@@ -1383,13 +1383,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
-      "size_bytes": 16528,
-      "sha256": "abcecd49281b1c1ee1b4dc73b7cc63ec1b50735667b29d73c7e9347856821693"
+      "size_bytes": 16532,
+      "sha256": "e7ec83f9c3c294f7ab227d0fa1bc13e0b8b7aac95aa5800825b4729f6e2df5be"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
-      "size_bytes": 17598,
-      "sha256": "0379d5a3d9efee686ee21d516dc281fb57586a927f5b7c6abf04de948d950c4f"
+      "size_bytes": 17602,
+      "sha256": "de90bf9fc874fb52afe165c1e8ad84b41bd19c900639c1a4622673fde6a139cb"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
@@ -1728,8 +1728,8 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/structural-checks.json",
-      "size_bytes": 1747,
-      "sha256": "65bf8b36f26f6b5abba596cd9a79f834205293d39ec933b94f8e2e91c9b32a8a"
+      "size_bytes": 3012,
+      "sha256": "de6929afcbbf7cb7fb9ad2bf54bca0eb5a5ca415cab9cf1d3778c047f366c449"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/verification/tiny-catalog-pytest.txt",
@@ -1963,8 +1963,8 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/SKILL.md",
-      "size_bytes": 13691,
-      "sha256": "1390cd028c6fb6a0c642aa3f668e1f2130d6adaa1de569dd711ed4d182d9fb7b"
+      "size_bytes": 13685,
+      "sha256": "668ddc3a6a84ef6e47884727187fe0dff9ff19d3e44a8eeace5d401355e0f28e"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/actors-and-boundaries.md",
@@ -1978,8 +1978,8 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/engines-and-notation.md",
-      "size_bytes": 12859,
-      "sha256": "7dbcdb1933a36caefbbd73aa2c12990746446c85d7c904df25ad85c8299d7324"
+      "size_bytes": 12835,
+      "sha256": "eea41cf3338fe89dfb7aa46b37b80f3410a3d647e6be22bf5805914fda564759"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/layers.md",
@@ -1989,7 +1989,7 @@
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/source-map.md",
       "size_bytes": 7225,
-      "sha256": "adf9665b660d089f525a343a75b9102db20e9673e4f91762c62c693e704ebdba"
+      "sha256": "8b7881d69792138adf9cbc6eee5c4536fa384817ad794829c775583620d92f01"
     }
   ]
 }

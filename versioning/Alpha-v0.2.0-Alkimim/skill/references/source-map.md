@@ -23,8 +23,8 @@ identifiers, not dependencies on files outside this skill.
 | `LICENSE` | Original MIT license and copyright attribution. |
 
 - **Canonical edition label:** `Alpha-v0.2.0-Alkimim`.
-- **English source SHA-256:** `4acd1803b5ed9bb3481ba4a18766ed464abc7414f5e01d9d362e8af617e04377`.
-- **Portuguese source SHA-256:** `12cff6a01d3b44068621a0f4d9e10767978df7772a0668d922ba2411592a6462`.
+- **English source SHA-256:** `e2dcea7e1cf6a6459393f08b37fe720a417dd2baef9c671d91180c73ab88d433`.
+- **Portuguese source SHA-256:** `b6d3d9ef1d1b0bffbb00b743372040d8c62872b0e7cfb95597a5fe43811865e7`.
 - **Original license SHA-256:** `13f4f5994a7b211a33015947cd53bf896ccc73641836036faf0e6111836e0704`.
 
 OAL's credited authors are **Douglas de Oliveira Alkimim** and **Bruno

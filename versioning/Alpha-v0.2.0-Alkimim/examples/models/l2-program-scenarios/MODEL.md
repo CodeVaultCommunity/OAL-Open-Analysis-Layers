@@ -1,6 +1,6 @@
 # OAL-EX-M2-PROGRAM-SCENARIOS — Program and Scenario Records (L2)
 
-[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md)
+[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md#reference-rules)
 
 **Identity:** `OAL-EX-M2-PROGRAM-SCENARIOS`
 **Version:** 0.1.0

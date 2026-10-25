@@ -14,15 +14,17 @@ As demais regras vêm de Alpha-v0.1.0-Alkimim. O OAL continua na fase alfa; esta
 
 ### Revisão dentro desta edição
 
-Esta revisão mantém **Alpha-v0.2.0-Alkimim** e os rótulos de versão existentes dos modelos didáticos. Esclarece papéis de ator e contexto de execução, define modelos L3 como organizações reutilizáveis de código, distingue armazenamento técnico do canal de persistência do domínio e separa registros de derivação manual de declarações sobre transformadores. Também reorganiza requisitos extensos, harmoniza as representações didáticas e os critérios compartilhados, corrige os exemplos executáveis, atualiza os diagramas bilíngues e renderiza a notação matemática em Markdown. O [inventário de conteúdo](../../CONTENT-SHA256.json) identifica os arquivos entregues, e o [registro estruturado de execução](examples/verification/execution.json) preserva os resultados observados dos testes de aplicação. A edição também inclui uma [skill informativa](skill/oal-alpha-v0-2-0-alkimim/SKILL.md); essas alterações não criam outra edição.
+Esta revisão mantém **Alpha-v0.2.0-Alkimim** e os rótulos de versão existentes dos modelos didáticos. Esclarece papéis de ator e contexto de execução, define modelos L3 como organizações reutilizáveis de código, distingue armazenamento técnico do canal de persistência do domínio e separa registros de derivação manual de declarações sobre transformadores. Também reorganiza requisitos extensos, harmoniza as representações didáticas e os critérios compartilhados, corrige os exemplos executáveis, atualiza os diagramas bilíngues e renderiza a notação matemática em Markdown. O [inventário de conteúdo](../../CONTENT-SHA256.json) identifica os arquivos entregues, e o [registro estruturado de execução](examples/verification/execution.json) preserva os resultados observados dos testes de aplicação. A edição também inclui uma [skill informativa](skill/SKILL.md); essas alterações não criam outra edição.
 
 Editor principal desta edição: Douglas de Oliveira Alkimim. Bruno Chevitarese é creditado como coautor do OAL.
 
 ---
 
+<a id="reference-rules"></a>
+
 # OAL Alpha-v0.2.0-Alkimim — regras de referência
 
-[English](README.md) · [Início](../../README.pt-br.md)
+[English](README.md#reference-rules) · [Início](../../README.pt-br.md)
 
 OAL significa Open Analysis Layers. O modelo organiza as responsabilidades de desenvolvimento em quatro camadas: L1 especifica casos de uso (UCS); L2 reúne modelagem do programa (ADPM) e especificação da verificação (ADVS) como ADMV; L3 implementa o núcleo invocável (ADI); e L4 oferece a fronteira de interação externa (ADIB). Cada camada define um metamodelo; um modelo reutilizável que satisfaz esse metamodelo é instanciado por artefatos concretos de projeto. O OAL atua como modelo de referência: como outros modelos de referência, separa responsabilidades e nomeia a conformidade sem importar a tecnologia de um domínio particular, e deixa equipes livres para escolher formatos, linguagens, ferramentas e organização do projeto. A pessoa responsável por uma derivação é distinta do ator que executa um caso.
 

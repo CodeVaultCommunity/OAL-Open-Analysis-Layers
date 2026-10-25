@@ -1,6 +1,6 @@
 # OAL-EX-M1-CASE-CONTRACTS — Simple Case Contracts (L1)
 
-[English](MODEL.md) · [Modelos](../README.pt-br.md) · [Regras de referência](../../../../Alpha-v0.2.0-Alkimim/README.pt-br.md)
+[English](MODEL.md) · [Modelos](../README.pt-br.md) · [Regras de referência](../../../../Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules)
 
 **Identidade:** `OAL-EX-M1-CASE-CONTRACTS`
 **Versão:** 0.1.0

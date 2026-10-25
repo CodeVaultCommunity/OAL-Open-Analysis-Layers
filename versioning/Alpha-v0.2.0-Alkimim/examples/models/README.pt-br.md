@@ -1,6 +1,6 @@
 # Modelos de exemplo do OAL — Alpha-v0.2.0-Alkimim
 
-[English](README.md) · [Exemplos](../README.pt-br.md) · [Regras de referência](../../../Alpha-v0.2.0-Alkimim/README.pt-br.md)
+[English](README.md) · [Exemplos](../README.pt-br.md) · [Regras de referência](../../../Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules)
 
 Este diretório contém quatro modelos reutilizáveis pequenos, um por camada do OAL. Eles são exemplos de modelos que declaram conformidade às regras numeradas de Alpha-v0.2.0-Alkimim. São deliberadamente estreitos: tomam decisões concretas suficientes para admitir ou rejeitar artefatos de projeto, com escopo didático declarado.
 

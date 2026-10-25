@@ -9,9 +9,11 @@ Editor principal desta edição: Douglas de Oliveira Alkimim. Bruno Chevitarese 
 
 ---
 
+<a id="reference-rules"></a>
+
 # OAL Alpha-v0.1.0-Alkimim — regras de referência
 
-[English](README.md) · [Início](../../README.pt-br.md)
+[English](README.md#reference-rules) · [Início](../../README.pt-br.md)
 
 OAL significa Open Analysis Layers. Suas cinco camadas tratam do comportamento dos casos de uso (UCS), da modelagem do programa (ADPM), do planejamento da verificação (ADVS), do núcleo invocável (ADI) e da interação externa (ADIB). O modelo é público e deixa equipes livres para escolher formatos, linguagens, ferramentas e organização do projeto. Cada camada nomeia uma responsabilidade; um projeto pode reuni-las em arquivos desde que seus limites continuem rastreáveis. A pessoa responsável por uma derivação é distinta do ator que executa um caso.
 

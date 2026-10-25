@@ -2,7 +2,7 @@
 
 [Português](UCS.pt-br.md) · [Home](../../../../../README.md)
 
-[Run the example](../README.md) · [UCS classification](../../../README.md)
+[Run the example](../README.md) · [UCS classification](../../../README.md#ucs)
 
 **Project specification version:** 0.1.0. **Classification:** UCS.
 **Status:** baseline of an illustrative example, not a commissioned production system.

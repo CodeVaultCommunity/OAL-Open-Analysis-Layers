@@ -2,7 +2,7 @@
 
 [English](UCS.md) · [Início](../../../../../README.pt-br.md)
 
-[Executar o exemplo](../README.pt-br.md) · [Classificação UCS](../../../../Alpha-v0.1.0-Alkimim/README.pt-br.md)
+[Executar o exemplo](../README.pt-br.md) · [Classificação UCS](../../../../Alpha-v0.1.0-Alkimim/README.pt-br.md#ucs)
 
 **Versão da especificação do projeto:** 0.1.0. **Classificação:** UCS.
 **Estado:** baseline de exemplo didático, não um sistema de produção contratado.

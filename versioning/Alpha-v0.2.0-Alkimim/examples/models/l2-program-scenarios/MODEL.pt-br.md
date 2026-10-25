@@ -1,6 +1,6 @@
 # OAL-EX-M2-PROGRAM-SCENARIOS — Registros de Programa e Cenários (L2)
 
-[English](MODEL.md) · [Modelos](../README.pt-br.md) · [Regras de referência](../../../../Alpha-v0.2.0-Alkimim/README.pt-br.md)
+[English](MODEL.md) · [Modelos](../README.pt-br.md) · [Regras de referência](../../../../Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules)
 
 **Identidade:** `OAL-EX-M2-PROGRAM-SCENARIOS`
 **Versão:** 0.1.0

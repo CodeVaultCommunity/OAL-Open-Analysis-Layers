@@ -1,4 +1,5 @@
 <a id="release-notes"></a>
+
 # Release notes — OAL Alpha-v0.2.0-Alkimim
 
 Alpha-v0.2.0-Alkimim revises Alpha-v0.1.0-Alkimim in six main directions:
@@ -14,15 +15,17 @@ Other rules carry forward from Alpha-v0.1.0-Alkimim. OAL remains in its alpha st
 
 ### Revision within this edition
 
-This revision retains **Alpha-v0.2.0-Alkimim** and the existing didactic-model version labels. It clarifies actor roles and execution context, defines L3 models as reusable code organizations, distinguishes technical channel storage from domain persistence, and separates manual derivation records from transformer claims. It also reorganizes long requirements, aligns the didactic representations and shared criteria, corrects the executable examples, updates the bilingual diagrams, and renders the mathematical notation in Markdown. The [content inventory](../../CONTENT-SHA256.json) identifies the delivered files, and the [structured execution record](examples/verification/execution.json) preserves the observed application-test results. The edition also includes an [informational skill](skill/oal-alpha-v0-2-0-alkimim/SKILL.md); these changes do not create another edition.
+This revision retains **Alpha-v0.2.0-Alkimim** and the existing didactic-model version labels. It clarifies actor roles and execution context, defines L3 models as reusable code organizations, distinguishes technical channel storage from domain persistence, and separates manual derivation records from transformer claims. It also reorganizes long requirements, aligns the didactic representations and shared criteria, corrects the executable examples, updates the bilingual diagrams, and renders the mathematical notation in Markdown. The [content inventory](../../CONTENT-SHA256.json) identifies the delivered files, and the [structured execution record](examples/verification/execution.json) preserves the observed application-test results. The edition also includes an [informational skill](skill/SKILL.md); these changes do not create another edition.
 
 Principal editor of this edition: Douglas de Oliveira Alkimim. Bruno Chevitarese is credited as a co-author of OAL.
 
 ---
 
+<a id="reference-rules"></a>
+
 # OAL Alpha-v0.2.0-Alkimim — reference rules
 
-[Português](README.pt-br.md) · [Home](../../README.md)
+[Português](README.pt-br.md#reference-rules) · [Home](../../README.md)
 
 OAL stands for Open Analysis Layers. The model organizes development responsibilities into four layers: L1 specifies use cases (UCS); L2 combines program modeling (ADPM) and verification specification (ADVS) as ADMV; L3 implements the callable core (ADI); and L4 provides the external interaction boundary (ADIB). Each layer defines a metamodel; a reusable model satisfying that metamodel is instantiated by concrete project artifacts. OAL acts as a reference model: like other reference models, it separates responsibilities and names conformance without importing the technology of any particular domain, and it leaves teams free to choose formats, languages, tools, and project layouts. The person responsible for a derivation is distinct from the actor who runs a use case.
 

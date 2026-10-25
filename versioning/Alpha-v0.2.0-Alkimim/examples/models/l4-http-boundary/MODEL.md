@@ -1,6 +1,6 @@
 # OAL-EX-M4-HTTP-BOUNDARY — Local HTTP Boundary (L4)
 
-[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md)
+[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md#reference-rules)
 
 **Identity:** `OAL-EX-M4-HTTP-BOUNDARY`
 **Version:** 0.1.0

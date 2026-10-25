@@ -1,6 +1,6 @@
 # OAL examples — Alpha-v0.1.0-Alkimim
 
-[Português](README.pt-br.md) · [Home](../../../README.md) · [Historical reference rules](../README.md)
+[Português](README.pt-br.md) · [Home](../../../README.md) · [Historical reference rules](../README.md#reference-rules)
 
 These are the historical examples of the Alpha-v0.1.0-Alkimim edition, preserved as historical reference. They are not the current edition. Each package contains UCS (P1), ADPM and ADVS (P2), ADI (P3), ADIB (P4), and a derivation record. Their needs baselines were reconstructed from the UCS for teaching purposes; they are not independent stakeholder records.
 

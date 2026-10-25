@@ -1,6 +1,6 @@
 # OAL-EX-M3-PYTHON-CORE — Injected Python Core (L3)
 
-[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md)
+[Português](MODEL.pt-br.md) · [Models](../README.md) · [Reference rules](../../../README.md#reference-rules)
 
 **Identity:** `OAL-EX-M3-PYTHON-CORE`
 **Version:** 0.1.0

@@ -1,6 +1,6 @@
 # OAL examples — Alpha-v0.2.0-Alkimim
 
-[Português](README.pt-br.md) · [Home](../../../README.md) · [Reference rules](../README.md)
+[Português](README.pt-br.md) · [Home](../../../README.md) · [Reference rules](../README.md#reference-rules)
 
 The runnable examples of this edition are in this directory, adapted from the [Alpha-v0.1.0-Alkimim examples](../../Alpha-v0.1.0-Alkimim/examples/README.md), which are preserved unchanged as history. Each package presents project artifacts associated with the OAL responsibilities: UCS (L1), the ADPM and ADVS components of L2, ADI (L3), ADIB (L4), and derivation records. The artifacts instantiate four reusable models, one per layer, defined under [models/](models/README.md). The records do not demonstrate the construction or execution of deterministic transformers between models: the models were applied manually. Their needs baselines were reconstructed from the UCS for teaching purposes; they are not independent stakeholder records. The individual READMEs show where the case rules end and the browser and HTTP adapters begin.
 

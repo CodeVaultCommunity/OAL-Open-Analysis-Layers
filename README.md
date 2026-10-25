@@ -103,21 +103,22 @@ One specialization may cover neighboring layers without constructing the transfo
 
 ## Versions
 
-| Edition | Status | Reference rules | Notes |
-| --- | --- | --- | --- |
-| Alpha-v0.2.0-Alkimim | Current alpha version | [English](versioning/Alpha-v0.2.0-Alkimim/README.md) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md) | [Release notes](versioning/Alpha-v0.2.0-Alkimim/README.md#release-notes) |
+| Edition | Status | Release Notes | Reference rules | Verification Guide | Conformance Guide |
+| --- | --- | --- | --- | --- | --- |
+| Alpha-v0.2.0-Alkimim | Current alpha version | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#release-notes) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#notas-da-versao) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#reference-rules) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#verification) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#verification) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#conformance) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#conformance) |
+| Alpha-v0.1.0-Alkimim | First alpha version | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#release-notes) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#notas-da-versao) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#reference-rules) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#verification) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#verification) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#conformance) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#conformance) |
 
-The [verification guide](versioning/Alpha-v0.2.0-Alkimim/README.md#verification) and [conformance guide](versioning/Alpha-v0.2.0-Alkimim/README.md#conformance) explain what a result can support. English is the source text; Portuguese is its translation. The runnable examples of this edition are under `versioning/Alpha-v0.2.0-Alkimim/examples/`.
+English is the source text; Portuguese is its translation. The runnable examples of this edition are under `versioning/<edition>/examples/`.
 
 ## Informational skill
 
-The [informational Agent Skill](versioning/Alpha-v0.2.0-Alkimim/skill/oal-alpha-v0-2-0-alkimim/SKILL.md) describes this edition's layers, models, artifacts, engines, actors, boundaries, mathematical notation, and evidence limits. Its self-contained folder includes `SKILL.md`, the license, and supporting references. It contains descriptive knowledge without an executable workflow; the edition's numbered requirements remain the authority for conformance.
+The [informational Agent Skill](versioning/Alpha-v0.2.0-Alkimim/skill/SKILL.md) describes this edition's layers, models, artifacts, engines, actors, boundaries, mathematical notation, and evidence limits. Its self-contained folder includes `SKILL.md`, the license, and supporting references. It contains descriptive knowledge without an executable workflow; the edition's numbered requirements remain the authority for conformance.
 
 The root [content inventory](CONTENT-SHA256.json) records the path, byte size, and SHA-256 digest of every delivered file, including the skill. Only the inventory itself is excluded.
 
 ## Examples
 
-The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Alpha-v0.2.0-Alkimim/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Alpha-v0.2.0-Alkimim/examples/README.md). Run any example with python run_examples.py --list and python run_examples.py EDITION/NAME; a bare name runs this edition.
+The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Alpha-v0.2.0-Alkimim/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Alpha-v0.2.0-Alkimim/examples/README.md). List the available examples with `python run_examples.py --list` and run one with `python run_examples.py EDITION/NAME`; a bare name runs this edition.
 
 ## Frequently asked questions
 
@@ -215,23 +216,20 @@ No. They show possible language, storage, and browser choices. The reference rul
 
 OAL was conceived and written by **Douglas de Oliveira Alkimim** and **Bruno Chevitarese**. See the [citation metadata](CITATION.cff) and [MIT license](LICENSE).
 
-<table align="center" cellspacing="16" cellpadding="8">
-  <tr>
-    <td width="340" valign="top">
-      <div>
-        <img src="https://avatars.githubusercontent.com/u/65194413?v=4" alt="Douglas de Oliveira Alkimim" width="88" height="88" align="left" hspace="12">
-        <strong>Douglas de Oliveira Alkimim</strong><br>
-        <a href="https://github.com/douglas-alkimim"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&amp;logoColor=white" alt="Douglas on GitHub"></a>&nbsp;<a href="https://www.linkedin.com/in/douglas-alkimim/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&amp;logoColor=white" alt="Douglas on LinkedIn"></a>
-        <br clear="all">
-      </div>
-    </td>
-    <td width="340" valign="top">
-      <div>
-        <img src="https://avatars.githubusercontent.com/u/150291749?v=4" alt="Bruno Chevitarese" width="88" height="88" align="left" hspace="12">
-        <strong>Bruno Chevitarese</strong><br>
-        <a href="https://github.com/chevitaresebruno"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&amp;logoColor=white" alt="Bruno on GitHub"></a>&nbsp;<a href="https://www.linkedin.com/in/bruno-chevitarese/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&amp;logoColor=white" alt="Bruno on LinkedIn"></a>
-        <br clear="all">
-      </div>
-    </td>
-  </tr>
-</table>
+---
+<br>
+<img src="https://avatars.githubusercontent.com/u/65194413?v=4" alt="Douglas de Oliveira Alkimim" width="88" height="88" align="left" hspace="12">
+<strong>Douglas de Oliveira Alkimim</strong><br>
+<a href="https://github.com/douglas-alkimim"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&amp;logoColor=white" alt="Douglas on GitHub"></a>&nbsp;<a href="https://www.linkedin.com/in/douglas-alkimim/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&amp;logoColor=white" alt="Douglas on LinkedIn"></a>
+<br clear="all">
+<br>
+
+---
+<br>
+<img src="https://avatars.githubusercontent.com/u/150291749?v=4" alt="Bruno Chevitarese" width="88" height="88" align="left" hspace="12">
+<strong>Bruno Chevitarese</strong><br>
+<a href="https://github.com/chevitaresebruno"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&amp;logoColor=white" alt="Bruno on GitHub"></a>&nbsp;<a href="https://www.linkedin.com/in/bruno-chevitarese/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&amp;logoColor=white" alt="Bruno on LinkedIn"></a>
+<br clear="all">
+<br>
+
+---
