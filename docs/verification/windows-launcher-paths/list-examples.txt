@@ -1,0 +1,3 @@
+board-crm  (port 8001)
+tiny-catalog  (port 8000)
+work-board  (port 8002)

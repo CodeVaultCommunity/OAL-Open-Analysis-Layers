@@ -88,9 +88,10 @@ class LauncherChecks(unittest.TestCase):
             self.invoke(script, ['tiny-catalog', '--port', port, '--no-browser'], self.unrelated, expected=2)
         self.invoke(script, [], self.unrelated, expected=2)
 
-    def controls(self, edition):
+    def controls(self, edition, script=None):
         """Check default browser, loopback, and graceful Ctrl+C without opening UI."""
-        script = self.copies[edition] / 'run_examples.py'
+        if script is None:
+            script = self.copies[edition] / 'run_examples.py'
         spec = importlib.util.spec_from_file_location('launcher_under_test', script)
         module = importlib.util.module_from_spec(spec)
         with patch.dict(sys.modules, {spec.name: module}):
@@ -104,7 +105,9 @@ class LauncherChecks(unittest.TestCase):
              patch.object(module, 'make_server', return_value=server) as make_server, \
              patch.object(module, 'Timer') as timer, patch.object(sys, 'path', list(sys.path)), redirect_stdout(output):
             self.assertEqual(module.PythonWSGIExecutor().run(example, []), 0)
-            factory.assert_called_once_with(script.parent / 'data' / example.database_name)
+            # The loader resolves __file__, including Windows 8.3 names and '..'.
+            expected_database = (script.parent / 'data' / example.database_name).resolve()
+            factory.assert_called_once_with(expected_database)
             self.assertEqual(sys.path[0], str(example.directory / 'src'))
             make_server.assert_called_once_with('127.0.0.1', example.default_port, factory.return_value)
             timer.return_value.start.assert_called_once()
@@ -112,6 +115,14 @@ class LauncherChecks(unittest.TestCase):
             timer.reset_mock()
             module.PythonWSGIExecutor().run(example, ['--no-browser'])
             timer.assert_not_called()
+
+    def controls_path_alias(self, edition):
+        """Exercise the controls through a real, non-canonical script path."""
+        script = self.copies[edition] / 'run_examples.py'
+        alias = script.parent / 'examples' / '..' / script.name
+        self.assertNotEqual(alias, script.resolve())
+        self.assertTrue(alias.samefile(script))
+        self.controls(edition, script=alias)
 
     def http_smoke(self, edition, project):
         isolated = self.copies[edition]
@@ -197,7 +208,7 @@ class LauncherChecks(unittest.TestCase):
 
 
 for index, edition in enumerate(EDITIONS):
-    for check in ('catalog_help', 'invalid_selections', 'controls'):
+    for check in ('catalog_help', 'invalid_selections', 'controls', 'controls_path_alias'):
         def test(self, edition=edition, check=check):
             getattr(self, check)(edition)
         setattr(LauncherChecks, f'test_{index}_{check}', test)

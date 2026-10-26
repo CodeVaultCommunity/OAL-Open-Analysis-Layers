@@ -1,0 +1,3299 @@
+{
+  "scope": "Repository maintenance; all versioning/ files and published Stable-v1.0.0 tag preserved.",
+  "baseline_commit": "ce225141686d4b6b3e46923866c97d84c031903f",
+  "baseline_tag_object": "b5b3c94a13e4af6d03f50b3623b83309f8ee767b",
+  "started_at": "2026-10-26T15:05:22+00:00",
+  "status": "passed",
+  "environment": {
+    "python": "3.13.7 (main, Sep 18 2025, 19:43:45) [MSC v.1944 64 bit (AMD64)]",
+    "pytest": "9.0.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "windows_83_alias": {
+    "long": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\long temporary directory for Windows path alias",
+    "short": "C:\\Users\\Douglas\\CODEX~1\\VISUAL~1\\2026\\10\\26\\01A175~1\\OAL-CI~1\\LONGTE~1",
+    "same_directory": true,
+    "environment_variable": "OAL_TEST_TMPDIR"
+  },
+  "before_fix": {
+    "command": [
+      "python3.13.7",
+      "-m",
+      "unittest",
+      "scripts.test_edition_launchers.LauncherChecks.test_0_controls_path_alias",
+      "scripts.test_edition_launchers.LauncherChecks.test_1_controls_path_alias",
+      "scripts.test_edition_launchers.LauncherChecks.test_2_controls_path_alias",
+      "-v"
+    ],
+    "exit_code": 1,
+    "expected_failures": 3,
+    "log": "before-fix.txt",
+    "tested_source_sha256": "a73819c99a6589b4af98db1011d71cbe0a00749e61312177ef3a0eb262ba8031",
+    "scope": "New alias cases using the original unresolved expected-path assertion; intentional red regression check."
+  },
+  "input_hash_exclusions": [
+    "CONTENT-SHA256.json",
+    "docs/verification/windows-launcher-paths/**",
+    "versioning/*/examples/verification/**"
+  ],
+  "input_files": [
+    {
+      "path": ".editorconfig",
+      "size_bytes": 225,
+      "sha256": "cc97f64ec292a2d4405e3b05ea7e0531081e7e44e5a753fde4e93b48360b0764"
+    },
+    {
+      "path": ".gitattributes",
+      "size_bytes": 58,
+      "sha256": "9a5b3e8c93ebcd35a580f2c2cf3b51cad2f4e5c1514a6984f454f36b355dacd8"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "size_bytes": 103,
+      "sha256": "2b6ff24efc44a6956a9a6f47e44e89491a07824f2dea8fd0ab1af76fefc491b7"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/concept.md",
+      "size_bytes": 1019,
+      "sha256": "ce01948ea0b37125e2cd541a132fd4acf49b95153801037a1382877f383c1688"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/concept.pt-br.md",
+      "size_bytes": 1127,
+      "sha256": "c8d7a58194f35638cddce553294a350cdd4be438f7018fee2b247769dc282ce4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/example.md",
+      "size_bytes": 872,
+      "sha256": "e5859367f7011dda83a4fafe612286d096e40e8917c507ca38b3812db731477f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/example.pt-br.md",
+      "size_bytes": 965,
+      "sha256": "c9197e5d937ba942fec155b337c6d50d098d8fbe131b444674609cb380c2e98f"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "size_bytes": 1302,
+      "sha256": "b3b88c8e205ea8b9f5de9d2e33541c7f628b6ddca00d896c4055ba922f45ac7f"
+    },
+    {
+      "path": ".github/pull_request_template.pt-br.md",
+      "size_bytes": 1400,
+      "sha256": "5f5ff25d431d2407e7f0a0cd3da46e98965ea2e3003747002cd4067899581715"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "size_bytes": 1490,
+      "sha256": "39d6535c5f935a6dc94dc4d57e0c608e46251bcc4b69fb25d2aa02be64158763"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 347,
+      "sha256": "e8216df6704bc441d55851651e363f98ee6f62cef3c6813177823ef9cff52179"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 4800,
+      "sha256": "ecfac2301f8b7a7a86b9d63bb5a75de11f3b1510d08def43765a6ff4b02958b8"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 900,
+      "sha256": "e05b0beb22ed8cfd1f5af2e2b9933916cf40141740c924511b683294c9edb68d"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 40,
+      "sha256": "553b2179c75dbabaa7289a6e11e00b29d1e6d2984be1414656ef6ea5a3878213"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 21693,
+      "sha256": "096a9df018f1aa3c2527bad40fc5194656c57b25c119bb546439cd46118eeb79"
+    },
+    {
+      "path": "README.pt-br.md",
+      "size_bytes": 23243,
+      "sha256": "c1c478b45169a9b8a523c2bba4d380305516d7a634d2edacaf99e59bd4d443b8"
+    },
+    {
+      "path": "VERSION",
+      "size_bytes": 14,
+      "sha256": "e55bc94e2eee9f15653a0bc1e6f2ab611f0fe0d30acf02096f349909b9d79e51"
+    },
+    {
+      "path": "assets/README.md",
+      "size_bytes": 1287,
+      "sha256": "1ba756855a1a945c453742851979a83943cf048b9bc784a887bd744fbfbbabae"
+    },
+    {
+      "path": "assets/README.pt-br.md",
+      "size_bytes": 1422,
+      "sha256": "10c5393aa7a26185c391388bff663dfe8621fb77c1e48da35867472cd2d5fd12"
+    },
+    {
+      "path": "assets/oal-banner-en.png",
+      "size_bytes": 1116174,
+      "sha256": "998f7c6c4aeed8d6db73eacc8684f1f154cb7d37ef516e565dee25d7a3460ac9"
+    },
+    {
+      "path": "assets/oal-banner-pt-br.png",
+      "size_bytes": 1138102,
+      "sha256": "ca265d7addda5573471ee689544de4a0a06e876bfd42bbd53e5fe5b5e4b466f6"
+    },
+    {
+      "path": "assets/oal-layers-en.png",
+      "size_bytes": 156556,
+      "sha256": "3a5654b18cdae903718c4f9bbb39f41133d4e8e9af29ff972f1fa49044023848"
+    },
+    {
+      "path": "assets/oal-layers-pt-br.png",
+      "size_bytes": 160699,
+      "sha256": "05ed5d46c73d56fcaa9b352bfcebc7d9373ff97482d72363a2014208e42922e6"
+    },
+    {
+      "path": "assets/oal-logo-dark.png",
+      "size_bytes": 445724,
+      "sha256": "77f85c5355e1a54da4f6551738bf14fb2e3c08bde5367877c421249c74583b45"
+    },
+    {
+      "path": "assets/oal-logo.png",
+      "size_bytes": 659810,
+      "sha256": "830e69cdc9bcd50838775083841e18b8cfbaee48981a75ab970d0b9b42c140fe"
+    },
+    {
+      "path": "assets/oal-map-en.png",
+      "size_bytes": 209582,
+      "sha256": "c19783663d2bc4c1dbf0ae4ac325ed5bb57ee3d85e0396bf73d6fc33d9afc265"
+    },
+    {
+      "path": "assets/oal-map-pt-br.png",
+      "size_bytes": 217092,
+      "sha256": "dad9939706a0b230daa9a52fecefa2d48ba563535b730f010dda46b97bec49a2"
+    },
+    {
+      "path": "assets/oal-mark.png",
+      "size_bytes": 675559,
+      "sha256": "c4f6a253bdac61db33a3e76a0eff69896072110b8bee6babe60deff58707da21"
+    },
+    {
+      "path": "assets/sources/README.md",
+      "size_bytes": 3160,
+      "sha256": "1c1654670d4a412973016293af72955bba7afb2a2aa30569187076a013c06213"
+    },
+    {
+      "path": "assets/sources/README.pt-br.md",
+      "size_bytes": 3376,
+      "sha256": "ce3ff844a43af53f06b537ceca89cea1caea82040b4fb11c8530e4e8b1b261d6"
+    },
+    {
+      "path": "assets/sources/banner-background.png",
+      "size_bytes": 1986995,
+      "sha256": "64569743c8032c19ab0deb02d0eccd00146859bb7f43619c8eab94d1877edf08"
+    },
+    {
+      "path": "assets/sources/labels.json",
+      "size_bytes": 3571,
+      "sha256": "a6ceb194bfd617f202943a854f7a208aecc25f90275dc074de367c197b9ed90b"
+    },
+    {
+      "path": "assets/sources/oal-banner-en.svg",
+      "size_bytes": 3559902,
+      "sha256": "b4c280d7e4bdb049ac0d0079eab24e36664fa06386f07aaa02089f4b343cd421"
+    },
+    {
+      "path": "assets/sources/oal-banner-pt-br.svg",
+      "size_bytes": 3559924,
+      "sha256": "70458999753436b959509d0280d29365398909ad903211525d4a6ab94161a8e6"
+    },
+    {
+      "path": "assets/sources/oal-layers-en.svg",
+      "size_bytes": 8405,
+      "sha256": "a07a67fcffd7e4ee1d8371d03bb70f079a3d49c1e96f958299bcf17b3062458d"
+    },
+    {
+      "path": "assets/sources/oal-layers-pt-br.svg",
+      "size_bytes": 8435,
+      "sha256": "5d057db093331353f0fb6623a82980b9b8d14aad51b483b513b07c21f1036a10"
+    },
+    {
+      "path": "assets/sources/oal-map-en.svg",
+      "size_bytes": 13211,
+      "sha256": "751b9e9f5098bf0b251db33f42628f44e54cf7eb98c1694069b17bc197a2a059"
+    },
+    {
+      "path": "assets/sources/oal-map-pt-br.svg",
+      "size_bytes": 13264,
+      "sha256": "ed01c2182e11c0170aab58116fcade7db6467c72ca2b447610a44c06d484f14c"
+    },
+    {
+      "path": "assets/sources/render_images.py",
+      "size_bytes": 13039,
+      "sha256": "41d08ab5c476fbad03561535f6616e70c5f3938e732aff506d18e4fa6745eb73"
+    },
+    {
+      "path": "docs/releasing.md",
+      "size_bytes": 6595,
+      "sha256": "a16161bd73fa225782248d3bca4cf081db5577009353317f85ce117d526ba135"
+    },
+    {
+      "path": "docs/releasing.pt-br.md",
+      "size_bytes": 6980,
+      "sha256": "7666b0246d8984db29651eaa674545e2cfc26e0a0020d0e5a6f09ef79dc47185"
+    },
+    {
+      "path": "scripts/check_archive.py",
+      "size_bytes": 2712,
+      "sha256": "1fad0dabfedfabb16b4fac7ce381b4aa9d11102a23c7b7885fd792aee57f50ce"
+    },
+    {
+      "path": "scripts/check_structure.py",
+      "size_bytes": 17619,
+      "sha256": "b8d4e712f21590adbd46d7c59b2be0539cbd559ff3bbd993fa6001723e02593b"
+    },
+    {
+      "path": "scripts/content_inventory.py",
+      "size_bytes": 3648,
+      "sha256": "bf6b7ada3e9d6c1ef724bc3760a898180528667217cd0fd76c0b9d7cfa389967"
+    },
+    {
+      "path": "scripts/test_edition_launchers.py",
+      "size_bytes": 12299,
+      "sha256": "7879785bcc68c00d336ab3ee5856701304ac7a57cd406d5b9646e37f3bf369b4"
+    },
+    {
+      "path": "scripts/test_release_checks.py",
+      "size_bytes": 2954,
+      "sha256": "22171f152327bdcdfc93ca010d3f5787a3dd945f10209b6a629f51a6a5db7640"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/README.md",
+      "size_bytes": 24936,
+      "sha256": "e08f2afb093ecf1adfc3b4a2cb07b59313911ea220778ee89b5f559e1d96acb1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md",
+      "size_bytes": 27513,
+      "sha256": "639b2cd325c0a6f2a43a38109d98185a49385607a59c7c5ea77dfd3f36df9b92"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
+      "size_bytes": 4727,
+      "sha256": "e7b55dec9a6b9ca645f1523f19b4a548087f908c86ba4f93092025eed1cd323c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
+      "size_bytes": 5056,
+      "sha256": "6d834ddd135630e0aa0292f4342b728d8ab46c495b00f042a865257d8d1df4e2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 20842,
+      "sha256": "0a106a960ef7ad89c496594090541983d93ee3523ca4cbde9cc518cdc4aabfd1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 19285,
+      "sha256": "032846e12543ca8dff7ecf7572c07c988e142e5bdf863070b8de7fe0cd59ab6b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7389,
+      "sha256": "d9c60ebba79343ed61577066bd6ba827ae2881c19cf520f07c60d68d8530812d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 42783,
+      "sha256": "5f3e84ef8b4ebc28616ac05f0ec9c9e46ce1ec8c47427448adb6cb939604db10"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3100,
+      "sha256": "6ee8610e07d1e14d3eed1f7ee80307f6ef836063de092a1127d1257c4d9182a9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3326,
+      "sha256": "c87d6ad4e6fb6010c339e6a2a17ab9bbbdde4dd5c0ff6cec1c302766f820f363"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 1866,
+      "sha256": "6f2535a850b83d6fcccfff02296e5cdece9c5b28257c1f3c2a51aa0a705de89b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 1952,
+      "sha256": "9e01db8b2f38c95d127357b6cc1c370b64cab69080c9c2bff1a2ec361b1e92b4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2271,
+      "sha256": "92ba6866b54e19ec60935b40ab16595be03915ec9bc92a9c7d0460ecb8b7f28a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 6563,
+      "sha256": "2657f8ad1d0d898fa14826dab0ed81692d81450d4429e8ed90d06f28cc6664e3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7160,
+      "sha256": "dad85444db1b72560aae589553ff6374d45484a04b2e819cf394ae38e9c2b7a9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 3572,
+      "sha256": "1fd54cdd9daf057658affb506f57d8ea8409adee859a5a3367ac3c21100da4e9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1609,
+      "sha256": "bb6a2d0f1dacc093afeeec416ca84383f974e1fdd7e35bf667254b2ef1f6a6cd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1777,
+      "sha256": "e818f67729fad29d1eb15fc1aa439ae82b920c24ed532a17c16fd01c7dd9ac81"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 2657,
+      "sha256": "5f71f926936f4bcfa0ee8f8a458d4569b2005209d30f93993aa498f084bab269"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 2801,
+      "sha256": "76bbbce8087e3c1cf9ebf20b5d3c3ca5df099e2cbfaf0453d2b5b1ed11705556"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3219,
+      "sha256": "767c64caf0ec45f6b3c1713528213a742a2e3c8794bbd3ec15c5696b8c7f9d88"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.md",
+      "size_bytes": 3424,
+      "sha256": "0d6d8b403b6064de12b6313766fbb8eca9c2837a78bf7a9736ad93080fe7c673"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.pt-br.md",
+      "size_bytes": 3724,
+      "sha256": "725946b42bc3a2388d9432e9bd7b377307e723af29ef62bb12bf57df40736a5e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/derivations.json",
+      "size_bytes": 4835,
+      "sha256": "bdfebefe73073f401537405dc740744af2f5cf052640933277d1251b28cd7f75"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1746,
+      "sha256": "81d78f9c1db2bf45ba44a781f9b75f5da5c4f746a75a2826a524f7ea9cf3b2f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/pyproject.toml",
+      "size_bytes": 615,
+      "sha256": "0fca8202a040c53aafdc799fa0031cf473033a09cf1aabfb0f2b9ad8be65ef53"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 89,
+      "sha256": "ee2acbc3e344d54a7e847a4f6687cb0efa6023908c149d39449f4b1659b663d8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1637,
+      "sha256": "1368fe21838d32aa318103e56cca0e12a2a0f294a92a60f581ae7f1ec21c180c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2064,
+      "sha256": "35a9ed02583fb11000404c0cbdbb3dced880dfbb9a35249e9a854b38a225091c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 464,
+      "sha256": "12046f6dcbb5ef6a874d80ad0251df5d030a6e3220e2308ccaab74c748a4b065"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1145,
+      "sha256": "3f6901decf6156db1e53de9d70ed21b589c5cf1c4c5961a58b4b2df3f9494cf5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6186,
+      "sha256": "b30caea46f36a77cfab38137e41b50ab5b5fa31387101d721ebdbaf5505142bc"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 791,
+      "sha256": "eb327b24d9b6228d07938169c342b7c788a2f5f233977e1832dbb5735be4fcd8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2523,
+      "sha256": "6ea87db80ae132516542f97f1fac82ee38e4bca8b229f9e32469f58d3e498e13"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5165,
+      "sha256": "367bbb4feb7db08d218c2f587dcdcd9b2bba040b3fb00a00b46ff48dd881f69b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5410,
+      "sha256": "7cc12a99a0f7adff7e240db038e94c7e305f09aeaa897d319f6a5ddd827f5f5e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 1887,
+      "sha256": "393210ceefa781e0ce6a696cf2f356e2bae72a7fd1a1e41730eea6a9eb372c7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 7614,
+      "sha256": "92457036ebd2f7e34f3b0fc55a7d153f0363aaedfc4a4f071f94d3487bf886ce"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 3120,
+      "sha256": "9ea0a23bbd9180c7aa0951ad65a2705025b60a362dca5055ccf4c4982e228ff5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 1246,
+      "sha256": "96b5449699f2099b046a2324988618aa4fc434b5d17ac25ebf8a49b0d2131b7b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 14151,
+      "sha256": "1ea2cf8de0075ffcaeed79efed769232e9a0adb22e8c61504807f15e9bc865e6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 15011,
+      "sha256": "00bc1038747d240374e34be0a0ccabb30bcf9b417931498ebeae4dd3f646eaf7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 2785,
+      "sha256": "a11dbc83fd1f32b6ce050c2555da3b50e70244677266bab32ac28075b185b780"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2596,
+      "sha256": "1fad86353314895f4864c691e34004bc29303f8d90c8e359ab07d9251d18548e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2828,
+      "sha256": "c3e711ad339befb7ac43c2c1f1d065659fc7119270a3f4ce2f69b8493752cce5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2151,
+      "sha256": "e6bbe4fe3d1797807c3ede75b5fc7c5bd195eeaedc3cd830409ef6d5d234d0f1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2405,
+      "sha256": "4708b1cba6f945f91e42c40a9d989506e680f610edaab60953df8ec12e6bddbf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1707,
+      "sha256": "f8c09c9737791d47eec2cf68500f8091b9ec0d3ba9f6a15b7b2ef77db3327003"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 6369,
+      "sha256": "5d78ed3ef70ee8e710ea112070c960c09a4495067f11c50b7cb93bc5aa8adf47"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 6701,
+      "sha256": "0769bc4fb8b65d5bade7eee703d17123dfc59d5b5e2e564f2f2ff8304e88e9fb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 2367,
+      "sha256": "a26cf8697522fddfed5ffec99677d5a199b7793ac6c71d7536971d27e731437a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 3006,
+      "sha256": "a84669a8a118f154c19170b230cb7c0ece7c8bb62fe7420010e1da0f15f2a3af"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 3278,
+      "sha256": "56fa6c5c4db3e7c59ba7d7cba76eacc777e239e612f36cc5767f7036fa338b00"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1619,
+      "sha256": "48c32fceb9b295a02a3e5f4417c2d54478ad2572e69b1f76994b69e07b68f07a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1787,
+      "sha256": "7f222a6fed4ba3284637cde44184728250b283988d3de0b9b36bf7de10942ccf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3351,
+      "sha256": "28aae0956a26effc39e1f7985d4975188d65bbd73b6700c01105ea3b8fba522a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3604,
+      "sha256": "6e773603fe1cfcbb9ab69b372496fa01f4d7051f685403f472187a3236847393"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2239,
+      "sha256": "87af19523c7f028ebaeafe798513f0c2c5374862ec8443cbba2c65037a176d99"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.md",
+      "size_bytes": 3130,
+      "sha256": "7476951db682f18cf93182f958b58c0ce879be2b23acc5abe4c385955408b679"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 3422,
+      "sha256": "b881b226c345e34b6bb4cb9b01b7f4e493a16aab6d0b1589fb2d630b801c1ecf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/derivations.json",
+      "size_bytes": 4569,
+      "sha256": "181b628f3350bd641614ebb5ec1e44a2484ffbca4fde45112e32e174b5dee19d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1164,
+      "sha256": "6d62de8042935c7e490226fb8449277f07317a712b4ca8fa3043d1677c5c5049"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1139,
+      "sha256": "60650780fa99d26274fac589a45e3688dde8f4b9d2038cfdeba34fb77cb47a43"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 1454,
+      "sha256": "64f3034ba7e8ecb7382acddab51e32cfba71b6545f19b42e336c6de009456c7c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 110,
+      "sha256": "890004997651f8c4d34ab5b36b0aaab1275c044949fd27917ed3212d738cc48a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1763,
+      "sha256": "4df1599a6165ef54b6b91147660c40df1a3a60547e56cfb79f81e561da74f8f3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 626,
+      "sha256": "5f9a5d98e3e9c41cff8ad47626f1cca83c816b499a81aeab8b08ccdb01374de0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1584,
+      "sha256": "dcb97c798cf5186566b49f122d7b844f902a180becb663eaf4e1beb4d473e5aa"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 830,
+      "sha256": "c80d57eea0a48584cbf1a944159e8c73bc6f213d6baacb0c0629b1d383c71762"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2055,
+      "sha256": "a8bb3e646d8fb3d025628f2b2fd75b413361e3f071b8442b51d6c42baa3b1ea1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 72,
+      "sha256": "d6c65c317568e2ea789aa3e46d3406d492266ed350558813b6d806c414e7c46c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 987,
+      "sha256": "40b95c77353ea45a4cfea70354a87e186b2b5aa1082adf061f4dbc12acdbb361"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 1496,
+      "sha256": "72910f86d4652784b6efd0f4b772075aba7eeec2a65ba1bf5bed8f077636711d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 818,
+      "sha256": "5d5a9be8b590e10e1ff1f849d0dce560d9d642b334219ebb22f474583f057102"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2439,
+      "sha256": "b12fcde7a5170c6abe24130f34e60017e158cdceca7f9eae5bce9de460361331"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 971,
+      "sha256": "7252053aeff08093108a6d08dbc9e54c24a99a4ffb8f540920c2d0f89e3ecffe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 1027,
+      "sha256": "670cb1b8da15433aefe0795a1e705216811cc7a057ad7e4ffd2eda26976925ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 3614,
+      "sha256": "b50ad58877ae57b8425ddf57398ff6d55717f291d02d03bdbfa6ceaa7843cc14"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 1239,
+      "sha256": "3a30d012116590ab16aa694b9260d26cbae75a9d4d140787d8631795ef2f7317"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 1325,
+      "sha256": "dc383264e54b217740904529cb001838887ce67c0afd3fb19ecbfe976a7c13ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1537,
+      "sha256": "f513affd8aa5e4fd09699ac032dd927c782018dfbd4e50cf3ab5121c84571380"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 787,
+      "sha256": "d3efaf61457e37d5abcc24107364c4cd5cd0ddba821fa0fcd52062b174bff8e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 864,
+      "sha256": "8519739486324dd219c209ab706657bf2f955e3a838813d5d3cd31edf6c0fee3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 1216,
+      "sha256": "79aea2d73a818e5de5b08042b0518b3aa833a32eddb151f96ce7a55da35ab339"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 1237,
+      "sha256": "375b342be61f54bd624e0039ebc42e3b5993e9f53c91984e64db7261caa3d686"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 1315,
+      "sha256": "d7f38e652e40e1be47e729da3e4577a1e76736ca6d50112d7af960d0f7fdb093"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 1902,
+      "sha256": "3860b5ba92db2c9f71a39e3fe9d7640d6b07cf4e6a7cd49bd8d1ac8af0754fab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 2042,
+      "sha256": "fa523313be6117aff1ae01d76cac77c6bb606bd785a5947a3eae415790d3947e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 2192,
+      "sha256": "a230a65cfb005503e5b94d549458e7fb0d66aefffc74c5c180fcf0017d059995"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.md",
+      "size_bytes": 2750,
+      "sha256": "009f203b337ee8611f3745add2cc6f50ee9f90522aff1ee1b631ff685490932a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.pt-br.md",
+      "size_bytes": 2894,
+      "sha256": "de01003566a8f689321beef284816eac99ef4729faf935cf8a3e0e491170adab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/derivations.json",
+      "size_bytes": 2986,
+      "sha256": "ed508585f62885cac359b5812cc3656b139115211825bafd3f4e1e4690c78df8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "8bd6327642a6abd976126587c55ce5561c800f9cc44a8104bda897a6246acc46"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/pyproject.toml",
+      "size_bytes": 626,
+      "sha256": "d7a8c2c5db2b14f37c73d7b5247da9c84c477e6125d184fad566a0b1e774a845"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 710,
+      "sha256": "795354f15bb9112f4449b6887712160ef8c83f0fac8174a87c97c723be98211e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 827,
+      "sha256": "a3e33e18eca44b4f60b9dfa550579e776d02f75501143eea1400acf213be3490"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 460,
+      "sha256": "ce164f3cebcf96f3f367a90ef8b630c5a758d6519fc11cc555131efe737d9bfb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 623,
+      "sha256": "9f4ba56f30efc081addc8f9fce6b4fab39d025f2ac6fff9a9bf09c11d0884112"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 4391,
+      "sha256": "ebb7cead12a1c5c443671a3ae6cd8cc8a7f5da1932b959888b356747f5a624ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 800,
+      "sha256": "fd6f93c1901ce8751f2cd66dcd6eb089e372f5c27ed6bd2b1d0830422cf108c7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 3812,
+      "sha256": "dfcdd192ef64496924fb141c8fd7c342bce2c9ce31be6d0b14384ee19636b351"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5742,
+      "sha256": "7933c94bf8c17336515d370bd00be5b5d8bd4c0767f79f335868f12b0f8c3967"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4151,
+      "sha256": "4f9150644f3498cea8cb83eab2a4f9ece5b33d9741a988f636840bf650dd8431"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 3560,
+      "sha256": "2188c7fb309a4e1633d2ab3347413b8d32514568ef2ec010b6e3272ce5349f48"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 3927,
+      "sha256": "b4f3ea88fd8680ed2c65afb8d70ab3de6e73c57667f4305c6d794eb996f96e28"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/run_examples.py",
+      "size_bytes": 5520,
+      "sha256": "05091471e22fb0ccbb109f11e4e5a978fb51c82dfcfba17ffd4b8b10305d8574"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/README.md",
+      "size_bytes": 67421,
+      "sha256": "e2dcea7e1cf6a6459393f08b37fe720a417dd2baef9c671d91180c73ab88d433"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md",
+      "size_bytes": 73676,
+      "sha256": "b6d3d9ef1d1b0bffbb00b743372040d8c62872b0e7cfb95597a5fe43811865e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.md",
+      "size_bytes": 8245,
+      "sha256": "abb3d1e83ea142d01768cf7e61770f29aa5eb91bb260707262bfd033f1bcc0f4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.pt-br.md",
+      "size_bytes": 8996,
+      "sha256": "a041a5a0c7927ccd2e2759ac48ae0764ec6ecc7290ea82fecf00d3d23fb39e60"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 21284,
+      "sha256": "83ae689b14f19536b20752fa5cd295f45f4d4c619ab4f63094575dd5eb5f7ab7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 19730,
+      "sha256": "a7ead358ae887a47e8e0ba3e1403d1a6ec4c2b3048a59cd537b709b4f051624d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7475,
+      "sha256": "e93abe9513c1302fab7d03f85321379fcb2645260590fdf50014600edb92c4dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 59540,
+      "sha256": "61942305e84a41e977c240922595f692c6e21bab9c95f6ec023acf37fae892ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3485,
+      "sha256": "dd2c9d7e2e8ad51baf840f35e009dfa5112e6c17d51e800b5bdf6353703e4824"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3763,
+      "sha256": "b129bd16f6c2ead50327fbf956635c43775bc77bb01fbf2a8ab6d7857bdf29ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2738,
+      "sha256": "93ce7ef592fda411fb8d407ebf74d652e0f85b0bcb54dca2fc0a543973f459b3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2929,
+      "sha256": "dac55c833d3f4363724ea6f84d6582c27ee5b11470a81fc32caeff26b8e772df"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2397,
+      "sha256": "3439edf8ca0d71ecac971eaa4c580cc5156ebf8e8e2bb2bc2425559950f7c476"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 8530,
+      "sha256": "f14850bcd41117279cb6507c7e1d18fdfe757702be4ea9763c4dbca5a63ed7db"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 9263,
+      "sha256": "bcaa40852bf3a2b0e3d1ed57d7a6396c17bf35175590bacb309b4e3378b6c926"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8799,
+      "sha256": "214613bbdf9f1428e034a01fb8b2fb5abccbf831087a8aefd24cb2781316202e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2513,
+      "sha256": "29f92c389ba532efd9cb26b2aedbb69a9e3715522d5fe52e9a0dc570ef2fe2e5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2761,
+      "sha256": "ebf463213c9e444757f146dcf0323106ba727b01d1517d8b885f2e27e93a09dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 5333,
+      "sha256": "d03a36e336734bf0be913f7b9c953c28127df1a35fe7ea7e80054bab41fee48e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 5722,
+      "sha256": "cd91edaf3da6f9cea0ec38ef933972bb028076ad5a9a94be8a1c63ff2794853d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3843,
+      "sha256": "d416f9f8a591003ce22a674e24a8a9e39ed48a49fd3ae049247fab27904cca6f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.md",
+      "size_bytes": 4079,
+      "sha256": "7c205507b99262a3ad1666f61dee6cfd0b2773bc17d4f278ff1ac64af2479959"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.pt-br.md",
+      "size_bytes": 4433,
+      "sha256": "5945a98720b768cc533e91b3fdae0111f0f8dc6a2f9fe203463f8f1208014ff7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/derivations.json",
+      "size_bytes": 7474,
+      "sha256": "c1a4043a46284f6352d58e5cc3692fbee00ca0799a7d2b37c4083f4f3723cdc0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/model-instances.json",
+      "size_bytes": 9882,
+      "sha256": "f50b4ac702e22fdb99e4a134471a628146d78d04a507fe4aaa9249ce69c16427"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1746,
+      "sha256": "4631eb43abb4107a1281a5f92d65668b108bfa3632457570f538f1020d3954ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/pyproject.toml",
+      "size_bytes": 613,
+      "sha256": "514841eec4e5fc63803d5f3dad60fc43919bb8fb24cd3c5843534f075757db6e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 89,
+      "sha256": "0c584307688a9375862eeedcfb641bad4581a4c51fc7235fcaa0313f87d2c3b4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1637,
+      "sha256": "1368fe21838d32aa318103e56cca0e12a2a0f294a92a60f581ae7f1ec21c180c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2736,
+      "sha256": "0ed0824462cccc006caa4ef13cfd659bad44df788fb32e8036b17605c46a9074"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 464,
+      "sha256": "12046f6dcbb5ef6a874d80ad0251df5d030a6e3220e2308ccaab74c748a4b065"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1145,
+      "sha256": "3f6901decf6156db1e53de9d70ed21b589c5cf1c4c5961a58b4b2df3f9494cf5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6840,
+      "sha256": "c2ac4e285032e2afc9d8bfbb5de064e918050f5a501856338a6bae6f1bbb58f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 1124,
+      "sha256": "5df6711c64741a86780913e60c597b598df8a9830f8184a2eb955f9565875ae5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2523,
+      "sha256": "d52bd38714413ea7cf597ed74431cd280683d7cb5caae246a9d13c7d759dbebc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5934,
+      "sha256": "9240c8d186051ec5c3275a4d970d1692543bc484915511180d4f2602aa88a564"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5781,
+      "sha256": "e11e83ed0ba6627ef85f9c62c715fa4e379179d41b57b05bddbcd6cc1e5f9331"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3097,
+      "sha256": "f6144fa1e26847a8948ed24bc6a58da20e55cbd11cb9eef933a6f7763231a302"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 11909,
+      "sha256": "7edfbf527c3c751c2ce04e76ee7a123f2e83e935b681efbd34a43b9a037379ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 6074,
+      "sha256": "1d9aa4096aa860ab180470829c254556fdd0a9f71675ac6282907287001c7b54"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 2116,
+      "sha256": "0abd3fb9c0d79bb69e3c183747b3f1b3150f51b68f604ebaee00a91b26cbbb3d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.md",
+      "size_bytes": 6474,
+      "sha256": "e6cb5fcda8c4a9c21842fcd343a71e65b68dea764aba3b074383a2d2194bb513"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/README.pt-br.md",
+      "size_bytes": 6974,
+      "sha256": "21e861dc60355231771bd00509adb469b92609b18b7b38a98d9e17519e9f9527"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.md",
+      "size_bytes": 11912,
+      "sha256": "c3c738f94d77f7ad372b8255c9b512310b0e608790e9848abb9443f5722d08b2"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/MODEL.pt-br.md",
+      "size_bytes": 12630,
+      "sha256": "1a7e01598b56ef009d5741eac56888a59c0d621b73b2517a1d3744caf35135f3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/counterexample.json",
+      "size_bytes": 2847,
+      "sha256": "d7f2008e7acdcda204a56bceaec08786273e2ac088726b0d6e4d84805dadcbaa"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/example.json",
+      "size_bytes": 11738,
+      "sha256": "616079bc26862bddead412ad3b864bad5241b9d063234e851307183bc2be0fe5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/model.json",
+      "size_bytes": 318,
+      "sha256": "33319cdfc80858166083fceda2f7d2ac9077c837ebed062c20b0530ba2e39c7e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l1-case-contracts/template.json",
+      "size_bytes": 2563,
+      "sha256": "d36784da303e5bd8e18792c1221e6c2729df016ad16f4bd18845f5f0a504eb38"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.md",
+      "size_bytes": 10919,
+      "sha256": "c611a28be1c7b67da50b19eadf0011799bffafcd7751f703809f2db190980aa3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/MODEL.pt-br.md",
+      "size_bytes": 11621,
+      "sha256": "ffa4c4020868176e9085436bdf751940194570fde661970703709afa6eabf690"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/counterexample.json",
+      "size_bytes": 3553,
+      "sha256": "69084e48aaa5eab3a5b49a5c573c7e4485a5322275ca7b09af862de213459d88"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/example.json",
+      "size_bytes": 12825,
+      "sha256": "8e5792182cb5f6d42079976dba62c45b844fbae42162cbbfc6ba3f6dcd341fc0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/model.json",
+      "size_bytes": 321,
+      "sha256": "662acc6cc05ea3329cb56ca768ef210033d58fea363290434071f2e52b72d32b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l2-program-scenarios/template.json",
+      "size_bytes": 2817,
+      "sha256": "1b5186015a4e9bd5833ea1920d5785bc0e03473428e046fa324cd6888bc7f782"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.md",
+      "size_bytes": 10070,
+      "sha256": "e512f550f35c87adec34ccce296e92e495402289f8201773fcaf5f396f56debd"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/MODEL.pt-br.md",
+      "size_bytes": 10831,
+      "sha256": "d2bfc5068baf9e971bcf9895a5f1b21aae4b87d774b6e7387c5d4064b331d0c6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/counterexample.json",
+      "size_bytes": 2343,
+      "sha256": "d524b387901a4d33f2a00c075fb0aa504c75c5263dc33da70de7e7467e5d8706"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/example.json",
+      "size_bytes": 4611,
+      "sha256": "6fd974774b038b865d256ee9016661478ccdf3cedcd7019e4fd8d8312cf98439"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/model.json",
+      "size_bytes": 315,
+      "sha256": "0bfa1f46c151ccea8d7a7669f9b93839d505af2e68acef4354566c2ef6a6a3ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l3-python-core/template.json",
+      "size_bytes": 1664,
+      "sha256": "96d3d16f71c5e8d972aa1659b49f868f8f4dc0cd580175117a59357685283ae0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.md",
+      "size_bytes": 8329,
+      "sha256": "14e0a0ec1dfe308bd79a755d05a1a04465c0ed0b178090e8d51e7bf924ae7610"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/MODEL.pt-br.md",
+      "size_bytes": 8830,
+      "sha256": "a0f673530ddb68e44d920c0236a73c45c2ef3e7582c1baa49da38f7811aca634"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/counterexample.json",
+      "size_bytes": 2106,
+      "sha256": "66d1301e40e49fac79763337d1d8380a80521ce9621359121d421681ca1b1bae"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/example.json",
+      "size_bytes": 6776,
+      "sha256": "da148d91cf84007a29159367ca4c366c5b5eff4f7db99b98f655e155268ceec7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/model.json",
+      "size_bytes": 317,
+      "sha256": "0ecb1941b4ae04b48863bf55087749bfd9725901bb9d81ed299612ebd70a6206"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/models/l4-http-boundary/template.json",
+      "size_bytes": 1857,
+      "sha256": "8ed5b7247f656956c61c2ae897f5bdef952406070cea2d13386de44fa0c94c08"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 16532,
+      "sha256": "e7ec83f9c3c294f7ab227d0fa1bc13e0b8b7aac95aa5800825b4729f6e2df5be"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 17602,
+      "sha256": "de90bf9fc874fb52afe165c1e8ad84b41bd19c900639c1a4622673fde6a139cb"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 20630,
+      "sha256": "7d59de2ba2dcc41657a8ddc42d71d2ff64ea99b56c2197dcce9859fafe59464f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3042,
+      "sha256": "960f3858e5a7b58596564e3483db2505e319b1e504fc5cf1a355fa15fc9b9b8e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3318,
+      "sha256": "6943fc9ef285be6c4ac4b6337d119bdb750467582c683ad5039f03784e9705c5"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 3361,
+      "sha256": "badbb4d4ea56c34d28191b6ab36b02bd10fb4040095a0bbff7c19511fedb6f5e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 3720,
+      "sha256": "84b759588ae05e63a163455a34cec1ecb6a1e149311751c3ef50b4a163ec5c44"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1819,
+      "sha256": "e1ab16a0d27887c9ce87a8dab826588375b59485db58c96a05eeb90523207ab3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 7414,
+      "sha256": "c5b7e29fe365175f42099d24e29613bae96e6bdb75df57adcf6b5449cf6dad31"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7847,
+      "sha256": "8477b79b9a025979b89689975ab5483e1ef9b69a157d778dc09cd3d8ead9ee1c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 7711,
+      "sha256": "3de53692445dec522b969f1e6b1892e05f85129390024e3d0fb02c503b003996"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 5009,
+      "sha256": "02e98a69f9828ae7e3aea8dc647fc3f9f95e8e97891e8757bdfd078169b1837b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 5441,
+      "sha256": "a4290893e19d4a12106c1a410373ee872c7c46ebaa797ecc7a16ee0f6057a71a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2475,
+      "sha256": "3bb578c78a1e5c76e1aadc250d156a044397a108b4a225f2cf22c520d595f7a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2697,
+      "sha256": "480b1376684d7b153c34728e8fd9a0bd2262993013c88209128356cddbffb2a4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3704,
+      "sha256": "32ab3e24ddd6bdf3562d58376c253b0ed7f4d12d5043380f386b41aee947ec3e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3954,
+      "sha256": "e81101dde01c756c9f9765be41c1ae959b571edb18d98275ceba4b1e00023232"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2239,
+      "sha256": "28ffb0e3137cf17e08a6b4ba98052c1633080c9cd4af429f2da285b98cbcca92"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.md",
+      "size_bytes": 4051,
+      "sha256": "935efee5feb42331e3c3080892c907360c97c9c868902a29298c65993124fa05"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 4407,
+      "sha256": "c93fbac72f616aab780e5a10367a74a075301e29275b01e63b58c8fb61c53d8b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/derivations.json",
+      "size_bytes": 5567,
+      "sha256": "1d63efbcf16eae98396c5052ac85d90803c30ad37000430cfe13e44865f14ce3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/model-instances.json",
+      "size_bytes": 9545,
+      "sha256": "37a337897300aa87423111f3a0f40890f2b0e772a629cf4086d68786d3cf0ea8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1164,
+      "sha256": "fd253a3ba467f7eae75f65aa353fa9673cb807480d06c9f39294264398ae69c8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1137,
+      "sha256": "ca1d015c90c5a7f8f5d977b92c7afbdfbeb2d0efa1f6c6c20ae14a98dc4ed415"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 3089,
+      "sha256": "ff2fd45f6d4d132338a5a573cbc09618bc35c0ee4fad75dc9ce008a9efbc5c88"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 120,
+      "sha256": "136e36f8ce661b8c0117ee1fd0067dd538e7fc539ca331e8276a8ec70062a18d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1763,
+      "sha256": "4df1599a6165ef54b6b91147660c40df1a3a60547e56cfb79f81e561da74f8f3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 783,
+      "sha256": "e978fada772d107a6e108be03c9d70fa31a35ed942a727f9f75ff4b4a97caf54"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1584,
+      "sha256": "dcb97c798cf5186566b49f122d7b844f902a180becb663eaf4e1beb4d473e5aa"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 1167,
+      "sha256": "420bf0920d4523a5c1d4976dd85d01e971cfd1431f7b8f28f3f1b772af3e25bf"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2055,
+      "sha256": "3b12f9d6315c435be6905e09f1220049f77616607ce990e5e085e979708dcc5c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 72,
+      "sha256": "4091e7a2ebd4e32ad3716a0ced83abbc29183dac0f64bbdbbd3d82fc50aa9a14"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 987,
+      "sha256": "40b95c77353ea45a4cfea70354a87e186b2b5aa1082adf061f4dbc12acdbb361"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 4019,
+      "sha256": "a52ee62292c1de9d41e0a1afc0620b1e5510da97e71b523b82212d2dcf6a8b5f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 817,
+      "sha256": "83ca6e9b8a081251b905f9d7fcf564669f6f05e730bfe03d7ba8a022a2666bf8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2439,
+      "sha256": "b12fcde7a5170c6abe24130f34e60017e158cdceca7f9eae5bce9de460361331"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/p4/test_http_demo_auth.py",
+      "size_bytes": 2887,
+      "sha256": "a93910e16f3ea524f13d21fd5ee87ebec1db5f9af1e2b5e5bd9fffb37d01ac35"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 4231,
+      "sha256": "891f5b122814cd734a929189473d187b7271af77647163208c2dc2bfe93f62df"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 4708,
+      "sha256": "d82a427d866df8cd1c1fcbcf66ba30b1894d402bc77151ad028c5c117db02a62"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 21953,
+      "sha256": "4172edfb6a31577fcb107f8619d298cea721d017574acb18a7f90a1bd0aa87ed"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2421,
+      "sha256": "e3c51a4ac2c6a3869aaf1e0c2839f6cceb35a2a51bcf0a84c9e849a840b95aec"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2678,
+      "sha256": "68cf97e0dcdafc8db4804c19ff62a590bd3e3fb666a8aa2d25e7c8ee04027ce2"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2039,
+      "sha256": "a70931a141280b9b38d2954358d56de488907c253f76d248cb04b5019e73016f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 4310,
+      "sha256": "6bf4adc7396ded283ee2746b593945103eb37c9242a0c5d5f462b9917e5f4051"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 4664,
+      "sha256": "8923dcf0d979425c5f3778d1622062071251da681882121f409f79af6e0b17a3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 7847,
+      "sha256": "d570bbf3f78025393b2ad36a90f7812808e5184c720bd6c4a7ba286f4391428b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2589,
+      "sha256": "cba1a9fbaafa8087eed9b4973d312581360e1b6df86f29b564daa4b3b1656be1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2832,
+      "sha256": "f170d0dae9b5e4e922c43b9cd294fceeb720b6ff6ed6dbd59dfb12938423b8ac"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 2808,
+      "sha256": "ae37c7cad57fa96d606cd73bd230b5fc844856ae5a65ef77ae6d99ade15625fc"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3047,
+      "sha256": "e5f4548bb0c6e0e32222c234cbab94742a7d3dd489b37c8eeee1586059b3b82a"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 2192,
+      "sha256": "54bdc4b1e198c93aa8af3295111d3d654a0c1a58c93aa2e6ab5c15b0120f7512"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.md",
+      "size_bytes": 3927,
+      "sha256": "2cc15031208a4a9a4d2db3f75cc1ab3558642f31cd1f01ed5ef3d44ab2bcf616"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.pt-br.md",
+      "size_bytes": 4218,
+      "sha256": "6436b352d06b58b30e922227b022777785e688cf32b6103cb3d0a5c5cf508224"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/derivations.json",
+      "size_bytes": 4631,
+      "sha256": "7c432be535f2b99defb0d7a6027d4035726231870f5b5aef4e6ef5469412fd09"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/model-instances.json",
+      "size_bytes": 10346,
+      "sha256": "528a59030dd74fea25fae52897881ca0fb0ea66fcffcce1c48e49b736da444b0"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "3a42927ad0d54b4e20e94cf0c0368aa840e8973ac829da007eb6336f475ca091"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/pyproject.toml",
+      "size_bytes": 697,
+      "sha256": "07c01306a7e15859b6f0c746707b173da6020f2f92f271a8526d579f6509d236"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 710,
+      "sha256": "795354f15bb9112f4449b6887712160ef8c83f0fac8174a87c97c723be98211e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 958,
+      "sha256": "c7adf8fbe6839fed4782818fed0bfa74b97f4ca9eafa62ea20ddd710fd877fc3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 801,
+      "sha256": "28b1be4e927f4da8b449572314a1e09a4db98ec0dc036db5695d40f6d44960ff"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 2598,
+      "sha256": "2d630c1ce114c2c84faa5c543f4349046d95959f65337f6339a511eb937951bb"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 6525,
+      "sha256": "fbfb5e796a373ab7934ef2140b17170e8ca76af0196c7e107b149b90698c5c94"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 1133,
+      "sha256": "ea19a9eb7408e48fd51f63eb9f179304439626a55bee87eb93ececfae74f6612"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 4025,
+      "sha256": "75bbb3cbdfcdec05eaccc832a72d844532f3a9b47b489fa8ac3fbedcba763b32"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5887,
+      "sha256": "9c6d12a99c4a806b51be56e5e3d2109bc344a5d61d74152e390ac079ceea0cb6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4488,
+      "sha256": "394e37a9f6bf3f9c9e6529d61416de3e05098a6d832241fd61d5a66e0350d96f"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/integration/test_sqlite_store.py",
+      "size_bytes": 4778,
+      "sha256": "b47fdcc79e122698aeaaf96c17889f798fac2ad2385c5238ccc44ee771fc792d"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 10378,
+      "sha256": "9899b325877f2aaf46f0b63bc32c350d88bd6695160635e2a5ab77f56ca0ff72"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 7217,
+      "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/run_examples.py",
+      "size_bytes": 5520,
+      "sha256": "bc9e22b6a998a671b4caafffc35287d1e91d223162068047edad3e11c623c37b"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/LICENSE.txt",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/SKILL.md",
+      "size_bytes": 13685,
+      "sha256": "668ddc3a6a84ef6e47884727187fe0dff9ff19d3e44a8eeace5d401355e0f28e"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/actors-and-boundaries.md",
+      "size_bytes": 11669,
+      "sha256": "41a5e90dec9dbe43453c051499b9fa5544b7aba0ca0a261b5768de5bc838abb6"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/conformance-and-evidence.md",
+      "size_bytes": 9416,
+      "sha256": "6a726463a6f2a0c34857afd7a4a8e1286c003389f8b3e1d1b9607561795649ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/engines-and-notation.md",
+      "size_bytes": 12835,
+      "sha256": "eea41cf3338fe89dfb7aa46b37b80f3410a3d647e6be22bf5805914fda564759"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/layers.md",
+      "size_bytes": 16712,
+      "sha256": "983938fe7ee2b04355654ab194ee6ae3cc78e87e2291ab8fc0a556da5d828172"
+    },
+    {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/skill/references/source-map.md",
+      "size_bytes": 7225,
+      "sha256": "8b7881d69792138adf9cbc6eee5c4536fa384817ad794829c775583620d92f01"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.md",
+      "size_bytes": 4672,
+      "sha256": "65497de08d25e6e184b711b9064f95f6e1116c440367475b92c888f4406688b5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.pt-br.md",
+      "size_bytes": 4775,
+      "sha256": "36e06e4dde3af56f8398ebe6fd77efc9ed36b872d5032aca49fe55f988944d67"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "size_bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "size_bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.md",
+      "size_bytes": 8280,
+      "sha256": "9ab9ca9d2703ead51e09ec9fde3135d99b5df7e069acc8d573b22ab94afe24e9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
+      "size_bytes": 8919,
+      "sha256": "64621fa43abd6274d595e06e11048a78ca0f00c5626579788e303d6dda75fefe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 21271,
+      "sha256": "d00936544410f66526adea7e9f99bd850d3fc7f63d5c06ae4c6ba942832a157e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 19717,
+      "sha256": "4ce2a8a4d3450b571e5600925ba741da5567008c4a14d402123267708292198e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7515,
+      "sha256": "1c382ed09523ed2d931e9dc763061718d4a6920cc3feafdae8daf6f632892c79"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 59526,
+      "sha256": "be90ee9b384d52aa7df399c3e8bdcde299cbe9e6ad7249fa177320dc7b6f4258"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3478,
+      "sha256": "a9a7ca0b9b08fcd0f5801bf159b90da97da0dc58df7545101d48dd71921c825b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3756,
+      "sha256": "89dd9ea719643a0c668282b5b4327e71d874b3cbf18751045404aeec8e4829e5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2738,
+      "sha256": "93ce7ef592fda411fb8d407ebf74d652e0f85b0bcb54dca2fc0a543973f459b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2929,
+      "sha256": "dac55c833d3f4363724ea6f84d6582c27ee5b11470a81fc32caeff26b8e772df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2362,
+      "sha256": "2539713ea2e19c87cfa9d2207515e5ee6494e3871b16ec425c8fdadfc4f43ebb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 8523,
+      "sha256": "17808163662b8eb1c17a59ae69f8c2214b4f1d48717ae05d6b922f5b9d8de665"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 9256,
+      "sha256": "5c5f43e5e902c8625b0213b6e8d2cf680d3f5342661873f3b5e33b655b4df3ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 9426,
+      "sha256": "19a7ffcbdac7dc0f21f6f043f84ce60a90f4448d9e0894435b22307563370884"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2513,
+      "sha256": "29f92c389ba532efd9cb26b2aedbb69a9e3715522d5fe52e9a0dc570ef2fe2e5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2761,
+      "sha256": "ebf463213c9e444757f146dcf0323106ba727b01d1517d8b885f2e27e93a09dd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 5333,
+      "sha256": "d03a36e336734bf0be913f7b9c953c28127df1a35fe7ea7e80054bab41fee48e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 5722,
+      "sha256": "cd91edaf3da6f9cea0ec38ef933972bb028076ad5a9a94be8a1c63ff2794853d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3843,
+      "sha256": "d416f9f8a591003ce22a674e24a8a9e39ed48a49fd3ae049247fab27904cca6f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/README.md",
+      "size_bytes": 4051,
+      "sha256": "434b389b5f35c4a01f0413972ff44b64be1f1198301ec78a9de2e64691d5aab0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/README.pt-br.md",
+      "size_bytes": 4398,
+      "sha256": "2cdd7b84fa17d96b9eccf06967036faeb00db02a9d45bb36980bd6897b32b766"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/derivations.json",
+      "size_bytes": 7929,
+      "sha256": "799e30988c3406653016add2e40abe917f994480278d84b24f67de88ddaf924c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/model-instances.json",
+      "size_bytes": 12519,
+      "sha256": "6ef401a7b2144acdaa1efee4a657343d071687609d3c6d0a4f11c5ed245cd4ee"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1746,
+      "sha256": "4631eb43abb4107a1281a5f92d65668b108bfa3632457570f538f1020d3954ab"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/pyproject.toml",
+      "size_bytes": 613,
+      "sha256": "514841eec4e5fc63803d5f3dad60fc43919bb8fb24cd3c5843534f075757db6e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 82,
+      "sha256": "70f945347d55f4d073420f5615af75031f6aec5147fb02bd2e4a05cbcd5cfd29"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1637,
+      "sha256": "1368fe21838d32aa318103e56cca0e12a2a0f294a92a60f581ae7f1ec21c180c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2736,
+      "sha256": "0ed0824462cccc006caa4ef13cfd659bad44df788fb32e8036b17605c46a9074"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 462,
+      "sha256": "889888bf913d1a57f58489055f3e0da907b953878d4340165debe4394bfa15c4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1143,
+      "sha256": "1815f0e46b1f7140fa2c66ee532926981d19127fb74eb0e3f9ebca4ac58e3af2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6838,
+      "sha256": "7d8bffa64269ae05a77d6ffc13841fb7134cc0315a9b827fc25f3fbedaf7799a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 1124,
+      "sha256": "5df6711c64741a86780913e60c597b598df8a9830f8184a2eb955f9565875ae5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2523,
+      "sha256": "d52bd38714413ea7cf597ed74431cd280683d7cb5caae246a9d13c7d759dbebc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5934,
+      "sha256": "9240c8d186051ec5c3275a4d970d1692543bc484915511180d4f2602aa88a564"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5779,
+      "sha256": "1f2ff01f94d83e4dc2c3461fc0829040b7c3bc28a45b3fdc65f837739d1ace5b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3097,
+      "sha256": "f6144fa1e26847a8948ed24bc6a58da20e55cbd11cb9eef933a6f7763231a302"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 11909,
+      "sha256": "7edfbf527c3c751c2ce04e76ee7a123f2e83e935b681efbd34a43b9a037379ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 6074,
+      "sha256": "1d9aa4096aa860ab180470829c254556fdd0a9f71675ac6282907287001c7b54"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 2116,
+      "sha256": "0abd3fb9c0d79bb69e3c183747b3f1b3150f51b68f604ebaee00a91b26cbbb3d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/README.md",
+      "size_bytes": 6254,
+      "sha256": "5c53185454ae3659c20256b135a7a4b2e52e8ba805d6575719f2b42bd087d337"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/README.pt-br.md",
+      "size_bytes": 6729,
+      "sha256": "703dd6acc6f4b54c5da28d360afa15c16894cd70ba70c6afd39bf8d61fe23984"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.md",
+      "size_bytes": 12414,
+      "sha256": "937ed3a61e214ffd4d3170cfc445c2c6900e9ee9f56193ad497b227d92ce515d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.pt-br.md",
+      "size_bytes": 13161,
+      "sha256": "c818b126cba53bc7d647ac2ed3d98858b680ea0a2cd7fba674a749c8e04904a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/counterexample.json",
+      "size_bytes": 2840,
+      "sha256": "524d22b466defb03ab5a2daed07a1b6c3019866dd8ac9eb51be1f79ebf8b1526"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/example.json",
+      "size_bytes": 11731,
+      "sha256": "0bc32ad0ac12a38ce1c89f019c047254e6fc2cc6afcdd2b1a7f859573868ede1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/model.json",
+      "size_bytes": 382,
+      "sha256": "69f383f3b3a57b54c02cefcf83a280e2263d2340a9ee4a3144cb5fe8e72e08e7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/template.json",
+      "size_bytes": 2556,
+      "sha256": "47c6c549e9f25e91cc10bb1c440a7bbcf6789a72ceeee4a08a9f76bea720a522"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.md",
+      "size_bytes": 11421,
+      "sha256": "0caa959e33a048a0391c6ddf59deaf5ac6c2aefef7c57f3b8df78f8f6e9869c0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.pt-br.md",
+      "size_bytes": 12152,
+      "sha256": "9e13435e83611490b271078d86e21a5ead51356a47add51eba0f48f21ce518b8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/counterexample.json",
+      "size_bytes": 3546,
+      "sha256": "d93326260773cd161aca380d733c1d1f9c2fd864c615b63247d3f406b2b69bf8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/example.json",
+      "size_bytes": 12818,
+      "sha256": "a0eea212e2454493d31ef8f53fec12b796a4bd6bbca6d6316940c129d7d3e7f0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/model.json",
+      "size_bytes": 385,
+      "sha256": "9d7f77dda577b06366bf219ac292f3c3e64734069f1f0a6c5b3b815954c7c631"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/template.json",
+      "size_bytes": 2810,
+      "sha256": "9d0356998ffced8d67b1c58e37c6cf3520ecc6136dbc8442aa707f72264c5827"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.md",
+      "size_bytes": 10572,
+      "sha256": "c1e3ba3145d9e2b167517dd096aa6e82f2fc98edbaf9c351c54e04319f1599c9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.pt-br.md",
+      "size_bytes": 11362,
+      "sha256": "37ef026b83ee66b64a3bca42a07312585d4910e4d09fc9cfbbbe7e2dfcf03c1a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/counterexample.json",
+      "size_bytes": 2336,
+      "sha256": "759399685a5a7e318d6a6812f8eba3ebba60d1212353018275c13da4bd367ccb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/example.json",
+      "size_bytes": 4604,
+      "sha256": "9f7642f2fe0162aec5c6c4f07600ef95a68fc8dadcd50b4449fdd9ced8b79cad"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/model.json",
+      "size_bytes": 379,
+      "sha256": "e5916c0a87582fa0fed1987013b7c6b49fc2cb06f2b7997fe3e2818259986474"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/template.json",
+      "size_bytes": 1657,
+      "sha256": "e8e294ed5f0bbfb8d66051f9f6686c9feec8bde51be72c5869b2f014ecc607f7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.md",
+      "size_bytes": 8831,
+      "sha256": "20c8dbd73a6edbcbc323f82618f7123daa41d15a141ec7d441015c122c0c1951"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.pt-br.md",
+      "size_bytes": 9361,
+      "sha256": "c66c5c3205bd8160ac3cf2b5b3c30832eca1f15d07a3799da853259580f4c535"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/counterexample.json",
+      "size_bytes": 2247,
+      "sha256": "ca9f8483096b2cd7c2e0d6066304b354085fef6b3938098d5c09e9adbdbfd048"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/example.json",
+      "size_bytes": 6769,
+      "sha256": "b691bb34999e7d1e8e91626667bc1732b59b386a813a8abf09f45d72d82a9a62"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/model.json",
+      "size_bytes": 381,
+      "sha256": "ccdb7a660729d8a949cd2fd06bef39bc6df209f0dcf522c9a0f70abab5ea48b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/template.json",
+      "size_bytes": 1850,
+      "sha256": "3bb0c1883654b6898d24e8fcccdbeb5df26189e2f5441ca1c39039224db9ad40"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 16525,
+      "sha256": "8649ccc7a10decf84fb1a7cb4d81c048009d37f3e583a6644c45f2fed910361e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 17588,
+      "sha256": "7b6b6c6285a727ad84f124bde5ce0da0f3d273a35c10838a21492d60f90f1aaa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 20616,
+      "sha256": "4fbf72852ddb97ca012ae8a9d78a3c1ccf9954585d41d3be2dcbc9813568b1cb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3035,
+      "sha256": "84e05e1ed576be2cd1d4cdcf7498131c413637ed53a237788c3966a9a8f75d85"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3311,
+      "sha256": "d0fdc062c1c848bd08c131a0e94f757c39fb178f53f841c9358d23355a2c64a8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 3361,
+      "sha256": "badbb4d4ea56c34d28191b6ab36b02bd10fb4040095a0bbff7c19511fedb6f5e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 3720,
+      "sha256": "84b759588ae05e63a163455a34cec1ecb6a1e149311751c3ef50b4a163ec5c44"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1812,
+      "sha256": "37e9f5ab9c309c6fc53d21cb6df614bce61f6df9adef3e86f549d239beafafca"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 7407,
+      "sha256": "040e7aa2bd6c776fef2dfa19dac2d9d8d374dcb17563b0de2659c5b9275676d5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7840,
+      "sha256": "483058e0e5a8fd992efb481eaabcdd608482486212108b50a8c8074479e31e52"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8318,
+      "sha256": "7da10143b054fb563e36780d9faff64aaba12353d270e770dc233b6ec1d94101"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 4995,
+      "sha256": "c843038921972dcc9acfc00fd4525e2c1d14d19d89aa90486bfe4d4ab3482c9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 5420,
+      "sha256": "bdc94ea3a8329945d2db75b5d7472d8f2ed6c93de07e55b945f8ca716c2e82c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2475,
+      "sha256": "3bb578c78a1e5c76e1aadc250d156a044397a108b4a225f2cf22c520d595f7a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2697,
+      "sha256": "480b1376684d7b153c34728e8fd9a0bd2262993013c88209128356cddbffb2a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3704,
+      "sha256": "32ab3e24ddd6bdf3562d58376c253b0ed7f4d12d5043380f386b41aee947ec3e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3954,
+      "sha256": "e81101dde01c756c9f9765be41c1ae959b571edb18d98275ceba4b1e00023232"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2239,
+      "sha256": "28ffb0e3137cf17e08a6b4ba98052c1633080c9cd4af429f2da285b98cbcca92"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.md",
+      "size_bytes": 4023,
+      "sha256": "0053a4e2429b31f8d802d720a75baca7c253760684b98aaba8ed66ead99de1ce"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 4372,
+      "sha256": "b3246301d17c2918167506193b1ecd70528531c0a722428832eaa5111e6efdbb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/derivations.json",
+      "size_bytes": 6025,
+      "sha256": "809ecdcd3ffd3543a90a1985bf4f6d410e2ea70e1937c4c6fdc10e6f26115456"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/model-instances.json",
+      "size_bytes": 12125,
+      "sha256": "3eb2ce5cd15510a9addf76b2e7c7bd047768f3e609ede4e2a2de212278987b8e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1164,
+      "sha256": "fd253a3ba467f7eae75f65aa353fa9673cb807480d06c9f39294264398ae69c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1137,
+      "sha256": "ca1d015c90c5a7f8f5d977b92c7afbdfbeb2d0efa1f6c6c20ae14a98dc4ed415"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 3089,
+      "sha256": "ff2fd45f6d4d132338a5a573cbc09618bc35c0ee4fad75dc9ce008a9efbc5c88"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 113,
+      "sha256": "83554349425fcdb6c2e3f2fa2395afdaf3147f47970daf77fb3e4942a3265884"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1763,
+      "sha256": "4df1599a6165ef54b6b91147660c40df1a3a60547e56cfb79f81e561da74f8f3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 783,
+      "sha256": "e978fada772d107a6e108be03c9d70fa31a35ed942a727f9f75ff4b4a97caf54"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1584,
+      "sha256": "dcb97c798cf5186566b49f122d7b844f902a180becb663eaf4e1beb4d473e5aa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 1167,
+      "sha256": "420bf0920d4523a5c1d4976dd85d01e971cfd1431f7b8f28f3f1b772af3e25bf"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2055,
+      "sha256": "3b12f9d6315c435be6905e09f1220049f77616607ce990e5e085e979708dcc5c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 65,
+      "sha256": "5badf50dbf80bf41320822923db097c371f60901ffc0044571859fa6010a2515"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 987,
+      "sha256": "40b95c77353ea45a4cfea70354a87e186b2b5aa1082adf061f4dbc12acdbb361"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 4019,
+      "sha256": "a52ee62292c1de9d41e0a1afc0620b1e5510da97e71b523b82212d2dcf6a8b5f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 817,
+      "sha256": "83ca6e9b8a081251b905f9d7fcf564669f6f05e730bfe03d7ba8a022a2666bf8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2439,
+      "sha256": "b12fcde7a5170c6abe24130f34e60017e158cdceca7f9eae5bce9de460361331"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_demo_auth.py",
+      "size_bytes": 2887,
+      "sha256": "a93910e16f3ea524f13d21fd5ee87ebec1db5f9af1e2b5e5bd9fffb37d01ac35"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 4370,
+      "sha256": "e387a5465abf1de202b1a6f802b5060f2fa0cf1bc875106865b9b0f55168807d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 4871,
+      "sha256": "ea4939435020c5248e810ca0efe4423a734efeb1ac74e17d8c9b67ae4eb9d088"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 22216,
+      "sha256": "19b2971eef515beec40e1efb5a5df18ec7764cf58c170ac49a0ae126699ae9be"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2414,
+      "sha256": "1c0590b468e7d213d0b34e466bc2b549991f6e168f27ad9aa5300b821796fa92"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2671,
+      "sha256": "0fb1da3e1be3d025a8f9c82d2d3e982a70a39f1424f0f4d875748be8a2043d9a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2346,
+      "sha256": "9afe9582217aabb542aab315a027770395bac94e7e275fdcad8feb68f0cbb5db"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 4303,
+      "sha256": "c4d2a3df0893f3f6330250c0701ae79273241759300ed1eef090aed835273cc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 4657,
+      "sha256": "dd5db258ab9cc9d2cd76b49a58bb9cafd5ea0360481f73e4e9d398ee5dca1717"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8620,
+      "sha256": "f14fb289400bf0b637db3835379df9f0324a7511d16a01009c8a5f9cf6f7a71c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2589,
+      "sha256": "cba1a9fbaafa8087eed9b4973d312581360e1b6df86f29b564daa4b3b1656be1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2832,
+      "sha256": "f170d0dae9b5e4e922c43b9cd294fceeb720b6ff6ed6dbd59dfb12938423b8ac"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 2808,
+      "sha256": "ae37c7cad57fa96d606cd73bd230b5fc844856ae5a65ef77ae6d99ade15625fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3047,
+      "sha256": "e5f4548bb0c6e0e32222c234cbab94742a7d3dd489b37c8eeee1586059b3b82a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 3186,
+      "sha256": "6b57401366bce6093c89e06c4a1e45a330250ba881086e2a090af026383fdb43"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/README.md",
+      "size_bytes": 3892,
+      "sha256": "d610802cbf14a323ca4bd47f7d0e113df270f2d2c581e09d8bfc7450f74649f6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/README.pt-br.md",
+      "size_bytes": 4176,
+      "sha256": "5df459e749d25621ea42f6d051c7fff60a5225bfa27c987e403c50ab8d1d4b61"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/derivations.json",
+      "size_bytes": 5819,
+      "sha256": "5433bc28187cf98223f215753082f328a7897b66d1aa72a58d20c256c8322bf2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/model-instances.json",
+      "size_bytes": 12924,
+      "sha256": "6d56e350da2c068964aa863f4d398ad036f8faca0e89522c5912d8c641e47ced"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "3a42927ad0d54b4e20e94cf0c0368aa840e8973ac829da007eb6336f475ca091"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/pyproject.toml",
+      "size_bytes": 696,
+      "sha256": "05c9899c6bab202a0444aaf7be83e13d97d54fc8bc5db6259ab8a0ddf4d0c32d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 709,
+      "sha256": "383718c9360b073e1853a6967945419ead3e9eafa8523a16348811ee1823a441"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 957,
+      "sha256": "4e7d870a8450bb011310564281a6beebfc1412923ada798b57d57c493d37ed2a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 800,
+      "sha256": "40f88af7a6bfebf1de52bba51290ec87f6c4e391192fd49b5f2ac7edc5ed23b9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 2598,
+      "sha256": "2d630c1ce114c2c84faa5c543f4349046d95959f65337f6339a511eb937951bb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 6525,
+      "sha256": "fbfb5e796a373ab7934ef2140b17170e8ca76af0196c7e107b149b90698c5c94"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 1132,
+      "sha256": "b7c38eead27e6d43ed31ba6fe07b5e2b5e660aa60bf3762003ed60cb693388b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 4025,
+      "sha256": "75bbb3cbdfcdec05eaccc832a72d844532f3a9b47b489fa8ac3fbedcba763b32"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5887,
+      "sha256": "9c6d12a99c4a806b51be56e5e3d2109bc344a5d61d74152e390ac079ceea0cb6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4488,
+      "sha256": "394e37a9f6bf3f9c9e6529d61416de3e05098a6d832241fd61d5a66e0350d96f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/integration/test_sqlite_store.py",
+      "size_bytes": 4778,
+      "sha256": "b47fdcc79e122698aeaaf96c17889f798fac2ad2385c5238ccc44ee771fc792d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 10378,
+      "sha256": "9899b325877f2aaf46f0b63bc32c350d88bd6695160635e2a5ab77f56ca0ff72"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 7217,
+      "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/run_examples.py",
+      "size_bytes": 5513,
+      "sha256": "aedda2430cb2a125b2c91944912a97f17071a9dafcc3ff27ad60f6d3d3f5620c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/LICENSE.txt",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/SKILL.md",
+      "size_bytes": 13657,
+      "sha256": "a0c20f8f7f9455cf522a6b34381f00c179a92d4b83fa66751bb9450fc64b0db5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/actors-and-boundaries.md",
+      "size_bytes": 11662,
+      "sha256": "818ecc1dcd3515dba927102c0afef9d429e227f24611ff7e1001fbde8272712f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/conformance-and-evidence.md",
+      "size_bytes": 9410,
+      "sha256": "7bd14587a369f6480be07f205961eea2d936226b230492aac6779d44a0fe63ed"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/engines-and-notation.md",
+      "size_bytes": 12828,
+      "sha256": "bf305e546e9e7e48c7c46e6c566954ed27f9081355bffe9386b7d93e7aa30e85"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/layers.md",
+      "size_bytes": 16705,
+      "sha256": "04973862b267e4667b3d987a89e7b380b0bd908504545cf2416a917958da6df9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/source-map.md",
+      "size_bytes": 7372,
+      "sha256": "e28403197381a47cc8031f92ed70b955c5653b3eaa5f93ad4cd51cedb3568b3c"
+    }
+  ],
+  "commands": [
+    {
+      "name": "edition-launchers-py313",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "scripts/test_edition_launchers.py",
+        "--report",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\docs\\verification\\windows-launcher-paths\\edition-launchers-py313.json"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:05:23+00:00",
+      "finished_at": "2026-10-26T15:05:51+00:00",
+      "duration_seconds": 28.391,
+      "exit_code": 0,
+      "log": "edition-launchers-py313.txt"
+    },
+    {
+      "name": "controls-py312",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "scripts.test_edition_launchers.LauncherChecks.test_0_controls",
+        "scripts.test_edition_launchers.LauncherChecks.test_0_controls_path_alias",
+        "scripts.test_edition_launchers.LauncherChecks.test_1_controls",
+        "scripts.test_edition_launchers.LauncherChecks.test_1_controls_path_alias",
+        "scripts.test_edition_launchers.LauncherChecks.test_2_controls",
+        "scripts.test_edition_launchers.LauncherChecks.test_2_controls_path_alias",
+        "-v"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:05:51+00:00",
+      "finished_at": "2026-10-26T15:05:52+00:00",
+      "duration_seconds": 0.906,
+      "exit_code": 0,
+      "log": "controls-py312.txt"
+    },
+    {
+      "name": "tiny-catalog-pytest-py313",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\pytest-tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\versioning\\Stable-v1.0.0\\examples\\tiny-catalog",
+      "started_at": "2026-10-26T15:08:34+00:00",
+      "finished_at": "2026-10-26T15:08:36+00:00",
+      "duration_seconds": 1.918,
+      "exit_code": 0,
+      "log": "tiny-catalog-pytest-py313.txt"
+    },
+    {
+      "name": "board-crm-pytest-py313",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\pytest-board-crm"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\versioning\\Stable-v1.0.0\\examples\\board-crm",
+      "started_at": "2026-10-26T15:08:36+00:00",
+      "finished_at": "2026-10-26T15:08:37+00:00",
+      "duration_seconds": 1.13,
+      "exit_code": 0,
+      "log": "board-crm-pytest-py313.txt"
+    },
+    {
+      "name": "work-board-pytest-py313",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\pytest-work-board"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\versioning\\Stable-v1.0.0\\examples\\work-board",
+      "started_at": "2026-10-26T15:08:37+00:00",
+      "finished_at": "2026-10-26T15:08:39+00:00",
+      "duration_seconds": 1.497,
+      "exit_code": 0,
+      "log": "work-board-pytest-py313.txt"
+    },
+    {
+      "name": "list-examples",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "versioning/Stable-v1.0.0/run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:08:39+00:00",
+      "finished_at": "2026-10-26T15:08:39+00:00",
+      "duration_seconds": 0.209,
+      "exit_code": 0,
+      "log": "list-examples.txt"
+    },
+    {
+      "name": "launcher-help",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "versioning/Stable-v1.0.0/run_examples.py",
+        "tiny-catalog",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:08:39+00:00",
+      "finished_at": "2026-10-26T15:08:39+00:00",
+      "duration_seconds": 0.215,
+      "exit_code": 0,
+      "log": "launcher-help.txt"
+    },
+    {
+      "name": "board-crm-render",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
+        "--check"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:08:39+00:00",
+      "finished_at": "2026-10-26T15:08:39+00:00",
+      "duration_seconds": 0.151,
+      "exit_code": 0,
+      "log": "board-crm-render.txt"
+    },
+    {
+      "name": "release-regressions",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "scripts/test_release_checks.py"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:08:39+00:00",
+      "finished_at": "2026-10-26T15:08:41+00:00",
+      "duration_seconds": 1.495,
+      "exit_code": 0,
+      "log": "release-regressions.txt"
+    },
+    {
+      "name": "structure",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "scripts/check_structure.py",
+        "--edition",
+        "Stable-v1.0.0",
+        "--report",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\docs\\verification\\windows-launcher-paths\\structure.json"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical",
+      "started_at": "2026-10-26T15:08:41+00:00",
+      "finished_at": "2026-10-26T15:08:42+00:00",
+      "duration_seconds": 0.764,
+      "exit_code": 0,
+      "log": "structure.txt"
+    }
+  ],
+  "limits": [
+    "Windows local execution; no successful remote CI run asserted for this maintenance commit.",
+    "No browser JavaScript, visual accessibility or OAL transformer execution assessed.",
+    "Ctrl+C/browser controls are mocked; HTTP and process termination are exercised."
+  ],
+  "setup_attempts": [
+    {
+      "name": "tiny-catalog-pytest-py313",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-ci-path-fix\\canonical\\versioning\\Stable-v1.0.0\\examples\\tiny-catalog",
+      "started_at": "2026-10-26T15:05:52+00:00",
+      "finished_at": "2026-10-26T15:06:02+00:00",
+      "duration_seconds": 9.662,
+      "exit_code": 1,
+      "log": "tiny-catalog-pytest-py313-setup-attempt.txt.gz",
+      "reason": "PermissionError accessing a pre-existing pytest-of-Douglas temporary directory; retried with a fresh explicit basetemp.",
+      "log_encoding": "gzip containing the captured UTF-8 text; original bytes preserved",
+      "uncompressed_size_bytes": 333430,
+      "uncompressed_sha256": "f359fdc4be79dfc5684f9b5a6d755a46ef73470312d4c598cdad952701061ef5"
+    }
+  ],
+  "preservation": {
+    "versioned_working_files_unchanged": 624,
+    "alpha_working_files_unchanged": 368,
+    "input_hashes_unchanged_after_checks": true,
+    "published_tag_unchanged": true
+  },
+  "finished_at": "2026-10-26T15:08:42+00:00"
+}

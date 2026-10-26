@@ -1,0 +1,26 @@
+test_0_catalog_help (__main__.LauncherChecks.test_0_catalog_help) ... ok
+test_0_controls (__main__.LauncherChecks.test_0_controls) ... ok
+test_0_controls_path_alias (__main__.LauncherChecks.test_0_controls_path_alias) ... ok
+test_0_http_board_crm (__main__.LauncherChecks.test_0_http_board_crm) ... ok
+test_0_http_tiny_catalog (__main__.LauncherChecks.test_0_http_tiny_catalog) ... ok
+test_0_http_work_board (__main__.LauncherChecks.test_0_http_work_board) ... ok
+test_0_invalid_selections (__main__.LauncherChecks.test_0_invalid_selections) ... ok
+test_1_catalog_help (__main__.LauncherChecks.test_1_catalog_help) ... ok
+test_1_controls (__main__.LauncherChecks.test_1_controls) ... ok
+test_1_controls_path_alias (__main__.LauncherChecks.test_1_controls_path_alias) ... ok
+test_1_http_board_crm (__main__.LauncherChecks.test_1_http_board_crm) ... ok
+test_1_http_tiny_catalog (__main__.LauncherChecks.test_1_http_tiny_catalog) ... ok
+test_1_http_work_board (__main__.LauncherChecks.test_1_http_work_board) ... ok
+test_1_invalid_selections (__main__.LauncherChecks.test_1_invalid_selections) ... ok
+test_2_catalog_help (__main__.LauncherChecks.test_2_catalog_help) ... ok
+test_2_controls (__main__.LauncherChecks.test_2_controls) ... ok
+test_2_controls_path_alias (__main__.LauncherChecks.test_2_controls_path_alias) ... ok
+test_2_http_board_crm (__main__.LauncherChecks.test_2_http_board_crm) ... ok
+test_2_http_tiny_catalog (__main__.LauncherChecks.test_2_http_tiny_catalog) ... ok
+test_2_http_work_board (__main__.LauncherChecks.test_2_http_work_board) ... ok
+test_2_invalid_selections (__main__.LauncherChecks.test_2_invalid_selections) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 28.111s
+
+OK

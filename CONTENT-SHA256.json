@@ -208,13 +208,93 @@
     },
     {
       "path": "docs/releasing.md",
-      "size_bytes": 5521,
-      "sha256": "bb22ce783206041c3afddad2a8b33df2ff8af7ec600a83cfde093f8c1bb066ac"
+      "size_bytes": 6595,
+      "sha256": "a16161bd73fa225782248d3bca4cf081db5577009353317f85ce117d526ba135"
     },
     {
       "path": "docs/releasing.pt-br.md",
-      "size_bytes": 5848,
-      "sha256": "52fdac015e70abb92307c09d826decca744c4908558b7cb607d9a9417440e47b"
+      "size_bytes": 6980,
+      "sha256": "7666b0246d8984db29651eaa674545e2cfc26e0a0020d0e5a6f09ef79dc47185"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/README.md",
+      "size_bytes": 2519,
+      "sha256": "4786970f87975c732acb54aabead0b1660b8840758e23de44ab1bda5d2332c04"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/before-fix.txt",
+      "size_bytes": 5461,
+      "sha256": "eaaf04cdc233b255eb8ee3e34b110c6faf78576c84cba4f6e9fab1069d0463e8"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/board-crm-pytest-py313.txt",
+      "size_bytes": 83,
+      "sha256": "8e59077af7231131e0be618d1da6a0c1b2159044caf009a26c1f3704518f4349"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/board-crm-render.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/controls-py312.txt",
+      "size_bytes": 686,
+      "sha256": "91107dca31571df3421c775499a665ca49ab05f8bcf0c068d900b9aca2b1c18a"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/edition-launchers-py313.json",
+      "size_bytes": 69088,
+      "sha256": "d0ccd91fc63d11119cb74f09a40a90964e15df72dfa9bb2a42738976776d7914"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/edition-launchers-py313.txt",
+      "size_bytes": 1747,
+      "sha256": "2993797ef1449ae1ad893ee13b561cf5c65140ca1a6b1c76d1bf327124b01e70"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/execution.json",
+      "size_bytes": 140339,
+      "sha256": "f9d20587a4c7eb29ab06746b07a54e4dbf4cdea9c362cda410472f8843963818"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/launcher-help.txt",
+      "size_bytes": 450,
+      "sha256": "82ff9e9f0ca267f3ef9a97a372a36c04cf17286eff928d3918594bb417fb8665"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/list-examples.txt",
+      "size_bytes": 73,
+      "sha256": "4745794e3c8a212efaa0518f60041d8112e60a13216b161bc2b8b962cec36e11"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/release-regressions.txt",
+      "size_bytes": 103,
+      "sha256": "47d475f93d7e8e3a8ab114d9891cf12e1b92073258827c612e23210d9df156dc"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/structure.json",
+      "size_bytes": 602,
+      "sha256": "a8c2448850abbb215f4b83368058181a19befe050e7faafc572688ddf0075e39"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/structure.txt",
+      "size_bytes": 133,
+      "sha256": "d53ce04ca441baa5c8fb02a7035d5a2f6ea4f67b98a27d1300129e321bb13e8f"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/tiny-catalog-pytest-py313-setup-attempt.txt.gz",
+      "size_bytes": 6417,
+      "sha256": "c74bbaa7ed19be5b93e5b97cf44540cd1f9578d0ca6ca8949805605136c6f593"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/tiny-catalog-pytest-py313.txt",
+      "size_bytes": 179,
+      "sha256": "dbba21cf5debed6f14115e8ed5027f031fe89532c06b73d33674d0bd5ee194ee"
+    },
+    {
+      "path": "docs/verification/windows-launcher-paths/work-board-pytest-py313.txt",
+      "size_bytes": 99,
+      "sha256": "b730eab5afe1d06e6fe52e9129240272ca45cab2eacc73f3cdaaea9e4dd8cf38"
     },
     {
       "path": "scripts/check_archive.py",
@@ -233,8 +313,8 @@
     },
     {
       "path": "scripts/test_edition_launchers.py",
-      "size_bytes": 11696,
-      "sha256": "729b0995a6afed8c5816cf39aec5d9aff76e6ab03a6116b3edee7c5b5e261669"
+      "size_bytes": 12299,
+      "sha256": "7879785bcc68c00d336ab3ee5856701304ac7a57cd406d5b9646e37f3bf369b4"
     },
     {
       "path": "scripts/test_release_checks.py",

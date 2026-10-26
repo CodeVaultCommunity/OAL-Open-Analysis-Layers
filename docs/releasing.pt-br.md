@@ -6,6 +6,8 @@ Este procedimento de manutenção não acrescenta requisitos de conformidade OAL
 
 ## Preparar as fontes
 
+O repositório canônico é [CodeVaultCommunity/OAL_OpenAnalysisLayers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers). Atualize remotos locais e referências ativas de projetos dependentes após uma renomeação; preserve URLs antigas quando identificarem evidências históricas. Manutenção posterior a uma tag publicada entra em novo commit, sem mover a tag nem reescrever as evidências publicadas. A [verificação de caminhos dos lançadores no Windows](verification/windows-launcher-paths/README.md) registra a manutenção separadamente da execução Stable publicada.
+
 Confira primeiro a branch, o diretório de trabalho e as tags/releases publicadas. Preserve alterações do usuário e edições históricas. Finalize a documentação em inglês e português, referências de versões, proveniência e hashes de origem da skill selecionada antes das evidências finais. Preserve versões de modelos e aplicações quando seus contratos independentes não mudarem. As notas da release descrevem escopo e limites reais; datas de publicação e DOIs devem corresponder a publicação ou atribuição efetivas.
 
 Preserve os bytes dos registros e logs anteriores, com seus comandos originais e a identidade do snapshot. Aponte as evidências correntes para a nova verificação. Um caminho removido ou hash anterior em uma execução arquivada descreve aquele snapshot; não é comando atual nem autorização para alterar conteúdo histórico. Não reescreva observações antigas para aparentar correspondência com a nova entrega.
@@ -37,6 +39,8 @@ python scripts/content_inventory.py --check
 ```
 
 Inclua o inventário resultante no índice e faça commit da árvore final. Confira que a árvore comitada corresponde à árvore canônica usada nas verificações. Gere o ZIP desse commit com `git archive --format=zip --output=OAL-Stable-v1.0.0.zip HEAD`, substituindo a edição no nome quando necessário. O pacote deve conter os arquivos pretendidos daquele commit, sem .git, ambientes, caches, bancos ou saídas temporárias de compilação.
+
+O comando acima exporta o repositório completo e seu inventário da raiz. Um arquivo contendo somente uma edição tem outro escopo de distribuição: identifique-o explicitamente e forneça inventário próprio, licença e conferência dos links locais após a extração. O inventário da raiz não verifica um pacote que omite arquivos indexados da raiz e outras edições. Diferencie nomes, hashes e afirmações de verificação; um pacote de manutenção de commit posterior não é o arquivo da release originalmente publicada.
 
 Execute `python scripts/check_archive.py CAMINHO_DO_ZIP`, extraia em diretório vazio e execute `python scripts/check_archive.py DIRETORIO_EXTRAIDO`. As duas verificações comparam cobertura completa, tamanhos e SHA-256 dos bytes reais com o inventário incluído, sem exigir Git. Já content_inventory.py, baseado no índice, exige checkout Git. Não existe contagem fixa permanente de arquivos.
 

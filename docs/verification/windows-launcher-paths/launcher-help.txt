@@ -1,0 +1,12 @@
+usage: python run_examples.py tiny-catalog [-h] [--port PORT]
+                                           [--database DATABASE]
+                                           [--no-browser]
+
+Run the Stable-v1.0.0/tiny-catalog example in a local browser
+
+options:
+  -h, --help           show this help message and exit
+  --port PORT
+  --database DATABASE  SQLite file; relative paths use the current working
+                       directory
+  --no-browser

@@ -6,6 +6,8 @@ This maintenance procedure adds no OAL conformance requirements. Select the inte
 
 ## Prepare the sources
 
+The canonical repository is [CodeVaultCommunity/OAL_OpenAnalysisLayers](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers). Keep local remotes and active dependent-project references current after a rename; preserve old URLs where they identify historical evidence. Repository maintenance after a published tag belongs in a new commit. It does not move the tag or rewrite the released evidence. The [Windows launcher-path verification](verification/windows-launcher-paths/README.md) records the maintenance check separately from the published Stable execution.
+
 Check the branch, working tree and published tags/releases first. Preserve user changes and historical editions. Finalize English and Portuguese documentation, version references, provenance and the selected skill's source hashes before recording final evidence. Preserve model and application versions when their independent contracts have not changed. Release notes describe the actual scope and limits; publication dates and DOIs must reflect real publication or assignment.
 
 Preserve earlier execution records and logs byte for byte, with their original commands and snapshot identity. Point current evidence to the new verification set. A removed path or earlier input hash in an archived run describes that snapshot; it is not a current command or permission to edit historical content. Do not rewrite old observations to match the new delivery.
@@ -37,6 +39,8 @@ python scripts/content_inventory.py --check
 ```
 
 Stage the resulting inventory and commit the final tree. Verify that the committed tree matches the canonical tree used for checks. Generate the ZIP from that commit with `git archive --format=zip --output=OAL-Stable-v1.0.0.zip HEAD`, substituting the selected edition in the filename when appropriate. The package must contain that commit's intended files without .git, environments, caches, databases or temporary build outputs.
+
+The command above exports the complete repository and its root inventory. An archive containing only one edition is a separate distribution scope: label it explicitly and provide an inventory of that package, its license and a check of its extracted local links. The root inventory cannot verify a package that omits indexed root files and other editions. Keep filenames, hashes and verification claims distinct; a maintenance archive from a later commit is not the original published release asset.
 
 Run `python scripts/check_archive.py PATH_TO_ZIP`, extract into an empty directory, then run `python scripts/check_archive.py EXTRACTED_DIRECTORY`. Both compare complete coverage, byte sizes and actual SHA-256 hashes against the included inventory without requiring Git. The index-based content_inventory.py instead requires a Git checkout. There is no permanent expected file count.
 

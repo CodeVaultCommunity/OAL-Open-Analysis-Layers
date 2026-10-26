@@ -1,0 +1,74 @@
+test_0_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_0_controls_path_alias) ... FAIL
+test_1_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_1_controls_path_alias) ... FAIL
+test_2_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_2_controls_path_alias) ... FAIL
+
+======================================================================
+FAIL: test_0_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_0_controls_path_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 211, in test
+    getattr(self, check)(edition)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 123, in controls_path_alias
+    self.controls(edition, script=alias)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 108, in controls
+    factory.assert_called_once_with(script.parent / 'data' / example.database_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 991, in assert_called_once_with
+    return self.assert_called_with(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 979, in assert_called_with
+    raise AssertionError(_error_message()) from cause
+AssertionError: expected call not found.
+Expected: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-0/examples/../data/catalog.sqlite3'))
+  Actual: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-0/data/catalog.sqlite3'))
+
+======================================================================
+FAIL: test_1_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_1_controls_path_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 211, in test
+    getattr(self, check)(edition)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 123, in controls_path_alias
+    self.controls(edition, script=alias)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 108, in controls
+    factory.assert_called_once_with(script.parent / 'data' / example.database_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 991, in assert_called_once_with
+    return self.assert_called_with(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 979, in assert_called_with
+    raise AssertionError(_error_message()) from cause
+AssertionError: expected call not found.
+Expected: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-1/examples/../data/catalog.sqlite3'))
+  Actual: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-1/data/catalog.sqlite3'))
+
+======================================================================
+FAIL: test_2_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_2_controls_path_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 211, in test
+    getattr(self, check)(edition)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 123, in controls_path_alias
+    self.controls(edition, script=alias)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Alkimim\Projetos\CodeVault\OAL\scripts\test_edition_launchers.py", line 108, in controls
+    factory.assert_called_once_with(script.parent / 'data' / example.database_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 991, in assert_called_once_with
+    return self.assert_called_with(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Douglas\AppData\Roaming\uv\python\cpython-3.13.7-windows-x86_64-none\Lib\unittest\mock.py", line 979, in assert_called_with
+    raise AssertionError(_error_message()) from cause
+AssertionError: expected call not found.
+Expected: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-2/examples/../data/catalog.sqlite3'))
+  Actual: create_handler(WindowsPath('C:/Users/Douglas/AppData/Local/Temp/oal-launchers-nwqkojj8/renamed-2/data/catalog.sqlite3'))
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.527s
+
+FAILED (failures=3)

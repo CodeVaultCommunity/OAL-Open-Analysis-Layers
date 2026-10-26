@@ -1,0 +1,11 @@
+test_0_controls (scripts.test_edition_launchers.LauncherChecks.test_0_controls) ... ok
+test_0_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_0_controls_path_alias) ... ok
+test_1_controls (scripts.test_edition_launchers.LauncherChecks.test_1_controls) ... ok
+test_1_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_1_controls_path_alias) ... ok
+test_2_controls (scripts.test_edition_launchers.LauncherChecks.test_2_controls) ... ok
+test_2_controls_path_alias (scripts.test_edition_launchers.LauncherChecks.test_2_controls_path_alias) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.713s
+
+OK
