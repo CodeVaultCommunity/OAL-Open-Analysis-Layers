@@ -1,0 +1,237 @@
+{
+  "model": "OAL-EX-M4-HTTP-BOUNDARY",
+  "model_version": "0.1.0",
+  "layer": "L4",
+  "oal_edition": "Stable-v1.0.0",
+  "partial_slice": true,
+  "slice_note": {
+    "en": "Partial L4 slice of Tiny Catalog: two endpoints and two interface elements. The complete instance is the project's HTTP contract, map, page, and channel tests.",
+    "pt-BR": "Recorte parcial de L4 do Tiny Catalog: dois endpoints e dois elementos de interface. A instância completa é o contrato HTTP do projeto, seu mapa, página e testes de canal."
+  },
+  "project": "Tiny Catalog",
+  "source_l3": {
+    "model": "OAL-EX-M3-PYTHON-CORE",
+    "version": "0.1.0",
+    "instance": "tiny-catalog OAL-P3"
+  },
+  "channel": {
+    "kind": "HTTP + JSON over WSGI",
+    "configuration": "local demonstration bound to 127.0.0.1:8000",
+    "pages": [
+      "/",
+      "/app.css",
+      "/app.js"
+    ],
+    "authentication": "HTTP Basic with fixed demonstration credentials",
+    "identity_resolution": "The boundary authenticates the demonstration credentials, resolves the caller to a maintainer or reader role, and passes that role string as the actor context; anonymous API calls are not admitted."
+  },
+  "endpoints": [
+    {
+      "id": "API-CAT-POST-ITEMS",
+      "method": "POST",
+      "path": "/items",
+      "case_id": "UC-CAT-001",
+      "inputs": [
+        "code",
+        "name"
+      ],
+      "identity": "resolved role string passed explicitly as actor context; the case authorizes it",
+      "success": "201 and the registered item",
+      "failures": [
+        {
+          "condition": "invalid fields",
+          "status": 422,
+          "error": "invalid_data"
+        },
+        {
+          "condition": "duplicate code",
+          "status": 409,
+          "error": "duplicate_item"
+        },
+        {
+          "condition": "missing or invalid credentials",
+          "status": 401,
+          "error": "authentication_required"
+        },
+        {
+          "condition": "known role without permission",
+          "status": 403,
+          "error": "access_denied"
+        },
+        {
+          "condition": "storage unavailable",
+          "status": 503,
+          "error": "persistence_unavailable"
+        }
+      ],
+      "representation": "application/json"
+    },
+    {
+      "id": "API-CAT-GET-ITEM",
+      "method": "GET",
+      "path": "/items/{code}",
+      "case_id": "UC-CAT-002",
+      "inputs": [
+        "code"
+      ],
+      "identity": "resolved role string passed explicitly as actor context; the case authorizes it",
+      "success": "200 and the retained item",
+      "failures": [
+        {
+          "condition": "invalid code",
+          "status": 422,
+          "error": "invalid_data"
+        },
+        {
+          "condition": "absent item",
+          "status": 404,
+          "error": "item_not_found"
+        },
+        {
+          "condition": "missing or invalid credentials",
+          "status": 401,
+          "error": "authentication_required"
+        },
+        {
+          "condition": "known role without permission",
+          "status": 403,
+          "error": "access_denied"
+        },
+        {
+          "condition": "storage unavailable",
+          "status": 503,
+          "error": "persistence_unavailable"
+        }
+      ],
+      "representation": "application/json"
+    }
+  ],
+  "interface_elements": [
+    {
+      "id": "UI-CAT-REGISTER",
+      "description": "Registration form and its refresh",
+      "invokes": [
+        "UC-CAT-001",
+        "UC-CAT-003"
+      ],
+      "interface_only": false
+    },
+    {
+      "id": "UI-CAT-LOOKUP",
+      "description": "Item lookup form",
+      "invokes": [
+        "UC-CAT-002"
+      ],
+      "interface_only": false
+    },
+    {
+      "id": "UI-CAT-STATIC",
+      "description": "Headings, labels, and static page structure",
+      "invokes": [],
+      "interface_only": true
+    }
+  ],
+  "obligations": [
+    {
+      "id": "O-IDENTITY",
+      "nature": "security",
+      "statement": "Every API request carries an authenticated actor identity from the permitted set.",
+      "origin": "ucs",
+      "origin_reference": "UCS S-01 / A-01",
+      "scope": "all API endpoints",
+      "verifiable_conditions": [
+        "an absent actor is refused",
+        "an unpermitted role is refused before effects"
+      ],
+      "check_refs": [
+        "tests/p4/test_http_authorization.py"
+      ]
+    },
+    {
+      "id": "O-LOCAL",
+      "nature": "deployment",
+      "statement": "The demonstration binds to loopback and uses fixed demonstration credentials.",
+      "origin": "l4-decision",
+      "origin_reference": "OAL-P4/HTTP.md",
+      "scope": "local demonstration",
+      "verifiable_conditions": [
+        "the server binds 127.0.0.1",
+        "no production account claim is made"
+      ],
+      "check_refs": [
+        "CHK-LOCAL-01"
+      ]
+    },
+    {
+      "id": "O-STATUS",
+      "nature": "representation",
+      "statement": "Case outcomes and failures map to the declared statuses and JSON representation.",
+      "origin": "l4-decision",
+      "origin_reference": "OAL-P4/HTTP.md",
+      "scope": "all API endpoints",
+      "verifiable_conditions": [
+        "success and failure statuses match the contract"
+      ],
+      "check_refs": [
+        "tests/p4/test_http_behavior.py"
+      ]
+    },
+    {
+      "id": "O-A11Y",
+      "nature": "accessibility",
+      "statement": "The page exposes labelled controls and readable headings.",
+      "origin": "l4-decision",
+      "origin_reference": "OAL-P4/HTTP.md",
+      "scope": "browser page",
+      "verifiable_conditions": [
+        "controls have labels",
+        "headings are present"
+      ],
+      "check_refs": [
+        "CHK-A11Y-01"
+      ]
+    }
+  ],
+  "channel_checks": [
+    {
+      "id": "CHK-LOCAL-01",
+      "kind": "review",
+      "obligation_ids": [
+        "O-LOCAL"
+      ],
+      "case_ids": [],
+      "criteria": [],
+      "scenario": "Inspect the server configuration and the demonstration credentials note.",
+      "boundary": "local configuration",
+      "status": "planned",
+      "reference": "manual inspection; not executed in a recorded run"
+    },
+    {
+      "id": "CHK-A11Y-01",
+      "kind": "review",
+      "obligation_ids": [
+        "O-A11Y"
+      ],
+      "case_ids": [],
+      "criteria": [],
+      "scenario": "Review labels and headings on the page.",
+      "boundary": "browser page",
+      "status": "planned",
+      "reference": "manual review; not executed in a recorded run"
+    }
+  ],
+  "exposure_scope": [
+    "UC-CAT-001",
+    "UC-CAT-002",
+    "UC-CAT-003"
+  ],
+  "interface_only": [
+    "UI-CAT-STATIC"
+  ],
+  "persistence_access": "none; the boundary invokes cases only",
+  "execution": {
+    "status": "not_recorded",
+    "reference": null
+  },
+  "technical_storage": []
+}

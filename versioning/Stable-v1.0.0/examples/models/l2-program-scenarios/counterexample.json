@@ -1,0 +1,127 @@
+{
+  "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0",
+  "layer": "L2",
+  "oal_edition": "Stable-v1.0.0",
+  "counterexample_note": {
+    "en": "Invalid instance used to check rejection. It is not a project artifact.",
+    "pt-BR": "Instância inválida usada para verificar a recusa. Não é artefato de projeto."
+  },
+  "expected_violations": [
+    "V-M2-02/V-M2-04: UC-CAT-002 has no BehavioralTest.",
+    "V-M2-04: BT-CAT-001 and BT-CAT-009 are duplicated identities or an extra directly linked test.",
+    "V-M2-07: the permission scenario for UC-CAT-001 is marked not_applicable although F_u = {reader} is non-empty.",
+    "V-M2-08: the tool contract revalidates the entity's internal coherence conditions.",
+    "V-M2-05: AC-SHARED-UNDECLARED has no canonical definition or explicit participating-case/support mapping in the selected L1 artifact."
+  ],
+  "project": "counterexample",
+  "source_l1": {
+    "model": "OAL-EX-M1-CASE-CONTRACTS",
+    "version": "0.1.0",
+    "instance": "counterexample"
+  },
+  "adpm": {
+    "cases": [
+      {
+        "id": "P-001",
+        "ucs_case_id": "UC-CAT-001",
+        "collaborators": [
+          "ItemStore"
+        ],
+        "sequence": [
+          "validate the code",
+          "insert"
+        ],
+        "results": [
+          "item"
+        ],
+        "effects": [
+          "record"
+        ],
+        "errors": [],
+        "permission": "maintainer only",
+        "domains": [],
+        "lifetime": ""
+      }
+    ],
+    "entities": [
+      {
+        "id": "PE-01",
+        "ucs_entity_id": "E-01",
+        "validity_location": "the SQL store"
+      }
+    ],
+    "tool_contracts": [
+      {
+        "id": "TC-INSERT",
+        "operation": "insert(item)",
+        "inputs": [
+          "item"
+        ],
+        "outputs": [],
+        "guarantees": [],
+        "failures": [],
+        "ready_entity_assumption": "A ready entity satisfies I_E.",
+        "contextual_conditions": [],
+        "revalidates_entity_internal_conditions": true
+      }
+    ],
+    "dependencies": [],
+    "composition": [],
+    "authorization": [],
+    "lifetime": []
+  },
+  "advs": {
+    "behavioral_tests": [
+      {
+        "id": "BT-CAT-001",
+        "ucs_case_id": "UC-CAT-001",
+        "criteria": [
+          "AC-CAT-001-01"
+        ],
+        "boundary": "P3 callable use case",
+        "status": "planned",
+        "scenarios": [
+          {
+            "id": "VS-001-PERMISSION",
+            "preparation": [
+              "known actors A = {maintainer, reader}; permitted A_u = {maintainer}"
+            ],
+            "actor": "reader",
+            "action": "attempt registration",
+            "observed_boundary": "P3 case",
+            "configuration": "",
+            "expected_result": "denied",
+            "expected_effects": [],
+            "criteria_verified": [
+              "AC-CAT-001-06",
+              "AC-SHARED-UNDECLARED"
+            ],
+            "applicability": {
+              "status": "not_applicable",
+              "justification": "not applicable"
+            }
+          }
+        ],
+        "supporting_checks": [
+          "tests/p3/test_ghost.py::test_absent"
+        ]
+      },
+      {
+        "id": "BT-CAT-001",
+        "ucs_case_id": "UC-CAT-009",
+        "criteria": [],
+        "boundary": "P3 callable use case",
+        "status": "planned",
+        "scenarios": [],
+        "supporting_checks": []
+      }
+    ],
+    "planned_checks": [],
+    "execution": {
+      "status": "recorded",
+      "reference": null
+    },
+    "l4_obligations": []
+  }
+}

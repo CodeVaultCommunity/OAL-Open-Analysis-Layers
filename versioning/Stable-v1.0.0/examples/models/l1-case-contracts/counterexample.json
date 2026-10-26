@@ -1,0 +1,111 @@
+{
+  "model": "OAL-EX-M1-CASE-CONTRACTS",
+  "model_version": "0.1.0",
+  "layer": "L1",
+  "oal_edition": "Stable-v1.0.0",
+  "counterexample_note": {
+    "en": "Invalid instance used to check rejection. It is not a project artifact.",
+    "pt-BR": "Instância inválida usada para verificar a recusa. Não é artefato de projeto."
+  },
+  "expected_violations": [
+    "V-M1-03: UC-CAT-001 permits actor ACT-CAT-X and references entity E-404; neither is declared.",
+    "V-M1-04: the initiating actor ACT-CAT-OUTSIDER is absent from the permitted set.",
+    "V-M1-05: the case has no criteria.",
+    "V-M1-06: rule R-01 is applied by UC-MISSING, which is not a declared case.",
+    "V-M1-07: obligation O-X has no origin, scope, or verifiable conditions.",
+    "V-M1-09: entity E-01 assigns canonical validity to a tool, which the model forbids.",
+    "V-M1-03/V-M1-05: the shared criterion references an undeclared case, has no obligation, and has no verifiable conditions."
+  ],
+  "project": {
+    "identity": "counterexample",
+    "version": "0.2.0",
+    "scope": "Deliberately invalid.",
+    "status": "draft"
+  },
+  "sources": [],
+  "canonical_content": {
+    "narrative": "OAL-P1/UCS.md",
+    "structured": "OAL-P1/index.json",
+    "consistency_rule": "Stated but not enforced."
+  },
+  "facts": [],
+  "actors": [
+    {
+      "id": "ACT-CAT-M",
+      "name": "Maintainer",
+      "description": "Declared role."
+    }
+  ],
+  "entities": [
+    {
+      "id": "E-01",
+      "meaning": "Item key.",
+      "fields": [
+        "code"
+      ],
+      "relations": [],
+      "invariants": [],
+      "validity_owner": "tool",
+      "validity_location": "the SQL store"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-01",
+      "statement": "Codes are unique.",
+      "applied_by": [
+        "UC-MISSING"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "id": "O-X",
+      "nature": "security",
+      "statement": "Access must be safe."
+    }
+  ],
+  "cases": [
+    {
+      "id": "UC-CAT-001",
+      "title": "Register item",
+      "objective": "Create an item.",
+      "initiating_actor": "ACT-CAT-OUTSIDER",
+      "permitted_actors": [
+        "ACT-CAT-X"
+      ],
+      "trigger": "A request arrives.",
+      "inputs": [
+        "code"
+      ],
+      "context": [],
+      "preconditions": [],
+      "results": [],
+      "effects": [],
+      "alternatives": [],
+      "failures": [],
+      "entities": [
+        "E-404"
+      ],
+      "rules": [],
+      "capabilities": [],
+      "dependencies": [],
+      "obligations": [
+        "O-X"
+      ],
+      "criteria": []
+    }
+  ],
+  "shared_criteria": [
+    {
+      "id": "AC-SHARED-INVALID",
+      "kind": "integration",
+      "statement": "Unspecified integration behavior.",
+      "case_ids": [
+        "UC-UNDECLARED"
+      ],
+      "obligation_ids": [],
+      "verifiable_conditions": []
+    }
+  ]
+}

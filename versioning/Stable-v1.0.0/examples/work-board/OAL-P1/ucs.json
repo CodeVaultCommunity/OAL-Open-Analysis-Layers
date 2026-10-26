@@ -1,0 +1,698 @@
+{
+  "project": "Work Board",
+  "version": "0.2.1",
+  "oal_edition": "Stable-v1.0.0",
+  "status": "baseline",
+  "classification": "UCS artifact (OAL Stable-v1.0.0) instantiating OAL-EX-M1-CASE-CONTRACTS 0.1.0",
+  "sources": [
+    {
+      "id": "SRC-NEEDS",
+      "description": "Reconstructed needs baseline (N-WB-001 to N-WB-006).",
+      "provenance": "needs-baseline.json; reconstructed from the UCS, not independent stakeholder evidence.",
+      "reconstructed": true
+    },
+    {
+      "id": "SRC-UCS",
+      "description": "Project UCS narrative.",
+      "provenance": "OAL-P1/UCS.md, corrected baseline 0.2.1; original behavioral baseline 0.2.0.",
+      "reconstructed": false
+    }
+  ],
+  "canonical_content": {
+    "structured": "OAL-P1/ucs.json",
+    "narrative": "OAL-P1/UCS.md",
+    "narrative_role": "partial narrative projection, not a complete reproduction",
+    "consistency_rule": "ucs.json is the complete canonical structured source. UCS.md is a partial narrative projection: identifiers it cites must exist in ucs.json, and reproduced statements must agree with it. Omission of fields and sets not covered by the projection is permitted; a mismatch in reproduced content is a divergence."
+  },
+  "facts": [
+    {
+      "id": "F-01",
+      "kind": "requirement",
+      "statement": "A team can record work in a project backlog (N-WB-001)."
+    },
+    {
+      "id": "F-02",
+      "kind": "requirement",
+      "statement": "A manager can assign a work item to a person (N-WB-002)."
+    },
+    {
+      "id": "F-03",
+      "kind": "requirement",
+      "statement": "A team can advance work through a three-state workflow (N-WB-003)."
+    },
+    {
+      "id": "F-04",
+      "kind": "requirement",
+      "statement": "A team can discuss an item through comments (N-WB-004)."
+    },
+    {
+      "id": "F-05",
+      "kind": "requirement",
+      "statement": "A team can read the board and the discussion (N-WB-005, N-WB-006)."
+    },
+    {
+      "id": "F-06",
+      "kind": "open",
+      "statement": "Sprints, estimates, notifications, public deployment, and user administration are outside this baseline."
+    }
+  ],
+  "baseline_notes": "Version 0.2.0 makes field limits, priority values, whitespace normalization, and ordering explicit from the implemented contract and the edition review. These details were not stated in the 0.1.0 text; they are recorded as 0.2.0 baseline decisions, not as historical requirements. The same 0.2.0 edition now makes the storage-failure outcome and the unbounded positive expected-version input explicit; its identifiers and version are unchanged.",
+  "scope": "One local team, work items grouped by project, a three-state workflow, and discussion.",
+  "actors": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "description": "Creates, assigns, advances, comments, and reads."
+    },
+    {
+      "id": "contributor",
+      "name": "Contributor",
+      "description": "Creates, advances, comments, and reads."
+    },
+    {
+      "id": "viewer",
+      "name": "Viewer",
+      "description": "Reads the board and comments."
+    }
+  ],
+  "entities": [
+    {
+      "id": "E-WB-ITEM",
+      "meaning": "Work item.",
+      "fields": [
+        "project: 1-40",
+        "title: 1-120",
+        "description: at most 2000, may be empty",
+        "priority: low, normal, high",
+        "status: backlog, in_progress, done",
+        "assignee: 1-80 or none",
+        "version: positive integer"
+      ],
+      "relations": [
+        "A work item owns zero or more comments."
+      ],
+      "invariants": [
+        "Surrounding whitespace is trimmed before length checks.",
+        "Only the next workflow state is admissible.",
+        "A stale version cannot overwrite a newer one."
+      ],
+      "validity_owner": "consuming-case",
+      "validity_location": "applied by the cases in src/work_board/usecases/operations.py using required_text in src/work_board/entities.py"
+    },
+    {
+      "id": "E-WB-COMMENT",
+      "meaning": "Append-only discussion note.",
+      "fields": [
+        "author: authenticated actor",
+        "body: 1-1000",
+        "created_at: timestamp",
+        "item_id: existing work item"
+      ],
+      "relations": [
+        "A comment belongs to one work item."
+      ],
+      "invariants": [
+        "Comments do not change the item version.",
+        "Comments are ordered by timestamp then identifier."
+      ],
+      "validity_owner": "consuming-case",
+      "validity_location": "applied by AddComment in src/work_board/usecases/operations.py"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-WB-01",
+      "statement": "Project is 1-40 characters, title 1-120, and description at most 2000 after trimming surrounding whitespace; a whitespace-only value counts as empty. Assignee is 1-80 characters and comment text 1-1000 characters after trimming.",
+      "applied_by": [
+        "UC-WB-001",
+        "UC-WB-002",
+        "UC-WB-004"
+      ]
+    },
+    {
+      "id": "R-WB-02",
+      "statement": "Priority is low, normal, or high; normal is the default and any other value is invalid.",
+      "applied_by": [
+        "UC-WB-001"
+      ]
+    },
+    {
+      "id": "R-WB-03",
+      "statement": "An expected version is a positive integer. Assignment and advance are atomic compare-and-set operations: a stale version is rejected without changing the item. This input domain has no storage-specific upper bound. An expected value that cannot match a stored version yields conflict for an existing item or not_found for an absent item.",
+      "applied_by": [
+        "UC-WB-002",
+        "UC-WB-003"
+      ]
+    },
+    {
+      "id": "R-WB-04",
+      "statement": "The workflow is backlog to in_progress to done; only the next step is allowed, and a skipped step is rejected without changing the item.",
+      "applied_by": [
+        "UC-WB-003"
+      ]
+    },
+    {
+      "id": "R-WB-05",
+      "statement": "A comment records the authenticated actor, trimmed text, and timestamp. Comments are append-only, ordered by timestamp then identifier, and do not change the item version or its records.",
+      "applied_by": [
+        "UC-WB-004",
+        "UC-WB-006"
+      ]
+    },
+    {
+      "id": "R-WB-06",
+      "statement": "The board applies exact project and status filters and returns items ordered by project, title, and identifier, without mutation.",
+      "applied_by": [
+        "UC-WB-005"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "id": "O-WB-AUTH",
+      "nature": "security",
+      "statement": "Every case receives a resolved actor context and checks its role against the permitted set before domain effects. This example requires authenticated callers; the trusted entry point establishes the context but does not authorize the case.",
+      "origin": "domain",
+      "origin_reference": "UCS actor and permission contract",
+      "scope": "all six cases",
+      "verifiable_conditions": [
+        "absent identity is refused",
+        "unknown identity is refused",
+        "a known role outside the permitted set is refused",
+        "refusal leaves no domain or persistence effect"
+      ],
+      "responsibility": "cases UC-WB-001..006"
+    },
+    {
+      "id": "O-WB-VERSION",
+      "nature": "concurrency",
+      "statement": "Assignment and advance use an expected version and fail without overwriting a newer state.",
+      "origin": "domain",
+      "origin_reference": "UCS R-WB-03",
+      "scope": "UC-WB-002 and UC-WB-003",
+      "verifiable_conditions": [
+        "a stale version yields a conflict",
+        "the item is unchanged after the conflict"
+      ],
+      "responsibility": "cases with the store contract"
+    },
+    {
+      "id": "O-WB-PERSIST",
+      "nature": "persistence",
+      "statement": "Create, assign, advance, and comment are atomic with their records; comments do not alter the item version. Atomicity excludes partial records, but an unconfirmed commit does not establish that no complete write occurred.",
+      "origin": "domain",
+      "origin_reference": "UCS R-WB-05 and the store contract",
+      "scope": "UC-WB-001..004",
+      "verifiable_conditions": [
+        "a confirmed rollback leaves the previous state intact; no partial record is reported as success",
+        "a comment insertion does not change the item version"
+      ],
+      "responsibility": "cases with the store contract"
+    },
+    {
+      "id": "O-WB-UI",
+      "nature": "accessibility",
+      "statement": "The form exposes length limits and the next workflow step so the interface agrees with the domain contract.",
+      "origin": "l4-decision",
+      "origin_reference": "OAL-P4/HTTP.md",
+      "scope": "browser page",
+      "verifiable_conditions": [
+        "form limits match R-WB-01",
+        "the next state is presented consistently with R-WB-04"
+      ],
+      "responsibility": "channel; the case remains authoritative"
+    },
+    {
+      "id": "Q-WB-01",
+      "nature": "performance",
+      "statement": "The board returns all matching items for a small local team; pagination and throughput targets are not claimed.",
+      "origin": "assumption",
+      "origin_reference": "UCS scope",
+      "scope": "UC-WB-005",
+      "verifiable_conditions": [
+        "all matching items are returned"
+      ],
+      "responsibility": "UC-WB-005"
+    },
+    {
+      "id": "O-WB-AVAIL",
+      "nature": "operational failure",
+      "statement": "Every case exposes storage unavailability as a stable failure with a declared write outcome and never presents an unconfirmed operation as successful.",
+      "origin": "domain",
+      "origin_reference": "Current 0.2.0 baseline review; not reconstructed stakeholder evidence.",
+      "scope": "all six cases",
+      "verifiable_conditions": [
+        "a storage failure yields unavailable",
+        "not_applied is used only when absence of a write is established",
+        "an unconfirmed commit or rollback is reported as unknown"
+      ],
+      "responsibility": "store contract and consuming cases"
+    }
+  ],
+  "out_of_scope": [
+    "Sprints",
+    "Time estimates",
+    "Notifications",
+    "Public deployment",
+    "User administration"
+  ],
+  "use_cases": [
+    {
+      "id": "UC-WB-001",
+      "name": "Create work item",
+      "needs": [
+        "N-WB-001"
+      ],
+      "objective": "Record work in a project backlog.",
+      "initiating_actor": "contributor",
+      "permitted_actors": [
+        "manager",
+        "contributor"
+      ],
+      "trigger": "An allowed actor submits a project and title.",
+      "inputs": [
+        "project",
+        "title",
+        "description",
+        "priority"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted"
+      ],
+      "results": [
+        "A new item is in backlog with version 1 and no assignee."
+      ],
+      "effects": [
+        "one work item persisted"
+      ],
+      "alternatives": [],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "invalid",
+        "conflict",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-ITEM"
+      ],
+      "rules": [
+        "R-WB-01",
+        "R-WB-02"
+      ],
+      "capabilities": [
+        "persist a new work item"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "O-WB-PERSIST",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-001-01",
+          "text": "A valid item stores project, title, description, priority, backlog status, and version 1."
+        },
+        {
+          "id": "AC-WB-001-02",
+          "text": "A viewer or invalid required fields cannot create an item."
+        },
+        {
+          "id": "AC-WB-001-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    },
+    {
+      "id": "UC-WB-002",
+      "name": "Assign work item",
+      "needs": [
+        "N-WB-002"
+      ],
+      "objective": "Assign an existing item to a person.",
+      "initiating_actor": "manager",
+      "permitted_actors": [
+        "manager"
+      ],
+      "trigger": "A manager names an assignee and the expected version.",
+      "inputs": [
+        "item_id",
+        "assignee",
+        "expected_version"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted",
+        "the item exists"
+      ],
+      "results": [
+        "The assignee is recorded and the version increases."
+      ],
+      "effects": [
+        "the assignee and version of the item change"
+      ],
+      "alternatives": [],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "invalid",
+        "not_found",
+        "conflict",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-ITEM"
+      ],
+      "rules": [
+        "R-WB-01",
+        "R-WB-03"
+      ],
+      "capabilities": [
+        "update an existing item conditionally on its version"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "O-WB-VERSION",
+        "O-WB-PERSIST",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-002-01",
+          "text": "Only a manager can assign an existing item."
+        },
+        {
+          "id": "AC-WB-002-02",
+          "text": "A stale version is rejected without overwriting a newer assignment."
+        },
+        {
+          "id": "AC-WB-002-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    },
+    {
+      "id": "UC-WB-003",
+      "name": "Advance work item",
+      "needs": [
+        "N-WB-003"
+      ],
+      "objective": "Advance work through the three-state workflow.",
+      "initiating_actor": "contributor",
+      "permitted_actors": [
+        "manager",
+        "contributor"
+      ],
+      "trigger": "An allowed actor requests the next state with the expected version.",
+      "inputs": [
+        "item_id",
+        "target_status",
+        "expected_version"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted",
+        "the item exists"
+      ],
+      "results": [
+        "The item advances backlog to in_progress to done, one step at a time."
+      ],
+      "effects": [
+        "the status and version of the item change"
+      ],
+      "alternatives": [],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "invalid",
+        "not_found",
+        "conflict",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-ITEM"
+      ],
+      "rules": [
+        "R-WB-03",
+        "R-WB-04"
+      ],
+      "capabilities": [
+        "update the status conditionally on its version"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "O-WB-VERSION",
+        "O-WB-PERSIST",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-003-01",
+          "text": "A valid next step changes the state and increases the version."
+        },
+        {
+          "id": "AC-WB-003-02",
+          "text": "A skipped step or stale version is rejected without changing the item."
+        },
+        {
+          "id": "AC-WB-003-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    },
+    {
+      "id": "UC-WB-004",
+      "name": "Add comment",
+      "needs": [
+        "N-WB-004"
+      ],
+      "objective": "Discuss an item without changing its version.",
+      "initiating_actor": "contributor",
+      "permitted_actors": [
+        "manager",
+        "contributor"
+      ],
+      "trigger": "An allowed actor submits comment text for an existing item.",
+      "inputs": [
+        "item_id",
+        "body"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted",
+        "the item exists"
+      ],
+      "results": [
+        "A comment records author, text, and time without changing the item version."
+      ],
+      "effects": [
+        "one comment persisted"
+      ],
+      "alternatives": [],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "invalid",
+        "not_found",
+        "conflict",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-COMMENT"
+      ],
+      "rules": [
+        "R-WB-01",
+        "R-WB-05"
+      ],
+      "capabilities": [
+        "persist a comment for an existing item"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "O-WB-PERSIST",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-004-01",
+          "text": "A valid comment is retained with its actor and timestamp."
+        },
+        {
+          "id": "AC-WB-004-02",
+          "text": "A viewer, empty text, or absent item cannot add a comment."
+        },
+        {
+          "id": "AC-WB-004-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    },
+    {
+      "id": "UC-WB-005",
+      "name": "View board",
+      "needs": [
+        "N-WB-005"
+      ],
+      "objective": "Read matching work items without mutation.",
+      "initiating_actor": "viewer",
+      "permitted_actors": [
+        "manager",
+        "contributor",
+        "viewer"
+      ],
+      "trigger": "An actor requests the board, optionally filtering project or state.",
+      "inputs": [
+        "project (optional)",
+        "status (optional)"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted"
+      ],
+      "results": [
+        "Matching work items are returned without mutation."
+      ],
+      "effects": [],
+      "alternatives": [
+        "an empty result is a successful response"
+      ],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "invalid",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-ITEM"
+      ],
+      "rules": [
+        "R-WB-06"
+      ],
+      "capabilities": [
+        "read work items with exact filters"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "Q-WB-01",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-005-01",
+          "text": "An allowed actor can see all items or only a selected project or state."
+        },
+        {
+          "id": "AC-WB-005-02",
+          "text": "An unknown state filter is rejected."
+        },
+        {
+          "id": "AC-WB-005-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    },
+    {
+      "id": "UC-WB-006",
+      "name": "View comments",
+      "needs": [
+        "N-WB-006"
+      ],
+      "objective": "Read an item's discussion without mutation.",
+      "initiating_actor": "viewer",
+      "permitted_actors": [
+        "manager",
+        "contributor",
+        "viewer"
+      ],
+      "trigger": "An actor requests discussion for an item.",
+      "inputs": [
+        "item_id"
+      ],
+      "context": [
+        "one local team"
+      ],
+      "preconditions": [
+        "the actor is authenticated and permitted"
+      ],
+      "results": [
+        "Its comments are returned in time order without mutation."
+      ],
+      "effects": [],
+      "alternatives": [
+        "an item without comments returns an empty list"
+      ],
+      "failures": [
+        "authentication_required",
+        "access_denied",
+        "not_found",
+        "unavailable"
+      ],
+      "entities": [
+        "E-WB-COMMENT"
+      ],
+      "rules": [
+        "R-WB-05"
+      ],
+      "capabilities": [
+        "read comments for an existing item"
+      ],
+      "dependencies": [],
+      "obligations": [
+        "O-WB-AUTH",
+        "O-WB-AVAIL"
+      ],
+      "criteria": [
+        {
+          "id": "AC-WB-006-01",
+          "text": "An allowed actor can read an item's comments, including an empty list."
+        },
+        {
+          "id": "AC-WB-006-02",
+          "text": "An absent item is reported as absent."
+        },
+        {
+          "id": "AC-WB-006-03",
+          "text": "Storage failure yields unavailable without false success; confirmed absence of a write is distinguished from an unknown write outcome."
+        }
+      ]
+    }
+  ],
+  "actor_context": {
+    "actor_meaning": "The specified actor is a role performed by a person or system requesting a case.",
+    "authentication": "Required by this example for every case.",
+    "representation": "An explicitly supplied resolved role identifier (manager, contributor, viewer). The trusted entry point establishes the role; principal is the implementation parameter for this context.",
+    "denial": "Missing or unknown context and roles outside the case permitted set are refused before domain effects. This example does not admit anonymous requests."
+  },
+  "failure_contracts": {
+    "unavailable": {
+      "meaning": "The storage operation could not confirm a successful result; no success is reported.",
+      "write_outcome": {
+        "not_applied": "The operation failed before a write, or its uncommitted changes were confirmed rolled back.",
+        "unknown": "The write outcome could not be confirmed, including a failure during commit or rollback."
+      },
+      "recovery": "When the outcome is unknown, inspect current state before deciding whether to retry; a failure response alone does not imply absence of effects."
+    }
+  },
+  "stable_revision": {
+    "from_version": "0.2.0",
+    "to_version": "0.2.1",
+    "change": "O-WB-AVAIL origin classification corrected to domain; original origin_reference retained; no behavioral change.",
+    "needs_version": "0.2.0"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0",
+  "layer": "L2",
+  "oal_edition": "Stable-v1.0.0",
+  "project": "",
+  "source_l1": {
+    "model": "OAL-EX-M1-CASE-CONTRACTS",
+    "version": "0.1.0",
+    "instance": ""
+  },
+  "adpm": {
+    "cases": [
+      {
+        "id": "",
+        "ucs_case_id": "",
+        "collaborators": [],
+        "sequence": [],
+        "results": [],
+        "effects": [],
+        "errors": [],
+        "permission": "declare actor context, any authentication prerequisite, and the case authorization decision",
+        "domains": [],
+        "lifetime": ""
+      }
+    ],
+    "entities": [
+      {
+        "id": "",
+        "ucs_entity_id": "",
+        "validity_location": ""
+      }
+    ],
+    "tool_contracts": [
+      {
+        "id": "",
+        "operation": "",
+        "inputs": [],
+        "outputs": [],
+        "guarantees": [],
+        "failures": [],
+        "ready_entity_assumption": "A ready entity satisfies the entity's internal coherence conditions.",
+        "contextual_conditions": [
+          {
+            "condition": "",
+            "object": "",
+            "purpose": "",
+            "responsibility": ""
+          }
+        ]
+      }
+    ],
+    "dependencies": [],
+    "composition": [],
+    "authorization": [],
+    "lifetime": []
+  },
+  "advs": {
+    "behavioral_tests": [
+      {
+        "id": "",
+        "ucs_case_id": "",
+        "criteria": [],
+        "boundary": "",
+        "status": "",
+        "scenarios": [
+          {
+            "id": "",
+            "preparation": [],
+            "actor": "",
+            "action": "",
+            "observed_boundary": "",
+            "configuration": "",
+            "expected_result": "",
+            "expected_effects": [],
+            "criteria_verified": [],
+            "applicability": {
+              "status": "applicable | not_applicable",
+              "justification": ""
+            }
+          }
+        ],
+        "supporting_checks": []
+      }
+    ],
+    "planned_checks": [],
+    "execution": {
+      "status": "not_recorded | recorded | not_applicable",
+      "reference": null
+    },
+    "l4_obligations": [],
+    "shared_supporting_checks": [
+      {
+        "id": "",
+        "criteria_verified": [],
+        "case_ids": [],
+        "obligation_ids": [],
+        "behavioral_test_ids": [],
+        "reference": "",
+        "scenario": {
+          "id": "",
+          "preparation": [],
+          "actor": "",
+          "action": "",
+          "observed_boundary": "",
+          "configuration": "",
+          "expected_result": "",
+          "expected_effects": [],
+          "criteria_verified": [],
+          "applicability": {
+            "status": "applicable | not_applicable",
+            "justification": ""
+          }
+        }
+      }
+    ]
+  }
+}

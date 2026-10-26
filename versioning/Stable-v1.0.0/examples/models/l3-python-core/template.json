@@ -1,0 +1,80 @@
+{
+  "model": "OAL-EX-M3-PYTHON-CORE",
+  "model_version": "0.1.0",
+  "layer": "L3",
+  "oal_edition": "Stable-v1.0.0",
+  "project": "",
+  "source_l2": {
+    "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+    "version": "0.1.0",
+    "instance": ""
+  },
+  "core": {
+    "package": "src/",
+    "modules": [],
+    "excluded": [],
+    "language": "Python",
+    "transport_imports": []
+  },
+  "entities": [
+    {
+      "ucs_entity_id": "",
+      "symbol": "",
+      "validity_owner": "entity | consuming-case"
+    }
+  ],
+  "cases": [
+    {
+      "id": "",
+      "ucs_case_id": "",
+      "adpm_case_id": "",
+      "symbol": "",
+      "callable_convention": "__call__ | execute | function",
+      "authorization": "declare resolved actor-context input, trusted source, required authentication, and denial before domain effects"
+    }
+  ],
+  "tool_contracts": [
+    {
+      "id": "",
+      "symbol": "",
+      "ready_entity_assumption": "A ready entity satisfies the entity's internal coherence conditions.",
+      "contextual_conditions": []
+    }
+  ],
+  "implementations": [
+    {
+      "contract_id": "",
+      "symbol": "",
+      "configuration": ""
+    }
+  ],
+  "composition": [
+    {
+      "symbol": "",
+      "injected_collaborators": [],
+      "selection_point": ""
+    }
+  ],
+  "verification": [
+    {
+      "bt_ids": [],
+      "checks": [],
+      "execution": {
+        "status": "not_recorded | recorded | not_applicable",
+        "reference": null
+      }
+    }
+  ],
+  "mapping": {
+    "cases": {},
+    "criteria": {},
+    "bt_links": {}
+  },
+  "application_initializers": [
+    {
+      "symbol": "",
+      "role": "",
+      "imports_transport": true
+    }
+  ]
+}

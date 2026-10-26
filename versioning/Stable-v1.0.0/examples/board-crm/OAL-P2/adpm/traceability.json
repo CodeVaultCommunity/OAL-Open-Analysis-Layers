@@ -1,0 +1,82 @@
+{
+  "project": "Board CRM",
+  "oal_edition": "Stable-v1.0.0",
+  "scope": "complete six-use-case example",
+  "mapping": [
+    {
+      "id": "UC-CRM-001",
+      "implementation": "board_crm.usecases.operations:CreateOpportunity",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-001",
+      "interface_element_ids": [
+        "UI-CRM-CREATE",
+        "API-CRM-CREATE"
+      ]
+    },
+    {
+      "id": "UC-CRM-002",
+      "implementation": "board_crm.usecases.operations:MoveOpportunity",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-002",
+      "interface_element_ids": [
+        "UI-CRM-MOVE",
+        "API-CRM-MOVE"
+      ]
+    },
+    {
+      "id": "UC-CRM-003",
+      "implementation": "board_crm.usecases.operations:RecordInteraction",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-003",
+      "interface_element_ids": [
+        "UI-CRM-NOTE",
+        "API-CRM-NOTE"
+      ]
+    },
+    {
+      "id": "UC-CRM-004",
+      "implementation": "board_crm.usecases.operations:ViewBoard",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-004",
+      "interface_element_ids": [
+        "UI-CRM-CREATE",
+        "UI-CRM-MOVE",
+        "UI-CRM-NOTE",
+        "UI-CRM-BOARD",
+        "UI-CRM-WON",
+        "UI-CRM-LOST",
+        "UI-CRM-LANGUAGE",
+        "API-CRM-BOARD"
+      ]
+    },
+    {
+      "id": "UC-CRM-005",
+      "implementation": "board_crm.usecases.operations:CloseWon",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-005",
+      "interface_element_ids": [
+        "UI-CRM-WON",
+        "API-CRM-WON"
+      ]
+    },
+    {
+      "id": "UC-CRM-006",
+      "implementation": "board_crm.usecases.operations:CloseLost",
+      "source": "src/board_crm/usecases/operations.py",
+      "behavioral_test": "BT-CRM-006",
+      "interface_element_ids": [
+        "UI-CRM-LOST",
+        "API-CRM-LOST"
+      ]
+    }
+  ],
+  "model_status": "specified",
+  "model_identity": "OAL-EX-M2-PROGRAM-SCENARIOS",
+  "model_version": "0.1.0",
+  "adpm_version": "0.2.0",
+  "adi_version": "0.2.0",
+  "advs_version": "0.2.0",
+  "adib_version": "0.2.0",
+  "behavioral_test_source": "OAL-P2/advs/behavioral-tests.json",
+  "interface_mapping_source": "OAL-P4/traceability.json"
+}

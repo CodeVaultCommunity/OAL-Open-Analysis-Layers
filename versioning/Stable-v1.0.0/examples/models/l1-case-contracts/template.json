@@ -1,0 +1,119 @@
+{
+  "model": "OAL-EX-M1-CASE-CONTRACTS",
+  "model_version": "0.1.0",
+  "layer": "L1",
+  "oal_edition": "Stable-v1.0.0",
+  "project": {
+    "identity": "",
+    "version": "",
+    "scope": "",
+    "status": "draft"
+  },
+  "sources": [
+    {
+      "id": "",
+      "description": "",
+      "provenance": "",
+      "reconstructed": false
+    }
+  ],
+  "canonical_content": {
+    "narrative": "",
+    "structured": "",
+    "consistency_rule": "",
+    "authority_by_field": {
+      "identifiers_and_relations": "",
+      "contracts": "",
+      "shared_criteria": ""
+    }
+  },
+  "facts": [
+    {
+      "id": "",
+      "kind": "observed | requirement | inference | assumption | open",
+      "statement": ""
+    }
+  ],
+  "actors": [
+    {
+      "id": "",
+      "name": "",
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "id": "",
+      "meaning": "",
+      "fields": [],
+      "relations": [],
+      "invariants": [],
+      "validity_owner": "entity | consuming-case",
+      "validity_location": ""
+    }
+  ],
+  "rules": [
+    {
+      "id": "",
+      "statement": "",
+      "applied_by": []
+    }
+  ],
+  "obligations": [
+    {
+      "id": "",
+      "nature": "",
+      "statement": "",
+      "origin": "external | domain | assumption | l4-decision",
+      "origin_reference": "",
+      "scope": "",
+      "verifiable_conditions": [],
+      "responsibility": ""
+    }
+  ],
+  "cases": [
+    {
+      "id": "",
+      "title": "",
+      "objective": "",
+      "initiating_actor": "",
+      "permitted_actors": [],
+      "trigger": "",
+      "inputs": [],
+      "context": [],
+      "preconditions": [],
+      "results": [],
+      "effects": [],
+      "alternatives": [],
+      "failures": [],
+      "entities": [],
+      "rules": [],
+      "capabilities": [],
+      "dependencies": [],
+      "obligations": [],
+      "criteria": [
+        {
+          "id": "",
+          "statement": ""
+        }
+      ]
+    }
+  ],
+  "actor_policy": {
+    "context": "declare the context required by each case or a common policy",
+    "authentication": "declare when identity must be authenticated",
+    "authorization": "deny missing, unresolved, unknown, or unpermitted context before prohibited effects",
+    "anonymous_access": "declare an anonymous role explicitly if admitted",
+    "composition": "preserve context and the called case policy; declare any delegation"
+  },
+  "shared_criteria": [
+    {
+      "id": "",
+      "kind": "integration",
+      "statement": "",
+      "case_ids": [],
+      "obligation_ids": [],
+      "verifiable_conditions": []
+    }
+  ]
+}

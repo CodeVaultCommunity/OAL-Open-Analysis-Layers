@@ -19,6 +19,7 @@ from PIL import ImageFont
 
 HERE = Path(__file__).resolve().parent
 ASSETS = HERE.parent
+EDITION = (ASSETS.parent / 'VERSION').read_text(encoding='utf-8').strip()
 LABELS = json.loads((HERE / "labels.json").read_text(encoding="utf-8"))
 NAVY = "#06134f"
 BLUE = "#0051dc"
@@ -206,7 +207,7 @@ def banner(lang):
 
 def write_asset(kind,lang,builder):
     w,h,body=builder(lang)
-    title=f'OAL Alpha-v0.2.0-Alkimim — {kind} — {LABELS[lang]["language"]}'
+    title=f'OAL {EDITION} — {kind} — {LABELS[lang]["language"]}'
     svg=(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title">'
          f'<title id="title">{html.escape(title)}</title>'+defs()+body+'</svg>')
     name=f'oal-{kind}-{lang}'

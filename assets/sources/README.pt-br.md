@@ -2,7 +2,7 @@
 
 [English](README.md) · [Imagens](../README.pt-br.md)
 
-Estas fontes atualizam as ilustrações existentes da **Alpha-v0.2.0-Alkimim** na própria edição. Preservam a paleta azul/ciano, os painéis arredondados, as funções dos ícones, as posições gerais, as dimensões e os pares bilíngues.
+Estas fontes surgiram na Alpha-v0.2.0-Alkimim e também descrevem a Stable-v1.0.0. Geometria, rótulos, paleta e PNGs permanecem iguais; apenas os metadados de título corrente dos SVGs são atualizados.
 
 | Ilustração | SVG em inglês | SVG em português | Dimensões do PNG |
 | --- | --- | --- | --- |

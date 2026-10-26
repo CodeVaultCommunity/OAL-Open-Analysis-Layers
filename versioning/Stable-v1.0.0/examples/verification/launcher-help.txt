@@ -1,0 +1,11 @@
+usage: python run_examples.py Stable-v1.0.0/tiny-catalog [-h] [--port PORT]
+                                                         [--database DATABASE]
+                                                         [--no-browser]
+
+Run the Stable-v1.0.0/tiny-catalog example in a local browser
+
+options:
+  -h, --help           show this help message and exit
+  --port PORT
+  --database DATABASE
+  --no-browser

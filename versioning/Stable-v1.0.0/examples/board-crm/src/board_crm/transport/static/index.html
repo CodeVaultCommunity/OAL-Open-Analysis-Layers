@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Board CRM · OAL Alpha-v0.2.0-Alkimim</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark">O</span><span>OAL <small>Board CRM</small></span></div>
+    <div class="header-right"><span class="edition">OAL Alpha-v0.2.0-Alkimim · Python</span><button id="language" type="button">English</button></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow" data-i18n="eyebrow">Exemplo executável</p><h1 data-i18n="headline">Seu funil, em um quadro.</h1><p class="intro-copy" data-i18n="intro">Crie oportunidades, mova cartões entre etapas e registre o resultado de cada negociação.</p></div>
+      <div class="intro-stat"><span>06</span><small data-i18n="cases">casos de uso especificados</small></div>
+    </section>
+
+    <section class="toolbar" aria-label="Controles do quadro">
+      <form id="create-form" class="create-form">
+        <h2 data-i18n="createTitle">Nova oportunidade</h2>
+        <div class="fields">
+          <label><span data-i18n="title">Título</span><input id="title" required maxlength="80" placeholder="Ex.: Renovação anual"></label>
+          <label><span data-i18n="company">Empresa</span><input id="company" required maxlength="80" placeholder="Ex.: Horizonte Ltda."></label>
+          <label><span data-i18n="owner">Responsável</span><input id="owner" required maxlength="40" placeholder="Ex.: Ana"></label>
+          <button class="primary" type="submit" data-i18n="create">Criar cartão</button>
+        </div>
+      </form>
+      <div class="filters"><label><span data-i18n="filter">Filtrar por responsável</span><input id="owner-filter" placeholder="Nome exato"></label><button id="refresh" type="button" data-i18n="refresh">Atualizar</button></div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <section class="board-shell"><div id="board" class="board" aria-label="Quadro de oportunidades"></div></section>
+    <p class="board-help" data-i18n="help">Arraste um cartão para uma etapa vizinha ou use o seletor no próprio cartão. Etapas encerradas não recebem cartões.</p>
+  </main>
+  <footer><span data-i18n="footer">Demonstração local. Dados salvos no SQLite configurado ao iniciar o servidor.</span></footer>
+</body>
+</html>

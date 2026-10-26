@@ -1,0 +1,355 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "Board CRM",
+  "oal_edition": "Stable-v1.0.0",
+  "artifact_version": "0.2.0",
+  "instances": [
+    {
+      "id": "board-crm-m1",
+      "layer": "L1",
+      "model": {
+        "identity": "OAL-EX-M1-CASE-CONTRACTS",
+        "version": "0.1.0",
+        "definition": "../models/l1-case-contracts/MODEL.md"
+      },
+      "artifact": {
+        "scope": "all use cases in the declared project scope",
+        "canonical_content": [
+          "OAL-P1/ucs.json"
+        ],
+        "files": [
+          "OAL-P1/ucs.json",
+          "OAL-P1/UCS.tex",
+          "OAL-P1/UCS.pt-br.tex",
+          "OAL-P1/render_ucs.py"
+        ],
+        "symbols": [],
+        "representation_rule": "OAL-P1/ucs.json is canonical. The English and Portuguese TeX representations are rendered by OAL-P1/render_ucs.py and checked with its --check option."
+      },
+      "mapping": {
+        "cases": {
+          "UC-CRM-001": "UC-CRM-001",
+          "UC-CRM-002": "UC-CRM-002",
+          "UC-CRM-003": "UC-CRM-003",
+          "UC-CRM-004": "UC-CRM-004",
+          "UC-CRM-005": "UC-CRM-005",
+          "UC-CRM-006": "UC-CRM-006"
+        }
+      },
+      "evidence": {
+        "assessment": "Stable compatibility review and explicit structure; see ../../COMPATIBILITY.md for limits",
+        "planned_checks": [
+          "Review the UCS against OAL-EX-M1-CASE-CONTRACTS 0.1.0."
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "python scripts/check_structure.py --edition Stable-v1.0.0",
+          "run_id": "2026-10-25T22:20:43-03:00",
+          "observed": "Explicit structural references checked; no semantic sufficiency claim",
+          "report": "../verification/structural-checks.json"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "The UCS is assessed against M1; the model does not prove that the contracts describe the real system or that stakeholder needs are adequate.",
+      "historical_evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "Review the UCS against OAL-EX-M1-CASE-CONTRACTS 0.1.0."
+        ],
+        "execution": {
+          "status": "not_recorded",
+          "reference": null,
+          "observed": "manual review; no executed check recorded"
+        },
+        "oal_edition": "Alpha-v0.2.0-Alkimim"
+      }
+    },
+    {
+      "id": "board-crm-m2",
+      "layer": "L2",
+      "model": {
+        "identity": "OAL-EX-M2-PROGRAM-SCENARIOS",
+        "version": "0.1.0",
+        "definition": "../models/l2-program-scenarios/MODEL.md"
+      },
+      "artifact": {
+        "scope": "all use cases: ADPM program cases and ADVS behavioral tests",
+        "canonical_content": {
+          "adpm": [
+            "OAL-P2/adpm/MODEL.md",
+            "OAL-P2/adpm/tool-contracts.md",
+            "OAL-P2/adpm/traceability.json"
+          ],
+          "advs": [
+            "OAL-P2/advs/SCENARIOS.md",
+            "OAL-P2/advs/behavioral-tests.json"
+          ]
+        },
+        "files": [
+          "OAL-P2/adpm/MODEL.md",
+          "OAL-P2/adpm/MODEL.pt-br.md",
+          "OAL-P2/adpm/tool-contracts.md",
+          "OAL-P2/adpm/traceability.json",
+          "OAL-P2/advs/SCENARIOS.md",
+          "OAL-P2/advs/SCENARIOS.pt-br.md",
+          "OAL-P2/advs/behavioral-tests.json"
+        ],
+        "symbols": []
+      },
+      "mapping": {
+        "cases": {
+          "UC-CRM-001": {
+            "adpm": "UC-CRM-001",
+            "behavioral_test": "BT-CRM-001"
+          },
+          "UC-CRM-002": {
+            "adpm": "UC-CRM-002",
+            "behavioral_test": "BT-CRM-002"
+          },
+          "UC-CRM-003": {
+            "adpm": "UC-CRM-003",
+            "behavioral_test": "BT-CRM-003"
+          },
+          "UC-CRM-004": {
+            "adpm": "UC-CRM-004",
+            "behavioral_test": "BT-CRM-004"
+          },
+          "UC-CRM-005": {
+            "adpm": "UC-CRM-005",
+            "behavioral_test": "BT-CRM-005"
+          },
+          "UC-CRM-006": {
+            "adpm": "UC-CRM-006",
+            "behavioral_test": "BT-CRM-006"
+          }
+        }
+      },
+      "evidence": {
+        "assessment": "Stable compatibility review and explicit structure; see ../../COMPATIBILITY.md for limits",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "python -m pytest -q",
+          "observed": "23 passed, 36 subtests passed in 0.78s",
+          "run_id": "2026-10-25T22:14:31-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Criterion coverage is a reference-level mapping; scenario sufficiency is reviewed, not proven by the test run.",
+      "historical_evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "23 passed, 36 subtests passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/historical-alpha-v0.2.0/execution.json",
+        "oal_edition": "Alpha-v0.2.0-Alkimim"
+      }
+    },
+    {
+      "id": "board-crm-m3",
+      "layer": "L3",
+      "model": {
+        "identity": "OAL-EX-M3-PYTHON-CORE",
+        "version": "0.1.0",
+        "definition": "../models/l3-python-core/MODEL.md"
+      },
+      "artifact": {
+        "scope": "callable core for all cases",
+        "canonical_content": [
+          "src/board_crm/__init__.py",
+          "src/board_crm/authorization.py",
+          "src/board_crm/composition.py",
+          "src/board_crm/errors.py",
+          "src/board_crm/entities.py",
+          "src/board_crm/tools",
+          "src/board_crm/usecases"
+        ],
+        "files": [
+          "OAL-P3/IMPLEMENTATION.md",
+          "OAL-P3/IMPLEMENTATION.pt-br.md",
+          "src/board_crm/__init__.py",
+          "src/board_crm/authorization.py",
+          "src/board_crm/composition.py",
+          "src/board_crm/errors.py",
+          "src/board_crm/entities.py",
+          "src/board_crm/tools",
+          "src/board_crm/usecases",
+          "tests/p3",
+          "tests/unit",
+          "tests/integration"
+        ],
+        "symbols": [
+          "src/board_crm/usecases/operations.py::CreateOpportunity",
+          "src/board_crm/usecases/operations.py::MoveOpportunity",
+          "src/board_crm/usecases/operations.py::RecordInteraction",
+          "src/board_crm/usecases/operations.py::ViewBoard",
+          "src/board_crm/usecases/operations.py::CloseWon",
+          "src/board_crm/usecases/operations.py::CloseLost"
+        ],
+        "boundary_files": [
+          "src/board_crm/__main__.py",
+          "src/board_crm/transport"
+        ],
+        "actor_context": "This example uses a resolved role string from a trusted caller; HTTP Basic resolves it at the boundary. Each case independently authorizes that role. Anonymous access is not admitted."
+      },
+      "mapping": {
+        "cases": {
+          "UC-CRM-001": "src/board_crm/usecases/operations.py::CreateOpportunity",
+          "UC-CRM-002": "src/board_crm/usecases/operations.py::MoveOpportunity",
+          "UC-CRM-003": "src/board_crm/usecases/operations.py::RecordInteraction",
+          "UC-CRM-004": "src/board_crm/usecases/operations.py::ViewBoard",
+          "UC-CRM-005": "src/board_crm/usecases/operations.py::CloseWon",
+          "UC-CRM-006": "src/board_crm/usecases/operations.py::CloseLost"
+        }
+      },
+      "evidence": {
+        "assessment": "Stable compatibility review and explicit structure; see ../../COMPATIBILITY.md for limits",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "python -m pytest -q",
+          "observed": "23 passed, 36 subtests passed in 0.78s",
+          "run_id": "2026-10-25T22:14:31-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Symbol resolution and test execution do not prove universal behavioral correctness.",
+      "historical_evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "23 passed, 36 subtests passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/historical-alpha-v0.2.0/execution.json",
+        "oal_edition": "Alpha-v0.2.0-Alkimim"
+      }
+    },
+    {
+      "id": "board-crm-m4",
+      "layer": "L4",
+      "model": {
+        "identity": "OAL-EX-M4-HTTP-BOUNDARY",
+        "version": "0.1.0",
+        "definition": "../models/l4-http-boundary/MODEL.md"
+      },
+      "artifact": {
+        "scope": "local HTTP channel; exposed cases",
+        "canonical_content": [
+          "OAL-P4/HTTP.md"
+        ],
+        "files": [
+          "OAL-P4/HTTP.md",
+          "OAL-P4/HTTP.pt-br.md",
+          "OAL-P4/traceability.json",
+          "src/board_crm/transport/wsgi.py",
+          "src/board_crm/transport/static/index.html",
+          "src/board_crm/transport/static/app.js",
+          "tests/p4"
+        ],
+        "symbols": [],
+        "actor_context": "This example uses a resolved role string from a trusted caller; HTTP Basic resolves it at the boundary. Each case independently authorizes that role. Anonymous access is not admitted."
+      },
+      "mapping": {
+        "cases": {
+          "UC-CRM-001": [
+            "UI-CRM-CREATE",
+            "API-CRM-CREATE"
+          ],
+          "UC-CRM-002": [
+            "UI-CRM-MOVE",
+            "API-CRM-MOVE"
+          ],
+          "UC-CRM-003": [
+            "UI-CRM-NOTE",
+            "API-CRM-NOTE"
+          ],
+          "UC-CRM-004": [
+            "UI-CRM-CREATE",
+            "UI-CRM-MOVE",
+            "UI-CRM-NOTE",
+            "UI-CRM-BOARD",
+            "UI-CRM-WON",
+            "UI-CRM-LOST",
+            "UI-CRM-LANGUAGE",
+            "API-CRM-BOARD"
+          ],
+          "UC-CRM-005": [
+            "UI-CRM-WON",
+            "API-CRM-WON"
+          ],
+          "UC-CRM-006": [
+            "UI-CRM-LOST",
+            "API-CRM-LOST"
+          ]
+        },
+        "interface_only": [
+          "UI-CRM-STATIC"
+        ],
+        "channel_obligations": {
+          "CH-CRM-JSON": {
+            "source": "OAL-P4/traceability.json",
+            "contract": "OAL-P4/HTTP.md",
+            "checks": [
+              "tests/p4/test_http_board.py::LocalBoardScenario.test_json_media_type_and_charset"
+            ]
+          },
+          "CH-CRM-FRAMING": {
+            "source": "OAL-P4/traceability.json",
+            "contract": "OAL-P4/HTTP.md",
+            "checks": [
+              "tests/p4/test_http_board.py::LocalBoardScenario.test_incomplete_and_unsupported_framing_are_rejected_without_creation"
+            ]
+          }
+        }
+      },
+      "evidence": {
+        "assessment": "Stable compatibility review and explicit structure; see ../../COMPATIBILITY.md for limits",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "python -m pytest -q",
+          "observed": "23 passed, 36 subtests passed in 0.78s",
+          "run_id": "2026-10-25T22:14:31-03:00"
+        },
+        "report": "../verification/execution.json"
+      },
+      "limits": "Channel tests are WSGI-level; JavaScript visual behavior is not executed.",
+      "historical_evidence": {
+        "assessment": "reviewed",
+        "planned_checks": [
+          "python -m pytest -q"
+        ],
+        "execution": {
+          "status": "recorded",
+          "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+          "observed": "23 passed, 36 subtests passed in 0.53s",
+          "run_id": "2026-10-24T19:55:43-03:00"
+        },
+        "report": "../verification/historical-alpha-v0.2.0/execution.json",
+        "oal_edition": "Alpha-v0.2.0-Alkimim"
+      }
+    }
+  ],
+  "provenance": {
+    "introduced_in": "Alpha-v0.2.0-Alkimim",
+    "historical_manifest": "../../../Alpha-v0.2.0-Alkimim/examples/board-crm/model-instances.json",
+    "stable_review": "../../COMPATIBILITY.md"
+  }
+}

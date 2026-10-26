@@ -2,7 +2,7 @@
 
 [Português](README.pt-br.md) · [Images](../README.md)
 
-These sources update the existing illustrations of **Alpha-v0.2.0-Alkimim** in place. They preserve the blue/cyan palette, rounded panels, icon roles, overall positions, canvas dimensions, and bilingual pairing.
+These sources were introduced with Alpha-v0.2.0-Alkimim and also describe Stable-v1.0.0. Diagram geometry, labels, palette, and PNGs are unchanged; only current SVG title metadata is updated.
 
 | Illustration | English SVG | Portuguese SVG | PNG canvas |
 | --- | --- | --- | --- |

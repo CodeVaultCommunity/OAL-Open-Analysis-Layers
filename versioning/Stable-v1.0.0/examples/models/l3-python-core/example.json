@@ -1,0 +1,156 @@
+{
+  "model": "OAL-EX-M3-PYTHON-CORE",
+  "model_version": "0.1.0",
+  "layer": "L3",
+  "oal_edition": "Stable-v1.0.0",
+  "partial_slice": true,
+  "slice_note": {
+    "en": "Partial L3 slice of Tiny Catalog for two cases. The complete instance is the project's core, its composition, and its implementation documents.",
+    "pt-BR": "Recorte parcial de L3 do Tiny Catalog para dois casos. A instância completa é o núcleo do projeto, sua composição e seus documentos de implementação."
+  },
+  "project": "Tiny Catalog",
+  "source_l2": {
+    "model": "OAL-EX-M2-PROGRAM-SCENARIOS",
+    "version": "0.1.0",
+    "instance": "tiny-catalog OAL-P2"
+  },
+  "core": {
+    "package": "src/tiny_catalog",
+    "modules": [
+      "src/tiny_catalog/__init__.py",
+      "src/tiny_catalog/authorization.py",
+      "src/tiny_catalog/composition.py",
+      "src/tiny_catalog/errors.py",
+      "src/tiny_catalog/entities",
+      "src/tiny_catalog/tools",
+      "src/tiny_catalog/usecases"
+    ],
+    "excluded": [
+      "src/tiny_catalog/__main__.py",
+      "src/tiny_catalog/transport"
+    ],
+    "language": "Python",
+    "transport_imports": []
+  },
+  "entities": [
+    {
+      "ucs_entity_id": "E-01",
+      "symbol": "src/tiny_catalog/entities/item.py::ItemKey",
+      "validity_owner": "entity"
+    },
+    {
+      "ucs_entity_id": "E-02",
+      "symbol": "src/tiny_catalog/entities/item.py::Item",
+      "validity_owner": "entity"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ADI-CAT-001",
+      "ucs_case_id": "UC-CAT-001",
+      "adpm_case_id": "P-CAT-001",
+      "symbol": "src/tiny_catalog/usecases/register_item.py::RegisterItem",
+      "callable_convention": "execute",
+      "authorization": "require_actor runs before validation and before the store call; denial has no effect."
+    },
+    {
+      "id": "ADI-CAT-002",
+      "ucs_case_id": "UC-CAT-002",
+      "adpm_case_id": "P-CAT-002",
+      "symbol": "src/tiny_catalog/usecases/get_item.py::GetItem",
+      "callable_convention": "execute",
+      "authorization": "require_actor runs before reading the code or the store."
+    }
+  ],
+  "tool_contracts": [
+    {
+      "id": "TC-ITEMSTORE",
+      "symbol": "src/tiny_catalog/tools/contracts.py::ItemStore",
+      "ready_entity_assumption": "insert and replace receive a ready entity satisfying I_E; the store does not revalidate item fields.",
+      "contextual_conditions": [
+        {
+          "condition": "the key is not already allocated",
+          "object": "the persisted key set",
+          "purpose": "preserve unique retention atomically",
+          "responsibility": "store contract; UC-CAT-001 decides the domain meaning"
+        },
+        {
+          "condition": "the stored representation decodes",
+          "object": "the raw record",
+          "purpose": "report corrupt storage as a technical failure",
+          "responsibility": "codec; the entity still validates its fields during reconstruction"
+        }
+      ]
+    }
+  ],
+  "implementations": [
+    {
+      "contract_id": "TC-ITEMSTORE",
+      "symbol": "src/tiny_catalog/tools/sqlite_store.py::SQLiteItemStore",
+      "configuration": "SQLite file selected by composition"
+    }
+  ],
+  "composition": [
+    {
+      "symbol": "src/tiny_catalog/composition.py::CatalogApplication",
+      "injected_collaborators": [
+        "ItemStore",
+        "Item factory",
+        "RecordCodec",
+        "ConnectionProvider"
+      ],
+      "selection_point": "build_application in composition.py"
+    }
+  ],
+  "verification": [
+    {
+      "bt_ids": [
+        "BT-CAT-001",
+        "BT-CAT-002"
+      ],
+      "checks": [
+        "tests/p3/test_uc_cat_001_register.py",
+        "tests/p3/test_uc_cat_002_get.py",
+        "tests/p3/test_authorization.py"
+      ],
+      "execution": {
+        "status": "not_recorded",
+        "reference": null
+      }
+    }
+  ],
+  "mapping": {
+    "cases": {
+      "UC-CAT-001": "ADI-CAT-001",
+      "UC-CAT-002": "ADI-CAT-002"
+    },
+    "criteria": {
+      "AC-CAT-001-01": [
+        "tests/p3/test_uc_cat_001_register.py"
+      ],
+      "AC-CAT-002-01": [
+        "tests/p3/test_uc_cat_002_get.py"
+      ]
+    },
+    "bt_links": {
+      "BT-CAT-001": [
+        "ADI-CAT-001"
+      ],
+      "BT-CAT-002": [
+        "ADI-CAT-002"
+      ]
+    }
+  },
+  "application_initializers": [
+    {
+      "symbol": "src/tiny_catalog/__main__.py::create_handler",
+      "role": "application composition and HTTP boundary realization",
+      "imports_transport": true
+    },
+    {
+      "symbol": "src/tiny_catalog/__main__.py::main",
+      "role": "local server startup",
+      "imports_transport": true
+    }
+  ]
+}

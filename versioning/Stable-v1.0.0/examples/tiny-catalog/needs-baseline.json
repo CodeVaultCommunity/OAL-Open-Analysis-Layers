@@ -1,0 +1,32 @@
+{
+  "project": "Tiny Catalog",
+  "version": "0.2.0",
+  "status": "illustrative reconstruction",
+  "provenance": {
+    "en": "The needs were extracted from the existing UCS example to make the teaching baseline inspectable; this file is not an independent record of stakeholder interviews.",
+    "pt-BR": "As necessidades foram extraídas da UCS existente para tornar a baseline didática inspecionável; este arquivo não é um registro independente de entrevistas com partes interessadas."
+  },
+  "needs": [
+    {
+      "id": "N-01",
+      "text": {
+        "en": "Retain a catalog item under an unambiguous code.",
+        "pt-BR": "Reter um item de catálogo sob um código inequívoco."
+      }
+    },
+    {
+      "id": "N-02",
+      "text": {
+        "en": "Consult known items and identify which are currently available.",
+        "pt-BR": "Consultar itens conhecidos e identificar os atualmente disponíveis."
+      }
+    },
+    {
+      "id": "N-03",
+      "text": {
+        "en": "Remove an item from availability without losing its current record.",
+        "pt-BR": "Retirar um item da disponibilidade sem perder seu registro atual."
+      }
+    }
+  ]
+}

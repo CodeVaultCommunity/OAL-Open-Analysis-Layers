@@ -1,0 +1,248 @@
+{
+  "project": "Tiny Catalog",
+  "version": "0.2.0",
+  "ucs_version": "0.2.0",
+  "definition": "One directly linked behavioral test identity per UCS case; listed executable checks support that identity and are not additional directly linked behavioral tests.",
+  "tests": [
+    {
+      "id": "BT-CAT-001",
+      "ucs_case_id": "UC-CAT-001",
+      "ucs_criteria": [
+        "AC-CAT-001-01",
+        "AC-CAT-001-02",
+        "AC-CAT-001-03",
+        "AC-CAT-001-04",
+        "AC-CAT-001-05",
+        "AC-CAT-001-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_001_register.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "permitted_roles": [
+          "ACT-CAT-M"
+        ],
+        "forbidden_roles": [
+          "ACT-CAT-R"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-CAT-R}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-CAT-R}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      },
+      "shared_criteria": [
+        "AC-SHARED-01"
+      ],
+      "shared_supporting_checks": [
+        "SC-CAT-RETENTION"
+      ]
+    },
+    {
+      "id": "BT-CAT-002",
+      "ucs_case_id": "UC-CAT-002",
+      "ucs_criteria": [
+        "AC-CAT-002-01",
+        "AC-CAT-002-02",
+        "AC-CAT-002-03",
+        "AC-CAT-002-04",
+        "AC-CAT-002-05",
+        "AC-CAT-002-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_002_get.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "permitted_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "forbidden_roles": [],
+        "known_forbidden_scenario": "not_applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u is empty: every known role is permitted, so a known-role-not-permitted scenario does not exist. Absent and unknown identities remain separate scenarios.",
+          "pt-BR": "F_u = A \\ A_u é vazio: todo papel conhecido é permitido, então não existe cenário de papel conhecido sem permissão. Identidades ausente e desconhecida continuam cenários separados."
+        }
+      },
+      "shared_criteria": [
+        "AC-SHARED-01"
+      ],
+      "shared_supporting_checks": [
+        "SC-CAT-RETENTION"
+      ]
+    },
+    {
+      "id": "BT-CAT-003",
+      "ucs_case_id": "UC-CAT-003",
+      "ucs_criteria": [
+        "AC-CAT-003-01",
+        "AC-CAT-003-02",
+        "AC-CAT-003-03",
+        "AC-CAT-003-04"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_003_list.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "permitted_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "forbidden_roles": [],
+        "known_forbidden_scenario": "not_applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u is empty: every known role is permitted, so a known-role-not-permitted scenario does not exist. Absent and unknown identities remain separate scenarios.",
+          "pt-BR": "F_u = A \\ A_u é vazio: todo papel conhecido é permitido, então não existe cenário de papel conhecido sem permissão. Identidades ausente e desconhecida continuam cenários separados."
+        }
+      },
+      "shared_criteria": [
+        "AC-SHARED-01"
+      ],
+      "shared_supporting_checks": [
+        "SC-CAT-RETENTION"
+      ]
+    },
+    {
+      "id": "BT-CAT-004",
+      "ucs_case_id": "UC-CAT-004",
+      "ucs_criteria": [
+        "AC-CAT-004-01",
+        "AC-CAT-004-02",
+        "AC-CAT-004-03",
+        "AC-CAT-004-04",
+        "AC-CAT-004-05",
+        "AC-CAT-004-06"
+      ],
+      "boundary": "P3 callable use case",
+      "supporting_checks": [
+        "tests/p3/test_uc_cat_004_deactivate.py",
+        "tests/p3/test_authorization.py",
+        "tests/p3/test_retention_flow.py"
+      ],
+      "status": "planned and implemented; execution results depend on the run",
+      "permission_applicability": {
+        "known_roles": [
+          "ACT-CAT-M",
+          "ACT-CAT-R"
+        ],
+        "permitted_roles": [
+          "ACT-CAT-M"
+        ],
+        "forbidden_roles": [
+          "ACT-CAT-R"
+        ],
+        "known_forbidden_scenario": "applicable",
+        "justification": {
+          "en": "F_u = A \\ A_u = {ACT-CAT-R}; a known-role-not-permitted scenario is applicable.",
+          "pt-BR": "F_u = A \\ A_u = {ACT-CAT-R}; o cenário de papel conhecido sem permissão é aplicável."
+        }
+      },
+      "shared_criteria": [
+        "AC-SHARED-01"
+      ],
+      "shared_supporting_checks": [
+        "SC-CAT-RETENTION"
+      ]
+    }
+  ],
+  "evidence": {
+    "execution": {
+      "status": "recorded",
+      "reference": "python -m pytest -q",
+      "observed": "90 passed in 1.32s",
+      "run_id": "2026-10-25T22:14:29-03:00"
+    },
+    "report": "../../../verification/execution.json",
+    "reference_base": "this file's directory"
+  },
+  "shared_supporting_checks": [
+    {
+      "id": "SC-CAT-RETENTION",
+      "kind": "integration-support",
+      "criteria_verified": [
+        "AC-SHARED-01"
+      ],
+      "case_ids": [
+        "UC-CAT-001",
+        "UC-CAT-002",
+        "UC-CAT-003",
+        "UC-CAT-004"
+      ],
+      "obligation_ids": [
+        "P-01",
+        "P-02"
+      ],
+      "behavioral_test_ids": [
+        "BT-CAT-001",
+        "BT-CAT-002",
+        "BT-CAT-003",
+        "BT-CAT-004"
+      ],
+      "reference": "tests/p3/test_retention_flow.py::test_confirmed_deactivation_survives_application_reconstruction",
+      "scenario": {
+        "id": "VS-AC-SHARED-01",
+        "preparation": [
+          "A usable retained store and an unused valid code.",
+          "A resolved maintainer context satisfying this example's authentication requirement."
+        ],
+        "actor": "maintainer; context resolved by a trusted caller",
+        "action": "Register, deactivate, reconstruct the application, retrieve, and list through the specified cases.",
+        "observed_boundary": "ADI callable cases across normal application reconstruction",
+        "configuration": "SQLite file retained between two application instances",
+        "expected_result": "Same code and name with active=false; the inactive item is absent from the available listing.",
+        "expected_effects": [
+          "One retained inactive record; no deletion or reactivation."
+        ],
+        "criteria_verified": [
+          "AC-SHARED-01"
+        ],
+        "applicability": {
+          "status": "applicable",
+          "justification": "All four cases and obligations P-01/P-02 participate in the declared retention contract."
+        }
+      },
+      "status": "planned and implemented; execution recorded separately"
+    }
+  ],
+  "historical_evidence": {
+    "oal_edition": "Alpha-v0.2.0-Alkimim",
+    "record": {
+      "planned_checks": [
+        "Run the supporting checks in tests/p3 and the channel checks in tests/p4."
+      ],
+      "execution": {
+        "status": "recorded",
+        "reference": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python -m pytest -q -p no:cacheprovider",
+        "observed": "90 passed in 1.01s",
+        "run_id": "2026-10-24T19:55:43-03:00"
+      },
+      "report": "../../../verification/execution.json"
+    },
+    "report": "../../../verification/historical-alpha-v0.2.0/execution.json",
+    "reference_base": "Original record paths are relative to the original Alpha file; wrapper report points to the retained copy."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "project": "Board CRM",
+  "version": "0.2.0",
+  "status": "illustrative reconstruction",
+  "provenance": {
+    "en": "The needs were extracted from the existing UCS example to make the teaching baseline inspectable; this file is not an independent record of stakeholder interviews.",
+    "pt-BR": "As necessidades foram extraídas da UCS existente para tornar a baseline didática inspecionável; este arquivo não é um registro independente de entrevistas com partes interessadas."
+  },
+  "needs": [
+    {
+      "id": "N-01",
+      "text": {
+        "en": "Record an opportunity with enough context to identify it and its owner.",
+        "pt-BR": "Registrar uma oportunidade com contexto suficiente para identificá-la e identificar seu responsável."
+      }
+    },
+    {
+      "id": "N-02",
+      "text": {
+        "en": "Know the current sales stage and move an active opportunity without losing concurrent changes.",
+        "pt-BR": "Conhecer a etapa comercial atual e mover uma oportunidade ativa sem perder alterações concorrentes."
+      }
+    },
+    {
+      "id": "N-03",
+      "text": {
+        "en": "Keep a concise record of interactions with a prospect.",
+        "pt-BR": "Manter um registro conciso das interações com um prospecto."
+      }
+    },
+    {
+      "id": "N-04",
+      "text": {
+        "en": "Inspect active work and closed outcomes from the same board.",
+        "pt-BR": "Consultar o trabalho ativo e os resultados encerrados no mesmo quadro."
+      }
+    },
+    {
+      "id": "N-05",
+      "text": {
+        "en": "Record why an opportunity ended and retain its stage history.",
+        "pt-BR": "Registrar por que uma oportunidade foi encerrada e preservar seu histórico de etapas."
+      }
+    }
+  ]
+}

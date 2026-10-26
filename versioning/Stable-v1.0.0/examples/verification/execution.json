@@ -1,0 +1,1390 @@
+{
+  "oal_edition": "Stable-v1.0.0",
+  "run_started_at": "2026-10-25T22:14:28-03:00",
+  "run_finished_at": "2026-10-25T22:14:45-03:00",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pytest": "9.0.2",
+    "executable": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+    "timezone": "America/Sao_Paulo (UTC-03:00)",
+    "variables": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONIOENCODING": "utf-8",
+      "PYTEST_ADDOPTS": "-p no:cacheprovider",
+      "PYTEST_DEBUG_TEMPROOT": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\pytest-work"
+    }
+  },
+  "records": [
+    {
+      "label": "list-examples",
+      "started_at": "2026-10-25T22:14:28-03:00",
+      "finished_at": "2026-10-25T22:14:28-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "run_examples.py",
+        "--list"
+      ],
+      "exit_code": 0,
+      "result": "Alpha-v0.1.0-Alkimim/board-crm  (port 8001)\nAlpha-v0.1.0-Alkimim/tiny-catalog  (port 8000)\nAlpha-v0.1.0-Alkimim/work-board  (port 8002)\nAlpha-v0.2.0-Alkimim/board-crm  (port 8001)\nAlpha-v0.2.0-Alkimim/tiny-catalog  (port 8000)\nAlpha-v0.2.0-Alkimim/work-board  (port 8002)\nStable-v1.0.0/board-crm  (port 8001)\nStable-v1.0.0/tiny-catalog  (port 8000)\nStable-v1.0.0/work-board  (port 8002)",
+      "log": "list-examples.txt"
+    },
+    {
+      "label": "launcher-help",
+      "started_at": "2026-10-25T22:14:28-03:00",
+      "finished_at": "2026-10-25T22:14:28-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "run_examples.py",
+        "Stable-v1.0.0/tiny-catalog",
+        "--help"
+      ],
+      "exit_code": 0,
+      "result": "usage: python run_examples.py Stable-v1.0.0/tiny-catalog [-h] [--port PORT]\n                                                         [--database DATABASE]\n                                                         [--no-browser]\n\nRun the Stable-v1.0.0/tiny-catalog example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE\n  --no-browser",
+      "log": "launcher-help.txt"
+    },
+    {
+      "label": "board-crm-render",
+      "started_at": "2026-10-25T22:14:28-03:00",
+      "finished_at": "2026-10-25T22:14:29-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py"
+      ],
+      "exit_code": 0,
+      "result": "",
+      "log": "board-crm-render.txt"
+    },
+    {
+      "label": "board-crm-tex",
+      "started_at": "2026-10-25T22:14:29-03:00",
+      "finished_at": "2026-10-25T22:14:29-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": "",
+      "log": "board-crm-tex.txt"
+    },
+    {
+      "label": "tiny-catalog-pytest",
+      "started_at": "2026-10-25T22:14:29-03:00",
+      "finished_at": "2026-10-25T22:14:31-03:00",
+      "working_directory": "versioning/Stable-v1.0.0/examples/tiny-catalog",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "result": "........................................................................ [ 80%]\n..................                                                       [100%]\n90 passed in 1.32s",
+      "log": "tiny-catalog-pytest.txt"
+    },
+    {
+      "label": "board-crm-pytest",
+      "started_at": "2026-10-25T22:14:31-03:00",
+      "finished_at": "2026-10-25T22:14:33-03:00",
+      "working_directory": "versioning/Stable-v1.0.0/examples/board-crm",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "result": ".......................              [100%]\n23 passed, 36 subtests passed in 0.78s",
+      "log": "board-crm-pytest.txt"
+    },
+    {
+      "label": "work-board-pytest",
+      "started_at": "2026-10-25T22:14:33-03:00",
+      "finished_at": "2026-10-25T22:14:35-03:00",
+      "working_directory": "versioning/Stable-v1.0.0/examples/work-board",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "result": "................................                                         [100%]\n32 passed in 1.01s",
+      "log": "work-board-pytest.txt"
+    },
+    {
+      "label": "tiny-catalog-smoke",
+      "started_at": "2026-10-25T22:14:37-03:00",
+      "finished_at": "2026-10-25T22:14:40-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "run_examples.py",
+        "Stable-v1.0.0/tiny-catalog",
+        "--no-browser",
+        "--port",
+        "49626",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\smoke-9k6d8bms\\smoke.sqlite3"
+      ],
+      "result": {
+        "status": 200,
+        "body_bytes": 2055,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "termination": {
+        "method": "terminate after HTTP check",
+        "exit_code": 1,
+        "port_closed": true
+      },
+      "log": "tiny-catalog-smoke.txt"
+    },
+    {
+      "label": "board-crm-smoke",
+      "started_at": "2026-10-25T22:14:40-03:00",
+      "finished_at": "2026-10-25T22:14:42-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "run_examples.py",
+        "Stable-v1.0.0/board-crm",
+        "--no-browser",
+        "--port",
+        "49635",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\smoke-1egmbx7d\\smoke.sqlite3"
+      ],
+      "result": {
+        "status": 200,
+        "body_bytes": 2523,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "termination": {
+        "method": "terminate after HTTP check",
+        "exit_code": 1,
+        "port_closed": true
+      },
+      "log": "board-crm-smoke.txt"
+    },
+    {
+      "label": "work-board-smoke",
+      "started_at": "2026-10-25T22:14:42-03:00",
+      "finished_at": "2026-10-25T22:14:45-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "run_examples.py",
+        "Stable-v1.0.0/work-board",
+        "--no-browser",
+        "--port",
+        "49642",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\smoke-1u666h5o\\smoke.sqlite3"
+      ],
+      "result": {
+        "status": 200,
+        "body_bytes": 1777,
+        "content_type": "text/html; charset=utf-8"
+      },
+      "termination": {
+        "method": "terminate after HTTP check",
+        "exit_code": 1,
+        "port_closed": true
+      },
+      "log": "work-board-smoke.txt"
+    },
+    {
+      "label": "board-crm-render-final",
+      "started_at": "2026-10-25T22:20:42-03:00",
+      "finished_at": "2026-10-25T22:20:43-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py"
+      ],
+      "exit_code": 0,
+      "result": "",
+      "log": "board-crm-render-final.txt",
+      "reason": "Final renderer emits LF and removes trailing whitespace in generated TeX; no model content change."
+    },
+    {
+      "label": "board-crm-tex-final",
+      "started_at": "2026-10-25T22:20:43-03:00",
+      "finished_at": "2026-10-25T22:20:43-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": "",
+      "log": "board-crm-tex-final.txt",
+      "reason": "Final renderer emits LF and removes trailing whitespace in generated TeX; no model content change."
+    },
+    {
+      "label": "release-negative-checks",
+      "started_at": "2026-10-25T22:20:43-03:00",
+      "finished_at": "2026-10-25T22:20:44-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "scripts/test_release_checks.py"
+      ],
+      "exit_code": 0,
+      "result": "...\n----------------------------------------------------------------------\nRan 3 tests in 1.066s\n\nOK",
+      "log": "release-negative-checks.txt"
+    },
+    {
+      "label": "skill-validation",
+      "started_at": "2026-10-25T22:20:44-03:00",
+      "finished_at": "2026-10-25T22:20:44-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "C:\\Users\\Douglas\\.codex\\skills\\.system\\skill-creator\\scripts\\quick_validate.py",
+        "versioning/Stable-v1.0.0/skill"
+      ],
+      "exit_code": 0,
+      "result": "Skill is valid!",
+      "log": "skill-validation.txt",
+      "validator_sha256": "6068513d924ed3559e186dfcdead7439129828dcf402167fd925c06dffbf2806",
+      "dependency": "PyYAML==6.0.3",
+      "scope": "Frontmatter, name, description, scaffold checks; not behavioral certification"
+    },
+    {
+      "label": "structure",
+      "started_at": "2026-10-25T22:20:44-03:00",
+      "finished_at": "2026-10-25T22:20:45-03:00",
+      "working_directory": ".",
+      "command": [
+        "python",
+        "scripts/check_structure.py",
+        "--edition",
+        "Stable-v1.0.0",
+        "--report",
+        "versioning/Stable-v1.0.0/examples/verification/structural-checks.json"
+      ],
+      "exit_code": 0,
+      "result": "Structure OK: {'cases': 16, 'file_references': 361, 'symbol_references': 93, 'instances': 12, 'projects': 3, 'document_links': 857}",
+      "log": "structure.txt"
+    }
+  ],
+  "earlier_attempt": {
+    "project": "tiny-catalog",
+    "result": "37 passed, 53 setup errors; not an approved run",
+    "cause": "PermissionError accessing the pre-existing default pytest-of-Douglas temporary directory",
+    "resolution": "Use an isolated PYTEST_DEBUG_TEMPROOT; no application change"
+  },
+  "report_finalized_at": "2026-10-25T22:20:45-03:00",
+  "base_commit": "5755a4e4a5b31a9614da5d409d03d1db9cf1e20c",
+  "input_files": [
+    {
+      "path": ".gitattributes",
+      "size_bytes": 58,
+      "sha256": "9a5b3e8c93ebcd35a580f2c2cf3b51cad2f4e5c1514a6984f454f36b355dacd8"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "size_bytes": 1431,
+      "sha256": "5fa8a154ee92a2390325e5c5564b3e6473057eddbc8728cb17e11016f723f8d8"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 2545,
+      "sha256": "ddaaa206b5f0db5e55453ce81afe706eb99a8477f47b421fc775daddb61e00fd"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 900,
+      "sha256": "e05b0beb22ed8cfd1f5af2e2b9933916cf40141740c924511b683294c9edb68d"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 531,
+      "sha256": "b40aa9e40de5030eab37dd442c82db2b70c95c1a5646cabf410f093dfc8f077d"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 21562,
+      "sha256": "213fb81ca4c08192bcad4de171af7599483c630f432ea65fd290df002cba890a"
+    },
+    {
+      "path": "README.pt-br.md",
+      "size_bytes": 23098,
+      "sha256": "decda993e2883f30d06be947bdeae2f83288a2daaa569ea563399f0034ee773b"
+    },
+    {
+      "path": "run_examples.py",
+      "size_bytes": 6412,
+      "sha256": "bb293a024419efe038d88968e3b74385c78c423748de4ca855a7323a78d1381c"
+    },
+    {
+      "path": "scripts/check_structure.py",
+      "size_bytes": 17123,
+      "sha256": "b24ed718a180c158332a35920b4ec922584b82206d69f86b4036fb66f17579f6"
+    },
+    {
+      "path": "scripts/content_inventory.py",
+      "size_bytes": 3648,
+      "sha256": "bf6b7ada3e9d6c1ef724bc3760a898180528667217cd0fd76c0b9d7cfa389967"
+    },
+    {
+      "path": "scripts/test_release_checks.py",
+      "size_bytes": 2014,
+      "sha256": "0dc3339b0dfff5583f749301962d4b5eff3489457ba5fc25237c5e7c2d24ba52"
+    },
+    {
+      "path": "VERSION",
+      "size_bytes": 14,
+      "sha256": "e55bc94e2eee9f15653a0bc1e6f2ab611f0fe0d30acf02096f349909b9d79e51"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.md",
+      "size_bytes": 4733,
+      "sha256": "6f6817f17ec70d56be7fe0cef1b7a1a9add08a7c691e75912eaa3942c3a80aab"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/COMPATIBILITY.pt-br.md",
+      "size_bytes": 4827,
+      "sha256": "05949a413304cce5a69cb29b39096c148e65d250d0cf02ef20acefd11b42a01b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/derivations.json",
+      "size_bytes": 7957,
+      "sha256": "e3a1fdab46118cb5c99d1714771068eb0ddeaaf9675253b4c6370972b49daee1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/model-instances.json",
+      "size_bytes": 12519,
+      "sha256": "163c7727248a33d6966d809c6b5eed0b9d14f63b316712f6626aee5c69fc1c64"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/needs-baseline.json",
+      "size_bytes": 1746,
+      "sha256": "4631eb43abb4107a1281a5f92d65668b108bfa3632457570f538f1020d3954ab"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
+      "size_bytes": 7515,
+      "sha256": "1c382ed09523ed2d931e9dc763061718d4a6920cc3feafdae8daf6f632892c79"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/ucs.json",
+      "size_bytes": 59526,
+      "sha256": "be90ee9b384d52aa7df399c3e8bdcde299cbe9e6ad7249fa177320dc7b6f4258"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/UCS.pt-br.tex",
+      "size_bytes": 21271,
+      "sha256": "d00936544410f66526adea7e9f99bd850d3fc7f63d5c06ae4c6ba942832a157e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/UCS.tex",
+      "size_bytes": 19717,
+      "sha256": "4ce2a8a4d3450b571e5600925ba741da5567008c4a14d402123267708292198e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3478,
+      "sha256": "a9a7ca0b9b08fcd0f5801bf159b90da97da0dc58df7545101d48dd71921c825b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3756,
+      "sha256": "89dd9ea719643a0c668282b5b4327e71d874b3cbf18751045404aeec8e4829e5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 2738,
+      "sha256": "93ce7ef592fda411fb8d407ebf74d652e0f85b0bcb54dca2fc0a543973f459b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 2929,
+      "sha256": "dac55c833d3f4363724ea6f84d6582c27ee5b11470a81fc32caeff26b8e772df"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2362,
+      "sha256": "2539713ea2e19c87cfa9d2207515e5ee6494e3871b16ec425c8fdadfc4f43ebb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 9426,
+      "sha256": "940475deaea1aecd1fa271359ab341496688d19046edeca749af8cf2bd4b994b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 8523,
+      "sha256": "17808163662b8eb1c17a59ae69f8c2214b4f1d48717ae05d6b922f5b9d8de665"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 9256,
+      "sha256": "5c5f43e5e902c8625b0213b6e8d2cf680d3f5342661873f3b5e33b655b4df3ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2513,
+      "sha256": "29f92c389ba532efd9cb26b2aedbb69a9e3715522d5fe52e9a0dc570ef2fe2e5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2761,
+      "sha256": "ebf463213c9e444757f146dcf0323106ba727b01d1517d8b885f2e27e93a09dd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/HTTP.md",
+      "size_bytes": 5333,
+      "sha256": "d03a36e336734bf0be913f7b9c953c28127df1a35fe7ea7e80054bab41fee48e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 5722,
+      "sha256": "cd91edaf3da6f9cea0ec38ef933972bb028076ad5a9a94be8a1c63ff2794853d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P4/traceability.json",
+      "size_bytes": 3843,
+      "sha256": "d416f9f8a591003ce22a674e24a8a9e39ed48a49fd3ae049247fab27904cca6f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/pyproject.toml",
+      "size_bytes": 613,
+      "sha256": "514841eec4e5fc63803d5f3dad60fc43919bb8fb24cd3c5843534f075757db6e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/README.md",
+      "size_bytes": 3687,
+      "sha256": "174a3231eef31e379030887d036e324f88c145077cabe57820b000890c4cea86"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/README.pt-br.md",
+      "size_bytes": 4028,
+      "sha256": "3e717c72772b3b6dc5ceef758ae51c167b4a130d3f1f64827f48784c9c2dc1ba"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/runner.json",
+      "size_bytes": 172,
+      "sha256": "8962257c08bcf22177050b68f4a8a99052fc9aead4382c2d394cac74511df5e7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/__init__.py",
+      "size_bytes": 82,
+      "sha256": "70f945347d55f4d073420f5615af75031f6aec5147fb02bd2e4a05cbcd5cfd29"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/__main__.py",
+      "size_bytes": 780,
+      "sha256": "f0669b0ca602174f53a611fa45be15cd0e5a836ddfffa1deca2b0493c4384577"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/authorization.py",
+      "size_bytes": 707,
+      "sha256": "d1d678b398e81e0a96940984e2912c6a61abb6c76c9c8d56225c463e54f99b12"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/composition.py",
+      "size_bytes": 1637,
+      "sha256": "1368fe21838d32aa318103e56cca0e12a2a0f294a92a60f581ae7f1ec21c180c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/entities.py",
+      "size_bytes": 2736,
+      "sha256": "0ed0824462cccc006caa4ef13cfd659bad44df788fb32e8036b17605c46a9074"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/errors.py",
+      "size_bytes": 462,
+      "sha256": "889888bf913d1a57f58489055f3e0da907b953878d4340165debe4394bfa15c4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/contracts.py",
+      "size_bytes": 1143,
+      "sha256": "1815f0e46b1f7140fa2c66ee532926981d19127fb74eb0e3f9ebca4ac58e3af2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/providers.py",
+      "size_bytes": 293,
+      "sha256": "71c162515c2ff2f18cdab44542974cf5b2675aba858fd0ef0d83d224fe84ca69"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/tools/sqlite_store.py",
+      "size_bytes": 6838,
+      "sha256": "7d8bffa64269ae05a77d6ffc13841fb7134cc0315a9b827fc25f3fbedaf7799a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/demo_auth.py",
+      "size_bytes": 1124,
+      "sha256": "5df6711c64741a86780913e60c597b598df8a9830f8184a2eb955f9565875ae5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/app.css",
+      "size_bytes": 4958,
+      "sha256": "364a2d98b25a85969e73b535168c62bec727da6d1ca9544aa219649c05a81bb2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/app.js",
+      "size_bytes": 8975,
+      "sha256": "f71124447e2da97aeae33f224e45d1a16a46be083d6d21e66a1113020588ec0f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/static/index.html",
+      "size_bytes": 2523,
+      "sha256": "d52bd38714413ea7cf597ed74431cd280683d7cb5caae246a9d13c7d759dbebc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/transport/wsgi.py",
+      "size_bytes": 5934,
+      "sha256": "9240c8d186051ec5c3275a4d970d1692543bc484915511180d4f2602aa88a564"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/usecases/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/src/board_crm/usecases/operations.py",
+      "size_bytes": 5779,
+      "sha256": "1f2ff01f94d83e4dc2c3461fc0829040b7c3bc28a45b3fdc65f837739d1ace5b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/__init__.py",
+      "size_bytes": 53,
+      "sha256": "f3277b4d2416f43e26c2db97a7d94abfbdd54e96563fab766546bf4dfb60da84"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/integration/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3097,
+      "sha256": "f6144fa1e26847a8948ed24bc6a58da20e55cbd11cb9eef933a6f7763231a302"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p3/__init__.py",
+      "size_bytes": 58,
+      "sha256": "66f8a5bb333d43df6f799efaede9dbcdc315f524d20459145b6ada28f7dc47c6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p3/test_crm.py",
+      "size_bytes": 11909,
+      "sha256": "7edfbf527c3c751c2ce04e76ee7a123f2e83e935b681efbd34a43b9a037379ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p4/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/p4/test_http_board.py",
+      "size_bytes": 6074,
+      "sha256": "1d9aa4096aa860ab180470829c254556fdd0a9f71675ac6282907287001c7b54"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/unit/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/board-crm/tests/unit/test_entities.py",
+      "size_bytes": 2116,
+      "sha256": "0abd3fb9c0d79bb69e3c183747b3f1b3150f51b68f604ebaee00a91b26cbbb3d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/counterexample.json",
+      "size_bytes": 2840,
+      "sha256": "524d22b466defb03ab5a2daed07a1b6c3019866dd8ac9eb51be1f79ebf8b1526"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/example.json",
+      "size_bytes": 11731,
+      "sha256": "0bc32ad0ac12a38ce1c89f019c047254e6fc2cc6afcdd2b1a7f859573868ede1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/model.json",
+      "size_bytes": 382,
+      "sha256": "69f383f3b3a57b54c02cefcf83a280e2263d2340a9ee4a3144cb5fe8e72e08e7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.md",
+      "size_bytes": 12423,
+      "sha256": "fdd15402940d3aab9d0c9306273999c53a8546e52048cf444442d494a8867602"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.pt-br.md",
+      "size_bytes": 13172,
+      "sha256": "2163ecca75a68eff9db7ecc5ad43b6e83ff90a8ae81ad65606ee12c293b2682b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/template.json",
+      "size_bytes": 2556,
+      "sha256": "47c6c549e9f25e91cc10bb1c440a7bbcf6789a72ceeee4a08a9f76bea720a522"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/counterexample.json",
+      "size_bytes": 3546,
+      "sha256": "d93326260773cd161aca380d733c1d1f9c2fd864c615b63247d3f406b2b69bf8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/example.json",
+      "size_bytes": 12818,
+      "sha256": "a0eea212e2454493d31ef8f53fec12b796a4bd6bbca6d6316940c129d7d3e7f0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/model.json",
+      "size_bytes": 385,
+      "sha256": "9d7f77dda577b06366bf219ac292f3c3e64734069f1f0a6c5b3b815954c7c631"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.md",
+      "size_bytes": 11430,
+      "sha256": "8a155aec84859087123bbed177a4bc500ba7da6105eb2cde714f2393a0535918"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.pt-br.md",
+      "size_bytes": 12163,
+      "sha256": "f0416d9adccbce5d2d5c27ea6fe0c4e79d2139c4b4443231a7673cae2dc7933f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/template.json",
+      "size_bytes": 2810,
+      "sha256": "9d0356998ffced8d67b1c58e37c6cf3520ecc6136dbc8442aa707f72264c5827"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/counterexample.json",
+      "size_bytes": 2336,
+      "sha256": "759399685a5a7e318d6a6812f8eba3ebba60d1212353018275c13da4bd367ccb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/example.json",
+      "size_bytes": 4604,
+      "sha256": "9f7642f2fe0162aec5c6c4f07600ef95a68fc8dadcd50b4449fdd9ced8b79cad"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/model.json",
+      "size_bytes": 379,
+      "sha256": "e5916c0a87582fa0fed1987013b7c6b49fc2cb06f2b7997fe3e2818259986474"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.md",
+      "size_bytes": 10581,
+      "sha256": "d0750281271e19cbceaeffcd59ee9c7d2730d9aa54309cde3d6b69831f8e6e38"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.pt-br.md",
+      "size_bytes": 11373,
+      "sha256": "ffe70a0925df7388d7ae6b84fdef2de218d45b84d199261d6e8b05ba0d7210f9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/template.json",
+      "size_bytes": 1657,
+      "sha256": "e8e294ed5f0bbfb8d66051f9f6686c9feec8bde51be72c5869b2f014ecc607f7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/counterexample.json",
+      "size_bytes": 2247,
+      "sha256": "ca9f8483096b2cd7c2e0d6066304b354085fef6b3938098d5c09e9adbdbfd048"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/example.json",
+      "size_bytes": 6769,
+      "sha256": "b691bb34999e7d1e8e91626667bc1732b59b386a813a8abf09f45d72d82a9a62"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/model.json",
+      "size_bytes": 381,
+      "sha256": "ccdb7a660729d8a949cd2fd06bef39bc6df209f0dcf522c9a0f70abab5ea48b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.md",
+      "size_bytes": 8840,
+      "sha256": "044941de9f33036c866a7dd2a1240ab10dbef1e51c0d814bb03ed19c16acfd47"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.pt-br.md",
+      "size_bytes": 9372,
+      "sha256": "74c0f6469bd994a21cc30e2644d13ab27c8891bca4594d707a4c624f62168c0d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/template.json",
+      "size_bytes": 1850,
+      "sha256": "3bb0c1883654b6898d24e8fcccdbeb5df26189e2f5441ca1c39039224db9ad40"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/README.md",
+      "size_bytes": 6254,
+      "sha256": "5c53185454ae3659c20256b135a7a4b2e52e8ba805d6575719f2b42bd087d337"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/models/README.pt-br.md",
+      "size_bytes": 6729,
+      "sha256": "703dd6acc6f4b54c5da28d360afa15c16894cd70ba70c6afd39bf8d61fe23984"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.md",
+      "size_bytes": 7611,
+      "sha256": "a4b34d46a1fe9ca151d6a24040551f6f8a67f8a782219b6587509ce4d6248ecc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
+      "size_bytes": 8212,
+      "sha256": "4e168b9402f6b634b0103575c4aa7bbff1d104254cb8d1546495258f0d04f8e9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/derivations.json",
+      "size_bytes": 6053,
+      "sha256": "44a81b7682ae4b136c142c307057a7a7644260ee3eae282e750822b3e1fba5f2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/model-instances.json",
+      "size_bytes": 12125,
+      "sha256": "9708d69479cf9a604a5cec0753eb10f44ccfba5b5ddf9c99daa5dfa6dbd4c1d1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/needs-baseline.json",
+      "size_bytes": 1164,
+      "sha256": "fd253a3ba467f7eae75f65aa353fa9673cb807480d06c9f39294264398ae69c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/index.json",
+      "size_bytes": 20616,
+      "sha256": "4fbf72852ddb97ca012ae8a9d78a3c1ccf9954585d41d3be2dcbc9813568b1cb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/UCS.md",
+      "size_bytes": 16525,
+      "sha256": "8649ccc7a10decf84fb1a7cb4d81c048009d37f3e583a6644c45f2fed910361e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 17588,
+      "sha256": "7b6b6c6285a727ad84f124bde5ce0da0f3d273a35c10838a21492d60f90f1aaa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 3035,
+      "sha256": "84e05e1ed576be2cd1d4cdcf7498131c413637ed53a237788c3966a9a8f75d85"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 3311,
+      "sha256": "d0fdc062c1c848bd08c131a0e94f757c39fb178f53f841c9358d23355a2c64a8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.md",
+      "size_bytes": 3361,
+      "sha256": "badbb4d4ea56c34d28191b6ab36b02bd10fb4040095a0bbff7c19511fedb6f5e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/tool-contracts.pt-br.md",
+      "size_bytes": 3720,
+      "sha256": "84b759588ae05e63a163455a34cec1ecb6a1e149311751c3ef50b4a163ec5c44"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/adpm/traceability.json",
+      "size_bytes": 1812,
+      "sha256": "37e9f5ab9c309c6fc53d21cb6df614bce61f6df9adef3e86f549d239beafafca"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8318,
+      "sha256": "212a158f3eb3035857cb21fcb64844fbdd8a51e74aeba55bcde2802b7d63c954"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 7407,
+      "sha256": "040e7aa2bd6c776fef2dfa19dac2d9d8d374dcb17563b0de2659c5b9275676d5"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 7840,
+      "sha256": "483058e0e5a8fd992efb481eaabcdd608482486212108b50a8c8074479e31e52"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
+      "size_bytes": 4995,
+      "sha256": "c843038921972dcc9acfc00fd4525e2c1d14d19d89aa90486bfe4d4ab3482c9f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.pt-br.md",
+      "size_bytes": 5420,
+      "sha256": "bdc94ea3a8329945d2db75b5d7472d8f2ed6c93de07e55b945f8ca716c2e82c8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2475,
+      "sha256": "3bb578c78a1e5c76e1aadc250d156a044397a108b4a225f2cf22c520d595f7a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2697,
+      "sha256": "480b1376684d7b153c34728e8fd9a0bd2262993013c88209128356cddbffb2a4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/HTTP.md",
+      "size_bytes": 3704,
+      "sha256": "32ab3e24ddd6bdf3562d58376c253b0ed7f4d12d5043380f386b41aee947ec3e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3954,
+      "sha256": "e81101dde01c756c9f9765be41c1ae959b571edb18d98275ceba4b1e00023232"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P4/traceability.json",
+      "size_bytes": 2239,
+      "sha256": "28ffb0e3137cf17e08a6b4ba98052c1633080c9cd4af429f2da285b98cbcca92"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/pyproject.toml",
+      "size_bytes": 1137,
+      "sha256": "ca1d015c90c5a7f8f5d977b92c7afbdfbeb2d0efa1f6c6c20ae14a98dc4ed415"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.md",
+      "size_bytes": 3658,
+      "sha256": "f2a5001053b679f1b461bcbee181df4d005208486bf65a908239adc52f539ed0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.pt-br.md",
+      "size_bytes": 4001,
+      "sha256": "645c931a709848b14ef36201f8d315f840cfb9e942812229801bfd41932f3648"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/runner.json",
+      "size_bytes": 176,
+      "sha256": "f07b09efbe557a7ec5a5b17a15e60aab7ae7db08fc5436a9029abca786322b6d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/scripts/demo_client.py",
+      "size_bytes": 3089,
+      "sha256": "ff2fd45f6d4d132338a5a573cbc09618bc35c0ee4fad75dc9ce008a9efbc5c88"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/__init__.py",
+      "size_bytes": 113,
+      "sha256": "83554349425fcdb6c2e3f2fa2395afdaf3147f47970daf77fb3e4942a3265884"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/__main__.py",
+      "size_bytes": 1763,
+      "sha256": "4df1599a6165ef54b6b91147660c40df1a3a60547e56cfb79f81e561da74f8f3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/authorization.py",
+      "size_bytes": 783,
+      "sha256": "e978fada772d107a6e108be03c9d70fa31a35ed942a727f9f75ff4b4a97caf54"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/composition.py",
+      "size_bytes": 2977,
+      "sha256": "026633718eca27995c8a0da589f1dca00c7e98ce6c5d8aeb4dc541c2d6cacea9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/entities/__init__.py",
+      "size_bytes": 45,
+      "sha256": "bdae1183c736c1c16ac76d526683d5fc55de6fbd566cb66f9feaa4236f9336d4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/entities/item.py",
+      "size_bytes": 2266,
+      "sha256": "d169ac57d3e05eb28b5969f067598c18ceaa3b3c926b849534acc4c97cdbe408"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/errors.py",
+      "size_bytes": 1306,
+      "sha256": "eb891c493ae7c2cd30f0a33a941559e831c85e92f719b5d817128c84eeff7340"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/__init__.py",
+      "size_bytes": 42,
+      "sha256": "163ac4d54fae86e32429784028f36343624dc19e63a75aa4452ab6d7417561ba"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/contracts.py",
+      "size_bytes": 1584,
+      "sha256": "dcb97c798cf5186566b49f122d7b844f902a180becb663eaf4e1beb4d473e5aa"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/record_codec.py",
+      "size_bytes": 1179,
+      "sha256": "61182e7780973e33b4885bd4dcbfc84ea25341abb924ed9e7ed6d0221a27165b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_connections.py",
+      "size_bytes": 1133,
+      "sha256": "ccdd134787bb5b9c4e0c55b10ab74b21867c93bfb91f67644c6cc1c164be7fac"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/tools/sqlite_store.py",
+      "size_bytes": 4413,
+      "sha256": "fbee614cacf07f01bddf69c8c8372b7e7ec7ebf54f0c56120d7fcb0b5afc2db4"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/__init__.py",
+      "size_bytes": 46,
+      "sha256": "fcf13bbcc5c2d6c2ac66e0e7d5124874f0192b02afbd9902ce61c69d0500d046"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/demo_auth.py",
+      "size_bytes": 1167,
+      "sha256": "420bf0920d4523a5c1d4976dd85d01e971cfd1431f7b8f28f3f1b772af3e25bf"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/app.css",
+      "size_bytes": 2287,
+      "sha256": "2141596ab18deba72dd5246bdc1adccb9634bf126da9c82f3dcafeec09cd3bd9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/app.js",
+      "size_bytes": 3844,
+      "sha256": "00737e76fcb3f060caaf30ccef9d0c085d17512f6b2a776228d4811a86a56a43"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/static/index.html",
+      "size_bytes": 2055,
+      "sha256": "3b12f9d6315c435be6905e09f1220049f77616607ce990e5e085e979708dcc5c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/transport/wsgi.py",
+      "size_bytes": 6754,
+      "sha256": "291dc81bf8fdd60d7da30af880a06ca79af7464ac399304136a61a712034bc5f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/__init__.py",
+      "size_bytes": 45,
+      "sha256": "2ba8f224b77c9060c4b3cb33884ccf6780cda7d75c2d506744f1294726a0b67f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/deactivate_item.py",
+      "size_bytes": 1542,
+      "sha256": "fa3dee45c1a63eaba687f37aa0fec5219f7c5892e7aaf1a584091b3419231723"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/get_item.py",
+      "size_bytes": 1154,
+      "sha256": "19154cf023288db7289a86b57cb9c6e3713902cc0c2a5056085bc6ae3a8fc885"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/list_available_items.py",
+      "size_bytes": 957,
+      "sha256": "5e1df0c698669d40b826e2e940970d90792dfd046dbe1e403a3d813a7767f2d1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/src/tiny_catalog/usecases/register_item.py",
+      "size_bytes": 1256,
+      "sha256": "01a49fa9b4ac8871e665438fa92ef1b63724845532af83ef6d395b64c3f70c11"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/__init__.py",
+      "size_bytes": 65,
+      "sha256": "5badf50dbf80bf41320822923db097c371f60901ffc0044571859fa6010a2515"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/conftest.py",
+      "size_bytes": 987,
+      "sha256": "40b95c77353ea45a4cfea70354a87e186b2b5aa1082adf061f4dbc12acdbb361"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/integration/test_sqlite_store.py",
+      "size_bytes": 3704,
+      "sha256": "9c5659447c9bdf165a5b1e1eaffa3cd60ae7910228bdd57648a36059642f6044"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/conftest.py",
+      "size_bytes": 685,
+      "sha256": "7bcbfd5e64e0e67b3bf44926432b93520951aaa391c033c087fc264984ca5ae6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_authorization.py",
+      "size_bytes": 4019,
+      "sha256": "a52ee62292c1de9d41e0a1afc0620b1e5510da97e71b523b82212d2dcf6a8b5f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_retention_flow.py",
+      "size_bytes": 817,
+      "sha256": "83ca6e9b8a081251b905f9d7fcf564669f6f05e730bfe03d7ba8a022a2666bf8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_001_register.py",
+      "size_bytes": 2718,
+      "sha256": "7dee504ba53c42eace145c581865cd6cb8e9f0202da7b342122e22529f2714cc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_002_get.py",
+      "size_bytes": 1800,
+      "sha256": "aab1f289abe9bfcf17a99fc705f2fcefb92cf6a24a2c98091bddcd149e568104"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_003_list.py",
+      "size_bytes": 1256,
+      "sha256": "1716ecb75ee6e57ed555ee9d0964fe2f7afe013f0ef106fad1eb266bd2005953"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p3/test_uc_cat_004_deactivate.py",
+      "size_bytes": 2463,
+      "sha256": "302a3ed15c186935dcc32a657c2c40327ebbdfb992db8ea1bc4205c2ea9314a0"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_authorization.py",
+      "size_bytes": 1466,
+      "sha256": "e96f180d89ca26823a8a10e23dcd3a2e4bd50a48f3ee230c8ffb841173a7118c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_behavior.py",
+      "size_bytes": 2439,
+      "sha256": "b12fcde7a5170c6abe24130f34e60017e158cdceca7f9eae5bce9de460361331"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/p4/test_http_demo_auth.py",
+      "size_bytes": 2887,
+      "sha256": "a93910e16f3ea524f13d21fd5ee87ebec1db5f9af1e2b5e5bd9fffb37d01ac35"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/support/__init__.py",
+      "size_bytes": 71,
+      "sha256": "1c892a2de50594de2161bba958afefbd97c1da7c225130a3e9c4e0c72968dea7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/support/memory_store.py",
+      "size_bytes": 1541,
+      "sha256": "106eb5d7e24f85f42a96f62a31f2f14c942f25dcf618ccd53e0e8d075469c552"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/unit/test_entities.py",
+      "size_bytes": 1563,
+      "sha256": "b9d97619b27c1073c0729f458d7f968d78ceb4453edfc7f9b4821b79f46403ae"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/tests/unit/test_record_codec.py",
+      "size_bytes": 954,
+      "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/derivations.json",
+      "size_bytes": 5847,
+      "sha256": "7a13f26720cda2f6136ce81a9ecce5c65ea1ff9f9a38b7627e47ccc6ec3a7547"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/model-instances.json",
+      "size_bytes": 12924,
+      "sha256": "b87a670db3676566f18a0ed3156be47f7ac1b65b4bf9592df0c0b52d785b9ece"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/needs-baseline.json",
+      "size_bytes": 693,
+      "sha256": "3a42927ad0d54b4e20e94cf0c0368aa840e8973ac829da007eb6336f475ca091"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/ucs.json",
+      "size_bytes": 22216,
+      "sha256": "19b2971eef515beec40e1efb5a5df18ec7764cf58c170ac49a0ae126699ae9be"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/UCS.md",
+      "size_bytes": 4370,
+      "sha256": "e387a5465abf1de202b1a6f802b5060f2fa0cf1bc875106865b9b0f55168807d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P1/UCS.pt-br.md",
+      "size_bytes": 4871,
+      "sha256": "ea4939435020c5248e810ca0efe4423a734efeb1ac74e17d8c9b67ae4eb9d088"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/MODEL.md",
+      "size_bytes": 2414,
+      "sha256": "1c0590b468e7d213d0b34e466bc2b549991f6e168f27ad9aa5300b821796fa92"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/MODEL.pt-br.md",
+      "size_bytes": 2671,
+      "sha256": "0fb1da3e1be3d025a8f9c82d2d3e982a70a39f1424f0f4d875748be8a2043d9a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/adpm/traceability.json",
+      "size_bytes": 2346,
+      "sha256": "9afe9582217aabb542aab315a027770395bac94e7e275fdcad8feb68f0cbb5db"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/behavioral-tests.json",
+      "size_bytes": 8620,
+      "sha256": "8d92af5066caeac57b4ca4c051b862ade5faf343684e57051c15d8ac5ec7259a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/SCENARIOS.md",
+      "size_bytes": 4303,
+      "sha256": "c4d2a3df0893f3f6330250c0701ae79273241759300ed1eef090aed835273cc2"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/SCENARIOS.pt-br.md",
+      "size_bytes": 4657,
+      "sha256": "dd5db258ab9cc9d2cd76b49a58bb9cafd5ea0360481f73e4e9d398ee5dca1717"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.md",
+      "size_bytes": 2589,
+      "sha256": "cba1a9fbaafa8087eed9b4973d312581360e1b6df86f29b564daa4b3b1656be1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.pt-br.md",
+      "size_bytes": 2832,
+      "sha256": "f170d0dae9b5e4e922c43b9cd294fceeb720b6ff6ed6dbd59dfb12938423b8ac"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/HTTP.md",
+      "size_bytes": 2808,
+      "sha256": "ae37c7cad57fa96d606cd73bd230b5fc844856ae5a65ef77ae6d99ade15625fc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/HTTP.pt-br.md",
+      "size_bytes": 3047,
+      "sha256": "e5f4548bb0c6e0e32222c234cbab94742a7d3dd489b37c8eeee1586059b3b82a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P4/traceability.json",
+      "size_bytes": 3186,
+      "sha256": "6b57401366bce6093c89e06c4a1e45a330250ba881086e2a090af026383fdb43"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/pyproject.toml",
+      "size_bytes": 696,
+      "sha256": "05c9899c6bab202a0444aaf7be83e13d97d54fc8bc5db6259ab8a0ddf4d0c32d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/README.md",
+      "size_bytes": 3515,
+      "sha256": "4f8876826248cec2593514ffbccf854302a1ba5ad5fa5bb0158e9e8ef20b58c7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/README.pt-br.md",
+      "size_bytes": 3793,
+      "sha256": "4a36adccc64e0ea7c6980ba7ec7041bc3dbcbad2344164f01e9c12e30ef8de68"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/runner.json",
+      "size_bytes": 175,
+      "sha256": "7efa6ecf72ddc100d8eeb0ccc9d829360d531d5813b3d2719b5e9095fa8eaea1"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/__init__.py",
+      "size_bytes": 77,
+      "sha256": "21342533a8da0355a39b6783f15f87f49e9a9de1373d89c15d4d6bf14b9b58fe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/__main__.py",
+      "size_bytes": 709,
+      "sha256": "383718c9360b073e1853a6967945419ead3e9eafa8523a16348811ee1823a441"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/authorization.py",
+      "size_bytes": 671,
+      "sha256": "f30a71ec65f10ada27a6fa868fea7a2187deafd482af4a067a4c1c303a113b98"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/composition.py",
+      "size_bytes": 1004,
+      "sha256": "e6d49cea5abaefae1a31568f46766f8f9a27d6bac45640fce874e7d66186cdbe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/entities.py",
+      "size_bytes": 957,
+      "sha256": "4e7d870a8450bb011310564281a6beebfc1412923ada798b57d57c493d37ed2a"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/errors.py",
+      "size_bytes": 800,
+      "sha256": "40f88af7a6bfebf1de52bba51290ec87f6c4e391192fd49b5f2ac7edc5ed23b9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/__init__.py",
+      "size_bytes": 62,
+      "sha256": "8149a38ce0d6f7400fe1fd5d7e73154bbdcfaf56b1f5211a45c37ece2dec4aa3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/contracts.py",
+      "size_bytes": 2598,
+      "sha256": "2d630c1ce114c2c84faa5c543f4349046d95959f65337f6339a511eb937951bb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/providers.py",
+      "size_bytes": 273,
+      "sha256": "f2d69f7feffa590a1e5ad03d9c423cc96de5b7dc9f1ad238882aacd6d2b76561"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/tools/sqlite_store.py",
+      "size_bytes": 6525,
+      "sha256": "fbfb5e796a373ab7934ef2140b17170e8ca76af0196c7e107b149b90698c5c94"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/__init__.py",
+      "size_bytes": 59,
+      "sha256": "a9394f3e4814f186b2bf9687f118a6263bd27dd01643dc1dce138d3ca8ab2489"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/demo_auth.py",
+      "size_bytes": 1132,
+      "sha256": "b7c38eead27e6d43ed31ba6fe07b5e2b5e660aa60bf3762003ed60cb693388b3"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/app.css",
+      "size_bytes": 1908,
+      "sha256": "0cc5b8cca955a684fe8f255dbf3a54ec078057bb84ffe62846977936425a12fe"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/app.js",
+      "size_bytes": 4025,
+      "sha256": "75bbb3cbdfcdec05eaccc832a72d844532f3a9b47b489fa8ac3fbedcba763b32"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/static/index.html",
+      "size_bytes": 1777,
+      "sha256": "51bb11fece623f7493131cec7cb7b3771297ce2e07c70f11dd3bfc5d0596489c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/transport/wsgi.py",
+      "size_bytes": 5887,
+      "sha256": "9c6d12a99c4a806b51be56e5e3d2109bc344a5d61d74152e390ac079ceea0cb6"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/usecases/__init__.py",
+      "size_bytes": 66,
+      "sha256": "66da77478454352ad81332469d28ce218cdcef3a443d13c9066dae19588658f8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/src/work_board/usecases/operations.py",
+      "size_bytes": 4488,
+      "sha256": "394e37a9f6bf3f9c9e6529d61416de3e05098a6d832241fd61d5a66e0350d96f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/integration/test_sqlite_store.py",
+      "size_bytes": 4778,
+      "sha256": "b47fdcc79e122698aeaaf96c17889f798fac2ad2385c5238ccc44ee771fc792d"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/p3/test_cases.py",
+      "size_bytes": 10378,
+      "sha256": "9899b325877f2aaf46f0b63bc32c350d88bd6695160635e2a5ab77f56ca0ff72"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/work-board/tests/p4/test_http.py",
+      "size_bytes": 7217,
+      "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "size_bytes": 63529,
+      "sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "size_bytes": 69371,
+      "sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/LICENSE.txt",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/actors-and-boundaries.md",
+      "size_bytes": 11662,
+      "sha256": "818ecc1dcd3515dba927102c0afef9d429e227f24611ff7e1001fbde8272712f"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/conformance-and-evidence.md",
+      "size_bytes": 9410,
+      "sha256": "7bd14587a369f6480be07f205961eea2d936226b230492aac6779d44a0fe63ed"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/engines-and-notation.md",
+      "size_bytes": 12828,
+      "sha256": "bf305e546e9e7e48c7c46e6c566954ed27f9081355bffe9386b7d93e7aa30e85"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/layers.md",
+      "size_bytes": 16705,
+      "sha256": "04973862b267e4667b3d987a89e7b380b0bd908504545cf2416a917958da6df9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/references/source-map.md",
+      "size_bytes": 7374,
+      "sha256": "f65c612f21758456525a83e6ac9832f861b6d1e951624d22f11c0b21fd022d08"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/skill/SKILL.md",
+      "size_bytes": 13657,
+      "sha256": "a0c20f8f7f9455cf522a6b34381f00c179a92d4b83fa66751bb9450fc64b0db5"
+    }
+  ],
+  "input_scope": {
+    "fixed_at": "2026-10-25T22:20:43-03:00",
+    "included": "Stable source documents/data/skill/code/tests, release verification scripts, and listed shared root/CI files",
+    "excluded": [
+      "CONTENT-SHA256.json",
+      "versioning/Stable-v1.0.0/examples/verification/**",
+      "untracked caches, temporary databases and external runtime"
+    ],
+    "reason": "Reports/logs are outputs. Excluding them and the inventory avoids hash cycles; source-map hashes were finalized first."
+  },
+  "limits": [
+    "Application tests and launcher HTTP smoke ran on Windows/Python 3.12.14. Linux is configured in CI but was not run locally.",
+    "No browser JavaScript execution or visual accessibility assessment.",
+    "No OAL transformer constructed or executed; manual history remains separate.",
+    "Finite tests and explicit reference checks do not prove universal correctness or scenario sufficiency.",
+    "Smoke process shutdown was forced termination after response, not a graceful-shutdown guarantee.",
+    "No remote push, tag, release or publication performed."
+  ],
+  "preparation": {
+    "source_checkout": "E:/Alkimim/Projetos/CodeVault/OAL",
+    "source_checkout_state": "clean Git status at baseline; some local historical files have CRLF/mixed bytes different from Git blobs",
+    "strategy": "Prepare in a clean managed worktree so inventory hashes actual Git-distributed bytes without changing the original Alpha working files",
+    "branch": "codex/oal-stable-v1.0.0",
+    "alpha_preservation": "Both original-checkout and preparation-checkout snapshots are retained externally; final preservation check is recorded outside the package."
+  },
+  "post_test_changes": [
+    "Board CRM package docstring now names Stable-v1.0.0; no executable statement changed.",
+    "Directed-test Git fixture disables autocrlf and was rerun; all three checks passed.",
+    "Manifest evidence pointers and current reports finalized after observed tests; structural check rerun against these declarations."
+  ]
+}

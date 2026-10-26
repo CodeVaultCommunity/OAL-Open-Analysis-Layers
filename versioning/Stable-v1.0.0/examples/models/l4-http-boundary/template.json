@@ -1,0 +1,79 @@
+{
+  "model": "OAL-EX-M4-HTTP-BOUNDARY",
+  "model_version": "0.1.0",
+  "layer": "L4",
+  "oal_edition": "Stable-v1.0.0",
+  "project": "",
+  "source_l3": {
+    "model": "OAL-EX-M3-PYTHON-CORE",
+    "version": "0.1.0",
+    "instance": ""
+  },
+  "channel": {
+    "kind": "HTTP + JSON",
+    "configuration": "",
+    "pages": [],
+    "authentication": "as required by each selected case contract",
+    "identity_resolution": "declare how the caller becomes a resolved actor context; anonymous only if explicitly admitted"
+  },
+  "endpoints": [
+    {
+      "id": "",
+      "method": "",
+      "path": "",
+      "case_id": "",
+      "inputs": [],
+      "identity": "explicitly resolved actor context",
+      "success": "",
+      "failures": [
+        {
+          "condition": "",
+          "status": 0,
+          "error": ""
+        }
+      ],
+      "representation": ""
+    }
+  ],
+  "interface_elements": [
+    {
+      "id": "",
+      "description": "",
+      "invokes": [],
+      "interface_only": false
+    }
+  ],
+  "obligations": [
+    {
+      "id": "",
+      "nature": "",
+      "statement": "",
+      "origin": "external | ucs | l4-decision",
+      "origin_reference": "",
+      "scope": "",
+      "verifiable_conditions": [],
+      "check_refs": []
+    }
+  ],
+  "channel_checks": [
+    {
+      "id": "",
+      "kind": "executable | review",
+      "obligation_ids": [],
+      "case_ids": [],
+      "criteria": [],
+      "scenario": "",
+      "boundary": "",
+      "status": "planned | implemented | executed | not_applicable",
+      "reference": ""
+    }
+  ],
+  "exposure_scope": [],
+  "interface_only": [],
+  "persistence_access": "domain storage through cases; separately declare any strictly technical channel storage",
+  "execution": {
+    "status": "not_recorded | recorded | not_applicable",
+    "reference": null
+  },
+  "technical_storage": []
+}

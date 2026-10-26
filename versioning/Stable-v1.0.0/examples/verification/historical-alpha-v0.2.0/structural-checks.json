@@ -1,0 +1,103 @@
+{
+  "historical_files_unchanged": 155,
+  "historical_navigation_only_changes": [
+    "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/OAL-P1/UCS.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md"
+  ],
+  "historical_files_total": 161,
+  "version_fields_preserved": 129,
+  "model_instances": 12,
+  "source_symbol_references": 91,
+  "projects": {
+    "tiny-catalog": {
+      "cases": 4,
+      "behavioral_tests": 4,
+      "case_criteria": 22,
+      "channel_identity_links": 10,
+      "shared_criteria": 1
+    },
+    "board-crm": {
+      "cases": 6,
+      "behavioral_tests": 6,
+      "case_criteria": 25,
+      "channel_identity_links": 18
+    },
+    "work-board": {
+      "cases": 6,
+      "behavioral_tests": 6,
+      "case_criteria": 18,
+      "channel_identity_links": 16
+    }
+  },
+  "local_markdown_file_references": 1226,
+  "images": {
+    "oal-banner-en.png": {
+      "width": 1766,
+      "height": 776,
+      "mode": "RGBA"
+    },
+    "oal-banner-pt-br.png": {
+      "width": 1766,
+      "height": 776,
+      "mode": "RGBA"
+    },
+    "oal-layers-en.png": {
+      "width": 1284,
+      "height": 1020,
+      "mode": "RGBA"
+    },
+    "oal-layers-pt-br.png": {
+      "width": 1284,
+      "height": 1020,
+      "mode": "RGBA"
+    },
+    "oal-map-en.png": {
+      "width": 1427,
+      "height": 1058,
+      "mode": "RGBA"
+    },
+    "oal-map-pt-br.png": {
+      "width": 1427,
+      "height": 1058,
+      "mode": "RGBA"
+    }
+  },
+  "cache_files_remaining": 0,
+  "errors": [],
+  "checked_at": "2026-10-24T23:36:28-03:00",
+  "comparison_baseline": {
+    "archive": "OAL_FINAL(1).zip",
+    "sha256": "8ffc1381049cc899b6ad0f5cf404e1906835407691faa3e4d69fe776702162f6",
+    "scope": "The user-supplied snapshot for this navigation and hash revision."
+  },
+  "scope": "Final package structure, local links, section anchors, and mathematical notation. Historical changes relative to the supplied snapshot are limited to link destinations. Application execution results remain in execution.json with their original timestamps; application suites were not rerun.",
+  "local_markdown_fragment_references": 149,
+  "markdown_files_checked": 110,
+  "version_tables": {
+    "columns": 6,
+    "editions": 2,
+    "section_links_per_language": 16,
+    "same_destinations_in_both_languages": true
+  },
+  "mathematical_notation": {
+    "engine": "MathJax 3.2.2 (local verification)",
+    "rendered_occurrences": 535,
+    "unique_rendered_forms": 104,
+    "errors": [],
+    "expressions_preserved_from_input": true
+  },
+  "skill": {
+    "skill_name": "oal-alpha-v0-2-0-alkimim",
+    "files": 7,
+    "local_references": 61,
+    "anchors": 47,
+    "numbered_requirements": 46,
+    "source_hashes_match": true,
+    "license_preserved": true,
+    "errors": []
+  }
+}

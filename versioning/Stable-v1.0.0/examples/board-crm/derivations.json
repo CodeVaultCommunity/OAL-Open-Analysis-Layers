@@ -1,0 +1,178 @@
+{
+  "record_kind": "didactic derivation record; not a transformer construction record and not an execution log",
+  "oal_edition": "Stable-v1.0.0",
+  "model_status": "specified",
+  "model_reference": null,
+  "engine_status": "not_demonstrated",
+  "provenance": "Adapted from the Alpha-v0.1.0-Alkimim example derivations. The four reusable models under models/ were specified for Alpha-v0.2.0-Alkimim and applied to the projects manually; the instances are declared in model-instances.json. No transformer was constructed or executed for this adaptation.",
+  "status": "illustrative baseline",
+  "accountable_people": [
+    "Douglas de Oliveira Alkimim",
+    "Bruno Chevitarese"
+  ],
+  "transitions": [
+    {
+      "from": "needs",
+      "to": "ucs",
+      "layer": "L1",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Organize the illustrative needs into stable cases, actors, outcomes, and acceptance criteria; keep channel choices out of the specification.",
+        "pt-BR": "Organizar as necessidades didáticas em casos estáveis, atores, resultados e critérios de aceite; manter escolhas de canal fora da especificação."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ],
+      "source_artifact": "needs-baseline.json",
+      "source_model": {
+        "status": "external needs record, reconstructed; reusable needs model unspecified",
+        "provenance_limit": "Needs baseline reconstructed from the existing UCS; not independent historical stakeholder evidence."
+      }
+    },
+    {
+      "from": "ucs",
+      "to": "l2",
+      "layer": "L2",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Single L1-to-L2 derivation producing both ADMV components: ADPM models opportunities, notes, and stage events as entities, keeps stage policy in six cases, injects Store, Clock, and IdentifierProvider, and denies forbidden actors before effects; ADVS plans a scenario for every UCS criterion, with active and closed stages, stale versions, atomic effects, and missing or forbidden actors.",
+        "pt-BR": "Derivação única L1→L2 produzindo ambos os componentes da ADMV: o ADPM modela oportunidades, notas e eventos de etapa como entidades, mantém as regras de etapa nos seis casos, injeta Store, Clock e IdentifierProvider e recusa atores sem permissão antes dos efeitos; a ADVS planeja um cenário por critério da UCS, com etapas ativas e encerradas, versões obsoletas, efeitos atômicos e atores ausentes ou sem permissão."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ],
+      "destination_artifacts": [
+        "OAL-P2/adpm/MODEL.md",
+        "OAL-P2/advs/SCENARIOS.md",
+        "OAL-P2/advs/behavioral-tests.json"
+      ]
+    },
+    {
+      "from": "l2",
+      "to": "l3",
+      "layer": "L3",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Use Python cases, injected SQLite storage, and executable criterion-linked checks.",
+        "pt-BR": "Usar casos em Python, armazenamento SQLite injetado e verificações executáveis ligadas aos critérios."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ]
+    },
+    {
+      "from": "l3",
+      "to": "l4",
+      "layer": "L4",
+      "source_version": "0.2.0",
+      "destination_version": "0.2.0",
+      "scope": "complete illustrative example",
+      "responsible_role": "derivation owner",
+      "responsible_people": [
+        "Douglas de Oliveira Alkimim",
+        "Bruno Chevitarese"
+      ],
+      "added_decisions": {
+        "en": "Expose callable cases through a loopback browser and JSON routes; select HTTP Basic credentials, representations, and status mapping as channel decisions of this boundary. The current-edition review explicitly requires a UTF-8 JSON object and complete declared body length; unsupported media receives 415 and invalid framing receives 400. CH-CRM-JSON and CH-CRM-FRAMING trace these decisions to their channel checks.",
+        "pt-BR": "Expor os casos invocáveis por navegador local e rotas JSON; escolher credenciais HTTP Basic, representações e códigos de resposta como decisões de canal desta fronteira. A revisão da edição atual exige expressamente objeto JSON UTF-8 e recebimento completo do comprimento declarado; mídia não admitida recebe 415 e enquadramento inválido recebe 400. CH-CRM-JSON e CH-CRM-FRAMING vinculam essas decisões às verificações do canal."
+      },
+      "case_ids": [
+        "UC-CRM-001",
+        "UC-CRM-002",
+        "UC-CRM-003",
+        "UC-CRM-004",
+        "UC-CRM-005",
+        "UC-CRM-006"
+      ],
+      "source_artifact": "OAL-P3/IMPLEMENTATION.md",
+      "additional_sources": [
+        {
+          "layer": "ucs",
+          "version": "0.2.0",
+          "decisions_informed": "exposed outcomes and actor permissions"
+        }
+      ],
+      "destination_artifact": "OAL-P4/HTTP.md",
+      "interface_mapping": "OAL-P4/traceability.json"
+    }
+  ],
+  "model_references": {
+    "L1": "../models/l1-case-contracts/MODEL.md",
+    "L2": "../models/l2-program-scenarios/MODEL.md",
+    "L3": "../models/l3-python-core/MODEL.md",
+    "L4": "../models/l4-http-boundary/MODEL.md"
+  },
+  "revision_notes": [
+    {
+      "change": "Q-01 split into Q-01 and Q-07",
+      "reason": "Q-01 now states the case-authorization requirement in the core; Q-07 records the local execution and authentication choice as an L4 decision.",
+      "affected": [
+        "OAL-P1/ucs.json",
+        "OAL-P4/HTTP.md",
+        "OAL-P2/advs/SCENARIOS.md"
+      ],
+      "original_text": {
+        "en": "The demonstration binds to 127.0.0.1 and authenticates each API request. Every case denies unpermitted actors before effects.",
+        "pt-BR": "A demonstração escuta em 127.0.0.1 e autentica cada requisição à API. Cada caso recusa atores sem permissão antes dos efeitos."
+      }
+    },
+    {
+      "change": "Q-06 split into Q-06 and Q-08",
+      "reason": "Q-06 states the accessibility requirement; Q-08 records the concrete stage-selector control as an L4 decision.",
+      "affected": [
+        "OAL-P1/ucs.json",
+        "OAL-P4/HTTP.md",
+        "OAL-P2/advs/SCENARIOS.md"
+      ],
+      "original_text": {
+        "en": "The UI must expose a non-drag alternative for moving a card through an explicit stage control.",
+        "pt-BR": "A interface deve oferecer alternativa ao arrastar para mover um cartão por controle explícito de etapa."
+      }
+    }
+  ],
+  "stable_revision": {
+    "kind": "compatibility review of manually derived artifacts",
+    "prepared_by": "Codex",
+    "historical_edition": "Alpha-v0.2.0-Alkimim",
+    "historical_record": "../../../Alpha-v0.2.0-Alkimim/examples/board-crm/derivations.json",
+    "assessment": "../../COMPATIBILITY.md",
+    "accountability": "responsible_people names belong to the historical derivations; this preparation asserts no new human approval",
+    "transformer_status": "not_demonstrated"
+  }
+}

@@ -1,6 +1,6 @@
 <p align="center"><img src="assets/oal-banner-en.png" alt="OAL — Open Analysis Layers" width="100%"></p>
 
-<p align="center"><strong>OAL Alpha-v0.2.0-Alkimim</strong><br>English · <a href="README.pt-br.md">Português brasileiro</a></p>
+<p align="center"><strong>OAL Stable-v1.0.0</strong><br>English · <a href="README.pt-br.md">Português brasileiro</a></p>
 
 # OAL — Open Analysis Layers
 
@@ -39,11 +39,11 @@ $$
 a \in A(M_i) \iff a \models M_i.
 $$
 
-Here $\in$ means “belongs to” and $\iff$ means “if and only if”. The [notation guide](versioning/Alpha-v0.2.0-Alkimim/README.md#mathematical-notation) defines the symbols, with edition, versions, scope, and evidence made explicit.
+Here $\in$ means “belongs to” and $\iff$ means “if and only if”. The [notation guide](versioning/Stable-v1.0.0/README.md#mathematical-notation) defines the symbols, with edition, versions, scope, and evidence made explicit.
 
-**ADPM and ADVS are components of L2, not separate layers.** They may be prepared in parallel from L1, and there is a single L1-to-L2 derivation. Within a declared scope, each use case has one corresponding ADPM case, one ADVS behavioral test, and one ADI case. Supporting subtests are not behavioral tests because they do not link directly to a UCS case. An ADIB interface element can invoke several cases, and a case can be exposed by several elements. These links preserve case identity without forcing the same file or class structure in every project. See the [cross-layer rules](versioning/Alpha-v0.2.0-Alkimim/README.md#oal-layers), [L2 rules](versioning/Alpha-v0.2.0-Alkimim/README.md#admv), [ADPM rules](versioning/Alpha-v0.2.0-Alkimim/README.md#adpm), and [ADVS rules](versioning/Alpha-v0.2.0-Alkimim/README.md#advs).
+**ADPM and ADVS are components of L2, not separate layers.** They may be prepared in parallel from L1, and there is a single L1-to-L2 derivation. Within a declared scope, each use case has one corresponding ADPM case, one ADVS behavioral test, and one ADI case. Supporting subtests are not behavioral tests because they do not link directly to a UCS case. An ADIB interface element can invoke several cases, and a case can be exposed by several elements. These links preserve case identity without forcing the same file or class structure in every project. See the [cross-layer rules](versioning/Stable-v1.0.0/README.md#oal-layers), [L2 rules](versioning/Stable-v1.0.0/README.md#admv), [ADPM rules](versioning/Stable-v1.0.0/README.md#adpm), and [ADVS rules](versioning/Stable-v1.0.0/README.md#advs).
 
-The ADPM separation among cases, tools, entities, and optional domains must remain identifiable in ADI and across ADIB. ADIB derives its interaction boundary from ADI's callable cases and may also consult UCS. ADIB is not a copy of ADI. The [ADI rules](versioning/Alpha-v0.2.0-Alkimim/README.md#adi) and [ADIB rules](versioning/Alpha-v0.2.0-Alkimim/README.md#adib) define these boundaries.
+The ADPM separation among cases, tools, entities, and optional domains must remain identifiable in ADI and across ADIB. ADIB derives its interaction boundary from ADI's callable cases and may also consult UCS. ADIB is not a copy of ADI. The [ADI rules](versioning/Stable-v1.0.0/README.md#adi) and [ADIB rules](versioning/Stable-v1.0.0/README.md#adib) define these boundaries.
 
 ## Case mapping and cardinality
 
@@ -93,32 +93,36 @@ The transformer $T$ is specialized for the selected pair of models. Construction
 | **Engine L2-L3** | Complete ADMV (ADPM **and** ADVS) → ADI (L3); UCS (L1) may be consulted as an additional versioned source. |
 | **Engine L3-L4** | ADI → ADIB (L4); UCS (L1) may be consulted as an additional versioned source. |
 
-A concrete derivation records source and destination versions, scope, added decisions, and an accountable person — separately from any claim that a transformer was constructed or executed. A conformance claim names its object: a reusable model evaluated against a layer metamodel, an artifact evaluated against its selected model, or a transformer construction, execution, or composition evaluated against the applicable engine requirements. Each claim states the edition, selected models and versions, scope, preserved links, and supporting evidence. Manual derivation records remain distinct from transformer claims. See the [engine rule](versioning/Alpha-v0.2.0-Alkimim/README.md#oal-layers) and [versioning guide](versioning/Alpha-v0.2.0-Alkimim/README.md#versioning).
+A concrete derivation records source and destination versions, scope, added decisions, and an accountable person — separately from any claim that a transformer was constructed or executed. A conformance claim names its object: a reusable model evaluated against a layer metamodel, an artifact evaluated against its selected model, or a transformer construction, execution, or composition evaluated against the applicable engine requirements. Each claim states the edition, selected models and versions, scope, preserved links, and supporting evidence. Manual derivation records remain distinct from transformer claims. See the [engine rule](versioning/Stable-v1.0.0/README.md#oal-layers) and [versioning guide](versioning/Stable-v1.0.0/README.md#versioning).
 
 ## Translations and combined implementations
 
 Models satisfying the same layer share its defining responsibilities. Artifacts of two selected models may be translated through an explicit mapping for a declared domain, even when their languages or formats differ. Sharing the layer label alone does not presume a universal translator. Such a translation records which shared characteristics survive and which details are lost or changed. A conversion between representations of one model is a different operation: it preserves the model content under a declared equivalence, not byte or editorial identity. The same applies to implementations of the same named engine.
 
-One specialization may cover neighboring layers without constructing the transformer between them. A combined model or package that merely gathers artifacts demonstrates coexistence, not transformation. If the specialization needs to perform the transition internally, it may construct a transformer according to the engine metamodel and record evidence for its source, destination, and transition. This is optional even when both layers are informational, as with L1 and L2. A claim of L2 coverage includes **both** ADPM and ADVS. A composition of transformers, such as $T_{13}(a) = T_{23}(T_{12}(a))$, is a separate claim: it requires a declared domain $D_{13} \subseteq \{a \in D_{12} \mid T_{12}(a) \in D_{23}\}$, a compatible intermediate model and version, compatibility between the equivalence used by $T_{12}$ and $T_{23}$'s input expectations (or a canonical form), failure handling, and preserved traces. See the [cross-layer rules](versioning/Alpha-v0.2.0-Alkimim/README.md#oal-layers).
+One specialization may cover neighboring layers without constructing the transformer between them. A combined model or package that merely gathers artifacts demonstrates coexistence, not transformation. If the specialization needs to perform the transition internally, it may construct a transformer according to the engine metamodel and record evidence for its source, destination, and transition. This is optional even when both layers are informational, as with L1 and L2. A claim of L2 coverage includes **both** ADPM and ADVS. A composition of transformers, such as $T_{13}(a) = T_{23}(T_{12}(a))$, is a separate claim: it requires a declared domain $D_{13} \subseteq \{a \in D_{12} \mid T_{12}(a) \in D_{23}\}$, a compatible intermediate model and version, compatibility between the equivalence used by $T_{12}$ and $T_{23}$'s input expectations (or a canonical form), failure handling, and preserved traces. See the [cross-layer rules](versioning/Stable-v1.0.0/README.md#oal-layers).
 
 ## Versions
 
 | Edition | Status | Release Notes | Reference rules | Verification Guide | Conformance Guide |
 | --- | --- | --- | --- | --- | --- |
-| Alpha-v0.2.0-Alkimim | Current alpha version | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#release-notes) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#notas-da-versao) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#reference-rules) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#verification) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#verification) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#conformance) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#conformance) |
+| Stable-v1.0.0 | Current stable version | [English](versioning/Stable-v1.0.0/README.md#release-notes) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#notas-da-versao) | [English](versioning/Stable-v1.0.0/README.md#reference-rules) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#reference-rules) | [English](versioning/Stable-v1.0.0/README.md#verification) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#verification) | [English](versioning/Stable-v1.0.0/README.md#conformance) · [Português](versioning/Stable-v1.0.0/README.pt-br.md#conformance) |
+| Alpha-v0.2.0-Alkimim | Historical alpha version | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#release-notes) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#notas-da-versao) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#reference-rules) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#verification) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#verification) | [English](versioning/Alpha-v0.2.0-Alkimim/README.md#conformance) · [Português](versioning/Alpha-v0.2.0-Alkimim/README.pt-br.md#conformance) |
 | Alpha-v0.1.0-Alkimim | First alpha version | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#release-notes) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#notas-da-versao) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#reference-rules) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#reference-rules) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#verification) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#verification) | [English](versioning/Alpha-v0.1.0-Alkimim/README.md#conformance) · [Português](versioning/Alpha-v0.1.0-Alkimim/README.pt-br.md#conformance) |
 
 English is the source text; Portuguese is its translation. The runnable examples of this edition are under `versioning/<edition>/examples/`.
 
 ## Informational skill
 
-The [informational Agent Skill](versioning/Alpha-v0.2.0-Alkimim/skill/SKILL.md) describes this edition's layers, models, artifacts, engines, actors, boundaries, mathematical notation, and evidence limits. Its self-contained folder includes `SKILL.md`, the license, and supporting references. It contains descriptive knowledge without an executable workflow; the edition's numbered requirements remain the authority for conformance.
+The [informational Agent Skill](versioning/Stable-v1.0.0/skill/SKILL.md) describes this edition's layers, models, artifacts, engines, actors, boundaries, mathematical notation, and evidence limits. Its self-contained folder includes `SKILL.md`, the license, and supporting references. It contains descriptive knowledge without an executable workflow; the edition's numbered requirements remain the authority for conformance.
 
 The root [content inventory](CONTENT-SHA256.json) records the path, byte size, and SHA-256 digest of every delivered file, including the skill. Only the inventory itself is excluded.
 
+
+Install the skill by copying the complete versioning/Stable-v1.0.0/skill/ directory into the skills directory supported by your environment, named oal-stable-v1-0-0. Preserve SKILL.md, LICENSE.txt, and references/; there is no universal installation path.
+
 ## Examples
 
-The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Alpha-v0.2.0-Alkimim/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Alpha-v0.2.0-Alkimim/examples/README.md). List the available examples with `python run_examples.py --list` and run one with `python run_examples.py EDITION/NAME`; a bare name runs this edition.
+The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Stable-v1.0.0/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Stable-v1.0.0/examples/README.md). List the available examples with `python run_examples.py --list` and run one with `python run_examples.py EDITION/NAME`; a bare name runs this edition.
 
 ## Frequently asked questions
 
@@ -142,7 +146,7 @@ No. Needs are the source material of a derivation. Engine Needs-L1 consumes arti
 
 <details><summary>Are the example models part of OAL?</summary>
 
-No. The four models under `versioning/Alpha-v0.2.0-Alkimim/examples/models/` are reusable didactic models that declare conformance to this edition. Each project declares four instances in `model-instances.json`. Specifying a model and assessing its instances are separate operations, and the records do not demonstrate a transformer.
+No. The four models under `versioning/Stable-v1.0.0/examples/models/` are reusable didactic models that declare conformance to this edition. Each project declares four instances in `model-instances.json`. Specifying a model and assessing its instances are separate operations, and the records do not demonstrate a transformer.
 
 </details>
 

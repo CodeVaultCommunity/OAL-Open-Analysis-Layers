@@ -1,0 +1,13 @@
+{
+  "identity": "OAL-EX-M4-HTTP-BOUNDARY",
+  "version": "0.1.0",
+  "layer": "L4",
+  "oal_edition": "Stable-v1.0.0",
+  "definition": "MODEL.md",
+  "translation": "MODEL.pt-br.md",
+  "template": "template.json",
+  "example": "example.json",
+  "counterexample": "counterexample.json",
+  "introduced_in": "Alpha-v0.2.0-Alkimim",
+  "assessment_reference": "../../../COMPATIBILITY.md"
+}
