@@ -122,7 +122,7 @@ Install the skill by copying the complete versioning/Stable-v1.0.0/skill/ direct
 
 ## Examples
 
-The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Stable-v1.0.0/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Stable-v1.0.0/examples/README.md). List this edition's examples with `python versioning/Stable-v1.0.0/run_examples.py --list` and run one with `python versioning/Stable-v1.0.0/run_examples.py NAME`. Choose another edition through its own launcher path. See [canonical distribution](DISTRIBUTION.md) for archive verification.
+The repository includes Tiny Catalog, Board CRM, and Work Board. These packages present project artifacts that instantiate four reusable models (M1–M4) under `versioning/Stable-v1.0.0/examples/models/`; each project declares its four instances in `model-instances.json`. The models were applied manually, so the records do not demonstrate constructed or executed transformers. Their artifacts, features, demonstration credentials, and execution instructions are in the [examples guide](versioning/Stable-v1.0.0/examples/README.md). List this edition's examples with `python versioning/Stable-v1.0.0/run_examples.py --list` and run one with `python versioning/Stable-v1.0.0/run_examples.py NAME`. Choose another edition through its own launcher path. See [release guide](docs/releasing.md) for archive verification.
 
 ## Frequently asked questions
 

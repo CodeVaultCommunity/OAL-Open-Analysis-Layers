@@ -1,9 +1,13 @@
 {
   "current": "execution.json",
   "previous_stable": {
+    "path": "historical-prepublication-bdea8a4/execution.json",
+    "snapshot_commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
+    "note": "Original bytes, commands and input paths preserved for this earlier snapshot, including references to files removed later."
+  },
+  "initial_stable": {
     "path": "historical-stable-initial/execution.json",
-    "snapshot_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
-    "note": "Original bytes, commands, inputs and observations retained; root launcher commands describe that snapshot only."
+    "snapshot_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa"
   },
   "historical_alpha": "historical-alpha-v0.2.0/execution.json"
 }

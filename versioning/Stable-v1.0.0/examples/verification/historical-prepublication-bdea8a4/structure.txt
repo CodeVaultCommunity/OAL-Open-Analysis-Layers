@@ -1,0 +1,6 @@
+versioning\Stable-v1.0.0\COMPATIBILITY.md: missing local link examples/verification/structural-checks.json
+versioning\Stable-v1.0.0\COMPATIBILITY.pt-br.md: missing local link examples/verification/structural-checks.json
+versioning\Stable-v1.0.0\README.md: missing local link examples/verification/structural-checks.json
+versioning\Stable-v1.0.0\README.pt-br.md: missing local link examples/verification/structural-checks.json
+versioning\Stable-v1.0.0\examples\README.md: missing local link verification/structural-checks.json
+versioning\Stable-v1.0.0\examples\README.pt-br.md: missing local link verification/structural-checks.json

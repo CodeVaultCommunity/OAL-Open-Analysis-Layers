@@ -173,8 +173,8 @@
     "execution": {
       "status": "recorded",
       "reference": "python -m pytest -q",
-      "observed": "90 passed in 3.07s",
-      "run_id": "2026-10-26T00:24:15-03:00"
+      "observed": "90 passed in 1.82s",
+      "run_id": "2026-10-26T09:32:53-03:00"
     },
     "report": "../../../verification/execution.json",
     "reference_base": "this file's directory"

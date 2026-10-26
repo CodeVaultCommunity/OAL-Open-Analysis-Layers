@@ -1,9 +1,9 @@
 <a id="notas-da-versao"></a>
 # Notas da versão — OAL Stable-v1.0.0
 
-Stable-v1.0.0 mantém os 46 requisitos numerados de Alpha-v0.2.0-Alkimim no commit-base 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, sem mudar sua redação nem suas recomendações opcionais. Os snapshots publicados das edições Alpha permanecem imutáveis. Nesta árvore candidata, a única exceção à preservação dos diretórios Alpha é a [lista explícita de ajustes operacionais](../../ALPHA-OPERATIONAL-ALLOWLIST.json): lançadores locais e instruções de execução; os demais arquivos históricos continuam preservados.
+Stable-v1.0.0 mantém os 46 requisitos numerados de Alpha-v0.2.0-Alkimim no commit-base 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, sem mudar sua redação nem suas recomendações opcionais. Os snapshots publicados das edições Alpha permanecem imutáveis. Os diretórios Alpha mantêm seu conteúdo histórico e os lançadores locais e instruções operacionais introduzidos na preparação Stable. Essas mudanças de manutenção já concluídas estão registradas no histórico Git e não concedem permissão permanente para editar conteúdo histórico.
 
-Estabilidade significa contrato definido, exemplos verificados e limites publicados. Não certifica todas as implementações, estabelece correção universal nem transforma aplicações demonstrativas em produtos de produção. Esta preparação local não afirma data de publicação, DOI ou revisão externa.
+Estabilidade significa contrato definido, exemplos verificados e limites publicados. Não certifica todas as implementações, estabelece correção universal nem transforma aplicações demonstrativas em produtos de produção. Os registros de verificação identificam os ambientes e o escopo efetivamente exercitados; não se afirma certificação ou revisão externa.
 
 A baseline UCS do Work Board passa a 0.2.1: O-WB-AVAIL é classificada como obrigação de domínio, mantendo sua proveniência original. Os derivados recebem revisão de compatibilidade sem mudança comportamental. Necessidades reconstruídas permanecem em 0.2.0. Tiny Catalog e Board CRM mantêm 0.2.0; os quatro modelos didáticos mantêm 0.1.0 e os pacotes Python mantêm 0.2.0a0. Essas versões são independentes do número 1.0.0 do OAL.
 

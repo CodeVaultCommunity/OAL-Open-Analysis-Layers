@@ -1,11 +1,11 @@
-"""Three directed regression checks for the release verifiers."""
+"""Directed regression checks for the release verifiers."""
 from pathlib import Path
 import json
 import subprocess
 import tempfile
 import unittest
 
-from check_structure import check_origins
+from check_structure import Checker, check_origins
 from content_inventory import build, check
 
 
@@ -41,6 +41,23 @@ class ReleaseChecks(unittest.TestCase):
         errors = check_origins([{"id": "O-WB-AVAIL", "origin": "baseline-decision"}])
         self.assertEqual(len(errors), 1)
         self.assertIn("invalid origin for O-WB-AVAIL", errors[0])
+
+
+    def test_nested_release_guide_broken_link_is_rejected(self):
+        guide = self.root / "docs" / "releasing.md"
+        guide.parent.mkdir()
+        guide.write_text("[Missing release procedure](missing.md)\n", encoding="utf-8")
+        checker = Checker(self.root, "Stable-v1.0.0")
+        checker.documents()
+        self.assertTrue(any("missing local link missing.md" in error for error in checker.errors))
+
+    def test_alpha_operational_links_are_checked_without_a_permission_manifest(self):
+        guide = self.root / "versioning" / "Alpha-v0.1.0-Alkimim" / "examples" / "tiny-catalog" / "README.md"
+        guide.parent.mkdir(parents=True)
+        guide.write_text("[Missing launcher](../../run_examples.py)\n", encoding="utf-8")
+        checker = Checker(self.root, "Stable-v1.0.0")
+        checker.documents()
+        self.assertTrue(any("missing local link ../../run_examples.py" in error for error in checker.errors))
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 {
   "oal_edition": "Stable-v1.0.0",
-  "run_started_at": "2026-10-26T00:23:28-03:00",
+  "run_started_at": "2026-10-26T09:32:24-03:00",
+  "status": "passed",
   "environment": {
     "python": "3.12.14",
     "pytest": "9.0.2",
@@ -11,14 +12,16 @@
       "PYTHONDONTWRITEBYTECODE": "1",
       "PYTHONIOENCODING": "utf-8",
       "PYTEST_ADDOPTS": "-p no:cacheprovider",
-      "PYTEST_DEBUG_TEMPROOT": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\pytest-work",
-      "OAL_TEST_TMPDIR": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work"
+      "PYTEST_DEBUG_TEMPROOT": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-publication-ready\\pytest-work",
+      "OAL_TEST_TMPDIR": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-publication-ready\\launcher-work",
+      "TEMP": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-publication-ready\\tmp",
+      "TMP": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-publication-ready\\tmp"
     }
   },
   "records": [
     {
       "label": "edition-launchers",
-      "started_at": "2026-10-26T00:23:29-03:00",
+      "started_at": "2026-10-26T09:32:25-03:00",
       "working_directory": ".",
       "command": [
         "python",
@@ -26,14 +29,14 @@
         "--report",
         "versioning/Stable-v1.0.0/examples/verification/edition-launchers.json"
       ],
-      "finished_at": "2026-10-26T00:24:15-03:00",
+      "finished_at": "2026-10-26T09:32:53-03:00",
       "exit_code": 0,
-      "result": "test_0_catalog_help (__main__.LauncherChecks.test_0_catalog_help) ... ok\ntest_0_controls (__main__.LauncherChecks.test_0_controls) ... ok\ntest_0_http_board_crm (__main__.LauncherChecks.test_0_http_board_crm) ... ok\ntest_0_http_tiny_catalog (__main__.LauncherChecks.test_0_http_tiny_catalog) ... ok\ntest_0_http_work_board (__main__.LauncherChecks.test_0_http_work_board) ... ok\ntest_0_invalid_selections (__main__.LauncherChecks.test_0_invalid_selections) ... ok\ntest_1_catalog_help (__main__.LauncherChecks.test_1_catalog_help) ... ok\ntest_1_controls (__main__.LauncherChecks.test_1_controls) ... ok\ntest_1_http_board_crm (__main__.LauncherChecks.test_1_http_board_crm) ... ok\ntest_1_http_tiny_catalog (__main__.LauncherChecks.test_1_http_tiny_catalog) ... ok\ntest_1_http_work_board (__main__.LauncherChecks.test_1_http_work_board) ... ok\ntest_1_invalid_selections (__main__.LauncherChecks.test_1_invalid_selections) ... ok\ntest_2_catalog_help (__main__.LauncherChecks.test_2_catalog_help) ... ok\ntest_2_controls (__main__.LauncherChecks.test_2_controls) ... ok\ntest_2_http_board_crm (__main__.LauncherChecks.test_2_http_board_crm) ... ok\ntest_2_http_tiny_catalog (__main__.LauncherChecks.test_2_http_tiny_catalog) ... ok\ntest_2_http_work_board (__main__.LauncherChecks.test_2_http_work_board) ... ok\ntest_2_invalid_selections (__main__.LauncherChecks.test_2_invalid_selections) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 44.638s\n\nOK",
+      "result": "test_0_catalog_help (__main__.LauncherChecks.test_0_catalog_help) ... ok\ntest_0_controls (__main__.LauncherChecks.test_0_controls) ... ok\ntest_0_http_board_crm (__main__.LauncherChecks.test_0_http_board_crm) ... ok\ntest_0_http_tiny_catalog (__main__.LauncherChecks.test_0_http_tiny_catalog) ... ok\ntest_0_http_work_board (__main__.LauncherChecks.test_0_http_work_board) ... ok\ntest_0_invalid_selections (__main__.LauncherChecks.test_0_invalid_selections) ... ok\ntest_1_catalog_help (__main__.LauncherChecks.test_1_catalog_help) ... ok\ntest_1_controls (__main__.LauncherChecks.test_1_controls) ... ok\ntest_1_http_board_crm (__main__.LauncherChecks.test_1_http_board_crm) ... ok\ntest_1_http_tiny_catalog (__main__.LauncherChecks.test_1_http_tiny_catalog) ... ok\ntest_1_http_work_board (__main__.LauncherChecks.test_1_http_work_board) ... ok\ntest_1_invalid_selections (__main__.LauncherChecks.test_1_invalid_selections) ... ok\ntest_2_catalog_help (__main__.LauncherChecks.test_2_catalog_help) ... ok\ntest_2_controls (__main__.LauncherChecks.test_2_controls) ... ok\ntest_2_http_board_crm (__main__.LauncherChecks.test_2_http_board_crm) ... ok\ntest_2_http_tiny_catalog (__main__.LauncherChecks.test_2_http_tiny_catalog) ... ok\ntest_2_http_work_board (__main__.LauncherChecks.test_2_http_work_board) ... ok\ntest_2_invalid_selections (__main__.LauncherChecks.test_2_invalid_selections) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 27.992s\n\nOK",
       "log": "edition-launchers.txt"
     },
     {
       "label": "tiny-catalog-pytest",
-      "started_at": "2026-10-26T00:24:15-03:00",
+      "started_at": "2026-10-26T09:32:53-03:00",
       "working_directory": "versioning/Stable-v1.0.0/examples/tiny-catalog",
       "command": [
         "python",
@@ -41,14 +44,14 @@
         "pytest",
         "-q"
       ],
-      "finished_at": "2026-10-26T00:24:19-03:00",
+      "finished_at": "2026-10-26T09:32:56-03:00",
       "exit_code": 0,
-      "result": "........................................................................ [ 80%]\n..................                                                       [100%]\n90 passed in 3.07s",
+      "result": "........................................................................ [ 80%]\n..................                                                       [100%]\n90 passed in 1.82s",
       "log": "tiny-catalog-pytest.txt"
     },
     {
       "label": "board-crm-pytest",
-      "started_at": "2026-10-26T00:24:19-03:00",
+      "started_at": "2026-10-26T09:32:56-03:00",
       "working_directory": "versioning/Stable-v1.0.0/examples/board-crm",
       "command": [
         "python",
@@ -56,14 +59,14 @@
         "pytest",
         "-q"
       ],
-      "finished_at": "2026-10-26T00:24:22-03:00",
+      "finished_at": "2026-10-26T09:32:57-03:00",
       "exit_code": 0,
-      "result": ".......................              [100%]\n23 passed, 36 subtests passed in 1.22s",
+      "result": ".......................              [100%]\n23 passed, 36 subtests passed in 0.63s",
       "log": "board-crm-pytest.txt"
     },
     {
       "label": "work-board-pytest",
-      "started_at": "2026-10-26T00:24:22-03:00",
+      "started_at": "2026-10-26T09:32:57-03:00",
       "working_directory": "versioning/Stable-v1.0.0/examples/work-board",
       "command": [
         "python",
@@ -71,41 +74,41 @@
         "pytest",
         "-q"
       ],
-      "finished_at": "2026-10-26T00:24:24-03:00",
+      "finished_at": "2026-10-26T09:32:58-03:00",
       "exit_code": 0,
-      "result": "................................                                         [100%]\n32 passed in 1.35s",
+      "result": "................................                                         [100%]\n32 passed in 0.68s",
       "log": "work-board-pytest.txt"
     },
     {
       "label": "board-crm-render",
-      "started_at": "2026-10-26T00:24:24-03:00",
+      "started_at": "2026-10-26T09:32:58-03:00",
       "working_directory": ".",
       "command": [
         "python",
         "versioning/Stable-v1.0.0/examples/board-crm/OAL-P1/render_ucs.py",
         "--check"
       ],
-      "finished_at": "2026-10-26T00:24:24-03:00",
+      "finished_at": "2026-10-26T09:32:58-03:00",
       "exit_code": 0,
       "result": "",
       "log": "board-crm-render.txt"
     },
     {
-      "label": "release-negative-checks",
-      "started_at": "2026-10-26T00:24:24-03:00",
+      "label": "release-regressions",
+      "started_at": "2026-10-26T09:32:58-03:00",
       "working_directory": ".",
       "command": [
         "python",
         "scripts/test_release_checks.py"
       ],
-      "finished_at": "2026-10-26T00:24:26-03:00",
+      "finished_at": "2026-10-26T09:32:59-03:00",
       "exit_code": 0,
-      "result": "...\n----------------------------------------------------------------------\nRan 3 tests in 1.666s\n\nOK",
-      "log": "release-negative-checks.txt"
+      "result": ".....\n----------------------------------------------------------------------\nRan 5 tests in 1.096s\n\nOK",
+      "log": "release-regressions.txt"
     },
     {
       "label": "structure",
-      "started_at": "2026-10-26T00:24:27-03:00",
+      "started_at": "2026-10-26T09:32:59-03:00",
       "working_directory": ".",
       "command": [
         "python",
@@ -115,58 +118,44 @@
         "--report",
         "versioning/Stable-v1.0.0/examples/verification/structural-checks.json"
       ],
-      "finished_at": "2026-10-26T00:24:30-03:00",
-      "exit_code": 1,
-      "result": "versioning\\Stable-v1.0.0\\COMPATIBILITY.md: missing local link examples/verification/structural-checks.json\nversioning\\Stable-v1.0.0\\COMPATIBILITY.pt-br.md: missing local link examples/verification/structural-checks.json\nversioning\\Stable-v1.0.0\\README.md: missing local link examples/verification/structural-checks.json\nversioning\\Stable-v1.0.0\\README.pt-br.md: missing local link examples/verification/structural-checks.json\nversioning\\Stable-v1.0.0\\examples\\README.md: missing local link verification/structural-checks.json\nversioning\\Stable-v1.0.0\\examples\\README.pt-br.md: missing local link verification/structural-checks.json",
-      "log": "structure.txt",
-      "diagnosis": "First generation found links to the not-yet-created current structural report. The command wrote that report; a subsequent full check verifies all links with the final reports present."
-    },
-    {
-      "label": "structure-final",
-      "started_at": "2026-10-26T00:26:09-03:00",
-      "working_directory": ".",
-      "command": [
-        "python",
-        "scripts/check_structure.py",
-        "--edition",
-        "Stable-v1.0.0",
-        "--report",
-        "versioning/Stable-v1.0.0/examples/verification/structural-checks.json"
-      ],
-      "finished_at": "2026-10-26T00:26:11-03:00",
+      "finished_at": "2026-10-26T09:33:00-03:00",
       "exit_code": 0,
-      "result": "Structure OK: {'cases': 16, 'file_references': 361, 'symbol_references': 93, 'instances': 12, 'projects': 3, 'document_links': 1368}",
-      "log": "structure-final.txt"
+      "result": "Structure OK: {'cases': 16, 'file_references': 361, 'symbol_references': 93, 'instances': 12, 'projects': 3, 'document_links': 1358}",
+      "log": "structure.txt"
     }
   ],
   "preparation": {
-    "baseline_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+    "baseline_commit": "bdea8a4269e2788f25b68d2925c125d7e62c04ed",
     "source_branch": "main",
-    "source_checkout": "E:/Alkimim/Projetos/CodeVault/OAL",
-    "canonical_candidate": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
-    "strategy": "Explicitly staged source edits exported by git checkout-index using repository attributes; separate temporary Git index for inventory discovery. Original protected Alpha working bytes unchanged.",
-    "publication": "No remote push, tag or release."
+    "source_checkout": "E:\\Alkimim\\Projetos\\CodeVault\\OAL",
+    "canonical_candidate": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-publication-ready\\canonical",
+    "strategy": "Explicitly staged source changes exported by git checkout-index using repository attributes; temporary Git index for inventory discovery. Frozen Alpha working files untouched."
+  },
+  "additional_verification": {
+    "preservation": "preservation.json",
+    "agent_guidance": "agent-guidance-review.json"
   },
   "limits": [
-    "Local Windows/Python 3.12.14 run. Linux is configured in CI but not executed locally.",
+    "Windows/Python 3.12.14 local execution. Windows/Linux CI approval for the final published revision remains a separate publication gate.",
     "No browser JavaScript execution or visual accessibility assessment.",
-    "No OAL transformer construction or execution; manual provenance and original human responsibility remain distinct.",
-    "Finite tests and explicit reference checks do not prove universal correctness or scenario sufficiency.",
-    "HTTP smoke uses process termination after response; mocked Ctrl+C/browser controls do not establish OS-signal/UI integration.",
-    "Original checkout has pre-existing mixed line endings. Distribution evidence uses canonical Git-exported actual bytes."
+    "Finite tests and explicit references do not prove universal correctness or scenario sufficiency.",
+    "No OAL transformer construction/execution or new human approval asserted.",
+    "Launcher smoke checks process termination; mocked Ctrl+C/browser checks do not establish OS-signal/UI integration.",
+    "Canonical Git bytes were tested. Original local CRLF differences were preserved.",
+    "No remote push, tag or release was performed by this local verification run."
   ],
   "post_test_changes": [
-    "Current manifest execution timestamps and observed pytest summaries updated from these runs; planned checks, historical evidence, modeled cases and application tests unchanged. Structural check follows these metadata updates."
+    "Only evidence timestamps/observed summaries were refreshed after application tests. Historical evidence and modeled cases unchanged; structural check executed against final metadata."
   ],
   "input_scope": {
-    "fixed_at": "2026-10-26T00:26:11-03:00",
-    "included": "All indexed source and distribution files, including all edition launchers, operational guides, application sources/tests and .github configuration.",
+    "fixed_at": "2026-10-26T09:33:00-03:00",
+    "included": "All indexed source and distribution files including docs, agents, scripts, all edition launchers and .github.",
     "excluded": [
       "CONTENT-SHA256.json",
       "versioning/*/examples/verification/**",
       "untracked caches, temporary databases and external runtime"
     ],
-    "reason": "Verification directories contain output reports, current or historical. Excluding them and the inventory prevents circular input/output hashes; source-map hashes were finalized first."
+    "reason": "Reports and logs are outputs. Excluding verification directories and inventory prevents cycles; source-map hashes were finalized before the checks."
   },
   "inputs_sha256": [
     {
@@ -226,13 +215,8 @@
     },
     {
       "path": "AGENTS.md",
-      "size_bytes": 2990,
-      "sha256": "30a7b899854a9e0edb7e8eb13f06ea01473d5a8cd6572e2cc24264419d9bfbac"
-    },
-    {
-      "path": "ALPHA-OPERATIONAL-ALLOWLIST.json",
-      "size_bytes": 3472,
-      "sha256": "2fe0fc64c1a9d00b7e045342ecc7c64fbb0487a3f4b518b97221c8898ff2e24d"
+      "size_bytes": 4800,
+      "sha256": "ecfac2301f8b7a7a86b9d63bb5a75de11f3b1510d08def43765a6ff4b02958b8"
     },
     {
       "path": "CITATION.cff",
@@ -241,18 +225,8 @@
     },
     {
       "path": "CLAUDE.md",
-      "size_bytes": 789,
-      "sha256": "7b1d85f6d201a6b0701cb3edc965f64ad70bd570fb0b15b4fadd12993a217cba"
-    },
-    {
-      "path": "DISTRIBUTION.md",
-      "size_bytes": 4055,
-      "sha256": "35d9a87a00492394978d6276828ca61fdd73a908fc27d5dfdbe5971e5b86bfcd"
-    },
-    {
-      "path": "DISTRIBUTION.pt-br.md",
-      "size_bytes": 4240,
-      "sha256": "1d0ca2b72d90b3045f40c9564609729c79676a78dc0caeff8aa86725ff7118a4"
+      "size_bytes": 40,
+      "sha256": "553b2179c75dbabaa7289a6e11e00b29d1e6d2984be1414656ef6ea5a3878213"
     },
     {
       "path": "LICENSE",
@@ -261,13 +235,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 21700,
-      "sha256": "b6c9af7f9589247e321582ac11e931ed4008daa865311af7fa465b8c14aee7b9"
+      "size_bytes": 21693,
+      "sha256": "096a9df018f1aa3c2527bad40fc5194656c57b25c119bb546439cd46118eeb79"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 23245,
-      "sha256": "dbcebca30e78269857166047e3318881faa4b5dbcf4669f1a3b93d5bc30663a1"
+      "size_bytes": 23243,
+      "sha256": "c1c478b45169a9b8a523c2bba4d380305516d7a634d2edacaf99e59bd4d443b8"
     },
     {
       "path": "VERSION",
@@ -385,14 +359,24 @@
       "sha256": "41d08ab5c476fbad03561535f6616e70c5f3938e732aff506d18e4fa6745eb73"
     },
     {
+      "path": "docs/releasing.md",
+      "size_bytes": 5521,
+      "sha256": "bb22ce783206041c3afddad2a8b33df2ff8af7ec600a83cfde093f8c1bb066ac"
+    },
+    {
+      "path": "docs/releasing.pt-br.md",
+      "size_bytes": 5848,
+      "sha256": "52fdac015e70abb92307c09d826decca744c4908558b7cb607d9a9417440e47b"
+    },
+    {
       "path": "scripts/check_archive.py",
       "size_bytes": 2712,
       "sha256": "1fad0dabfedfabb16b4fac7ce381b4aa9d11102a23c7b7885fd792aee57f50ce"
     },
     {
       "path": "scripts/check_structure.py",
-      "size_bytes": 17464,
-      "sha256": "e96331d1ba6c3695afe56cef99493d1a11de6b2f058f16da290dba386cbd6013"
+      "size_bytes": 17619,
+      "sha256": "b8d4e712f21590adbd46d7c59b2be0539cbd559ff3bbd993fa6001723e02593b"
     },
     {
       "path": "scripts/content_inventory.py",
@@ -406,8 +390,8 @@
     },
     {
       "path": "scripts/test_release_checks.py",
-      "size_bytes": 2014,
-      "sha256": "0dc3339b0dfff5583f749301962d4b5eff3489457ba5fc25237c5e7c2d24ba52"
+      "size_bytes": 2954,
+      "sha256": "22171f152327bdcdfc93ca010d3f5787a3dd945f10209b6a629f51a6a5db7640"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/README.md",
@@ -2231,23 +2215,23 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/README.md",
-      "size_bytes": 63750,
-      "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84"
+      "size_bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
     },
     {
       "path": "versioning/Stable-v1.0.0/README.pt-br.md",
-      "size_bytes": 69631,
-      "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d"
+      "size_bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.md",
-      "size_bytes": 8286,
-      "sha256": "1f3298d67caad620e871b29a5a25f753f221c0bda55b156394c05d122e9cc6f1"
+      "size_bytes": 8280,
+      "sha256": "9ab9ca9d2703ead51e09ec9fde3135d99b5df7e069acc8d573b22ab94afe24e9"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
-      "size_bytes": 8939,
-      "sha256": "8b6bd374cf867c33373a8643f2c434c6e7a8b29a615ba8a809b2c15d02314613"
+      "size_bytes": 8919,
+      "sha256": "64621fa43abd6274d595e06e11048a78ca0f00c5626579788e303d6dda75fefe"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/LICENSE",
@@ -2312,7 +2296,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 9426,
-      "sha256": "49123cbae570569d84631fc8dc6196a2fe04db5113e265854aeebeff3dc1028c"
+      "sha256": "19a7ffcbdac7dc0f21f6f043f84ce60a90f4448d9e0894435b22307563370884"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
@@ -2357,7 +2341,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/model-instances.json",
       "size_bytes": 12519,
-      "sha256": "36bb5d76d1dd3a36d2065762ab45eda2126b66f043cf8428354bc20ae02050f2"
+      "sha256": "6ef401a7b2144acdaa1efee4a657343d071687609d3c6d0a4f11c5ed245cd4ee"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/needs-baseline.json",
@@ -2697,7 +2681,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 8318,
-      "sha256": "a4c3ff3a49f619187870671f0958c3149970e68bc1c1a765625557ee5fd82a63"
+      "sha256": "7da10143b054fb563e36780d9faff64aaba12353d270e770dc233b6ec1d94101"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
@@ -2752,7 +2736,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/model-instances.json",
       "size_bytes": 12125,
-      "sha256": "9d3a2966f2f45d3e22175eaceb02f7e4d01591477af41b9fdc4135f2cc71f23e"
+      "sha256": "3eb2ce5cd15510a9addf76b2e7c7bd047768f3e609ede4e2a2de212278987b8e"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/needs-baseline.json",
@@ -3022,7 +3006,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 8620,
-      "sha256": "5606a4461222ed73586a66e4b9da652c3a2e21a34681751ec7981062fe924eae"
+      "sha256": "f14fb289400bf0b637db3835379df9f0324a7511d16a01009c8a5f9cf6f7a71c"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.md",
@@ -3067,7 +3051,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/model-instances.json",
       "size_bytes": 12924,
-      "sha256": "ff4d988ece593c09476df3261396a5ea8ec4d05c319a8f96e51fe1fc26ed976a"
+      "sha256": "6d56e350da2c068964aa863f4d398ad036f8faca0e89522c5912d8c641e47ced"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/needs-baseline.json",
@@ -3227,24 +3211,8 @@
     {
       "path": "versioning/Stable-v1.0.0/skill/references/source-map.md",
       "size_bytes": 7372,
-      "sha256": "e982b8abd4c23b467b6d8a11bab350674a0d7b94b2203df1a8e77d7691abfc00"
+      "sha256": "e28403197381a47cc8031f92ed70b955c5653b3eaa5f93ad4cd51cedb3568b3c"
     }
   ],
-  "previous_attempts": [
-    {
-      "report": "sandbox-attempt/execution.json",
-      "detail": "sandbox-attempt/edition-launchers.txt",
-      "test_driver": "sandbox-attempt/test-driver.py",
-      "test_driver_sha256": "c3a343e02a300f7ed9d3b92ae736ef520e30555b73e5f3689fb4296833583774",
-      "status": "failed",
-      "cause": "Sandbox denied loopback sockets with WinError 10013. The initial test driver also left SQLite connections open and did not explicitly terminate Windows child processes.",
-      "resolution": "Close test SQLite connections and terminate the spawned process tree; rerun with local loopback permission. Final 18 tests including 9 HTTP smokes passed."
-    }
-  ],
-  "additional_verification": {
-    "archive_verifier": "archive-verifier-checks.json",
-    "preservation": "preservation.json"
-  },
-  "run_finished_at": "2026-10-26T00:26:11-03:00",
-  "status": "passed"
+  "run_finished_at": "2026-10-26T09:33:00-03:00"
 }

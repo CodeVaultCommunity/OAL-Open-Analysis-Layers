@@ -2,9 +2,9 @@
 
 # Release notes — OAL Stable-v1.0.0
 
-Stable-v1.0.0 carries forward the 46 numbered requirements of Alpha-v0.2.0-Alkimim at baseline commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, without changing their wording or optional recommendations. Published Alpha snapshots remain immutable. In this candidate tree, the only exception to Alpha directory preservation is the [explicit operational allowlist](../../ALPHA-OPERATIONAL-ALLOWLIST.json): local launchers and execution instructions; all other historical files remain preserved.
+Stable-v1.0.0 carries forward the 46 numbered requirements of Alpha-v0.2.0-Alkimim at baseline commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, without changing their wording or optional recommendations. Published Alpha snapshots remain immutable. The Alpha directories retain their historical content and the edition-local launchers and operational instructions introduced during Stable preparation. Those completed maintenance changes are recorded in Git history and grant no continuing permission to edit historical content.
 
-Stability means a defined contract, verified examples, and published limits. It does not certify all implementations, establish universal correctness, or make the demonstration applications production products. This local preparation asserts no publication date, DOI, or external review.
+Stability means a defined contract, verified examples, and published limits. It does not certify all implementations, establish universal correctness, or make the demonstration applications production products. The verification records identify the environments and scope actually exercised; no external certification or review is asserted.
 
 The Work Board UCS baseline becomes 0.2.1: O-WB-AVAIL is classified as a domain obligation; its original provenance is retained. Derived artifacts receive a compatibility review without behavioral changes. Reconstructed needs remain 0.2.0. Tiny Catalog and Board CRM remain 0.2.0; the four didactic models remain 0.1.0 and the Python packages remain 0.2.0a0. These versions are independent of OAL's 1.0.0 number.
 

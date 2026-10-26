@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "baseline_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+  "protected_alpha_files": 350,
+  "comparison": "Canonical Git blob equality plus original working-byte equality outside the operational allowlist.",
+  "alpha_operational_allowlist_paths": [
+    "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.md",
+    "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.pt-br.md",
+    "versioning/Alpha-v0.1.0-Alkimim/run_examples.py",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/README.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/README.pt-br.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.pt-br.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.md",
+    "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.pt-br.md",
+    "versioning/Alpha-v0.2.0-Alkimim/run_examples.py"
+  ],
+  "alpha_guide_nonoperational_sections_unchanged": 16,
+  "normative_sections": [
+    {
+      "path": "versioning/Stable-v1.0.0/README.md",
+      "unchanged_requirements": 46,
+      "section_sha256": "135660fdbdc3df5129e5768ecba512403641b0f4e7f9432355893c67a528ed1b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/README.pt-br.md",
+      "unchanged_requirements": 46,
+      "section_sha256": "033f0520e783404abd00b7476d3bb541faedebddd51017b5037d0d47df80b6bf"
+    }
+  ],
+  "stable_python_files_unchanged": 81,
+  "previous_stable_evidence_preserved": [
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-pytest.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-pytest.txt",
+      "sha256": "511528680f758b6aade4ebc126883b306bc717db74250f2c0233a3bbcfb4b9e8"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-render-final.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-render-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-render.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-render.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-smoke.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-smoke.txt",
+      "sha256": "173986573db943749b358b5769b33f63016af13030c2174d8e767ce916fdacf8"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-tex-final.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-tex-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/board-crm-tex.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-tex.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/execution.json",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/execution.json",
+      "sha256": "e7abe11cd3d61e60d64d7bfd0f62ccf98fcb06c2856af41b20195f37c6b33e34"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/launcher-help.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/launcher-help.txt",
+      "sha256": "1f4bb016a61d56fc2f5969421b8b9511805a2b3ba2dad3024e39268d62129719"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/list-examples.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/list-examples.txt",
+      "sha256": "8aa6a0a6a6b62c021dc0a2b717c22ab3649917b79178cfb05fe08b5f3d7e21bc"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/release-negative-checks.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/release-negative-checks.txt",
+      "sha256": "c1ed648fa08329abf02887392f2d40206030d318bea70a5e918b4e44fed984ba"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/skill-validation.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/skill-validation.txt",
+      "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/structural-checks.json",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/structural-checks.json",
+      "sha256": "c44241b948d47cc19e8144f9fa49709cdcaa97f58118c3085d6a10708fe4c344"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/structure.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/structure.txt",
+      "sha256": "5f0546353bccde305cea8083d0d37746fec30b6b3f6583db9f6c17ac1c649761"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/tiny-catalog-pytest.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/tiny-catalog-pytest.txt",
+      "sha256": "7627b8938f829f998a97554f17075cec1ab1aec2f7f10f2a847c220c7deb21cf"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/tiny-catalog-smoke.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/tiny-catalog-smoke.txt",
+      "sha256": "4acf4e346367edd156178b551787ff38c7451e6475e8b402deda9590058096d5"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/work-board-pytest.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/work-board-pytest.txt",
+      "sha256": "17d41b0ebeab1007f4db5bf35eda710e7e837a0266b277b5cf80aa3907504f88"
+    },
+    {
+      "original_path": "versioning/Stable-v1.0.0/examples/verification/work-board-smoke.txt",
+      "archived_path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/work-board-smoke.txt",
+      "sha256": "3755128bfddff24732139d383c938b6add9cbbbe585f7de0d12ebe639384eb62"
+    }
+  ]
+}

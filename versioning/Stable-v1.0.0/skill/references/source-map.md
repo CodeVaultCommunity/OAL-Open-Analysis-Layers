@@ -22,8 +22,8 @@ identifiers, not dependencies on files outside this skill.
 | `LICENSE` | Original MIT license and copyright attribution. |
 
 - **Canonical edition label:** `Stable-v1.0.0`.
-- **English source SHA-256:** `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84`.
-- **Portuguese source SHA-256:** `5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d`.
+- **English source SHA-256:** `d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da`.
+- **Portuguese source SHA-256:** `52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9`.
 - **Original license SHA-256:** `dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7`.
 
 - **Included license SHA-256:** `dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7`.

@@ -1,0 +1,9 @@
+{
+  "current": "execution.json",
+  "previous_stable": {
+    "path": "historical-stable-initial/execution.json",
+    "snapshot_commit": "a02bf8eecf222e7e0a7a34977fff49a25b5af6aa",
+    "note": "Original bytes, commands, inputs and observations retained; root launcher commands describe that snapshot only."
+  },
+  "historical_alpha": "historical-alpha-v0.2.0/execution.json"
+}

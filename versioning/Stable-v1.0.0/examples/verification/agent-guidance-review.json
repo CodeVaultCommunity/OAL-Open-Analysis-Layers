@@ -1,0 +1,31 @@
+{
+  "method": "Instruction review; not an execution test of an autonomous agent.",
+  "claude": "Only forwards to AGENTS.md.",
+  "cases": [
+    {
+      "request": "Explicit Alpha-v0.1.0-Alkimim",
+      "expected": "Use its manual and local launcher; no bundled skill; do not apply Stable structural assumptions."
+    },
+    {
+      "request": "Explicit Alpha-v0.2.0-Alkimim or path inside it",
+      "expected": "Use that edition, its manual and its own skill; VERSION does not override the request."
+    },
+    {
+      "request": "Explicit Stable-v1.0.0",
+      "expected": "Use Stable manual/skill and documented Stable checks."
+    },
+    {
+      "request": "No edition indicated",
+      "expected": "Highest available Stable-vMAJOR.MINOR.PATCH by numeric tuple; currently Stable-v1.0.0. No unnecessary question."
+    },
+    {
+      "request": "Missing or ambiguous edition, or no Stable available",
+      "expected": "Ask for the target instead of silently substituting another edition."
+    },
+    {
+      "request": "Deliberate comparison between editions",
+      "expected": "Keep each edition distinct; do not reinterpret it using another edition."
+    }
+  ],
+  "status": "reviewed"
+}
