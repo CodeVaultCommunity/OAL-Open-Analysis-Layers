@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "pristine_fixture_accepted": true,
+  "negative_cases": [
+    {
+      "case": "changed-bytes",
+      "rejected": true,
+      "diagnostics": [
+        "hash/size differs: payload.txt"
+      ]
+    },
+    {
+      "case": "missing-file",
+      "rejected": true,
+      "diagnostics": [
+        "missing file: payload.txt"
+      ]
+    },
+    {
+      "case": "unexpected-file",
+      "rejected": true,
+      "diagnostics": [
+        "unexpected file: extra.txt"
+      ]
+    }
+  ]
+}

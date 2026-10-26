@@ -1,4 +1,4 @@
-"""Launch any OAL example from any edition through an executor selected per example."""
+"""Launch examples belonging only to this self-contained OAL edition."""
 from __future__ import annotations
 
 import argparse
@@ -14,8 +14,7 @@ from wsgiref.simple_server import make_server
 
 
 ROOT = Path(__file__).resolve().parent
-VERSIONING = ROOT / "versioning"
-CURRENT = (ROOT / "VERSION").read_text(encoding="utf-8").strip() if (ROOT / "VERSION").is_file() else ""
+EDITION = "Alpha-v0.1.0-Alkimim"
 
 
 @dataclass(frozen=True)
@@ -44,11 +43,11 @@ class PythonWSGIExecutor:
 
     def run(self, example: Example, argv: Sequence[str]) -> int:
         parser = argparse.ArgumentParser(
-            prog=f"python run_examples.py {example.key}",
+            prog=f"python run_examples.py {example.name}",
             description=f"Run the {example.key} example in a local browser",
         )
         parser.add_argument("--port", type=int, default=example.default_port)
-        parser.add_argument("--database", type=Path)
+        parser.add_argument("--database", type=Path, help="SQLite file; relative paths use the current working directory")
         parser.add_argument("--no-browser", action="store_true")
         args = parser.parse_args(argv)
         if args.port is None or not 1 <= args.port <= 65535:
@@ -56,7 +55,7 @@ class PythonWSGIExecutor:
         if example.database_name is None:
             parser.error("this example has no database configuration")
 
-        database = args.database or ROOT / "data" / example.version / example.database_name
+        database = args.database or ROOT / "data" / example.database_name
         database.parent.mkdir(parents=True, exist_ok=True)
         module_name, separator, factory_name = example.entrypoint.partition(":")
         if not separator or not module_name or not factory_name:
@@ -85,67 +84,49 @@ EXECUTORS: dict[str, ExampleExecutor] = {"python-wsgi": PythonWSGIExecutor()}
 
 
 def discover() -> list[Example]:
-    """Find every version/example that declares a runner.json."""
+    """Read runner declarations only from this launcher's sibling examples."""
     examples: list[Example] = []
-    if not VERSIONING.is_dir():
+    examples_dir = ROOT / "examples"
+    if not examples_dir.is_dir():
         return examples
-    for version_dir in sorted(path for path in VERSIONING.iterdir() if path.is_dir()):
-        examples_dir = version_dir / "examples"
-        if not examples_dir.is_dir():
-            continue
-        for example_dir in sorted(path for path in examples_dir.iterdir() if path.is_dir()):
-            runner = example_dir / "runner.json"
-            if not runner.is_file():
-                continue
-            data = json.loads(runner.read_text(encoding="utf-8"))
-            examples.append(
-                Example(
-                    version=version_dir.name,
-                    name=data["name"],
-                    directory=example_dir,
-                    executor=data["executor"],
-                    entrypoint=data["entrypoint"],
-                    default_port=data.get("default_port"),
-                    database_name=data.get("database_name"),
-                )
-            )
+    for runner in sorted(examples_dir.glob("*/runner.json")):
+        data = json.loads(runner.read_text(encoding="utf-8"))
+        examples.append(Example(
+            version=EDITION,
+            name=data["name"],
+            directory=runner.parent,
+            executor=data["executor"],
+            entrypoint=data["entrypoint"],
+            default_port=data.get("default_port"),
+            database_name=data.get("database_name"),
+        ))
     return examples
 
 
 def resolve(selection: str, examples: Sequence[Example]) -> Example:
-    """Resolve EDITION/NAME or a bare NAME (preferring the current edition)."""
-    if "/" in selection:
-        version, _, name = selection.partition("/")
-        matches = [item for item in examples if item.version == version and item.name == name]
-    else:
-        matches = [item for item in examples if item.name == selection]
+    """Resolve a bare NAME within this edition; never fall back to another."""
+    matches = [item for item in examples if item.name == selection]
     if not matches:
-        available = ", ".join(item.key for item in examples) or "none"
-        raise SystemExit(f"Unknown example: {selection}\nAvailable: {available}")
-    if len(matches) == 1:
-        return matches[0]
-    current = [item for item in matches if item.version == CURRENT]
-    if len(current) == 1:
-        return current[0]
-    available = ", ".join(item.key for item in matches)
-    raise SystemExit(f"Ambiguous example name: {selection}\nUse one of: {available}")
+        available = ", ".join(item.name for item in examples) or "none"
+        raise SystemExit(f"Unknown example in {EDITION}: {selection}\n"
+                         f"Use a bare NAME. Available: {available}")
+    return matches[0]
 
 
 def catalog(examples: Sequence[Example]) -> None:
     for item in examples:
         port = item.default_port if item.default_port is not None else "-"
-        print(f"{item.key}  (port {port})")
+        print(f"{item.name}  (port {port})")
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     arguments = list(sys.argv[1:] if argv is None else argv)
     parser = argparse.ArgumentParser(
-        description="Run an OAL example from any edition",
-        epilog="Use --list to see every example of every edition. "
-               "A bare NAME resolves to the current edition; use EDITION/NAME otherwise.",
+        description=f"Run an OAL example from {EDITION}",
+        epilog="Use --list to see this edition\'s examples. Select another edition through its own launcher path.",
     )
-    parser.add_argument("example", nargs="?", help="NAME or EDITION/NAME")
-    parser.add_argument("--list", action="store_true", help="list every example of every edition")
+    parser.add_argument("example", nargs="?", help="NAME in this edition")
+    parser.add_argument("--list", action="store_true", help="list this edition's examples")
 
     if not arguments or arguments[0] in {"-h", "--help"}:
         examples = discover()
@@ -154,6 +135,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         catalog(examples)
         return 0 if arguments else 2
     if arguments[0] == "--list":
+        parser.parse_args(arguments)
         catalog(discover())
         return 0
 

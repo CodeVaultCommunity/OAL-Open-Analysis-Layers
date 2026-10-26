@@ -28,8 +28,10 @@ In code, [`usecases`](src/board_crm/usecases) makes case and stage decisions, [`
 With Python 3.12 or later, run from the repository root:
 
 ```bash
-python run_examples.py board-crm
+python versioning/Alpha-v0.2.0-Alkimim/run_examples.py board-crm
 ```
+
+Inside the edition directory, use `python run_examples.py board-crm`. The default database is `versioning/Alpha-v0.2.0-Alkimim/data/board-crm.sqlite3`. `--database` accepts an absolute path or a path relative to the working directory; the [operational guide](../README.md#run-an-example) explains how to reuse old databases without moving them.
 
 The launcher opens `http://127.0.0.1:8001/`. The browser requests HTTP Basic credentials on the first API call. Use `manager` / `manager-demo`, `operator` / `operator-demo`, or `viewer` / `viewer-demo`. To switch accounts, use another private browser session or clear the stored credentials. Defaults can be changed with `OAL_CRM_<ROLE>_PASSWORD` environment variables. The demonstration binds to loopback; its fixed example passwords are for local use.
 

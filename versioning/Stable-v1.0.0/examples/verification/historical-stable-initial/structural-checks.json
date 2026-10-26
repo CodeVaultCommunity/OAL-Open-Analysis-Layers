@@ -1,0 +1,23 @@
+{
+  "edition": "Stable-v1.0.0",
+  "status": "passed",
+  "counts": {
+    "cases": 16,
+    "file_references": 361,
+    "symbol_references": 93,
+    "instances": 12,
+    "projects": 3,
+    "document_links": 857
+  },
+  "errors": [],
+  "scope": "Selected edition's explicit file/symbol references, models, versions, case/criterion mappings, origins and local document links; historical linked targets checked for existence only.",
+  "limits": "No prose/code semantics, scenario sufficiency, universal correctness, browser execution or transformer certification.",
+  "checked_at": "2026-10-25T22:20:43-03:00",
+  "normative_comparison": {
+    "baseline": "5755a4e4a5b31a9614da5d409d03d1db9cf1e20c",
+    "English_items": 46,
+    "Portuguese_items": 46,
+    "rule_regions": "identical",
+    "model_contracts": "four unchanged 0.1.0 definitions/templates, excluding edition/provenance metadata"
+  }
+}

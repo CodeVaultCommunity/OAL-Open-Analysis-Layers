@@ -126,7 +126,6 @@
   },
   "stable_revision": {
     "kind": "compatibility review of manually derived artifacts",
-    "prepared_by": "Codex",
     "historical_edition": "Alpha-v0.2.0-Alkimim",
     "historical_record": "../../../Alpha-v0.2.0-Alkimim/examples/work-board/derivations.json",
     "assessment": "../../COMPATIBILITY.md",

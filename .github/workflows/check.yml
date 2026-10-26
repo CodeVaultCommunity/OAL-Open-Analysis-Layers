@@ -28,8 +28,9 @@ jobs:
       - name: Check directed verifier regressions
         if: matrix.example == 'tiny-catalog'
         run: python scripts/test_release_checks.py
-      - name: List examples from every edition
-        run: python run_examples.py --list
+      - name: Check independent edition launchers
+        if: matrix.example == 'tiny-catalog'
+        run: python scripts/test_edition_launchers.py
       - name: Install example and test runner
         run: |
           python -m pip install -e "./versioning/Stable-v1.0.0/examples/${{ matrix.example }}"

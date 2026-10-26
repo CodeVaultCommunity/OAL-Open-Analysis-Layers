@@ -17,6 +17,8 @@ The dependency direction is P4 → P3. Cases know nothing about routes, forms, J
 
 ## Run
 
-From the repository root, use `python run_examples.py Alpha-v0.1.0-Alkimim/work-board`. Open `http://127.0.0.1:8002/`. The local demonstration accounts are `manager` / `manager-demo`, `contributor` / `contributor-demo`, and `viewer` / `viewer-demo`. Managers can assign; contributors can create, advance, and comment; viewers can read. Override passwords with `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD`, and `OAL_WORK_BOARD_VIEWER_PASSWORD`. Data goes to the ignored `data/Alpha-v0.1.0-Alkimim/work-board.sqlite3` file. Stop with Ctrl+C.
+From the repository root, use `python versioning/Alpha-v0.1.0-Alkimim/run_examples.py work-board`. Open `http://127.0.0.1:8002/`. The local demonstration accounts are `manager` / `manager-demo`, `contributor` / `contributor-demo`, and `viewer` / `viewer-demo`. Managers can assign; contributors can create, advance, and comment; viewers can read. Override passwords with `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD`, and `OAL_WORK_BOARD_VIEWER_PASSWORD`. Data goes to the ignored `versioning/Alpha-v0.1.0-Alkimim/data/work-board.sqlite3` file. Stop with Ctrl+C.
+
+Inside the edition directory, use `python run_examples.py work-board`. The default database is `versioning/Alpha-v0.1.0-Alkimim/data/work-board.sqlite3`. `--database` accepts an absolute path or a path relative to the working directory; the [operational guide](../README.md#run-an-example) explains how to reuse old databases without moving them.
 
 Run `python -m pytest -q --basetemp .pytest_cache/oal-work-board-temp` from this example directory for direct case and HTTP checks. The demonstration binds to loopback and is not a production account system.

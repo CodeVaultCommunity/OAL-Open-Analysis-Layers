@@ -30,30 +30,33 @@ Start it at `http://127.0.0.1:8001/`. The local HTTP Basic demonstration account
 
 ## Run an example
 
-The current examples require Python 3.12 or later. From the repository root, use [run_examples.py](../../../run_examples.py):
+Use Python 3.12 or later and [this edition's launcher](../run_examples.py). From the repository root:
 
 ```bash
-python run_examples.py tiny-catalog
-python run_examples.py board-crm
-python run_examples.py work-board
+python versioning/Alpha-v0.2.0-Alkimim/run_examples.py --list
+python versioning/Alpha-v0.2.0-Alkimim/run_examples.py tiny-catalog
+python versioning/Alpha-v0.2.0-Alkimim/run_examples.py board-crm
+python versioning/Alpha-v0.2.0-Alkimim/run_examples.py work-board
 ```
 
-Use `python run_examples.py --list` to see every example of every edition. A bare name runs the current edition; use `EDITION/NAME` for a historical edition. Each example directory declares `runner.json` with its executor, entrypoint, port, and database name. The launcher imports each Python example from its `src` directory, starts a server bound to `127.0.0.1`, and opens the page in a browser. It creates the default SQLite files under the repository's ignored `data/` directory, in an edition-specific subdirectory. Stop the server with Ctrl+C. The launcher only starts applications; it is not an OAL derivation engine.
+Inside `versioning/Alpha-v0.2.0-Alkimim/`, use `python run_examples.py NAME` or `python run_examples.py --list`. The list contains only this edition's three examples; selection accepts a bare name without `EDITION/`. Choose another edition through its own launcher path. An isolated copy of the edition directory, even renamed, retains its identity and works without repository-root files. From an unrelated working directory, supply the launcher's absolute path.
 
-The options come **after** the example name:
+The launcher reads only its sibling `examples/*/runner.json`, imports the selected example's `src`, binds to `127.0.0.1`, and opens a browser by default. Stop with Ctrl+C. It only starts applications; it is not an OAL derivation engine.
+
+Options come **after** the example name:
 
 | Option | Effect |
 | --- | --- |
-| `--port 8010` | Use another local port instead of 8000, 8001, or 8002. |
-| `--database PATH` | Use a specified SQLite file instead of the default under `data/`. |
-| `--no-browser` | Start the server without opening a browser. |
-| `--help` | Show options for the selected example. |
+| `--port 8011` | Override the port declared in `runner.json` (8000, 8001, or 8002). |
+| `--database PATH` | Use the specified SQLite file; relative paths use the current working directory, and absolute paths are accepted. |
+| `--no-browser` | Start without opening a browser. |
+| `--help` | Show the selected example's options. |
 
-For example, `python run_examples.py tiny-catalog --port 8010 --no-browser` starts Tiny Catalog on port 8010. The demonstration passwords are for local use; each example README explains how to change them with environment variables. Historical examples are available under `versioning/Alpha-v0.1.0-Alkimim/examples/`.
+For example, from the root: `python versioning/Alpha-v0.2.0-Alkimim/run_examples.py board-crm --port 8011 --no-browser`.
 
+The default database is `versioning/Alpha-v0.2.0-Alkimim/data/<database_name>`, next to `examples/`, independently of the working directory. Existing databases under the root's `data/Alpha-v0.2.0-Alkimim/` stay in place: there is no automatic migration or deletion. To reuse one from the root, run `python versioning/Alpha-v0.2.0-Alkimim/run_examples.py work-board --database data/Alpha-v0.2.0-Alkimim/work-board.sqlite3`; from another directory, supply the old database's absolute path.
 
-
-The root launcher selects an executor from the `EXECUTORS` registry. `ExampleExecutor` is its interface; `PythonWSGIExecutor` handles the current examples. A new language can provide another executor and declare it in the example's `runner.json`, with its own entry point and arguments. The launcher command stays at the repository root.
+Demonstration passwords are for local use; each README explains the environment variables. `PythonWSGIExecutor` interprets the local `runner.json` declarations; the launcher needs no shared module in another edition or at the repository root.
 
 ## Execution evidence
 

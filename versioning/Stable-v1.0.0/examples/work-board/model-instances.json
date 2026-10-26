@@ -55,7 +55,7 @@
         "execution": {
           "status": "recorded",
           "reference": "python scripts/check_structure.py --edition Stable-v1.0.0",
-          "run_id": "2026-10-25T22:20:43-03:00",
+          "run_id": "2026-10-26T00:26:09-03:00",
           "observed": "Explicit structural references checked; no semantic sufficiency claim",
           "report": "../verification/structural-checks.json"
         },
@@ -144,8 +144,8 @@
         "execution": {
           "status": "recorded",
           "reference": "python -m pytest -q",
-          "observed": "32 passed in 1.01s",
-          "run_id": "2026-10-25T22:14:33-03:00"
+          "observed": "32 passed in 1.35s",
+          "run_id": "2026-10-26T00:24:22-03:00"
         },
         "report": "../verification/execution.json"
       },
@@ -240,8 +240,8 @@
         "execution": {
           "status": "recorded",
           "reference": "python -m pytest -q",
-          "observed": "32 passed in 1.01s",
-          "run_id": "2026-10-25T22:14:33-03:00"
+          "observed": "32 passed in 1.35s",
+          "run_id": "2026-10-26T00:24:22-03:00"
         },
         "report": "../verification/execution.json"
       },
@@ -343,8 +343,8 @@
         "execution": {
           "status": "recorded",
           "reference": "python -m pytest -q",
-          "observed": "32 passed in 1.01s",
-          "run_id": "2026-10-25T22:14:33-03:00"
+          "observed": "32 passed in 1.35s",
+          "run_id": "2026-10-26T00:24:22-03:00"
         },
         "report": "../verification/execution.json"
       },

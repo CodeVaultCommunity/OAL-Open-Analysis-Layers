@@ -211,7 +211,10 @@ class Checker:
     def documents(self):
         paths = list(self.root.glob("*.md")) + list((self.root / ".github").rglob("*.md"))
         paths += list((self.root / "assets").rglob("*.md"))
-        paths += [p for p in self.base.rglob("*.md") if "historical-alpha-v0.2.0" not in p.parts]
+        paths += [p for p in self.base.rglob("*.md") if not any(part.startswith("historical-") for part in p.parts)]
+        # Check operational links in the two frozen editions without revalidating their models.
+        allowlist = read_json(self.root / "ALPHA-OPERATIONAL-ALLOWLIST.json")
+        paths += [self.root / item["path"] for item in allowlist["paths"] if item["path"].endswith(".md")]
         for path in paths:
             # Only explicit Markdown links and HTML media references outside fenced examples.
             text = re.sub(r"(?ms)^ *(\x60{3,}|~{3,}).*?^ *\1 *$", "", path.read_text(encoding="utf-8"))
@@ -259,7 +262,7 @@ class Checker:
         self.metadata()
         return {"edition": self.edition, "status": "failed" if self.errors else "passed",
                 "counts": dict(self.counts), "errors": self.errors,
-                "scope": "Selected edition's explicit file/symbol references, models, versions, case/criterion mappings, origins and local document links; historical linked targets checked for existence only.",
+                "scope": "Selected edition's explicit file/symbol references, models, versions, case/criterion mappings, origins and local document links; Alpha operational README links included; historical linked targets checked for existence only.",
                 "limits": "No prose/code semantics, scenario sufficiency, universal correctness, browser execution or transformer certification."}
 
 

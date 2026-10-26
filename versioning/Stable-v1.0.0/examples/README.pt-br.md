@@ -4,7 +4,7 @@ Copiados da Alpha-v0.2.0-Alkimim para a avaliação Stable-v1.0.0. Derivações 
 
 [English](README.md) · [Início](../../../README.pt-br.md) · [Regras de referência](../../Stable-v1.0.0/README.pt-br.md#reference-rules)
 
-Os exemplos executáveis desta edição estão neste diretório, adaptados dos [exemplos Alpha-v0.1.0-Alkimim](../../Alpha-v0.1.0-Alkimim/examples/README.pt-br.md), que permanecem preservados como histórico. Cada pacote apresenta artefatos de projeto associados às responsabilidades do OAL: UCS (L1), os componentes ADPM e ADVS da L2, ADI (L3), ADIB (L4) e registros de derivação. Os artefatos instanciam quatro modelos reutilizáveis, um por camada, definidos em [models/](models/README.pt-br.md). Os registros não demonstram a construção nem a execução de transformadores determinísticos entre modelos: os modelos foram aplicados manualmente. Suas bases de necessidades foram reconstruídas das UCS para fins didáticos; não são registros independentes das partes interessadas. Os READMEs de cada exemplo mostram onde terminam as regras dos casos e começam os adaptadores de navegador e HTTP.
+Os exemplos executáveis desta edição estão neste diretório, adaptados dos [exemplos Alpha-v0.1.0-Alkimim](../../Alpha-v0.1.0-Alkimim/examples/README.pt-br.md), cujos artefatos históricos permanecem preservados, com instruções operacionais do lançador atualizadas conforme a lista explícita de exceções do repositório. Cada pacote apresenta artefatos de projeto associados às responsabilidades do OAL: UCS (L1), os componentes ADPM e ADVS da L2, ADI (L3), ADIB (L4) e registros de derivação. Os artefatos instanciam quatro modelos reutilizáveis, um por camada, definidos em [models/](models/README.pt-br.md). Os registros não demonstram a construção nem a execução de transformadores determinísticos entre modelos: os modelos foram aplicados manualmente. Suas bases de necessidades foram reconstruídas das UCS para fins didáticos; não são registros independentes das partes interessadas. Os READMEs de cada exemplo mostram onde terminam as regras dos casos e começam os adaptadores de navegador e HTTP.
 
 Os três exemplos usam Python e SQLite, mas resolvem problemas diferentes: um catálogo pequeno, um quadro comercial e um quadro de itens de trabalho.
 
@@ -32,34 +32,37 @@ O [Work Board](work-board/README.pt-br.md) é um pequeno gerenciador de itens de
 
 ## Executar um exemplo
 
-Os exemplos atuais exigem Python 3.12 ou posterior. Na raiz do repositório, use [run_examples.py](../../../run_examples.py):
+Use Python 3.12 ou posterior e o [lançador desta edição](../run_examples.py). Na raiz do repositório:
 
 ```bash
-python run_examples.py tiny-catalog
-python run_examples.py board-crm
-python run_examples.py work-board
+python versioning/Stable-v1.0.0/run_examples.py --list
+python versioning/Stable-v1.0.0/run_examples.py tiny-catalog
+python versioning/Stable-v1.0.0/run_examples.py board-crm
+python versioning/Stable-v1.0.0/run_examples.py work-board
 ```
 
-Use `python run_examples.py --list` para ver todos os exemplos de todas as edições. Um nome sem edição executa a edição atual; use `EDICAO/NOME` para uma edição histórica. Cada diretório de exemplo declara `runner.json` com executador, ponto de entrada, porta e banco. O lançador importa cada exemplo Python de seu diretório `src`, inicia um servidor vinculado a `127.0.0.1` e abre a página no navegador. Os arquivos SQLite padrão ficam em `data/` na raiz do repositório, em um subdiretório por edição, ignorado pelo Git. Encerre o servidor com Ctrl+C. O lançador apenas inicia aplicações; ele não é um motor de derivação do OAL.
+Dentro de `versioning/Stable-v1.0.0/`, use `python run_examples.py NOME` ou `python run_examples.py --list`. A lista contém somente os três exemplos desta edição; a seleção aceita somente o nome, sem `EDICAO/`. Para outra edição, escolha seu próprio caminho de lançador. Uma cópia isolada da pasta da edição, mesmo renomeada, mantém essa identidade e funciona sem arquivos da raiz. Em outro diretório de trabalho, informe o caminho absoluto do lançador.
+
+O lançador lê somente `examples/*/runner.json` ao lado dele, importa o `src` do exemplo selecionado, escuta em `127.0.0.1` e abre o navegador por padrão. Encerre com Ctrl+C. Ele apenas inicia aplicações; não é um motor de derivação do OAL.
 
 As opções vêm **depois** do nome do exemplo:
 
 | Opção | Efeito |
 | --- | --- |
-| `--port 8010` | Usa outra porta local em vez de 8000, 8001 ou 8002. |
-| `--database CAMINHO` | Usa o arquivo SQLite indicado em vez do padrão em `data/`. |
-| `--no-browser` | Inicia o servidor sem abrir o navegador. |
+| `--port 8011` | Substitui a porta declarada em `runner.json` (8000, 8001 ou 8002). |
+| `--database CAMINHO` | Usa o SQLite indicado; caminhos relativos partem do diretório de trabalho atual, e caminhos absolutos são aceitos. |
+| `--no-browser` | Inicia sem abrir o navegador. |
 | `--help` | Mostra as opções do exemplo selecionado. |
 
-Por exemplo, `python run_examples.py tiny-catalog --port 8010 --no-browser` inicia o Tiny Catalog na porta 8010. As senhas de demonstração são para uso local; o README de cada exemplo explica como alterá-las por variáveis de ambiente. Os exemplos históricos estão em `versioning/Alpha-v0.1.0-Alkimim/examples/`.
+Por exemplo, na raiz: `python versioning/Stable-v1.0.0/run_examples.py board-crm --port 8011 --no-browser`.
 
+O banco padrão fica em `versioning/Stable-v1.0.0/data/<database_name>`, ao lado de `examples/`, independentemente do diretório de trabalho. Os bancos antigos em `data/Stable-v1.0.0/` na raiz continuam onde estavam: não há migração nem exclusão automática. Para reutilizá-los, na raiz execute `python versioning/Stable-v1.0.0/run_examples.py work-board --database data/Stable-v1.0.0/work-board.sqlite3`; em outro diretório, informe o caminho absoluto do banco antigo.
 
-
-O lançador da raiz escolhe um executador do registro `EXECUTORS`. `ExampleExecutor` é a interface; `PythonWSGIExecutor` atende os exemplos atuais. Outra linguagem pode oferecer um novo executador e declará-lo no `runner.json` do exemplo, com seu próprio ponto de entrada e argumentos. O comando do lançador continua na raiz do repositório.
+As senhas de demonstração são para uso local; cada README explica as variáveis de ambiente. `PythonWSGIExecutor` interpreta as declarações locais `runner.json`; o lançador não depende de módulo compartilhado em outra edição ou na raiz.
 
 ## Evidências de execução
 
-O [registro atual](verification/execution.json) contém os comandos efetivos da preparação Stable, horários, ambiente, resultados e hashes das entradas. A [execução histórica Alpha](verification/historical-alpha-v0.2.0/execution.json) preserva suas observações originais de 2026-10-24 e não comprova nova execução. O [relatório estrutural](verification/structural-checks.json) cobre apenas referências explícitas.
+O [índice histórico](verification/history.json) também preserva a [execução da candidata Stable inicial](verification/historical-stable-initial/execution.json), com seu commit e comandos originais. O [registro atual](verification/execution.json) contém os comandos efetivos da preparação Stable, horários, ambiente, resultados e hashes das entradas. A [execução histórica Alpha](verification/historical-alpha-v0.2.0/execution.json) preserva suas observações originais de 2026-10-24 e não comprova nova execução. O [relatório estrutural](verification/structural-checks.json) cobre apenas referências explícitas.
 
 As suítes exercitam núcleos e adaptadores WSGI; Tiny Catalog também utiliza HTTP de loopback. O smoke dos lançadores confirma resposta HTTP e encerramento do processo. JavaScript de navegador e acessibilidade visual não são avaliados. Falhas SQLite controladas não estabelecem garantias de crash ou perda de energia arbitrários. Observações finitas não provam conformidade universal nem demonstram um transformador OAL.
 

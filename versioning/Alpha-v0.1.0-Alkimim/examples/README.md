@@ -18,20 +18,30 @@ These are the historical examples of the Alpha-v0.1.0-Alkimim edition, preserved
 
 ## Run an example
 
-From the repository root, use the shared [launcher](../../../run_examples.py). Because this is a historical edition, name the edition explicitly:
+Use Python 3.12 or later and [this edition's launcher](../run_examples.py). From the repository root:
 
 ```bash
-python run_examples.py Alpha-v0.1.0-Alkimim/tiny-catalog
-python run_examples.py Alpha-v0.1.0-Alkimim/board-crm
-python run_examples.py Alpha-v0.1.0-Alkimim/work-board
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py --list
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py tiny-catalog
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py board-crm
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py work-board
 ```
 
-`python run_examples.py --list` lists every example of every edition. A bare example name resolves to the current edition; use `EDITION/NAME` for historical editions.
+Inside `versioning/Alpha-v0.1.0-Alkimim/`, use `python run_examples.py NAME` or `python run_examples.py --list`. The list contains only this edition's three examples; selection accepts a bare name without `EDITION/`. Choose another edition through its own launcher path. An isolated copy of the edition directory, even renamed, retains its identity and works without repository-root files. From an unrelated working directory, supply the launcher's absolute path.
 
-Each example directory contains a `runner.json` with its executor, entrypoint, default port, and database name. The launcher creates the default SQLite files under the repository's ignored `data/` directory, in an edition-specific subdirectory. The options come after the selection, for example:
+The launcher reads only its sibling `examples/*/runner.json`, imports the selected example's `src`, binds to `127.0.0.1`, and opens a browser by default. Stop with Ctrl+C. It only starts applications; it is not an OAL derivation engine.
 
-```bash
-python run_examples.py Alpha-v0.1.0-Alkimim/tiny-catalog --port 8010 --no-browser
-```
+Options come **after** the example name:
 
-The demonstration passwords are for local use; each example README explains how to change them with environment variables. The launcher only starts applications; it is not an OAL derivation engine.
+| Option | Effect |
+| --- | --- |
+| `--port 8011` | Override the port declared in `runner.json` (8000, 8001, or 8002). |
+| `--database PATH` | Use the specified SQLite file; relative paths use the current working directory, and absolute paths are accepted. |
+| `--no-browser` | Start without opening a browser. |
+| `--help` | Show the selected example's options. |
+
+For example, from the root: `python versioning/Alpha-v0.1.0-Alkimim/run_examples.py board-crm --port 8011 --no-browser`.
+
+The default database is `versioning/Alpha-v0.1.0-Alkimim/data/<database_name>`, next to `examples/`, independently of the working directory. Existing databases under the root's `data/Alpha-v0.1.0-Alkimim/` stay in place: there is no automatic migration or deletion. To reuse one from the root, run `python versioning/Alpha-v0.1.0-Alkimim/run_examples.py work-board --database data/Alpha-v0.1.0-Alkimim/work-board.sqlite3`; from another directory, supply the old database's absolute path.
+
+Demonstration passwords are for local use; each README explains the environment variables. `PythonWSGIExecutor` interprets the local `runner.json` declarations; the launcher needs no shared module in another edition or at the repository root.

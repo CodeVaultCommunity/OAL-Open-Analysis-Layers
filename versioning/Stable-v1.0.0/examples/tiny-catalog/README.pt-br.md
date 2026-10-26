@@ -26,8 +26,10 @@ No código, [`usecases`](src/tiny_catalog/usecases) toma as decisões do catálo
 Com Python 3.12 ou posterior, execute na raiz:
 
 ```bash
-python run_examples.py tiny-catalog
+python versioning/Stable-v1.0.0/run_examples.py tiny-catalog
 ```
+
+Dentro da pasta da edição, use `python run_examples.py tiny-catalog`. O banco padrão fica em `versioning/Stable-v1.0.0/data/catalog.sqlite3`. `--database` aceita um caminho absoluto ou relativo ao diretório de trabalho atual; o [guia operacional](../README.pt-br.md#executar-um-exemplo) explica como reutilizar bancos antigos sem movê-los.
 
 O inicializador abre `http://127.0.0.1:8000/`. O navegador solicita credenciais HTTP Basic na primeira chamada à API. Use `maintainer` / `maintainer-demo` ou `reader` / `reader-demo`. Para trocar de conta, use outra sessão privada do navegador ou limpe as credenciais armazenadas. É possível alterar as senhas padrão por variáveis de ambiente `OAL_CATALOG_<ROLE>_PASSWORD`. A demonstração escuta em loopback; as senhas fixas são apenas para uso local.
 

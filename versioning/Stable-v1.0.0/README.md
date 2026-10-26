@@ -2,7 +2,7 @@
 
 # Release notes — OAL Stable-v1.0.0
 
-Stable-v1.0.0 carries forward the 46 numbered requirements of Alpha-v0.2.0-Alkimim at baseline commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, without changing their wording or optional recommendations. Both Alpha editions are preserved as historical snapshots.
+Stable-v1.0.0 carries forward the 46 numbered requirements of Alpha-v0.2.0-Alkimim at baseline commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, without changing their wording or optional recommendations. Published Alpha snapshots remain immutable. In this candidate tree, the only exception to Alpha directory preservation is the [explicit operational allowlist](../../ALPHA-OPERATIONAL-ALLOWLIST.json): local launchers and execution instructions; all other historical files remain preserved.
 
 Stability means a defined contract, verified examples, and published limits. It does not certify all implementations, establish universal correctness, or make the demonstration applications production products. This local preparation asserts no publication date, DOI, or external review.
 
@@ -10,7 +10,7 @@ The Work Board UCS baseline becomes 0.2.1: O-WB-AVAIL is classified as a domain 
 
 The [comparison and assessment](COMPATIBILITY.md) records the normative comparison and new model review. The [execution evidence](examples/verification/execution.json), [structural checks](examples/verification/structural-checks.json), [content inventory](../../CONTENT-SHA256.json), and [informational skill](skill/SKILL.md) identify the delivered scope. Historical test results are separated from new runs.
 
-The credited OAL authors remain Douglas de Oliveira Alkimim and Bruno Chevitarese. Historical authorship and derivation accountability are retained; preparation by Codex is not an assertion of new human sign-off.
+The credited OAL authors remain Douglas de Oliveira Alkimim and Bruno Chevitarese. Historical authorship and derivation accountability are retained; this review is not an assertion of new human sign-off.
 
 ---
 

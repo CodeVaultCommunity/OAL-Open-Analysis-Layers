@@ -1,0 +1,1 @@
+Structure OK: {'cases': 16, 'file_references': 361, 'symbol_references': 93, 'instances': 12, 'projects': 3, 'document_links': 1368}

@@ -19,7 +19,9 @@ The dependency direction is P4 → P3. Cases know nothing about routes, forms, J
 
 ## Run
 
-From the repository root, use `python run_examples.py work-board`. Open `http://127.0.0.1:8002/`. The local demonstration accounts are `manager` / `manager-demo`, `contributor` / `contributor-demo`, and `viewer` / `viewer-demo`. Managers can assign; contributors can create, advance, and comment; viewers can read. Override passwords with `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD`, and `OAL_WORK_BOARD_VIEWER_PASSWORD`. Data goes to the ignored `data/Stable-v1.0.0/work-board.sqlite3` file. Stop with Ctrl+C.
+From the repository root, use `python versioning/Stable-v1.0.0/run_examples.py work-board`. Open `http://127.0.0.1:8002/`. The local demonstration accounts are `manager` / `manager-demo`, `contributor` / `contributor-demo`, and `viewer` / `viewer-demo`. Managers can assign; contributors can create, advance, and comment; viewers can read. Override passwords with `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD`, and `OAL_WORK_BOARD_VIEWER_PASSWORD`. Data goes to the ignored `versioning/Stable-v1.0.0/data/work-board.sqlite3` file. Stop with Ctrl+C.
+
+Inside the edition directory, use `python run_examples.py work-board`. The default database is `versioning/Stable-v1.0.0/data/work-board.sqlite3`. `--database` accepts an absolute path or a path relative to the working directory; the [operational guide](../README.md#run-an-example) explains how to reuse old databases without moving them.
 
 To run checks from this example directory, create and activate an isolated environment, install the declared test extra with `python -m pip install -e ".[test]"`, then run `python -m pytest -q`. The extra pins pytest 9.0.2. The suite covers direct cases, storage contracts, and WSGI HTTP handling, including oversized expected versions, unavailable storage, and unconfirmed commit outcomes. The demonstration binds to loopback and is not a production account system.
 

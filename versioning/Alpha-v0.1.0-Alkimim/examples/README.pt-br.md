@@ -18,20 +18,30 @@ O [Work Board](work-board/README.pt-br.md) é um pequeno gerenciador de itens de
 
 ## Executar um exemplo
 
-Na raiz do repositório, use o [lançador compartilhado](../../../run_examples.py). Como esta é uma edição histórica, nomeie a edição explicitamente:
+Use Python 3.12 ou posterior e o [lançador desta edição](../run_examples.py). Na raiz do repositório:
 
 ```bash
-python run_examples.py Alpha-v0.1.0-Alkimim/tiny-catalog
-python run_examples.py Alpha-v0.1.0-Alkimim/board-crm
-python run_examples.py Alpha-v0.1.0-Alkimim/work-board
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py --list
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py tiny-catalog
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py board-crm
+python versioning/Alpha-v0.1.0-Alkimim/run_examples.py work-board
 ```
 
-`python run_examples.py --list` lista todos os exemplos de todas as edições. Um nome de exemplo sem edição resolve para a edição atual; use `EDICAO/NOME` para edições históricas.
+Dentro de `versioning/Alpha-v0.1.0-Alkimim/`, use `python run_examples.py NOME` ou `python run_examples.py --list`. A lista contém somente os três exemplos desta edição; a seleção aceita somente o nome, sem `EDICAO/`. Para outra edição, escolha seu próprio caminho de lançador. Uma cópia isolada da pasta da edição, mesmo renomeada, mantém essa identidade e funciona sem arquivos da raiz. Em outro diretório de trabalho, informe o caminho absoluto do lançador.
 
-Cada diretório de exemplo contém um `runner.json` com seu executador, ponto de entrada, porta padrão e nome do banco. O lançador cria os arquivos SQLite padrão em `data/` na raiz do repositório, em um subdiretório por edição. As opções vêm depois da seleção, por exemplo:
+O lançador lê somente `examples/*/runner.json` ao lado dele, importa o `src` do exemplo selecionado, escuta em `127.0.0.1` e abre o navegador por padrão. Encerre com Ctrl+C. Ele apenas inicia aplicações; não é um motor de derivação do OAL.
 
-```bash
-python run_examples.py Alpha-v0.1.0-Alkimim/tiny-catalog --port 8010 --no-browser
-```
+As opções vêm **depois** do nome do exemplo:
 
-As senhas de demonstração são para uso local; o README de cada exemplo explica como alterá-las por variáveis de ambiente. O lançador apenas inicia aplicações; ele não é um motor de derivação do OAL.
+| Opção | Efeito |
+| --- | --- |
+| `--port 8011` | Substitui a porta declarada em `runner.json` (8000, 8001 ou 8002). |
+| `--database CAMINHO` | Usa o SQLite indicado; caminhos relativos partem do diretório de trabalho atual, e caminhos absolutos são aceitos. |
+| `--no-browser` | Inicia sem abrir o navegador. |
+| `--help` | Mostra as opções do exemplo selecionado. |
+
+Por exemplo, na raiz: `python versioning/Alpha-v0.1.0-Alkimim/run_examples.py board-crm --port 8011 --no-browser`.
+
+O banco padrão fica em `versioning/Alpha-v0.1.0-Alkimim/data/<database_name>`, ao lado de `examples/`, independentemente do diretório de trabalho. Os bancos antigos em `data/Alpha-v0.1.0-Alkimim/` na raiz continuam onde estavam: não há migração nem exclusão automática. Para reutilizá-los, na raiz execute `python versioning/Alpha-v0.1.0-Alkimim/run_examples.py work-board --database data/Alpha-v0.1.0-Alkimim/work-board.sqlite3`; em outro diretório, informe o caminho absoluto do banco antigo.
+
+As senhas de demonstração são para uso local; cada README explica as variáveis de ambiente. `PythonWSGIExecutor` interpreta as declarações locais `runner.json`; o lançador não depende de módulo compartilhado em outra edição ou na raiz.

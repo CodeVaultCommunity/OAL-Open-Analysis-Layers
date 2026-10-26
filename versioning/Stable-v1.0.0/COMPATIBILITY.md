@@ -2,7 +2,7 @@
 
 [Português](COMPATIBILITY.pt-br.md) · [Reference rules](README.md#reference-rules)
 
-Source: Alpha-v0.2.0-Alkimim at commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c. Prepared by Codex under the execution plan; this records a local compatibility review, not external review or new human sign-off.
+Source: Alpha-v0.2.0-Alkimim at commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c. This records a local compatibility review, not external review or new human sign-off.
 
 ## Normative comparison
 
@@ -34,7 +34,7 @@ The models were introduced in Alpha-v0.2.0-Alkimim. Their original assessment is
 
 Work Board baseline 0.2.1 changes O-WB-AVAIL.origin from baseline-decision to domain because it specifies operational results of the cases. Its origin_reference is retained verbatim, including the baseline decision and absence of independent stakeholder evidence. Reconstructed needs stay 0.2.0. The Needs-to-L1 record explicitly identifies the corrected destination; subsequent source/destination references use 0.2.1.
 
-The derived Work Board artifacts are reviewed for compatibility and retain their behavior, case identities, criteria, implementation and tests. Their 0.2.1 label identifies this reviewed set, not a newly generated implementation. Historical derivation owners remain attributed to the historical work; Codex prepared this correction without asserting a transformer execution or human approval.
+The derived Work Board artifacts are reviewed for compatibility and retain their behavior, case identities, criteria, implementation and tests. Their 0.2.1 label identifies this reviewed set, not a newly generated implementation. Historical derivation owners remain attributed to the historical work; this correction does not assert a transformer execution or human approval.
 
 Tiny Catalog and Board CRM retain artifact baseline 0.2.0; their current edition metadata and evidence are updated. Board CRM's schema identifier names the historical content format and remains unchanged; its evolution paragraph records historical adaptation. The generated TeX date line identifies the current assessed edition. Python demonstration packages retain 0.2.0a0; OAL stability makes no commercial-stability claim for them.
 

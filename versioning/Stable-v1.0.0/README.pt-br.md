@@ -1,7 +1,7 @@
 <a id="notas-da-versao"></a>
 # Notas da versão — OAL Stable-v1.0.0
 
-Stable-v1.0.0 mantém os 46 requisitos numerados de Alpha-v0.2.0-Alkimim no commit-base 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, sem mudar sua redação nem suas recomendações opcionais. Ambas as edições Alpha são preservadas como snapshots históricos.
+Stable-v1.0.0 mantém os 46 requisitos numerados de Alpha-v0.2.0-Alkimim no commit-base 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c, sem mudar sua redação nem suas recomendações opcionais. Os snapshots publicados das edições Alpha permanecem imutáveis. Nesta árvore candidata, a única exceção à preservação dos diretórios Alpha é a [lista explícita de ajustes operacionais](../../ALPHA-OPERATIONAL-ALLOWLIST.json): lançadores locais e instruções de execução; os demais arquivos históricos continuam preservados.
 
 Estabilidade significa contrato definido, exemplos verificados e limites publicados. Não certifica todas as implementações, estabelece correção universal nem transforma aplicações demonstrativas em produtos de produção. Esta preparação local não afirma data de publicação, DOI ou revisão externa.
 
@@ -9,7 +9,7 @@ A baseline UCS do Work Board passa a 0.2.1: O-WB-AVAIL é classificada como obri
 
 A [comparação e avaliação](COMPATIBILITY.pt-br.md) registra a comparação normativa e nova revisão dos modelos. As [evidências de execução](examples/verification/execution.json), [verificações estruturais](examples/verification/structural-checks.json), o [inventário](../../CONTENT-SHA256.json) e a [skill informativa](skill/SKILL.md) identificam o escopo entregue. Resultados históricos de testes ficam separados das novas execuções.
 
-Os autores creditados do OAL continuam sendo Douglas de Oliveira Alkimim e Bruno Chevitarese. Autoria e responsabilidade histórica pelas derivações são preservadas; a preparação pelo Codex não afirma nova aprovação humana.
+Os autores creditados do OAL continuam sendo Douglas de Oliveira Alkimim e Bruno Chevitarese. Autoria e responsabilidade histórica pelas derivações são preservadas; esta revisão não afirma nova aprovação humana.
 
 ---
 

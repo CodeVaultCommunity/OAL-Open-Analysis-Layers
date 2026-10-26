@@ -2,7 +2,7 @@
 
 [English](COMPATIBILITY.md) · [Regras de referência](README.pt-br.md#reference-rules)
 
-Origem: Alpha-v0.2.0-Alkimim no commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c. Preparado pelo Codex conforme o plano de execução; registra revisão local de compatibilidade, sem revisão externa ou nova aprovação humana.
+Origem: Alpha-v0.2.0-Alkimim no commit 5755a4e4a5b31a9614da5d409d03d1db9cf1e20c. Este registro apresenta revisão local de compatibilidade, sem revisão externa ou nova aprovação humana.
 
 ## Comparação normativa
 
@@ -34,7 +34,7 @@ Os modelos surgiram na Alpha-v0.2.0-Alkimim. A avaliação original é históric
 
 Work Board 0.2.1 altera O-WB-AVAIL.origin de baseline-decision para domain, pois especifica resultados operacionais dos casos. origin_reference é preservado literalmente, inclusive a decisão de baseline e a ausência de evidência independente de stakeholders. Necessidades reconstruídas continuam 0.2.0. O registro Needs-to-L1 identifica o destino corrigido; referências seguintes usam 0.2.1.
 
-Os derivados Work Board recebem revisão de compatibilidade, mantendo comportamento, identidades, critérios, implementação e testes. O rótulo 0.2.1 identifica o conjunto revisado, sem alegar nova geração. A responsabilidade histórica continua atribuída ao trabalho original; o Codex preparou a correção sem afirmar execução de transformador ou aprovação humana.
+Os derivados Work Board recebem revisão de compatibilidade, mantendo comportamento, identidades, critérios, implementação e testes. O rótulo 0.2.1 identifica o conjunto revisado, sem alegar nova geração. A responsabilidade histórica continua atribuída ao trabalho original; esta correção não afirma execução de transformador ou aprovação humana.
 
 Tiny Catalog e Board CRM mantêm baseline 0.2.0, com metadados de edição e evidências atuais. O identificador de schema do Board CRM nomeia o formato histórico e permanece igual; o parágrafo de evolução registra a adaptação histórica. A linha de edição do TeX gerado identifica a edição avaliada atualmente. Pacotes Python demonstrativos mantêm 0.2.0a0; estabilidade do OAL não promete estabilidade comercial dessas aplicações.
 

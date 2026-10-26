@@ -90,4 +90,4 @@ Uma verificação estrutural pode conferir vínculos estruturais, mapeamento end
 
 ## Avaliação de compatibilidade estável
 
-Origem: Alpha-v0.2.0-Alkimim, modelo 0.1.0. Para Stable-v1.0.0, as regras numeradas do OAL e os campos e condições de validade deste modelo foram comparados com essa baseline; permanecem iguais. O mapeamento acima continua aplicável ao mesmo escopo didático. Esta revisão de compatibilidade pelo Codex não é certificação externa nem execução de transformador. O [relatório de avaliação](../../../COMPATIBILITY.pt-br.md) registra escopo e limites; execuções dos projetos são registradas separadamente.
+Origem: Alpha-v0.2.0-Alkimim, modelo 0.1.0. Para Stable-v1.0.0, as regras numeradas do OAL e os campos e condições de validade deste modelo foram comparados com essa baseline; permanecem iguais. O mapeamento acima continua aplicável ao mesmo escopo didático. Esta revisão de compatibilidade não é certificação externa nem execução de transformador. O [relatório de avaliação](../../../COMPATIBILITY.pt-br.md) registra escopo e limites; execuções dos projetos são registradas separadamente.

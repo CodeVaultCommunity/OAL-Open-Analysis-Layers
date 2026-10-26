@@ -90,4 +90,4 @@ A structural check can check structural links, endpoint-to-case mapping, interfa
 
 ## Stable compatibility assessment
 
-Origin: Alpha-v0.2.0-Alkimim, model version 0.1.0. For Stable-v1.0.0, the numbered OAL rules and this model's fields and validity conditions were compared with that baseline; they are unchanged. The mapping above therefore carries forward for the same educational scope. This is a compatibility review by Codex, not external certification or a transformer execution. The [assessment report](../../../COMPATIBILITY.md) records scope and limits; project executions are recorded separately.
+Origin: Alpha-v0.2.0-Alkimim, model version 0.1.0. For Stable-v1.0.0, the numbered OAL rules and this model's fields and validity conditions were compared with that baseline; they are unchanged. The mapping above therefore carries forward for the same educational scope. This is a compatibility review, not external certification or a transformer execution. The [assessment report](../../../COMPATIBILITY.md) records scope and limits; project executions are recorded separately.

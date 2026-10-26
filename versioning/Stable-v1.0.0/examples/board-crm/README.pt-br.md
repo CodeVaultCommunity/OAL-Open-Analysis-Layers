@@ -28,8 +28,10 @@ No código, [`usecases`](src/board_crm/usecases) toma as decisões dos casos e d
 Com Python 3.12 ou posterior, execute na raiz:
 
 ```bash
-python run_examples.py board-crm
+python versioning/Stable-v1.0.0/run_examples.py board-crm
 ```
+
+Dentro da pasta da edição, use `python run_examples.py board-crm`. O banco padrão fica em `versioning/Stable-v1.0.0/data/board-crm.sqlite3`. `--database` aceita um caminho absoluto ou relativo ao diretório de trabalho atual; o [guia operacional](../README.pt-br.md#executar-um-exemplo) explica como reutilizar bancos antigos sem movê-los.
 
 O inicializador abre `http://127.0.0.1:8001/`. O navegador solicita credenciais HTTP Basic na primeira chamada à API. Use `manager` / `manager-demo`, `operator` / `operator-demo` ou `viewer` / `viewer-demo`. Para trocar de conta, use outra sessão privada do navegador ou limpe as credenciais armazenadas. É possível alterar as senhas padrão por variáveis de ambiente `OAL_CRM_<ROLE>_PASSWORD`. A demonstração escuta em loopback; as senhas fixas são apenas para uso local.
 

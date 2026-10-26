@@ -122,7 +122,7 @@ Instale a skill copiando a pasta completa versioning/Stable-v1.0.0/skill/ para o
 
 ## Exemplos
 
-O repositório inclui Tiny Catalog, Board CRM e Work Board. Esses pacotes apresentam artefatos de projeto que instanciam quatro modelos reutilizáveis (M1–M4) em `versioning/Stable-v1.0.0/examples/models/`; cada projeto declara suas quatro instâncias em `model-instances.json`. Os modelos foram aplicados manualmente, então os registros não demonstram transformadores construídos ou executados. Seus artefatos, funcionalidades, credenciais de demonstração e instruções de execução estão no [guia dos exemplos](versioning/Stable-v1.0.0/examples/README.pt-br.md). Liste os exemplos disponíveis com `python run_examples.py --list` e execute um deles com `python run_examples.py EDICAO/NOME`; um nome sem edição executa esta edição.
+O repositório inclui Tiny Catalog, Board CRM e Work Board. Esses pacotes apresentam artefatos de projeto que instanciam quatro modelos reutilizáveis (M1–M4) em `versioning/Stable-v1.0.0/examples/models/`; cada projeto declara suas quatro instâncias em `model-instances.json`. Os modelos foram aplicados manualmente, então os registros não demonstram transformadores construídos ou executados. Seus artefatos, funcionalidades, credenciais de demonstração e instruções de execução estão no [guia dos exemplos](versioning/Stable-v1.0.0/examples/README.pt-br.md). Liste os exemplos desta edição com `python versioning/Stable-v1.0.0/run_examples.py --list` e execute um deles com `python versioning/Stable-v1.0.0/run_examples.py NOME`. Escolha outra edição pelo caminho de seu próprio lançador. Consulte a [distribuição canônica](DISTRIBUTION.pt-br.md) para verificar o ZIP.
 
 ## Perguntas frequentes
 

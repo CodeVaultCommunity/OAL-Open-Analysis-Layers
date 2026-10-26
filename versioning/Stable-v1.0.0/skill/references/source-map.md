@@ -22,14 +22,14 @@ identifiers, not dependencies on files outside this skill.
 | `LICENSE` | Original MIT license and copyright attribution. |
 
 - **Canonical edition label:** `Stable-v1.0.0`.
-- **English source SHA-256:** `8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e`.
-- **Portuguese source SHA-256:** `dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc`.
+- **English source SHA-256:** `70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84`.
+- **Portuguese source SHA-256:** `5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d`.
 - **Original license SHA-256:** `dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7`.
 
 - **Included license SHA-256:** `dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7`.
 
 OAL's credited authors are **Douglas de Oliveira Alkimim** and **Bruno
-Chevitarese**. The Alpha source credits Douglas de Oliveira Alkimim as its principal editor. Stable preparation by Codex does not assert new human sign-off. The [included license](../LICENSE.txt) preserves the source project's
+Chevitarese**. The Alpha source credits Douglas de Oliveira Alkimim as its principal editor. This compatibility review does not assert new human sign-off. The [included license](../LICENSE.txt) preserves the source project's
 MIT terms and attribution.
 
 Stable-v1.0.0 is a new edition; released commit/tag snapshots are immutable. These hashes identify the source bytes for this preparation. Historical Alpha editions and their skills remain separate.

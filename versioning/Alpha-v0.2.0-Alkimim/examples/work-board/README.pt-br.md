@@ -19,7 +19,9 @@ A direção das dependências é P4 → P3. Os casos não conhecem rotas, formul
 
 ## Executar
 
-Na raiz do repositório, use `python run_examples.py work-board`. Abra `http://127.0.0.1:8002/`. As contas locais de demonstração são `manager` / `manager-demo`, `contributor` / `contributor-demo` e `viewer` / `viewer-demo`. Gestores podem atribuir; colaboradores podem criar, avançar e comentar; leitores podem consultar. Altere as senhas com `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD` e `OAL_WORK_BOARD_VIEWER_PASSWORD`. Os dados ficam no arquivo ignorado `data/Alpha-v0.2.0-Alkimim/work-board.sqlite3`. Encerre com Ctrl+C.
+Na raiz do repositório, use `python versioning/Alpha-v0.2.0-Alkimim/run_examples.py work-board`. Abra `http://127.0.0.1:8002/`. As contas locais de demonstração são `manager` / `manager-demo`, `contributor` / `contributor-demo` e `viewer` / `viewer-demo`. Gestores podem atribuir; colaboradores podem criar, avançar e comentar; leitores podem consultar. Altere as senhas com `OAL_WORK_BOARD_MANAGER_PASSWORD`, `OAL_WORK_BOARD_CONTRIBUTOR_PASSWORD` e `OAL_WORK_BOARD_VIEWER_PASSWORD`. Os dados ficam no arquivo ignorado `versioning/Alpha-v0.2.0-Alkimim/data/work-board.sqlite3`. Encerre com Ctrl+C.
+
+Dentro da pasta da edição, use `python run_examples.py work-board`. O banco padrão fica em `versioning/Alpha-v0.2.0-Alkimim/data/work-board.sqlite3`. `--database` aceita um caminho absoluto ou relativo ao diretório de trabalho atual; o [guia operacional](../README.pt-br.md#executar-um-exemplo) explica como reutilizar bancos antigos sem movê-los.
 
 Para verificar o exemplo, crie e ative um ambiente isolado na pasta do exemplo, instale o extra de testes declarado com `python -m pip install -e ".[test]"` e execute `python -m pytest -q`. O extra fixa pytest 9.0.2. A suíte cobre casos diretos, contratos de armazenamento e tratamento HTTP via WSGI, incluindo versões esperadas grandes, indisponibilidade e resultado de confirmação desconhecido. A demonstração escuta apenas em loopback e não é um sistema de contas de produção.
 

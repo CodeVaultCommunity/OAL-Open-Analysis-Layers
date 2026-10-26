@@ -53,8 +53,8 @@
     },
     {
       "path": ".github/workflows/check.yml",
-      "size_bytes": 1431,
-      "sha256": "5fa8a154ee92a2390325e5c5564b3e6473057eddbc8728cb17e11016f723f8d8"
+      "size_bytes": 1490,
+      "sha256": "39d6535c5f935a6dc94dc4d57e0c608e46251bcc4b69fb25d2aa02be64158763"
     },
     {
       "path": ".gitignore",
@@ -63,8 +63,13 @@
     },
     {
       "path": "AGENTS.md",
-      "size_bytes": 2545,
-      "sha256": "ddaaa206b5f0db5e55453ce81afe706eb99a8477f47b421fc775daddb61e00fd"
+      "size_bytes": 2990,
+      "sha256": "30a7b899854a9e0edb7e8eb13f06ea01473d5a8cd6572e2cc24264419d9bfbac"
+    },
+    {
+      "path": "ALPHA-OPERATIONAL-ALLOWLIST.json",
+      "size_bytes": 3472,
+      "sha256": "2fe0fc64c1a9d00b7e045342ecc7c64fbb0487a3f4b518b97221c8898ff2e24d"
     },
     {
       "path": "CITATION.cff",
@@ -73,8 +78,18 @@
     },
     {
       "path": "CLAUDE.md",
-      "size_bytes": 531,
-      "sha256": "b40aa9e40de5030eab37dd442c82db2b70c95c1a5646cabf410f093dfc8f077d"
+      "size_bytes": 789,
+      "sha256": "7b1d85f6d201a6b0701cb3edc965f64ad70bd570fb0b15b4fadd12993a217cba"
+    },
+    {
+      "path": "DISTRIBUTION.md",
+      "size_bytes": 4055,
+      "sha256": "35d9a87a00492394978d6276828ca61fdd73a908fc27d5dfdbe5971e5b86bfcd"
+    },
+    {
+      "path": "DISTRIBUTION.pt-br.md",
+      "size_bytes": 4240,
+      "sha256": "1d0ca2b72d90b3045f40c9564609729c79676a78dc0caeff8aa86725ff7118a4"
     },
     {
       "path": "LICENSE",
@@ -83,13 +98,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 21562,
-      "sha256": "213fb81ca4c08192bcad4de171af7599483c630f432ea65fd290df002cba890a"
+      "size_bytes": 21700,
+      "sha256": "b6c9af7f9589247e321582ac11e931ed4008daa865311af7fa465b8c14aee7b9"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 23098,
-      "sha256": "decda993e2883f30d06be947bdeae2f83288a2daaa569ea563399f0034ee773b"
+      "size_bytes": 23245,
+      "sha256": "dbcebca30e78269857166047e3318881faa4b5dbcf4669f1a3b93d5bc30663a1"
     },
     {
       "path": "VERSION",
@@ -207,19 +222,24 @@
       "sha256": "41d08ab5c476fbad03561535f6616e70c5f3938e732aff506d18e4fa6745eb73"
     },
     {
-      "path": "run_examples.py",
-      "size_bytes": 6412,
-      "sha256": "bb293a024419efe038d88968e3b74385c78c423748de4ca855a7323a78d1381c"
+      "path": "scripts/check_archive.py",
+      "size_bytes": 2712,
+      "sha256": "1fad0dabfedfabb16b4fac7ce381b4aa9d11102a23c7b7885fd792aee57f50ce"
     },
     {
       "path": "scripts/check_structure.py",
-      "size_bytes": 17123,
-      "sha256": "b24ed718a180c158332a35920b4ec922584b82206d69f86b4036fb66f17579f6"
+      "size_bytes": 17464,
+      "sha256": "e96331d1ba6c3695afe56cef99493d1a11de6b2f058f16da290dba386cbd6013"
     },
     {
       "path": "scripts/content_inventory.py",
       "size_bytes": 3648,
       "sha256": "bf6b7ada3e9d6c1ef724bc3760a898180528667217cd0fd76c0b9d7cfa389967"
+    },
+    {
+      "path": "scripts/test_edition_launchers.py",
+      "size_bytes": 11696,
+      "sha256": "729b0995a6afed8c5816cf39aec5d9aff76e6ab03a6116b3edee7c5b5e261669"
     },
     {
       "path": "scripts/test_release_checks.py",
@@ -238,13 +258,13 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.md",
-      "size_bytes": 3469,
-      "sha256": "674f87cc00906b9f755a2cbf459ec8c8e54104cb4583e20926437b7246aa4870"
+      "size_bytes": 4727,
+      "sha256": "e7b55dec9a6b9ca645f1523f19b4a548087f908c86ba4f93092025eed1cd323c"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/README.pt-br.md",
-      "size_bytes": 3771,
-      "sha256": "106613669101e6e73f32ba5b3357481561674cf03cc1b474b38d963c214a761c"
+      "size_bytes": 5056,
+      "sha256": "6d834ddd135630e0aa0292f4342b728d8ab46c495b00f042a865257d8d1df4e2"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/LICENSE",
@@ -338,13 +358,13 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.md",
-      "size_bytes": 3067,
-      "sha256": "bd62c96c95a4970ba112bec2178379f77bfbc297a9c38c70f70d606cad11d395"
+      "size_bytes": 3424,
+      "sha256": "0d6d8b403b6064de12b6313766fbb8eca9c2837a78bf7a9736ad93080fe7c673"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/README.pt-br.md",
-      "size_bytes": 3361,
-      "sha256": "3e905084fd2b7a3830068e34d96bf08821bd16614e4b7311dd6a7bd52065f50b"
+      "size_bytes": 3724,
+      "sha256": "725946b42bc3a2388d9432e9bd7b377307e723af29ef62bb12bf57df40736a5e"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/board-crm/derivations.json",
@@ -598,13 +618,13 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.md",
-      "size_bytes": 2772,
-      "sha256": "bc3c3473347d2fd600af1a4c1bb734cb2af20c2146a7c2a9903b3bc69669619e"
+      "size_bytes": 3130,
+      "sha256": "7476951db682f18cf93182f958b58c0ce879be2b23acc5abe4c385955408b679"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
-      "size_bytes": 3058,
-      "sha256": "2f6f0366c3af09c44515b6811ffb77b1283e3eeeffb7a900e6b328d788403c7c"
+      "size_bytes": 3422,
+      "sha256": "b881b226c345e34b6bb4cb9b01b7f4e493a16aab6d0b1589fb2d630b801c1ecf"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/tiny-catalog/derivations.json",
@@ -903,13 +923,13 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.md",
-      "size_bytes": 2380,
-      "sha256": "cb6ea0709e0e78079dec7703c5d769add439cd9f1b9f8d72e0a3cb9f80af02d5"
+      "size_bytes": 2750,
+      "sha256": "009f203b337ee8611f3745add2cc6f50ee9f90522aff1ee1b631ff685490932a"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/README.pt-br.md",
-      "size_bytes": 2518,
-      "sha256": "6a71e4053871213ecb86e0138007453a839cea685aeeb89e77819cb4e91b6cb9"
+      "size_bytes": 2894,
+      "sha256": "de01003566a8f689321beef284816eac99ef4729faf935cf8a3e0e491170adab"
     },
     {
       "path": "versioning/Alpha-v0.1.0-Alkimim/examples/work-board/derivations.json",
@@ -1032,6 +1052,11 @@
       "sha256": "b4f3ea88fd8680ed2c65afb8d70ab3de6e73c57667f4305c6d794eb996f96e28"
     },
     {
+      "path": "versioning/Alpha-v0.1.0-Alkimim/run_examples.py",
+      "size_bytes": 5520,
+      "sha256": "05091471e22fb0ccbb109f11e4e5a978fb51c82dfcfba17ffd4b8b10305d8574"
+    },
+    {
       "path": "versioning/Alpha-v0.2.0-Alkimim/README.md",
       "size_bytes": 67421,
       "sha256": "e2dcea7e1cf6a6459393f08b37fe720a417dd2baef9c671d91180c73ab88d433"
@@ -1043,13 +1068,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.md",
-      "size_bytes": 7796,
-      "sha256": "abae369173ac9367a6df6282706eca941b5e8afde375e862866d0bdb927e94f9"
+      "size_bytes": 8245,
+      "sha256": "abb3d1e83ea142d01768cf7e61770f29aa5eb91bb260707262bfd033f1bcc0f4"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/README.pt-br.md",
-      "size_bytes": 8524,
-      "sha256": "98ae50be53242798336df7b6fec348742547daecb546985dddbb9837c45a03b5"
+      "size_bytes": 8996,
+      "sha256": "a041a5a0c7927ccd2e2759ac48ae0764ec6ecc7290ea82fecf00d3d23fb39e60"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/LICENSE",
@@ -1143,13 +1168,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.md",
-      "size_bytes": 3701,
-      "sha256": "e7d5b44a7490a75ed88513404d04532c40fb9d0d30b46f59fc5500f5888dcb70"
+      "size_bytes": 4079,
+      "sha256": "7c205507b99262a3ad1666f61dee6cfd0b2773bc17d4f278ff1ac64af2479959"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/README.pt-br.md",
-      "size_bytes": 4049,
-      "sha256": "10b807ff800f880337c393ba61ec875cc130178a37b97eb9de0a5d9251933f03"
+      "size_bytes": 4433,
+      "sha256": "5945a98720b768cc533e91b3fdae0111f0f8dc6a2f9fe203463f8f1208014ff7"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/board-crm/derivations.json",
@@ -1538,13 +1563,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.md",
-      "size_bytes": 3672,
-      "sha256": "525b77157442d90f1537e391c8fd1d26326c6aa235c6eae3e966bfc84c72839d"
+      "size_bytes": 4051,
+      "sha256": "935efee5feb42331e3c3080892c907360c97c9c868902a29298c65993124fa05"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/README.pt-br.md",
-      "size_bytes": 4022,
-      "sha256": "754cfad0a0aca2b4c4a8d52e4dc939e2899d07c6fe6c0df70b7d823dd45f31e0"
+      "size_bytes": 4407,
+      "sha256": "c93fbac72f616aab780e5a10367a74a075301e29275b01e63b58c8fb61c53d8b"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/tiny-catalog/derivations.json",
@@ -1883,13 +1908,13 @@
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.md",
-      "size_bytes": 3536,
-      "sha256": "129feca25e72bba9f62327344fdb7a40b41f532b57c536827aa91b4f764d45f3"
+      "size_bytes": 3927,
+      "sha256": "2cc15031208a4a9a4d2db3f75cc1ab3558642f31cd1f01ed5ef3d44ab2bcf616"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/README.pt-br.md",
-      "size_bytes": 3821,
-      "sha256": "99fa3585e773bb26290e379822c6a00073a1f03eb0e65be1da172f7a65ba2f38"
+      "size_bytes": 4218,
+      "sha256": "6436b352d06b58b30e922227b022777785e688cf32b6103cb3d0a5c5cf508224"
     },
     {
       "path": "versioning/Alpha-v0.2.0-Alkimim/examples/work-board/derivations.json",
@@ -2022,6 +2047,11 @@
       "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
     },
     {
+      "path": "versioning/Alpha-v0.2.0-Alkimim/run_examples.py",
+      "size_bytes": 5520,
+      "sha256": "bc9e22b6a998a671b4caafffc35287d1e91d223162068047edad3e11c623c37b"
+    },
+    {
       "path": "versioning/Alpha-v0.2.0-Alkimim/skill/LICENSE.txt",
       "size_bytes": 1106,
       "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
@@ -2058,33 +2088,33 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/COMPATIBILITY.md",
-      "size_bytes": 4733,
-      "sha256": "6f6817f17ec70d56be7fe0cef1b7a1a9add08a7c691e75912eaa3942c3a80aab"
+      "size_bytes": 4672,
+      "sha256": "65497de08d25e6e184b711b9064f95f6e1116c440367475b92c888f4406688b5"
     },
     {
       "path": "versioning/Stable-v1.0.0/COMPATIBILITY.pt-br.md",
-      "size_bytes": 4827,
-      "sha256": "05949a413304cce5a69cb29b39096c148e65d250d0cf02ef20acefd11b42a01b"
+      "size_bytes": 4775,
+      "sha256": "36e06e4dde3af56f8398ebe6fd77efc9ed36b872d5032aca49fe55f988944d67"
     },
     {
       "path": "versioning/Stable-v1.0.0/README.md",
-      "size_bytes": 63529,
-      "sha256": "8e3d82be109b1e8baf1deab32b338b568aa7c98d407858456620336c76ce499e"
+      "size_bytes": 63750,
+      "sha256": "70f6f8d8d4fcb626e3d4ee84259919bc5c62e149a6d6dc4a2af81ef7ff806f84"
     },
     {
       "path": "versioning/Stable-v1.0.0/README.pt-br.md",
-      "size_bytes": 69371,
-      "sha256": "dec2199d47e04caf65934861cc27308afb264504fce0e54a24391db8d9033bdc"
+      "size_bytes": 69631,
+      "sha256": "5bfe9578f8d967488225ec8591e6524afccb20c4bacabc269102bc6700c8605d"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.md",
-      "size_bytes": 7611,
-      "sha256": "a4b34d46a1fe9ca151d6a24040551f6f8a67f8a782219b6587509ce4d6248ecc"
+      "size_bytes": 8286,
+      "sha256": "1f3298d67caad620e871b29a5a25f753f221c0bda55b156394c05d122e9cc6f1"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/README.pt-br.md",
-      "size_bytes": 8212,
-      "sha256": "4e168b9402f6b634b0103575c4aa7bbff1d104254cb8d1546495258f0d04f8e9"
+      "size_bytes": 8939,
+      "sha256": "8b6bd374cf867c33373a8643f2c434c6e7a8b29a615ba8a809b2c15d02314613"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/LICENSE",
@@ -2149,7 +2179,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 9426,
-      "sha256": "940475deaea1aecd1fa271359ab341496688d19046edeca749af8cf2bd4b994b"
+      "sha256": "49123cbae570569d84631fc8dc6196a2fe04db5113e265854aeebeff3dc1028c"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/OAL-P3/IMPLEMENTATION.md",
@@ -2178,23 +2208,23 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/README.md",
-      "size_bytes": 3687,
-      "sha256": "174a3231eef31e379030887d036e324f88c145077cabe57820b000890c4cea86"
+      "size_bytes": 4051,
+      "sha256": "434b389b5f35c4a01f0413972ff44b64be1f1198301ec78a9de2e64691d5aab0"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/README.pt-br.md",
-      "size_bytes": 4028,
-      "sha256": "3e717c72772b3b6dc5ceef758ae51c167b4a130d3f1f64827f48784c9c2dc1ba"
+      "size_bytes": 4398,
+      "sha256": "2cdd7b84fa17d96b9eccf06967036faeb00db02a9d45bb36980bd6897b32b766"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/derivations.json",
-      "size_bytes": 7957,
-      "sha256": "e3a1fdab46118cb5c99d1714771068eb0ddeaaf9675253b4c6370972b49daee1"
+      "size_bytes": 7929,
+      "sha256": "799e30988c3406653016add2e40abe917f994480278d84b24f67de88ddaf924c"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/model-instances.json",
       "size_bytes": 12519,
-      "sha256": "163c7727248a33d6966d809c6b5eed0b9d14f63b316712f6626aee5c69fc1c64"
+      "sha256": "36bb5d76d1dd3a36d2065762ab45eda2126b66f043cf8428354bc20ae02050f2"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/board-crm/needs-baseline.json",
@@ -2358,13 +2388,13 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.md",
-      "size_bytes": 12423,
-      "sha256": "fdd15402940d3aab9d0c9306273999c53a8546e52048cf444442d494a8867602"
+      "size_bytes": 12414,
+      "sha256": "937ed3a61e214ffd4d3170cfc445c2c6900e9ee9f56193ad497b227d92ce515d"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/MODEL.pt-br.md",
-      "size_bytes": 13172,
-      "sha256": "2163ecca75a68eff9db7ecc5ad43b6e83ff90a8ae81ad65606ee12c293b2682b"
+      "size_bytes": 13161,
+      "sha256": "c818b126cba53bc7d647ac2ed3d98858b680ea0a2cd7fba674a749c8e04904a4"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l1-case-contracts/counterexample.json",
@@ -2388,13 +2418,13 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.md",
-      "size_bytes": 11430,
-      "sha256": "8a155aec84859087123bbed177a4bc500ba7da6105eb2cde714f2393a0535918"
+      "size_bytes": 11421,
+      "sha256": "0caa959e33a048a0391c6ddf59deaf5ac6c2aefef7c57f3b8df78f8f6e9869c0"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/MODEL.pt-br.md",
-      "size_bytes": 12163,
-      "sha256": "f0416d9adccbce5d2d5c27ea6fe0c4e79d2139c4b4443231a7673cae2dc7933f"
+      "size_bytes": 12152,
+      "sha256": "9e13435e83611490b271078d86e21a5ead51356a47add51eba0f48f21ce518b8"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l2-program-scenarios/counterexample.json",
@@ -2418,13 +2448,13 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.md",
-      "size_bytes": 10581,
-      "sha256": "d0750281271e19cbceaeffcd59ee9c7d2730d9aa54309cde3d6b69831f8e6e38"
+      "size_bytes": 10572,
+      "sha256": "c1e3ba3145d9e2b167517dd096aa6e82f2fc98edbaf9c351c54e04319f1599c9"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/MODEL.pt-br.md",
-      "size_bytes": 11373,
-      "sha256": "ffe70a0925df7388d7ae6b84fdef2de218d45b84d199261d6e8b05ba0d7210f9"
+      "size_bytes": 11362,
+      "sha256": "37ef026b83ee66b64a3bca42a07312585d4910e4d09fc9cfbbbe7e2dfcf03c1a"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l3-python-core/counterexample.json",
@@ -2448,13 +2478,13 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.md",
-      "size_bytes": 8840,
-      "sha256": "044941de9f33036c866a7dd2a1240ab10dbef1e51c0d814bb03ed19c16acfd47"
+      "size_bytes": 8831,
+      "sha256": "20c8dbd73a6edbcbc323f82618f7123daa41d15a141ec7d441015c122c0c1951"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/MODEL.pt-br.md",
-      "size_bytes": 9372,
-      "sha256": "74c0f6469bd994a21cc30e2644d13ab27c8891bca4594d707a4c624f62168c0d"
+      "size_bytes": 9361,
+      "sha256": "c66c5c3205bd8160ac3cf2b5b3c30832eca1f15d07a3799da853259580f4c535"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/models/l4-http-boundary/counterexample.json",
@@ -2534,7 +2564,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 8318,
-      "sha256": "212a158f3eb3035857cb21fcb64844fbdd8a51e74aeba55bcde2802b7d63c954"
+      "sha256": "a4c3ff3a49f619187870671f0958c3149970e68bc1c1a765625557ee5fd82a63"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/OAL-P3/CONFORMANCE.md",
@@ -2573,23 +2603,23 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.md",
-      "size_bytes": 3658,
-      "sha256": "f2a5001053b679f1b461bcbee181df4d005208486bf65a908239adc52f539ed0"
+      "size_bytes": 4023,
+      "sha256": "0053a4e2429b31f8d802d720a75baca7c253760684b98aaba8ed66ead99de1ce"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/README.pt-br.md",
-      "size_bytes": 4001,
-      "sha256": "645c931a709848b14ef36201f8d315f840cfb9e942812229801bfd41932f3648"
+      "size_bytes": 4372,
+      "sha256": "b3246301d17c2918167506193b1ecd70528531c0a722428832eaa5111e6efdbb"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/derivations.json",
-      "size_bytes": 6053,
-      "sha256": "44a81b7682ae4b136c142c307057a7a7644260ee3eae282e750822b3e1fba5f2"
+      "size_bytes": 6025,
+      "sha256": "809ecdcd3ffd3543a90a1985bf4f6d410e2ea70e1937c4c6fdc10e6f26115456"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/model-instances.json",
       "size_bytes": 12125,
-      "sha256": "9708d69479cf9a604a5cec0753eb10f44ccfba5b5ddf9c99daa5dfa6dbd4c1d1"
+      "sha256": "9d3a2966f2f45d3e22175eaceb02f7e4d01591477af41b9fdc4135f2cc71f23e"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/tiny-catalog/needs-baseline.json",
@@ -2812,14 +2842,14 @@
       "sha256": "388e87cd797ab1b6a462b91c35e3db38988714c15f45fd80a9ad654b843e907f"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-pytest.txt",
-      "size_bytes": 83,
-      "sha256": "511528680f758b6aade4ebc126883b306bc717db74250f2c0233a3bbcfb4b9e8"
+      "path": "versioning/Stable-v1.0.0/examples/verification/archive-verifier-checks.json",
+      "size_bytes": 500,
+      "sha256": "84cf9f235eefc2c69435c0c4f34a51588f0dd1a4d9345c7ef9773a9a3f39f456"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-render-final.txt",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-pytest.txt",
+      "size_bytes": 83,
+      "sha256": "953aaba585410396c8deabbf4b7d32b95206a675127f6102760adc3512f86da9"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-render.txt",
@@ -2827,24 +2857,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-smoke.txt",
-      "size_bytes": 134,
-      "sha256": "173986573db943749b358b5769b33f63016af13030c2174d8e767ce916fdacf8"
+      "path": "versioning/Stable-v1.0.0/examples/verification/edition-launchers.json",
+      "size_bytes": 74488,
+      "sha256": "0edd659a5cd3e114f1ee7afa94edd0037ddfd318ebd845ea93f86010549162b8"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-tex-final.txt",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "versioning/Stable-v1.0.0/examples/verification/board-crm-tex.txt",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "path": "versioning/Stable-v1.0.0/examples/verification/edition-launchers.txt",
+      "size_bytes": 1486,
+      "sha256": "5d68c65b0c7304e5dd03ea3b523db1ade2d2d61c286086942d96ae3bf56327d4"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/verification/execution.json",
-      "size_bytes": 56642,
-      "sha256": "e7abe11cd3d61e60d64d7bfd0f62ccf98fcb06c2856af41b20195f37c6b33e34"
+      "size_bytes": 139398,
+      "sha256": "c668f7184b4650a1b40dc8013ea3d23e47021b38354391f4fd1ae1b32dd6471a"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/verification/historical-alpha-v0.2.0/board-crm-pytest.txt",
@@ -2877,54 +2902,149 @@
       "sha256": "2c1fb26e2381deb566100a0510229630e1e8f0d05c7d6c6c3b83734e375d0878"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/launcher-help.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-pytest.txt",
+      "size_bytes": 83,
+      "sha256": "511528680f758b6aade4ebc126883b306bc717db74250f2c0233a3bbcfb4b9e8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-render-final.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-render.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-smoke.txt",
+      "size_bytes": 134,
+      "sha256": "173986573db943749b358b5769b33f63016af13030c2174d8e767ce916fdacf8"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-tex-final.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/board-crm-tex.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/execution.json",
+      "size_bytes": 56642,
+      "sha256": "e7abe11cd3d61e60d64d7bfd0f62ccf98fcb06c2856af41b20195f37c6b33e34"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/launcher-help.txt",
       "size_bytes": 406,
       "sha256": "1f4bb016a61d56fc2f5969421b8b9511805a2b3ba2dad3024e39268d62129719"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/list-examples.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/list-examples.txt",
       "size_bytes": 387,
       "sha256": "8aa6a0a6a6b62c021dc0a2b717c22ab3649917b79178cfb05fe08b5f3d7e21bc"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/release-negative-checks.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/release-negative-checks.txt",
       "size_bytes": 101,
       "sha256": "c1ed648fa08329abf02887392f2d40206030d318bea70a5e918b4e44fed984ba"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/skill-validation.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/skill-validation.txt",
       "size_bytes": 16,
       "sha256": "db349825903d66adffea3ecf1bd8e1803043e8a71cf1a051235dabc5371f5bb0"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/structural-checks.json",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/structural-checks.json",
       "size_bytes": 891,
       "sha256": "c44241b948d47cc19e8144f9fa49709cdcaa97f58118c3085d6a10708fe4c344"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/structure.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/structure.txt",
       "size_bytes": 132,
       "sha256": "5f0546353bccde305cea8083d0d37746fec30b6b3f6583db9f6c17ac1c649761"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/tiny-catalog-pytest.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/tiny-catalog-pytest.txt",
       "size_bytes": 179,
       "sha256": "7627b8938f829f998a97554f17075cec1ab1aec2f7f10f2a847c220c7deb21cf"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/tiny-catalog-smoke.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/tiny-catalog-smoke.txt",
       "size_bytes": 137,
       "sha256": "4acf4e346367edd156178b551787ff38c7451e6475e8b402deda9590058096d5"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/work-board-pytest.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/work-board-pytest.txt",
       "size_bytes": 99,
       "sha256": "17d41b0ebeab1007f4db5bf35eda710e7e837a0266b277b5cf80aa3907504f88"
     },
     {
-      "path": "versioning/Stable-v1.0.0/examples/verification/work-board-smoke.txt",
+      "path": "versioning/Stable-v1.0.0/examples/verification/historical-stable-initial/work-board-smoke.txt",
       "size_bytes": 135,
       "sha256": "3755128bfddff24732139d383c938b6add9cbbbe585f7de0d12ebe639384eb62"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/history.json",
+      "size_bytes": 375,
+      "sha256": "4cf01ddeac8e6d69aa9b6c7f50e31acdeabc329c89b63c890f09e68bef0243fd"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/preservation.json",
+      "size_bytes": 7339,
+      "sha256": "1fd46211191bcf00b1d55970f573cfab6551b1aa0b2e4d141767b65ba8e5e5cb"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/release-negative-checks.txt",
+      "size_bytes": 101,
+      "sha256": "8a733d3dbe1a54ee50ad671d2d8b5ade2a5a2e00a582d6f4cecec493c9b6dc69"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/sandbox-attempt/edition-launchers.json",
+      "size_bytes": 71636,
+      "sha256": "dddddbc65bb21670418e35ae7dc5c5d9a88f8854f8eb5dccd3a81f41869d9af9"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/sandbox-attempt/edition-launchers.txt",
+      "size_bytes": 42589,
+      "sha256": "42d69ae0440a47bfea876ff5cf93f072e185e7682434acd5cf306ebb46e1a4ee"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/sandbox-attempt/execution.json",
+      "size_bytes": 47780,
+      "sha256": "c276dd43d6d13c35c0266be0bb54ba8450799f22f131167f90a63853e137ceba"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/sandbox-attempt/test-driver.py",
+      "size_bytes": 10774,
+      "sha256": "c3a343e02a300f7ed9d3b92ae736ef520e30555b73e5f3689fb4296833583774"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/structural-checks.json",
+      "size_bytes": 602,
+      "sha256": "6d987fed53116054752a5ce349e7c1a20e705a44bfbac363b8f763767a6c822c"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/structure-final.txt",
+      "size_bytes": 133,
+      "sha256": "df08932cb5996b2fba8141d0de0d90ef776739701ad730642d82c2dc01f9df19"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/structure.txt",
+      "size_bytes": 632,
+      "sha256": "e7db20f9e25910f812256c9d0ce386c8b00cabcbdff0caa4475cd76a3ed45f3b"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/tiny-catalog-pytest.txt",
+      "size_bytes": 179,
+      "sha256": "91832d629a85b64836659d5f1386b5bc355e4db892d3129fe1874e1d2f3a8e41"
+    },
+    {
+      "path": "versioning/Stable-v1.0.0/examples/verification/work-board-pytest.txt",
+      "size_bytes": 99,
+      "sha256": "f140e43a5b9ab7defcff408562528d6edf6f15e74810833b63e756cbff131078"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/LICENSE",
@@ -2974,7 +3094,7 @@
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P2/advs/behavioral-tests.json",
       "size_bytes": 8620,
-      "sha256": "8d92af5066caeac57b4ca4c051b862ade5faf343684e57051c15d8ac5ec7259a"
+      "sha256": "5606a4461222ed73586a66e4b9da652c3a2e21a34681751ec7981062fe924eae"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/OAL-P3/IMPLEMENTATION.md",
@@ -3003,23 +3123,23 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/README.md",
-      "size_bytes": 3515,
-      "sha256": "4f8876826248cec2593514ffbccf854302a1ba5ad5fa5bb0158e9e8ef20b58c7"
+      "size_bytes": 3892,
+      "sha256": "d610802cbf14a323ca4bd47f7d0e113df270f2d2c581e09d8bfc7450f74649f6"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/README.pt-br.md",
-      "size_bytes": 3793,
-      "sha256": "4a36adccc64e0ea7c6980ba7ec7041bc3dbcbad2344164f01e9c12e30ef8de68"
+      "size_bytes": 4176,
+      "sha256": "5df459e749d25621ea42f6d051c7fff60a5225bfa27c987e403c50ab8d1d4b61"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/derivations.json",
-      "size_bytes": 5847,
-      "sha256": "7a13f26720cda2f6136ce81a9ecce5c65ea1ff9f9a38b7627e47ccc6ec3a7547"
+      "size_bytes": 5819,
+      "sha256": "5433bc28187cf98223f215753082f328a7897b66d1aa72a58d20c256c8322bf2"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/model-instances.json",
       "size_bytes": 12924,
-      "sha256": "b87a670db3676566f18a0ed3156be47f7ac1b65b4bf9592df0c0b52d785b9ece"
+      "sha256": "ff4d988ece593c09476df3261396a5ea8ec4d05c319a8f96e51fe1fc26ed976a"
     },
     {
       "path": "versioning/Stable-v1.0.0/examples/work-board/needs-baseline.json",
@@ -3142,6 +3262,11 @@
       "sha256": "f05b0271c5dd41033a57ec12df443a4dba5c0ce99d8ab917ea4609979bdb2141"
     },
     {
+      "path": "versioning/Stable-v1.0.0/run_examples.py",
+      "size_bytes": 5513,
+      "sha256": "aedda2430cb2a125b2c91944912a97f17071a9dafcc3ff27ad60f6d3d3f5620c"
+    },
+    {
       "path": "versioning/Stable-v1.0.0/skill/LICENSE.txt",
       "size_bytes": 1106,
       "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
@@ -3173,8 +3298,8 @@
     },
     {
       "path": "versioning/Stable-v1.0.0/skill/references/source-map.md",
-      "size_bytes": 7374,
-      "sha256": "f65c612f21758456525a83e6ac9832f861b6d1e951624d22f11c0b21fd022d08"
+      "size_bytes": 7372,
+      "sha256": "e982b8abd4c23b467b6d8a11bab350674a0d7b94b2203df1a8e77d7691abfc00"
     }
   ]
 }

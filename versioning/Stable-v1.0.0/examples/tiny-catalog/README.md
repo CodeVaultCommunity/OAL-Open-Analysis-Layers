@@ -26,8 +26,10 @@ In code, [`usecases`](src/tiny_catalog/usecases) makes catalog decisions, [`enti
 With Python 3.12 or later, run from the repository root:
 
 ```bash
-python run_examples.py tiny-catalog
+python versioning/Stable-v1.0.0/run_examples.py tiny-catalog
 ```
+
+Inside the edition directory, use `python run_examples.py tiny-catalog`. The default database is `versioning/Stable-v1.0.0/data/catalog.sqlite3`. `--database` accepts an absolute path or a path relative to the working directory; the [operational guide](../README.md#run-an-example) explains how to reuse old databases without moving them.
 
 The launcher opens `http://127.0.0.1:8000/`. The browser requests HTTP Basic credentials on the first API call. Use `maintainer` / `maintainer-demo` or `reader` / `reader-demo`. To switch accounts, use another private browser session or clear the stored credentials. Defaults can be changed with `OAL_CATALOG_<ROLE>_PASSWORD` environment variables. The demonstration binds to loopback; its fixed example passwords are for local use.
 

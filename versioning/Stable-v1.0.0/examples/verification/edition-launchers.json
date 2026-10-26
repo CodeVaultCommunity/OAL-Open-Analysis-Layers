@@ -1,0 +1,1123 @@
+{
+  "status": "passed",
+  "tests_run": 18,
+  "records": [
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:31+00:00",
+      "finished_at": "2026-10-26T03:23:32+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:32+00:00",
+      "finished_at": "2026-10-26T03:23:32+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.1.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:32+00:00",
+      "finished_at": "2026-10-26T03:23:33+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:33+00:00",
+      "finished_at": "2026-10-26T03:23:33+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.1.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:33+00:00",
+      "finished_at": "2026-10-26T03:23:33+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:33+00:00",
+      "finished_at": "2026-10-26T03:23:34+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.1.0-Alkimim\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.1.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:34+00:00",
+      "finished_at": "2026-10-26T03:23:34+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:34+00:00",
+      "finished_at": "2026-10-26T03:23:34+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.1.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:34+00:00",
+      "finished_at": "2026-10-26T03:23:34+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "board-crm",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py board-crm [-h] [--port PORT]\n                                        [--database DATABASE] [--no-browser]\n\nRun the Alpha-v0.1.0-Alkimim/board-crm example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:34+00:00",
+      "finished_at": "2026-10-26T03:23:34+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "tiny-catalog",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\n\nRun the Alpha-v0.1.0-Alkimim/tiny-catalog example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:34+00:00",
+      "finished_at": "2026-10-26T03:23:35+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "work-board",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py work-board [-h] [--port PORT]\n                                         [--database DATABASE] [--no-browser]\n\nRun the Alpha-v0.1.0-Alkimim/work-board example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.1.0-Alkimim",
+      "example": "board-crm",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "board-crm",
+        "--port",
+        "50485",
+        "--no-browser",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.1.0-Alkimim\\board-crm.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.1.0-Alkimim\\board-crm.sqlite3",
+      "database_mode": "absolute-existing",
+      "started_at": "2026-10-26T03:23:35+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 19276,
+      "http_status": 200,
+      "response_bytes": 2523,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:36+00:00",
+      "log": "Alpha-v0.1.0-Alkimim/board-crm: http://127.0.0.1:50485/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:35] \"GET / HTTP/1.1\" 200 2523\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.1.0-Alkimim",
+      "example": "tiny-catalog",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "58700",
+        "--no-browser",
+        "--database",
+        "..\\data\\Alpha-v0.1.0-Alkimim\\catalog.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.1.0-Alkimim\\catalog.sqlite3",
+      "database_mode": "relative-existing",
+      "started_at": "2026-10-26T03:23:37+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 41340,
+      "http_status": 200,
+      "response_bytes": 2055,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:38+00:00",
+      "log": "Alpha-v0.1.0-Alkimim/tiny-catalog: http://127.0.0.1:58700/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:37] \"GET / HTTP/1.1\" 200 2055\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.1.0-Alkimim",
+      "example": "work-board",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "work-board",
+        "--port",
+        "58709",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\data\\work-board.sqlite3",
+      "database_mode": "edition-default",
+      "started_at": "2026-10-26T03:23:39+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 11180,
+      "http_status": 200,
+      "response_bytes": 1777,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:40+00:00",
+      "log": "Alpha-v0.1.0-Alkimim/work-board: http://127.0.0.1:58709/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:39] \"GET / HTTP/1.1\" 200 1777\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:41+00:00",
+      "finished_at": "2026-10-26T03:23:41+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "missing-example"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.1.0-Alkimim: missing-example\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:41+00:00",
+      "finished_at": "2026-10-26T03:23:42+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "Alpha-v0.2.0-Alkimim/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.1.0-Alkimim: Alpha-v0.2.0-Alkimim/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:42+00:00",
+      "finished_at": "2026-10-26T03:23:42+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "Alpha-v0.1.0-Alkimim/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.1.0-Alkimim: Alpha-v0.1.0-Alkimim/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:42+00:00",
+      "finished_at": "2026-10-26T03:23:43+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "0",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:43+00:00",
+      "finished_at": "2026-10-26T03:23:43+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "65536",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:43+00:00",
+      "finished_at": "2026-10-26T03:23:44+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "invalid",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: argument --port: invalid int value: 'invalid'\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:44+00:00",
+      "finished_at": "2026-10-26T03:23:44+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-0\\run_examples.py"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.1.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:44+00:00",
+      "finished_at": "2026-10-26T03:23:45+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:45+00:00",
+      "finished_at": "2026-10-26T03:23:46+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.2.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:46+00:00",
+      "finished_at": "2026-10-26T03:23:46+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:46+00:00",
+      "finished_at": "2026-10-26T03:23:47+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.2.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:47+00:00",
+      "finished_at": "2026-10-26T03:23:47+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:47+00:00",
+      "finished_at": "2026-10-26T03:23:48+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Alpha-v0.2.0-Alkimim\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.2.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:48+00:00",
+      "finished_at": "2026-10-26T03:23:48+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:48+00:00",
+      "finished_at": "2026-10-26T03:23:49+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.2.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:49+00:00",
+      "finished_at": "2026-10-26T03:23:49+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "board-crm",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py board-crm [-h] [--port PORT]\n                                        [--database DATABASE] [--no-browser]\n\nRun the Alpha-v0.2.0-Alkimim/board-crm example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:49+00:00",
+      "finished_at": "2026-10-26T03:23:50+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "tiny-catalog",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\n\nRun the Alpha-v0.2.0-Alkimim/tiny-catalog example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:50+00:00",
+      "finished_at": "2026-10-26T03:23:50+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "work-board",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py work-board [-h] [--port PORT]\n                                         [--database DATABASE] [--no-browser]\n\nRun the Alpha-v0.2.0-Alkimim/work-board example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.2.0-Alkimim",
+      "example": "board-crm",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "board-crm",
+        "--port",
+        "62410",
+        "--no-browser",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.2.0-Alkimim\\board-crm.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.2.0-Alkimim\\board-crm.sqlite3",
+      "database_mode": "absolute-existing",
+      "started_at": "2026-10-26T03:23:50+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 36376,
+      "http_status": 200,
+      "response_bytes": 2523,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:52+00:00",
+      "log": "Alpha-v0.2.0-Alkimim/board-crm: http://127.0.0.1:62410/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:52] \"GET / HTTP/1.1\" 200 2523\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.2.0-Alkimim",
+      "example": "tiny-catalog",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "64651",
+        "--no-browser",
+        "--database",
+        "..\\data\\Alpha-v0.2.0-Alkimim\\catalog.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Alpha-v0.2.0-Alkimim\\catalog.sqlite3",
+      "database_mode": "relative-existing",
+      "started_at": "2026-10-26T03:23:53+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 37056,
+      "http_status": 200,
+      "response_bytes": 2055,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:54+00:00",
+      "log": "Alpha-v0.2.0-Alkimim/tiny-catalog: http://127.0.0.1:64651/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:54] \"GET / HTTP/1.1\" 200 2055\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Alpha-v0.2.0-Alkimim",
+      "example": "work-board",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "work-board",
+        "--port",
+        "64654",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\data\\work-board.sqlite3",
+      "database_mode": "edition-default",
+      "started_at": "2026-10-26T03:23:55+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 9192,
+      "http_status": 200,
+      "response_bytes": 1777,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:23:56+00:00",
+      "log": "Alpha-v0.2.0-Alkimim/work-board: http://127.0.0.1:64654/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:23:56] \"GET / HTTP/1.1\" 200 1777\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:57+00:00",
+      "finished_at": "2026-10-26T03:23:57+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "missing-example"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.2.0-Alkimim: missing-example\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:57+00:00",
+      "finished_at": "2026-10-26T03:23:58+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "Alpha-v0.1.0-Alkimim/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.2.0-Alkimim: Alpha-v0.1.0-Alkimim/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:58+00:00",
+      "finished_at": "2026-10-26T03:23:58+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "Alpha-v0.2.0-Alkimim/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Alpha-v0.2.0-Alkimim: Alpha-v0.2.0-Alkimim/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:58+00:00",
+      "finished_at": "2026-10-26T03:23:59+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "0",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:59+00:00",
+      "finished_at": "2026-10-26T03:23:59+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "65536",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:23:59+00:00",
+      "finished_at": "2026-10-26T03:24:00+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "invalid",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: argument --port: invalid int value: 'invalid'\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:00+00:00",
+      "finished_at": "2026-10-26T03:24:00+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-1\\run_examples.py"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Alpha-v0.2.0-Alkimim\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:00+00:00",
+      "finished_at": "2026-10-26T03:24:01+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:01+00:00",
+      "finished_at": "2026-10-26T03:24:01+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Stable-v1.0.0\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:01+00:00",
+      "finished_at": "2026-10-26T03:24:02+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:02+00:00",
+      "finished_at": "2026-10-26T03:24:02+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Stable-v1.0.0\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:02+00:00",
+      "finished_at": "2026-10-26T03:24:03+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:03+00:00",
+      "finished_at": "2026-10-26T03:24:03+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\canonical\\versioning\\Stable-v1.0.0\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Stable-v1.0.0\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:03+00:00",
+      "finished_at": "2026-10-26T03:24:04+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "--list"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "board-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:04+00:00",
+      "finished_at": "2026-10-26T03:24:04+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Stable-v1.0.0\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:04+00:00",
+      "finished_at": "2026-10-26T03:24:05+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "board-crm",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py board-crm [-h] [--port PORT]\n                                        [--database DATABASE] [--no-browser]\n\nRun the Stable-v1.0.0/board-crm example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:05+00:00",
+      "finished_at": "2026-10-26T03:24:05+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "tiny-catalog",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\n\nRun the Stable-v1.0.0/tiny-catalog example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:05+00:00",
+      "finished_at": "2026-10-26T03:24:05+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "work-board",
+        "--help"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "stdout": "usage: python run_examples.py work-board [-h] [--port PORT]\n                                         [--database DATABASE] [--no-browser]\n\nRun the Stable-v1.0.0/work-board example in a local browser\n\noptions:\n  -h, --help           show this help message and exit\n  --port PORT\n  --database DATABASE  SQLite file; relative paths use the current working\n                       directory\n  --no-browser\n",
+      "stderr": ""
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Stable-v1.0.0",
+      "example": "board-crm",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "board-crm",
+        "--port",
+        "64638",
+        "--no-browser",
+        "--database",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Stable-v1.0.0\\board-crm.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Stable-v1.0.0\\board-crm.sqlite3",
+      "database_mode": "absolute-existing",
+      "started_at": "2026-10-26T03:24:05+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 32384,
+      "http_status": 200,
+      "response_bytes": 2523,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:24:06+00:00",
+      "log": "Stable-v1.0.0/board-crm: http://127.0.0.1:64638/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:24:06] \"GET / HTTP/1.1\" 200 2523\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Stable-v1.0.0",
+      "example": "tiny-catalog",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "60032",
+        "--no-browser",
+        "--database",
+        "..\\data\\Stable-v1.0.0\\catalog.sqlite3"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\data\\Stable-v1.0.0\\catalog.sqlite3",
+      "database_mode": "relative-existing",
+      "started_at": "2026-10-26T03:24:07+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 27512,
+      "http_status": 200,
+      "response_bytes": 2055,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:24:08+00:00",
+      "log": "Stable-v1.0.0/tiny-catalog: http://127.0.0.1:60032/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:24:08] \"GET / HTTP/1.1\" 200 2055\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "http-smoke",
+      "edition": "Stable-v1.0.0",
+      "example": "work-board",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "work-board",
+        "--port",
+        "58547",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "database": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\data\\work-board.sqlite3",
+      "database_mode": "edition-default",
+      "started_at": "2026-10-26T03:24:09+00:00",
+      "browser_javascript_tested": false,
+      "process_id": 14644,
+      "http_status": 200,
+      "response_bytes": 1777,
+      "existing_database_preserved": true,
+      "termination_method": "taskkill /PID <spawned PID> /T /F",
+      "termination_command_exit_code": 0,
+      "exit_code_after_termination": 1,
+      "terminated": true,
+      "finished_at": "2026-10-26T03:24:10+00:00",
+      "log": "Stable-v1.0.0/work-board: http://127.0.0.1:58547/\nPress Ctrl+C to stop.\n127.0.0.1 - - [26/Oct/2026 00:24:10] \"GET / HTTP/1.1\" 200 1777\n",
+      "port_closed_after_termination": true
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:11+00:00",
+      "finished_at": "2026-10-26T03:24:12+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "missing-example"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Stable-v1.0.0: missing-example\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:12+00:00",
+      "finished_at": "2026-10-26T03:24:12+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "Alpha-v0.1.0-Alkimim/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Stable-v1.0.0: Alpha-v0.1.0-Alkimim/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:12+00:00",
+      "finished_at": "2026-10-26T03:24:12+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "Stable-v1.0.0/tiny-catalog"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "stdout": "",
+      "stderr": "Unknown example in Stable-v1.0.0: Stable-v1.0.0/tiny-catalog\nUse a bare NAME. Available: board-crm, tiny-catalog, work-board\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:12+00:00",
+      "finished_at": "2026-10-26T03:24:13+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "0",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:13+00:00",
+      "finished_at": "2026-10-26T03:24:13+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "65536",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: port must be between 1 and 65535\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:13+00:00",
+      "finished_at": "2026-10-26T03:24:14+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py",
+        "tiny-catalog",
+        "--port",
+        "invalid",
+        "--no-browser"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: python run_examples.py tiny-catalog [-h] [--port PORT]\n                                           [--database DATABASE]\n                                           [--no-browser]\npython run_examples.py tiny-catalog: error: argument --port: invalid int value: 'invalid'\n"
+    },
+    {
+      "kind": "cli",
+      "started_at": "2026-10-26T03:24:14+00:00",
+      "finished_at": "2026-10-26T03:24:14+00:00",
+      "command": [
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-release\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\renamed-2\\run_examples.py"
+      ],
+      "working_directory": "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\26\\01a175b8-4a98-7911-90b6-297be8357ce5\\oal-final-adjustments\\launcher-work\\oal-launchers-_d_05c95\\unrelated",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "stdout": "usage: run_examples.py [-h] [--list] [example]\n\nRun an OAL example from Stable-v1.0.0\n\npositional arguments:\n  example     NAME in this edition\n\noptions:\n  -h, --help  show this help message and exit\n  --list      list this edition's examples\n\nUse --list to see this edition's examples. Select another edition through its\nown launcher path.\n\nboard-crm  (port 8001)\ntiny-catalog  (port 8000)\nwork-board  (port 8002)\n",
+      "stderr": ""
+    }
+  ],
+  "limits": "HTTP and process termination only; no browser JavaScript or visual accessibility. Ctrl+C/browser controls are mocked, not OS signal/UI integration tests."
+}
